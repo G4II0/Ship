@@ -5,7 +5,6 @@
 
 namespace P
 {
-    //sucamiao dici ao allora cazzo 
     class Players
     {
 
