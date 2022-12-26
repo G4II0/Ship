@@ -18,7 +18,7 @@ namespace M
     {
         public:
 
-        //nave, destinazione, codice della mossa
+        //nave, destinazione
         struct Move
         {
             //nave mossa
@@ -30,7 +30,7 @@ namespace M
         };
         Mare(string log = "", string player1 = "", string player2 = "");
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<Move> posAvailable(S::Ship* pos);
+        vector<Move> posAvailable(char name);
         //metodo generale
         //ritorna true se è possibile la mossa
         bool performMove();
@@ -39,7 +39,11 @@ namespace M
         bool performMove();
         //metodo per giocatore: fornire posizioni
         //ritorna true se è possibile muovere
-        bool performMove(char tipo, pair<int, int>& start, pair<int, int>& destination);
+        bool performMove(pair<int, int> &start, pair<int, int> &destination, char name);
+        // aggiorna log con informazioni su vittoria
+        // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
+        // 3 se patta per raggiungimento limite mosse in partita tra bot
+        int getCondition(char name);
         //stampa la griglia
         string printMare();
         //aggiorna log con informazioni su vittoria
@@ -48,17 +52,12 @@ namespace M
         void updateLogVictory(int ending);
         //aggiorna log con tipo di partita
         void updateLogGameType(string type);
-        //----------------------------------------------------------------------
-        //TOGLIERLA ALLA FINE DI TUTTO
-        //importa board da file                         !!!!!!!!!!!!!!!!!!!!!!!!
-        void justForDebug(string fileName);
-        //----------------------------------------------------------------------
         //eccezione: input non valido
         class InvalidInputException {};
         //eccezione: mossa non valida
         class InvalidMoveException {};
 
-    private:
+        private:
 
         //ogni vettore rappresenta una riga
         vector<vector<S::Ship*>> mare_;
@@ -87,9 +86,6 @@ namespace M
         char scanOccupied(int row, int column);
         void initializeMare(int row);
         void insertShip(S::Ship* piece, pair<int, int>* pos);
-        void scanAddSpecialMoves(vector<Move>& moves);
-        //row e column: eventuali coordinate modificate del re
-        bool scanCheckmateImpossibility();
         //s1 = Nds, s2 = Altra nave
         bool healConditions(S::Ship* p1, S::Ship* p2);
         //aggiorna log con mossa
@@ -101,6 +97,5 @@ namespace M
     //controlla se pezzo e posizione di arrivo sono uguali
     bool operator==(const Mare::Move& m1, const Mare::Move& m2);
 }
-
 
 #endif
