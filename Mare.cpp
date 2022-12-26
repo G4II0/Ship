@@ -22,6 +22,7 @@ namespace M
         return (pos.first >= 0 && pos.first < SIZE && pos.second >= 0 && pos.second < SIZE);
     }
 
+//ceck del bordo
     bool Mare::scanBoundaries(int row, int column)
     {
         pair<int, int> tmp = pair(row, column);
@@ -29,6 +30,8 @@ namespace M
         return result;
     }
 
+
+/*
     char Mare::scanOccupied(pair<int, int> &pos) // !!!!!!!!!!
     {
         S::Ship *ship = board[pos.first][pos.second];
@@ -37,279 +40,28 @@ namespace M
         else
             return ship->GetColor();
     }
+*/
 
+/*
     char Mare::scanOccupied(int row, int column)
     {
         pair<int, int> tmp = pair(row, column);
         char result = scanOccupied(tmp);
         return result;
     }
+*/
 
-    bool Mare::scanPromotion(S::Ship *ship)
+    void Mare::insertShip(S::Ship *ship, pair<int, int> *pos)
     {
-        return (ship->GetName() == 'P' && ship->GetPosition().first == 0 ||
-                ship->GetName() == 'p' && ship->GetPosition().first == 7);
+        mare_[pos->first][pos->second] = ship;
+        sList.push_back(ship);
     }
 
-    bool Mare::scanCheck(char color, int row, int column)
+    void Mare::initializeMare(int row)
     {
-        int offset = 0;
-        if (color == 'N')
-            offset = SIZE * 2;
-
-        pair<int, int> pos;
-        vector<vector<S::Ship *>> *tmpBoard;
-        if (row == -1 && column == -1)
-        {
-            S::Ship *king = piecesList[4 + offset];
-            pos = king->GetPosition();
-        }
-        else
-            pos = pair(row, column);
-        for (auto it = directionsPieces.begin(); it != directionsPieces.end(); ++it)
-        {
-            pair<int, int> direction = it->first;
-            string pieces = it->second;
-            pair<int, int> tmp = pair(pos.first + direction.first, pos.second + direction.second);
-            int i = 1;
-            while (scanBoundaries(tmp))
-            {
-                char pieceColor = scanOccupied(tmp);
-                char pieceName;
-                if (pieceColor != 0)
-                {
-                    if (pieceColor == color)
-                        break;
-                    char pieceName = board[tmp.first][tmp.second]->GetName();
-                    if (pieceName > 90)
-                        pieceName -= 32;
-                    auto searchResult = find(pieces.begin(), pieces.end(), pieceName);
-                    if (searchResult != pieces.end() && ((pieceName != 'P' && pieceName != 'R') ||
-                                                        i == 1))
-                        return true;
-
-                    else
-                        break;
-                }
-                tmp.first += direction.first;
-                tmp.second += direction.second;
-                i++;
-            }
-        }
-        for (int i = 0; i < directionsHorse.size(); i++)
-        {
-            pair<int, int> direction = directionsHorse[i];
-            pair<int, int> tmp = pair(pos.first + direction.first, pos.second + direction.second);
-            if (scanBoundaries(tmp))
-            {
-                char pieceColor = scanOccupied(tmp);
-                if (pieceColor != 0 && pieceColor != color)
-                {
-                    char pieceName = board[tmp.first][tmp.second]->GetName();
-                    if (pieceName > 90)
-                        pieceName -= 32;
-                    if (pieceName == 'C')
-                        return true;
-                }
-            }
-        }
-        return false;
     }
 
-    bool Mare::scanCheck(Move &move, char color)
-    {
-        vector<vector<S::Ship *>> oldBoard = board;
-        S::Ship *ship = move.ship;
-        pair<int, int> start = move.ship->GetPosition();
-        pair<int, int> end = move.destination;
-        board[end.first][end.second] = ship;
-        board[start.first][start.second] = nullptr;
-        switch (move.moveName)
-        {
-        case 0:
-            break;
-        case 3:
-        {                                         // arrocco corto
-            S::Ship *tower = move.additionalPiece; // colonna attuale: 7, col. destinazione: 5
-            pair<int, int> pos = tower->GetPosition();
-            board[pos.first][pos.second] = nullptr;
-            board[pos.first][pos.second - 2] = tower;
-            break;
-        }
-        case 4:
-        {                                         // arrocco lungo
-            S::Ship *tower = move.additionalPiece; // colonna attuale: 0, col. destinazione: 4
-            pair<int, int> pos = tower->GetPosition();
-            board[pos.first][pos.second] = nullptr;
-            board[pos.first][pos.second + 3] = tower;
-            break;
-        }
-        }
-        bool result;
-        if (ship->GetName() == 'R' || ship->GetName() == 'r')
-            result = scanCheck(color, end.first, end.second);
-        else
-            result = scanCheck(color);
-        board = oldBoard;
-        return result;
-    }
-
-    bool Mare::scanCheckMate(bool initialCheck, vector<Move> &moves)
-    {
-        return initialCheck && moves.size() == 0;
-    }
-
-    bool Mare::enPassantConditions(S::Ship *p1, S::Ship *p2)
-    {
-        if (!p2)
-            return false; // controlla se esiste pezzo
-        char n1 = p1->GetName();
-        char n2 = p2->GetName();
-        int row2 = p2->GetPosition().first;
-        int row1 = p1->GetPosition().first;
-        return (row1 == row2 && (n2 == 'P' && row2 == 4 || n2 == 'p' && row2 == 3) &&
-                lastMove.ship == p2 && p2->GetStatus() == 1 && n1 - n2 != 0);
-    }
-
-    bool Mare::castlingConditions(S::Ship *king, S::Ship *tower)
-    {
-        if (!(king && tower))
-            return 0;
-        if (!(king->GetStatus() == 0 && tower->GetStatus() == 0))
-            return 0;
-        int start = king->GetPosition().second;
-        int finish = tower->GetPosition().second;
-        int row = king->GetPosition().first;
-        int tmp = tower->GetPosition().first;
-        char color = king->GetColor();
-        if (row != tmp)
-            return 0; // DA TOGLIERE INSIEME A JUSTFORDEBUG
-        int factor;
-        if (start < finish)
-            factor = 1;
-        else
-            factor = -1;
-        if (scanCheck(color))
-            return false;
-        for (int i = 1; i < abs(start - finish); i++)
-        {
-            Move tmp = Move(king, pair(row, start + i * factor), 0);
-            if (scanOccupied(row, start + i * factor) != 0 || scanCheck(tmp, color))
-                return false;
-        }
-        return true;
-    }
-
-    void Mare::scanAddSpecialMoves(vector<Move> &moves, char color)
-    {
-        int offset = 0;
-        if (color == 'N')
-            offset = SIZE * 2;
-
-        // arrocco
-        S::Ship *firstTower = piecesList[0 + offset];
-        S::Ship *secondTower = piecesList[7 + offset];
-        S::Ship *king = piecesList[4 + offset];
-        // arrocco lungo
-        if (castlingConditions(king, firstTower))
-            moves.push_back(Move(king, pair(0, 2), 4, firstTower));
-        // arrocco corto
-        if (castlingConditions(king, secondTower))
-            moves.push_back(Move(king, pair(0, 6), 3, secondTower));
-
-        // en passant + controllare se pedoni hanno pedine da mangiare in diagonale
-        // per essere valido, un pedone bianco dev'essere nella riga 5, un pedone nero nella riga 4
-        int direction;
-        if (color == 'B')
-            direction = 1;
-        else
-            direction = -1;
-        Move tmp;
-        for (int i = 0; i < SIZE; i++)
-        {
-            S::Ship *pawn = piecesList[8 + i + offset];
-            if (!pawn || (pawn->GetName() != 80 && pawn->GetName() != 112))
-                continue;
-            pair<int, int> pos = pawn->GetPosition();
-            if (scanBoundaries(pos.first, pos.second - direction))
-            {
-                S::Ship *toTheLeft = board[pos.first][pos.second - direction];
-                pair<int, int> destination = pair(pos.first + direction, pos.second - direction);
-                tmp = Move(pawn, destination, 2, toTheLeft);
-                if (enPassantConditions(pawn, toTheLeft) && !scanCheck(tmp, color))
-                    moves.push_back(tmp);
-            }
-            if (scanBoundaries(pos.first, pos.second + direction))
-            {
-                S::Ship *toTheRight = board[pos.first][pos.second + direction];
-                pair<int, int> destination = pair(pos.first + direction, pos.second + direction);
-                tmp = Move(pawn, destination, 2, toTheRight);
-                if (enPassantConditions(pawn, toTheRight) && !scanCheck(tmp, color))
-                    moves.push_back(tmp);
-            }
-            if (scanBoundaries(pos.first + direction, pos.second - direction))
-            {
-                S::Ship *forwardLeft = board[pos.first + direction][pos.second - direction];
-                pair<int, int> destination = pair(pos.first + direction, pos.second - direction);
-                tmp = Move(pawn, destination, 1, forwardLeft);
-                if (forwardLeft && forwardLeft->GetColor() != color && !scanCheck(tmp, color))
-                    moves.push_back(tmp);
-            }
-            if (scanBoundaries(pos.first + direction, pos.second + direction))
-            {
-                S::Ship *forwardRight = board[pos.first + direction][pos.second + direction];
-                pair<int, int> destination = pair(pos.first + direction, pos.second + direction);
-                tmp = Move(pawn, destination, 1, forwardRight);
-                if (forwardRight && forwardRight->GetColor() != color && !scanCheck(tmp, color))
-                    moves.push_back(tmp);
-            }
-        }
-    }
-
-    void Mare::insertPiece(S::Ship *ship, pair<int, int> *pos)
-    {
-        board[pos->first][pos->second] = ship;
-        piecesList.push_back(ship);
-    }
-
-    void Mare::initializeRow(int row)
-    {
-        char color;
-        if (row == 0 || row == 1)
-            color = 'B';
-        else
-            color = 'N';
-        S::Ship *ship;
-        if (row == 1 || row == 6)
-        {
-            for (int i = 0; i < SIZE; i++)
-            {
-                ship = new P(pair(row, i), color);
-                insertPiece(ship, new pair(row, i));
-            }
-        }
-        else if (row == 0 || row == 7)
-        {
-            ship = new T(pair(row, 0), color);
-            insertPiece(ship, new pair(row, 0));
-            ship = new C(pair(row, 1), color);
-            insertPiece(ship, new pair(row, 1));
-            ship = new A(pair(row, 2), color);
-            insertPiece(ship, new pair(row, 2));
-            ship = new D(pair(row, 3), color);
-            insertPiece(ship, new pair(row, 3));
-            ship = new R(pair(row, 4), color);
-            insertPiece(ship, new pair(row, 4));
-            ship = new A(pair(row, 5), color);
-            insertPiece(ship, new pair(row, 5));
-            ship = new C(pair(row, 6), color);
-            insertPiece(ship, new pair(row, 6));
-            ship = new T(pair(row, 7), color);
-            insertPiece(ship, new pair(row, 7));
-        }
-    }
-
-    void Mare::updateLog(pair<int, int> start, pair<int, int> end)
+    void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
     {
         ofstream write;
         write.open(logFile, ofstream::app);
@@ -320,25 +72,22 @@ namespace M
         write.close();
     }
 
-    void Mare::updateLog(char newPiece)
+    void Mare::updateLogHit()
     {
-        ofstream write(logFile);
-        write.open(logFile, ofstream::app);
-        write << "p " << newPiece << "\n";
-        write.close();
     }
+
+
 
     Mare::Mare(string log, string playerBlack, string playerWhite)
     {
         for (int i = 0; i < 8; i++)
-            board.push_back(vector<S::Ship *>(8, nullptr));
+            mare_.push_back(vector<S::Ship *>(8, nullptr));
         // inizializzare file
-        initializeRow(0);
-        initializeRow(1);
-        initializeRow(7);
-        initializeRow(6);
+        initializeMare(0);
+        initializeMare(1);
+        initializeMare(7);
+        initializeMare(6);
         lastMove = Move();
-        pieceToPromote = nullptr;
         logFile = log;
         if (log != "" && playerBlack != "" && playerWhite != "")
         {
@@ -349,18 +98,18 @@ namespace M
         }
     }
 
-    string Mare::printBoard()
+    string Mare::printMare()
     {
         string out = "";
         out += "  ---------------------------------\n";
-        for (int i = 7; i >= 0; i--)
+        for (int i = 11; i >= 0; i--)
         {
             out += to_string(i + 1);
             out += " | ";
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < 12; j++)
             {
-                if (board[i][j] != nullptr)
-                    out += board[i][j]->GetName();
+                if (mare_[i][j] != nullptr)
+                    out += mare_[i][j] -> getTipo();
                 else
                     out += " ";
                 out += " | ";
@@ -368,18 +117,23 @@ namespace M
             out += "\n";
             out += "  ---------------------------------\n";
         }
-        out += "    A   B   C   D   E   F   G   H";
+        out += "    A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
     }
 
-    int Mare::getCondition() { return condition; }
+
+/*
+    int Mare::getCondition()
+    { return condition; }
 
     int Mare::getCondition(char color)
     {
         humanPlayerMoves = movesAvailable(color);
         return condition;
     }
+*/
 
+/*
     vector<Mare::Move> Mare::movesAvailable(char color)
     {
         vector<Move> moves;
@@ -434,7 +188,9 @@ namespace M
             condition = -1;
         return moves;
     }
+*/
 
+/*
     bool Mare::performMove(Move move)
     {
         pieceToPromote = nullptr;
@@ -482,7 +238,9 @@ namespace M
         }
         return false;
     }
+*/
 
+/*
     bool Mare::performMove(pair<int, int> start, pair<int, int> destination, char color)
     {
         if (!(legitMoveInput(start) && legitMoveInput(start)))
@@ -524,7 +282,9 @@ namespace M
         if (logFile != "")
             updateLog(code);
     }
+*/
 
+/*
     void Mare::justForDebug(string fileName)
     {
         for (int i = 0; i < 32; i++)
@@ -626,4 +386,5 @@ namespace M
             piecesList[startIndex + i] = blackPawns[i];
         }
     }
+*/
 }

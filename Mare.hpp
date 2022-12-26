@@ -17,6 +17,7 @@ namespace M
     class Mare
     {
         public:
+
         //nave, destinazione, codice della mossa
         struct Move
         {
@@ -27,6 +28,7 @@ namespace M
             Move(S::Ship* p, pair<int, int> dest);
             Move();
         };
+        Mare(string log = "", string player1 = "", string player2 = "");
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<Move> posAvailable(S::Ship* pos);
         //metodo generale
@@ -55,11 +57,13 @@ namespace M
         class InvalidInputException {};
         //eccezione: mossa non valida
         class InvalidMoveException {};
+
     private:
+
         //ogni vettore rappresenta una riga
-        vector<vector<S::Ship*>> grill;
+        vector<vector<S::Ship*>> mare_;
         //ordine: C, S, E
-        vector<S::Ship*> ShipList;
+        vector<S::Ship*> sList;
         //ultima mossa effettuata
         Move lastMove;
         //nome del file su cui effettuare il log
@@ -81,7 +85,7 @@ namespace M
         //altrimenti, ritorna 0
         char scanOccupied(pair<int, int>& pos);
         char scanOccupied(int row, int column);
-        void initializeRow(int row);
+        void initializeMare(int row);
         void insertShip(S::Ship* piece, pair<int, int>* pos);
         void scanAddSpecialMoves(vector<Move>& moves);
         //row e column: eventuali coordinate modificate del re
@@ -92,8 +96,6 @@ namespace M
         void updateLogMove(pair<int, int> start, pair<int, int> finish);
         //aggiorna log con hitMarker
         void updateLogHit();
-        //aggiorna log con scacco
-        void updateLogCheck();
     };
     //operatore di confronto per Move
     //controlla se pezzo e posizione di arrivo sono uguali
