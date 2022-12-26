@@ -2,7 +2,6 @@
 
 namespace P
 {
-
     P::Players(Mare *mare, string N, char T)
     {
         Color = C;
