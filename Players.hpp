@@ -5,7 +5,7 @@
 
 namespace P
 {
-    //sucamiao dici ao u
+    //sucamiao dici ao
     class Players
     {
 
