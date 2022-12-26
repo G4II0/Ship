@@ -9,6 +9,7 @@
 #include <map>
 #include <random>
 #include "Ship.hpp"
+#include "Players.hpp"
 
 using namespace std;
 
@@ -39,11 +40,11 @@ namespace M
         bool performMove();
         //metodo per giocatore: fornire posizioni
         //ritorna true se è possibile muovere
-        bool performMove(pair<int, int> &start, pair<int, int> &destination, char name);
+        bool performMove(string name, pair<int, int> &destination, char type);
         // aggiorna log con informazioni su vittoria
         // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
         // 3 se patta per raggiungimento limite mosse in partita tra bot
-        int getCondition(char name);
+        int getCondition();
         //stampa la griglia
         string printMare();
         //aggiorna log con informazioni su vittoria
