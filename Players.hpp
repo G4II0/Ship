@@ -3,27 +3,27 @@
 
 #include "Mare.hpp"
 
-
-class Gamers
+namespace P
 {
+    class Players
+    {
 
-    protected:
+        protected:
 
-    string Name;
-    char Color;
-    M::Mare *Mare;
-    char Type;
+        string Name;
+        M::Mare *Mare;
+        char Type;
 
-    public:
+        public:
 
-    // costruttore
-    Gamers(M::Mare *chessBoard, string N, char T);
+        // costruttore
+        Players(M::Mare *chessBoard, string N, char T);
 
-    // player
-    bool Move(string start, string end);
-    int GetCondition();
-    // bot
-    bool Move();
-};
-
+        // player
+        bool Move(string start, string end);
+        int GetCondition();
+        // bot
+        bool Move();
+    };
+}
 #endif
