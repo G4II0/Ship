@@ -79,10 +79,11 @@ namespace M
 
     // sistemare
 
-    Mare::Mare(string log, string playerBlack, string playerWhite)
+    Mare::Mare(string log, string player1, string play2)
     {
-        for (int i = 0; i < 8; i++)
-            mare_.push_back(vector<S::Ship *>(8, nullptr));
+        vector<vector<char>> grill;
+        for (int i = 0; i < 12; i++)
+            grill.push_back();
         // inizializzare file
         initializeMare(0);
         initializeMare(1);
@@ -123,25 +124,19 @@ namespace M
     }
 
 
-
-    int Mare::getCondition(char name)
+    int Mare::getCondition()
     { return condition; }
-
-    int Mare::getCondition(char name)
-    {
-    }
 
     vector<Mare::Move> Mare::posAvailable(char name)
     {
     }
 
-
-
     bool Mare::performMove()
     {
     }
 
-    bool Mare::performMove(pair<int, int> &start, pair<int, int> &destination, char name)
+    bool Mare::performMove(string name, pair<int, int> &destination, char type)
     {
+        if()
     }
 }
