@@ -10,7 +10,7 @@ namespace P
         Type = T;
     }
 
-    // player
+    // playe
     bool P::Move(string start, string end)
     {
         int sFirst = start[1] - 49;
