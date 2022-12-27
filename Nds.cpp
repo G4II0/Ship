@@ -50,7 +50,7 @@ namespace S
     {return this -> corazza;}
 
     //0 verticle, 1 se orizzontale
-    int Nds::Direction(std::pair<int, int> prua, std::pair<int, int>  poppa)
+    int Nds::Direction(std::pair<int, int> prua, std::pair<int, int> poppa)
     {
         if(prua.first == poppa.first)
         return 0;
@@ -62,22 +62,19 @@ namespace S
     std::vector<std::pair<int, int>> Ship::Moves()
     {
         std::vector<std::pair<int, int>> Mov;
-        if(Direction(prua) == 0)
+        if(Direction(prua, poppa) == 0)
         {
             int y = 2;
             int x = 1;
-
-            std::vector<std::pair<int, int> > m1;
 
             while (x <12)
             {
                 while (y < 11)
                 {
-                    m1.push_back(std::pair<int, int>(x, y));
+                    Mov.push_back(std::pair<int, int>(x, y));
                     y++;
                 }
                 x++;
-                Mov.push_back(m1);
             }
         }
         else
@@ -85,17 +82,14 @@ namespace S
             int x = 2;
             int y = 1;
 
-            std::vector<std::pair<int, int> > m1;
-
             while (y <12)
             {
                 while (x < 11)
                 {
-                    m1.push_back(std::pair<int, int>(x, y));
+                    Mov.push_back(std::pair<int, int>(x, y));
                     x++;
                 }
                 y++;
-                Mov.push_back(m1);
             }
         }
         return Mov;
