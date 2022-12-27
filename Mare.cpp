@@ -140,7 +140,7 @@ namespace M
 //________________________________________________________
     vector<pair<int, int>> Mare::posAvailable(S::Sde shi, M::Mare m)
     {
-        vector<vector<pair<int, int>>> v1 = S::Moves(shi);
+        vector<pair<int, int>> v1 = S::Moves(shi);
         int x=0;
         int y=0;
         while (x <12)
