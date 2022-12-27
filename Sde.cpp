@@ -49,15 +49,6 @@ namespace S
     int Sde::getCorazza() const
     {return this -> corazza;}
 
-    //0 verticale, 1 se orizzontale
-    int Sde::Direction(std::pair<std::pair<int, int>, std::pair<int, int>>  pos)
-    {
-        if(pos.first.second == pos.second.second)
-        return 0;
-        else
-        return 1;
-    }
-
     //possibili posizioni del pMedio della Sde
     std::vector<std::pair<int, int>> Ship::Moves()
     {

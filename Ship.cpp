@@ -53,7 +53,7 @@ namespace S
     {return this -> corazza;}
 
     //0 verticale, 1 se orizzontale
-    int Ship::Direction(std::pair<std::pair<int, int>, std::pair<int, int>>  pos)
+    int Ship::Direction(std::pair<int, int> prua, std::pair<int, int> poppa)
     {}
 
     //possibili posizioni del pMedio della Nds
