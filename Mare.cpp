@@ -3,10 +3,11 @@
 using namespace std;
 namespace M
 {
+    //move
     Mare::Move::Move(S::Ship *p, pair<int, int> dest) : ship{p}, destination{dest} {}
-
     Mare::Move::Move() : ship{nullptr}, destination{pair(-1, -1)} {}
 
+    //operator
     bool operator==(const Mare::Move &m1, const Mare::Move &m2)
     {
         return (m1.ship == m2.ship && m1.destination == m2.destination);
@@ -79,27 +80,22 @@ namespace M
 
     // sistemare
 
-    Mare::Mare(string log, string player1, string play2)
+    Mare::Mare(string log, string player1, string play2, vector<vector<pair<int, int>>> m)
     {
-        vector<vector<char>> grill;
-        for (int i = 0; i < 12; i++)
-            grill.push_back();
-        // inizializzare file
-        initializeMare(0);
-        initializeMare(1);
-        initializeMare(7);
-        initializeMare(6);
-        lastMove = Move();
-        logFile = log;
-        if (log != "" && playerBlack != "" && playerWhite != "")
-        {
-            ofstream write(logFile);
-            string playerRow = "B: " + playerWhite + " N: " + playerBlack + "\n";
-            write << playerRow;
-            write.close();
-        }
+    lastMove = Move();
+    nextPlayerMoves.push_back(Move());
+    pieceToPromote = nullptr;
+    logFile = log;
+    drawMoves = 0;
+    PLWK = 30;
+    if (log != "" && playerWhite != "" && playerBlack != "") {
+        ofstream write(logFile);
+        string playerRow = "B: " + playerWhite + "\nN: " + playerBlack + "\n\n";
+        write << playerRow;
+        write.close();
     }
-
+    }
+ 
     string Mare::printMare()
     {
         string out = "";
@@ -110,8 +106,8 @@ namespace M
             out += " | ";
             for (int j = 0; j < 12; j++)
             {
-                if (mare_[i][j] != nullptr)
-                    out += mare_[i][j] -> getTipo();
+                if (mar_[i][j] != '\0')
+                    out += mar_[i][j];
                 else
                     out += " ";
                 out += " | ";
@@ -123,12 +119,34 @@ namespace M
         return out;
     }
 
+    vector<vector<pair<int, int>>> Mare::getMar()
+    {
+        return mar_;
+    }
 
     int Mare::getCondition()
     { return condition; }
 
-    vector<Mare::Move> Mare::posAvailable(char name)
+    vector<vector<pair<int, int>>> Mare::posAvailable(S::Nds ship, Mare m)
     {
+        vector<vector<pair<int, int>>> v= ship.Moves();
+    }
+
+    vector<vector<pair<int, int>>> Mare::posAvailable(S::Sde ship, M::Mare m)
+    {
+        vector<vector<pair<int, int>>> v= ship.Moves();
+        char temp[12][12] = m.getMar();
+        int x=0;
+        int y=0;
+        while (x <12)
+        {
+            while (y < 11)
+            {
+                if(temp[x][y])
+                y++;
+            }
+            x++;
+        }
     }
 
     bool Mare::performMove()

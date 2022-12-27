@@ -10,6 +10,8 @@
 #include <random>
 #include "Ship.hpp"
 #include "Players.hpp"
+#include "Nds.hpp"
+#include "Sde.hpp"
 
 using namespace std;
 
@@ -29,9 +31,11 @@ namespace M
             Move(S::Ship* p, pair<int, int> dest);
             Move();
         };
-        Mare(string log = "", string player1 = "", string player2 = "");
+        Mare(string log = "", string player1 = "", string player2 = "", vector<vector<pair<int, int>>> m);
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<Move> posAvailable(char name);
+        vector<vector<pair<int, int>>> posAvailable(S::Nds ship, Mare m);
+        //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
+        vector<vector<pair<int, int>>> posAvailable(S::Sde ship, Mare m);
         //metodo generale
         //ritorna true se è possibile la mossa
         bool performMove();
@@ -45,6 +49,8 @@ namespace M
         // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
         // 3 se patta per raggiungimento limite mosse in partita tra bot
         int getCondition();
+        //ritorna la matrice del mar
+        char getMar();
         //stampa la griglia
         string printMare();
         //aggiorna log con informazioni su vittoria
@@ -60,6 +66,8 @@ namespace M
 
         private:
 
+        //matrice del mare
+        char[12][12] mar_;
         //ogni vettore rappresenta una riga
         vector<vector<S::Ship*>> mare_;
         //ordine: C, S, E

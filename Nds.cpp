@@ -12,7 +12,7 @@ namespace S
         this -> pMedio;
         this -> state;
     }
-
+ 
     void Nds::setStructure(std::vector<char> structure_)
     {this -> structure = structure_;}
     void Nds::setTipo(char tipo_)
@@ -51,9 +51,9 @@ namespace S
     //possibili posizioni del pMedio della Nds
     std::vector<std::vector<std::pair<int, int> >> Nds::Moves()
     {
+        std::vector<std::vector<std::pair<int, int> >> Mov;
         if(Direction(pos) == true)
         {
-            std::vector<std::vector<std::pair<int, int> >> Moves;
             int y = 2;
             int x = 1;
 
@@ -67,12 +67,11 @@ namespace S
                     y++;
                 }
                 x++;
+                Mov.push_back(m1);
             }
-            Moves.push_back(m1);
         }
         else
         {
-            std::vector<std::vector<std::pair<int, int> >> Moves;
             int x = 2;
             int y = 1;
 
@@ -86,9 +85,10 @@ namespace S
                     x++;
                 }
                 y++;
+                Mov.push_back(m1);
             }
-            Moves.push_back(m1);
         }
+        return Mov;
     }
 
     void Nds::Damage()
