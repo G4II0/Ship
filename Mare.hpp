@@ -25,7 +25,7 @@ namespace M
         struct Move
         {
             //nave mossa
-            S::Ship* ship;
+            const S::Ship& ship;
             //posizione di arrivo
             pair<int, int> start;
             pair<int, int> destination;
@@ -36,9 +36,9 @@ namespace M
         Mare(string log = "", string player1 = "", string player2 = "", vector<vector<pair<int, int>>> m);
 
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(S::Nds ship, Mare m);
+        vector<pair<int, int>> posAvailable(S::Nds* ship, Mare m);
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(S::Sde ship, Mare m);
+        vector<pair<int, int>> posAvailable(S::Ship ship, Mare m);
 
         //metodo generale
         //ritorna true se è possibile la mossa

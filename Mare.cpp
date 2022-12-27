@@ -92,7 +92,7 @@ namespace M
 
     Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
     {
-        lastMove = Move();
+        lastMove;
         nextShipMoves.push_back(Move());
         logFile = log;
         drawMoves = 0;
@@ -132,15 +132,15 @@ namespace M
     int Mare::getCondition()
     { return condition; }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Nds ship, Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Nds* ship, Mare m)
     {
         vector<vector<pair<int, int>>> v= ship.Moves();
     }
 
 //________________________________________________________
-    vector<pair<int, int>> Mare::posAvailable(S::Sde ship, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Ship ship, M::Mare m)
     {
-        vector<vector<pair<int, int>>> v1= ship.Moves();
+        vector<vector<pair<int, int>>> v1 = ship.Moves();
         int x=0;
         int y=0;
         while (x <12)
@@ -163,6 +163,5 @@ namespace M
 
     bool Mare::performMove(string name, pair<int, int> &destination, char type)
     {
-        if()
     }
 }
