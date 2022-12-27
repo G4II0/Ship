@@ -125,7 +125,7 @@ namespace M
             if (i >= 1) out += "   ├───┼───┼───┼───┼───┼───┼───┼───┤\n";
         }
         out += "   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘\n";
-            out += "     A   B   C   D   E   F   G   H   I   J   K   L";
+        out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
     }
 
