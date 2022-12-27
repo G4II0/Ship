@@ -31,10 +31,6 @@ namespace M
         return result;
     }
 
-    char Mare::scanOccupied(int row, int column)
-    {
-    }
-
     void Mare::initializeMare(char mar_[12][12])
     {int x=0, y=0;
 
@@ -130,7 +126,7 @@ namespace M
     }
 
     int Mare::getCondition()
-    { return condition; }
+    { return condition;}
 
     vector<pair<int, int>> Mare::posAvailable(S::Nds shi, M::Mare m)
     {
@@ -145,11 +141,13 @@ namespace M
                 while (y < 11)
                 {
                     if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0')
-                        v1.pop_back();
+                        {v1.pop_back();}
                     else
+                    {
                         p.first = x;
-                    p.second = y;
-                    v1.push_back(p);
+                        p.second = y;
+                        v1.push_back(p);
+                    }
                     y++;
                 }
                 x++;
@@ -163,11 +161,13 @@ namespace M
                 while (y < 12)
                 {
                     if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0')
-                        v1.pop_back();
+                    {v1.pop_back();}
                     else
+                    {
                         p.first = x;
-                    p.second = y;
-                    v1.push_back(p);
+                        p.second = y;
+                        v1.push_back(p);
+                    }
                     y++;
                 }
                 x++;
