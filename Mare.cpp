@@ -162,7 +162,7 @@ namespace M
             {
                 while (y < 12)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x+1][y + 1] != '\0' || mar_[x-1][y - 1] != '\0')
+                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0')
                         v1.pop_back();
                     else
                         p.first = x;
