@@ -45,7 +45,7 @@ namespace S
         //0 verticale, 1 se orizzontale
         int Direction(std::pair<std::pair<int, int>, std::pair<int, int>> pos);
 
-        std::vector<std::pair<int, int>> Moves();
+        std::vector<std::pair<int, int>> Moves(Sde s);
 
         void Damage();
     };

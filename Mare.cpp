@@ -92,7 +92,7 @@ namespace M
 
     Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
     {
-        lastMove;
+        lastMove = Move();
         nextShipMoves.push_back(Move());
         logFile = log;
         drawMoves = 0;
@@ -138,9 +138,9 @@ namespace M
     }
 
 //________________________________________________________
-    vector<pair<int, int>> Mare::posAvailable(S::Ship ship, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Sde shi, M::Mare m)
     {
-        vector<vector<pair<int, int>>> v1 = ship.Moves();
+        vector<vector<pair<int, int>>> v1 = S::Moves(shi);
         int x=0;
         int y=0;
         while (x <12)

@@ -45,7 +45,7 @@ namespace S
 
         int Direction(std::pair<int, int> prua, std::pair<int, int> poppa);
 
-        std::vector<std::pair<int, int>> Moves();
+        std::vector<std::pair<int, int>> Moves(Ship s);
 
         void Damage();
 

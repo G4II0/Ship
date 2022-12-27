@@ -50,7 +50,7 @@ namespace S
     {return this -> corazza;}
 
     //possibili posizioni del pMedio della Sde
-    std::vector<std::pair<int, int>> Ship::Moves()
+    std::vector<std::pair<int, int>> Moves(Sde s)
     {
         std::vector<std::vector<std::pair<int, int> >> Moves;
         int y = 1;
