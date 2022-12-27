@@ -27,8 +27,9 @@ namespace M
             //nave mossa
             S::Ship* ship;
             //posizione di arrivo
+            pair<int, int> start;
             pair<int, int> destination;
-            Move(S::Ship* p, pair<int, int> dest);
+            Move(S::Ship *p, pair<int, int> start, pair<int, int> dest);
             Move();
         };
 
@@ -53,9 +54,6 @@ namespace M
         // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
         // 3 se patta per raggiungimento limite mosse in partita tra bot
         int getCondition();
-
-        //ritorna la matrice del mar
-        char getMar();
 
         //stampa la griglia
         string printMare();
@@ -82,7 +80,7 @@ namespace M
         //salva la condizione di giocatore attuale
         int condition = -1;
         //vettore contenente le posizioni disponibili della nave attuale
-        vector<Move> nextShypMoves;
+        vector<Move> nextShipMoves;
         //mappa che salva le configurazioni apparse e il numero di apparizioni di ciascuna
         map<string, int> positions;
         //numero di mosse effettuate
@@ -96,8 +94,8 @@ namespace M
         //altrimenti, ritorna 0
         char scanOccupied(pair<int, int>& pos);
         char scanOccupied(int row, int column);
-        void initializeMare(int row);
-        void insertShip(S::Ship* piece, pair<int, int>* pos);
+        void initializeMare(char mar_[12][12]);
+        void insertShip(S::Ship* ship, pair<int, int>* pos);
         //s1 = Nds, s2 = Altra nave
         bool healConditions(S::Ship* p1, S::Ship* p2);
         //aggiorna log con mossa

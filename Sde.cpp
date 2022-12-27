@@ -7,6 +7,8 @@ namespace S
         this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
         this -> pos = pos_;
+        this->prua = pos_.first;
+        this->poppa = pos_.second;
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> pMedio;
@@ -19,7 +21,11 @@ namespace S
     {this -> tipo = tipo_;}
     void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
     {this -> pos = pos_;}
-    void Sde::setPMedio(std::pair<char, int> pMedio_)
+    void Ship::setPrua(std::pair<int, int> prua_)
+    {this->prua = prua_;}
+    void Ship::setPrua(std::pair<int, int> poppa_)
+    {this->poppa = poppa_;}
+    void Sde::setPMedio(std::pair<int, int> pMedio_)
     {this -> pMedio = pMedio_;}
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
@@ -32,6 +38,10 @@ namespace S
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int>> Sde::getPos() const
     {return this -> pos;}
+    std::pair<int, int> Ship::getPrua() const
+    {return this->prua;}
+    std::pair<int, int> Ship::getPoppa() const
+    {return this->poppa;}
     std::pair<int, int> Sde::getPMedio() const
     {return this -> pMedio;}
     int Sde::getDimensione() const
