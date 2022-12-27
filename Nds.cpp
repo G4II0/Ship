@@ -59,10 +59,10 @@ namespace S
     }
 
     //possibili posizioni del pMedio della Nds
-    std::vector<std::vector<std::pair<int, int> >> Nds::Moves()
+    std::vector<std::pair<int, int>> Ship::Moves()
     {
-        std::vector<std::vector<std::pair<int, int> >> Mov;
-        if(Direction(poppa, prua) == 0)
+        std::vector<std::pair<int, int>> Mov;
+        if(Direction(prua) == 0)
         {
             int y = 2;
             int x = 1;

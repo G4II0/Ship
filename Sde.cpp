@@ -59,7 +59,7 @@ namespace S
     }
 
     //possibili posizioni del pMedio della Sde
-    std::vector<std::vector<std::pair<int, int> >> Sde::Moves()
+    std::vector<std::pair<int, int>> Ship::Moves()
     {
         std::vector<std::vector<std::pair<int, int> >> Moves;
         int y = 1;

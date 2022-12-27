@@ -57,7 +57,7 @@ namespace S
     {}
 
     //possibili posizioni del pMedio della Nds
-    std::vector<std::vector<std::pair<int, int> >> Ship::Moves()
+    std::vector<std::pair<int, int>> Ship::Moves()
     {}
 
     void Ship::Damage()

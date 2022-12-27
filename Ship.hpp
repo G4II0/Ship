@@ -45,7 +45,7 @@ namespace S
 
         int Ship::Direction(std::pair<std::pair<int, int>, std::pair<int, int>>  pos);
 
-        virtual std::vector<std::vector<std::pair<int, int>>> Moves() = 0;
+        virtual std::vector<std::pair<int, int>> Moves() = 0;
 
         void Damage();
 

@@ -45,7 +45,7 @@ namespace S
         //0 verticale, 1 se orizzontale
         int Direction(std::pair<int, int> prua, std::pair<int, int> poppa);
 
-        std::vector<std::vector<std::pair<int, int>>> Moves() override;
+        virtual std::vector<std::pair<int, int>> Moves() = 0;
 
         void Damage();
 

@@ -132,15 +132,15 @@ namespace M
     int Mare::getCondition()
     { return condition; }
 
-    vector<vector<pair<int, int>>> Mare::posAvailable(S::Nds ship, Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Nds ship, Mare m)
     {
         vector<vector<pair<int, int>>> v= ship.Moves();
     }
 
 //________________________________________________________
-    vector<vector<pair<int, int>>> Mare::posAvailable(S::Sde ship, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Sde ship, M::Mare m)
     {
-        vector<vector<pair<int, int>>> v= ship.Moves();
+        vector<vector<pair<int, int>>> v1= ship.Moves();
         int x=0;
         int y=0;
         while (x <12)
@@ -148,7 +148,7 @@ namespace M
             while (y < 11)
             {
                 if(mar_[x][y] != '\0')
-                v.push_back().push_back()
+                v1.pop_back()
                 y++;
             }
             x++;
