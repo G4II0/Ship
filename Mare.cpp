@@ -119,7 +119,7 @@ namespace M
         return out;
     }
 
-    vector<vector<pair<int, int>>> Mare::getMar()
+    char Mare::getMar()
     {
         return mar_;
     }
