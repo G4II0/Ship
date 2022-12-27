@@ -140,15 +140,14 @@ namespace M
 //________________________________________________________
     vector<pair<int, int>> Mare::posAvailable(S::Sde shi, M::Mare m)
     {
-        vector<pair<int, int>> v1 = S::Moves(shi);
-        int x=0;
-        int y=0;
+        vector<pair<int, int>> v1 = shi.Moves();
+        int x=0, y=0;
         while (x <12)
         {
             while (y < 11)
             {
                 if(mar_[x][y] != '\0')
-                v1.pop_back()
+                v1.pop_back();
                 y++;
             }
             x++;
