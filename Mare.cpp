@@ -1,11 +1,12 @@
-#include "mare.hpp"
+#include "Mare.hpp"
+#include "Ship.hpp"
 
 using namespace std;
 namespace M
 {
     //move
-    Mare::Move::Move(S::Ship *p, pair<int, int> dest) : ship{p}, destination{dest} {}
-    Mare::Move::Move() : ship{nullptr}, destination{pair(-1, -1)} {}
+    Mare::Move::Move(S::Ship *p, pair<int, int> st, pair<int, int> dest) : ship{p}, start{st}, destination{dest} {}
+    Mare::Move::Move() : ship{nullptr}, start{pair(-1, -1)}, destination{pair(-1, -1)} {}
 
     //operator
     bool operator==(const Mare::Move &m1, const Mare::Move &m2)
@@ -34,14 +35,23 @@ namespace M
     {
     }
 
-    void Mare::initializeMare(int row)
-    {
+    void Mare::initializeMare(char mar_[12][12])
+    {int x=0, y=0;
+
+        while (x < 12)
+        {
+            while (y < 12)
+            {
+                mar_[x][y] = '"\0"';
+                    y++;
+            }
+            x++;
+        }
     }
 
-    void Mare::insertShip(S::Ship *ship, pair<int, int> *pos)
+    void Mare::insertShip(S::Ship* ship, pair<int, int> *pos)
     {
-        mare_[pos->first][pos->second] = ship;
-        sList.push_back(ship);
+
     }
 
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
@@ -80,48 +90,43 @@ namespace M
 
     // sistemare
 
-    Mare::Mare(string log, string player1, string play2, vector<vector<pair<int, int>>> m)
+    Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
     {
-    lastMove = Move();
-    nextPlayerMoves.push_back(Move());
-    pieceToPromote = nullptr;
-    logFile = log;
-    drawMoves = 0;
-    PLWK = 30;
-    if (log != "" && playerWhite != "" && playerBlack != "") {
-        ofstream write(logFile);
-        string playerRow = "B: " + playerWhite + "\nN: " + playerBlack + "\n\n";
-        write << playerRow;
-        write.close();
-    }
+        lastMove = Move();
+        nextShipMoves.push_back(Move());
+        logFile = log;
+        drawMoves = 0;
+        if (log != "" && player1!= "" && player2 != "")
+        {
+            ofstream write(logFile);
+            string playerRow = "P1: " + player1 + "\nP2: " + player2 + "\n\n";
+            write << playerRow;
+            write.close();
+        }
     }
  
     string Mare::printMare()
     {
         string out = "";
-        out += "  ---------------------------------\n";
-        for (int i = 11; i >= 0; i--)
+        out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
+            for (int i = 11; i >= 0; i--)
         {
             out += to_string(i + 1);
-            out += " | ";
+            out += " │ ";
             for (int j = 0; j < 12; j++)
             {
                 if (mar_[i][j] != '\0')
                     out += mar_[i][j];
                 else
                     out += " ";
-                out += " | ";
+                out += " │ ";
             }
             out += "\n";
-            out += "  ---------------------------------\n";
+            if (i >= 1) out += "   ├───┼───┼───┼───┼───┼───┼───┼───┤\n";
         }
-        out += "    A   B   C   D   E   F   G   H   I   J   K   L";
+        out += "   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘\n";
+            out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
-    }
-
-    char Mare::getMar()
-    {
-        return mar_;
     }
 
     int Mare::getCondition()
@@ -132,22 +137,25 @@ namespace M
         vector<vector<pair<int, int>>> v= ship.Moves();
     }
 
+//________________________________________________________
     vector<vector<pair<int, int>>> Mare::posAvailable(S::Sde ship, M::Mare m)
     {
         vector<vector<pair<int, int>>> v= ship.Moves();
-        char temp[12][12] = m.getMar();
         int x=0;
         int y=0;
         while (x <12)
         {
             while (y < 11)
             {
-                if(temp[x][y])
+                if(mar_[x][y] != '\0')
+                v.push_back().push_back()
                 y++;
             }
             x++;
         }
+        return v;
     }
+//__________________________________________________________________
 
     bool Mare::performMove()
     {
