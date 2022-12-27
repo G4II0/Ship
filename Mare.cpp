@@ -132,29 +132,73 @@ namespace M
     int Mare::getCondition()
     { return condition; }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Nds* ship, Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Nds shi, M::Mare m)
     {
-        vector<vector<pair<int, int>>> v= ship.Moves();
+        vector<pair<int, int>> v1 = shi.Moves();
+        pair<int, int> p;
+        int d = shi.Direction(shi.getPrua(), shi.getPoppa());
+        if(d=0)
+        {
+            int x = 0, y = 1;
+            while (x < 12)
+            {
+                while (y < 11)
+                {
+                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0')
+                        v1.pop_back();
+                    else
+                        p.first = x;
+                    p.second = y;
+                    v1.push_back(p);
+                    y++;
+                }
+                x++;
+            }
+        }
+        else
+        {
+            int x = 1, y = 0;
+            while (x < 11)
+            {
+                while (y < 12)
+                {
+                    if (mar_[x][y] != '\0' || mar_[x+1][y + 1] != '\0' || mar_[x-1][y - 1] != '\0')
+                        v1.pop_back();
+                    else
+                        p.first = x;
+                    p.second = y;
+                    v1.push_back(p);
+                    y++;
+                }
+                x++;
+            }
+        }
+        shi.Moves() = v1;
+        return v1;
     }
 
-//________________________________________________________
     vector<pair<int, int>> Mare::posAvailable(S::Sde shi, M::Mare m)
     {
         vector<pair<int, int>> v1 = shi.Moves();
+        pair<int, int> p;
         int x=0, y=0;
         while (x <12)
         {
-            while (y < 11)
+            while (y < 12)
             {
                 if(mar_[x][y] != '\0')
                 v1.pop_back();
+                else
+                p.first = x;
+                p.second = y;
+                v1.push_back(p);
                 y++;
             }
             x++;
         }
+        shi.Moves() = v1;
         return v1;
     }
-//__________________________________________________________________
 
     bool Mare::performMove()
     {

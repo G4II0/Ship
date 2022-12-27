@@ -36,7 +36,7 @@ namespace M
         Mare(string log = "", string player1 = "", string player2 = "", vector<vector<pair<int, int>>> m);
 
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(S::Nds* ship, Mare m);
+        vector<pair<int, int>> posAvailable(S::Nds ship, Mare m);
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<pair<int, int>> posAvailable(S::Sde ship, Mare m);
 
