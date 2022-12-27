@@ -90,10 +90,6 @@ namespace M
         bool legitMoveInput(pair<int, int>& x);
         bool scanBoundaries(pair<int, int>& pos);
         bool scanBoundaries(int row, int column);
-        ///se casella occupata, ritorna 1
-        //altrimenti, ritorna 0
-        char scanOccupied(pair<int, int>& pos);
-        char scanOccupied(int row, int column);
         void initializeMare(char mar_[12][12]);
         void insertShip(S::Ship* ship, pair<int, int>* pos);
         //s1 = Nds, s2 = Altra nave
