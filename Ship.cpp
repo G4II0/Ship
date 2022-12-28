@@ -5,14 +5,15 @@ namespace S
 
     Ship::Ship()
     {}
-    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
     {
         this -> structure;
         this -> tipo;
         this -> pos = pos_;
         this -> prua = pos_.first;
         this -> poppa = pos_.second;
-        this-> dimensione;
+        this -> dimensione;
+        this -> direzione;
         this -> corazza;
         this -> pMedio;
         this -> state;
@@ -32,6 +33,8 @@ namespace S
     {this -> pMedio = pMedio_;}
     void Ship::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
+    void Ship::setDirezione(int direzione_)
+    {this -> direzione = direzione_;}
     void Ship::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
 
@@ -47,15 +50,13 @@ namespace S
     {return this->poppa;}
     std::pair<int, int> Ship::getPMedio() const
     {return this -> pMedio;}
+    int Ship::getDirezione() const
+    {return this -> direzione;}
     int Ship::getDimensione() const
     {return this -> dimensione;}
     int Ship::getCorazza() const
     {return this -> corazza;}
-
-    //0 verticale, 1 se orizzontale
-    int Ship::Direction(std::pair<int, int> prua, std::pair<int, int> poppa)
-    {}
-
+    
     //possibili posizioni del pMedio della Nds
     std::vector<std::pair<int, int>> Moves()
     {}

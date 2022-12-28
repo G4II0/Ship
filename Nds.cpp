@@ -2,13 +2,14 @@
 
 namespace S
 {
-    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
     {
         this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
         this -> pos = pos_;
         this -> prua = pos_.first;
         this -> poppa = pos_.second;
+        this -> direzione;
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> pMedio;
@@ -27,6 +28,8 @@ namespace S
     {this->poppa = poppa_;}
     void Nds::setPMedio(std::pair<int, int> pMedio_)
     {this -> pMedio = pMedio_;}
+    void Nds::setDimensione(int direzione_)
+    {this->direzione = direzione_;}
     void Nds::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
     void Nds::setCorazza(int corazza_)
@@ -39,30 +42,23 @@ namespace S
     std::pair<std::pair<int, int>, std::pair<int, int>> Nds::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
-    {return this->prua;}
+    {return this -> prua;}
     std::pair<int, int> Ship::getPoppa() const
-    {return this->poppa;}
+    {return this -> poppa;}
     std::pair<int, int> Nds::getPMedio() const
     {return this -> pMedio;}
+    int Nds::getDirezione() const
+    {return this -> direzione;}
     int Nds::getDimensione() const
     {return this -> dimensione;}
     int Nds::getCorazza() const
     {return this -> corazza;}
 
-    //0 verticle, 1 se orizzontale
-    int Nds::Direction(std::pair<int, int> prua, std::pair<int, int> poppa)
-    {
-        if(prua.first == poppa.first)
-        return 0;
-        else
-        return 1;
-    }
-
     //possibili posizioni del pMedio della Nds
     std::vector<std::pair<int, int>> Ship::Moves()
     {
         std::vector<std::pair<int, int>> Mov;
-        if(Direction(prua, poppa) == 0)
+        if(getDirezione() == 0)
         {
             int y = 2;
             int x = 1;

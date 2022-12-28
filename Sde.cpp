@@ -4,8 +4,8 @@ namespace S
 {
     Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
     {
-        this -> structure = {'S', 'S', 'S'};
-        this -> tipo = 'S';
+        this -> structure = {'E'};
+        this -> tipo = 'E';
         this -> pos = pos_;
         this->prua = pos_.first;
         this->poppa = pos_.second;

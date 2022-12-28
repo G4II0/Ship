@@ -4,32 +4,27 @@
 using namespace std;
 namespace M
 {
+/*
     //move
     Mare::Move::Move(S::Ship *p, pair<int, int> st, pair<int, int> dest) : ship{p}, start{st}, destination{dest} {}
     Mare::Move::Move() : ship{nullptr}, start{pair(-1, -1)}, destination{pair(-1, -1)} {}
+*/
 
-    //operator
-    bool operator==(const Mare::Move &m1, const Mare::Move &m2)
-    {
-        return (m1.ship == m2.ship && m1.destination == m2.destination);
-    }
+void Mare::setMare(pair<int, int> p, char c)
+{
+    int x = p.first;
+    int y = p.second;
+    this -> mar_[x][y] = c;
+}
 
-    bool Mare::legitMoveInput(pair<int, int> &x)
-    {
-        return (x.first >= 0 && x.first < 12 && x.second >= 0 && x.second < 12);
-    }
-
-    bool Mare::scanBoundaries(pair<int, int> &pos)
-    {
-        return (pos.first >= 0 && pos.first < SIZE && pos.second >= 0 && pos.second < SIZE);
-    }
-
-    bool Mare::scanBoundaries(int row, int column)
-    {
-        pair<int, int> tmp = pair(row, column);
-        bool result = scanBoundaries(tmp);
-        return result;
-    }
+bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
+{
+    vector<pair<int, int>> v = posAvailable(ship, m);
+    if (find(v.begin(), v.end(), pos) != v.end())
+    return true;
+    else
+    return false;
+}
 
     void Mare::initializeMare(char mar_[12][12])
     {int x=0, y=0;
@@ -38,39 +33,98 @@ namespace M
         {
             while (y < 12)
             {
-                mar_[x][y] = '"\0"';
+                mar_[x][y] = ' ';
+                    y++;
+            }
+            x++;
+        }
+    }
+//fixare
+    void Mare::initializeMareC(S::Ship marC_[12][12])
+    {
+        int x = 0, y = 0;
+
+        while (x < 12)
+        {
+            while (y < 12)
+            {
+                    marC_[x][y] = null;
                     y++;
             }
             x++;
         }
     }
 
-    void Mare::insertShip(S::Nds ship, pair<int, int> pos, M::Mare m)
+//inserimento corazzata
+    void Mare::insertCor(S::Nds ship, pair<int, int> pos, M::Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship, m);
-        if (find(v.begin(), v.end(), pos) != v.end())
+        if (legitMoveInput(ship, pos, m) == true)
         {
-            if (ship.Direction(ship.getPrua(), ship.getPoppa()) == 0)//fixare
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<int, int> temp3;
+            pair<int, int> temp4;
+            pair<pair<int, int>, pair<int, int>> temp5;
+            if (ship.getDirezione() == 0)
             {
-                pair<int, int> temp2;
-                pair<int, int> temp1;
-                pair<int, int> temp2;
-                pair<pair<int, int>, pair<int, int>> temp3;
-                temp1.first = pos.first;
-                temp1.second = (pos.second) + 1;
-                temp2.first = pos.first;
+                temp1.first = pos.first;         // x prua
+                temp1.second = (pos.second) + 2; // y prua
+                temp2.first = pos.first;         // x poppa
+                temp2.second = (pos.second) - 2; // y poppa
+                temp3.first = pos.first;
+                temp3.second = (pos.second) + 1;
+                temp4.first = pos.first;
                 temp2.second = (pos.second) - 1;
-                temp3.first = temp1;
-                temp3.second = temp2;
+                temp5.first = temp1;  // c prua
+                temp5.second = temp2; // c poppa
+                ship.setPos(temp5);
+            }
+            else
+            {
+                temp1.first = (pos.first) + 2; // x prua
+                temp1.second = pos.second;     // y prua
+                temp2.first = (pos.first) - 2; // x poppa
+                temp2.second = pos.second;     // y poppa
+                temp3.first = (pos.first) + 1;
+                temp3.second = pos.second;
+                temp4.first = (pos.first) - 1;
+                temp2.second = pos.second;
+                temp5.first = temp1;  // c prua
+                temp5.second = temp2; // c poppa
+                ship.setPos(temp5);
+            }
+            // posizionamento nella board
+            setMare(pos, 'C');
+            setMare(temp1, 'C');
+            setMare(temp2, 'C');
+            setMare(temp3, 'C');
+            setMare(temp4, 'C');
+        }
+        // else
+        // error;
+    }
+
+//inserimento Nds
+    void Mare::insertNds(S::Nds ship, pair<int, int> pos, M::Mare m)
+    {
+        if (legitMoveInput(ship, pos, m) == true)
+        {
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<pair<int, int>, pair<int, int>> temp3;
+            if (ship.getDirezione() == 0)
+            {
+                temp1.first = pos.first;         // x prua
+                temp1.second = (pos.second) + 1; // y prua
+                temp2.first = pos.first;         // x poppa
+                temp2.second = (pos.second) - 1; // y poppa
+                temp3.first = temp1;             // c prua
+                temp3.second = temp2;            // c poppa
                 ship.setPos(temp3);
             }
             else
             {
-                pair<int, int> temp2;
-                pair<int, int> temp1;
-                pair<int, int> temp2;
-                pair<pair<int, int>, pair<int, int>> temp3;
-                temp1.first = (pos.first) +1;
+                temp1.first = (pos.first) + 1;
                 temp1.second = pos.second;
                 temp2.first = (pos.first) - 1;
                 temp2.second = pos.second;
@@ -78,10 +132,45 @@ namespace M
                 temp3.second = temp2;
                 ship.setPos(temp3);
             }
+            // posizionamento nella board
+            setMare(pos, 'S');
+            setMare(temp1, 'S');
+            setMare(temp2, 'S');
         }
-        //else
-            //error;
+        // else
+        // error;
     }
+
+    // inserimento Sde
+    void Mare::insertSde(S::Nds ship, pair<int, int> pos, M::Mare m)
+    {
+        if (legitMoveInput(ship, pos, m) == true)
+        {
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<pair<int, int>, pair<int, int>> temp3;
+            temp1.first = pos.first;         // x prua
+            temp1.second = (pos.second);     // y prua
+            temp3.first = temp1;             // c prua
+            temp3.second = temp1;            // c poppa
+            ship.setPos(temp3);
+            // posizionamento nella board
+            setMare(pos, 'E');
+        }
+        // else
+        // error;
+    }
+
+
+    void Mare::shipHit()
+    {
+    }
+
+    void Mare::shipHit()
+    {
+    }
+
+//_______________________________________________________________________________________________________________________________________________
 
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
     {
@@ -110,15 +199,13 @@ namespace M
         write.close();
     }
 
-    void Mare::updateLogHit()
-    {
-    }
+//________________________________________________________________________________________________________________________________________________________
 
     bool healConditions(S::Ship *p1, S::Ship *p2)
     {}
 
     // sistemare
-
+/*
     Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
     {
         lastMove = Move();
@@ -133,8 +220,9 @@ namespace M
             write.close();
         }
     }
- 
-    string Mare::printMare()
+*/
+
+    string Mare::printAMare()
     {
         string out = "";
         out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
@@ -158,14 +246,40 @@ namespace M
         return out;
     }
 
-    int Mare::getCondition()
+//sistemare
+    string Mare::printEMare()
+    {
+        string out = "";
+        out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
+        for (int i = 11; i >= 0; i--)
+        {
+            out += to_string(i + 1);
+            out += " │ ";
+            for (int j = 0; j < 12; j++)
+            {
+                if (mar_[i][j] != '\0')
+                    out += mar_[i][j];
+                else
+                    out += " ";
+                out += " │ ";
+            }
+            out += "\n";
+            if (i >= 1)
+                out += "   ├───┼───┼───┼───┼───┼───┼───┼───┤\n";
+        }
+        out += "   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘\n";
+        out += "     A   B   C   D   E   F   G   H   I   J   K   L";
+        return out;
+    }
+
+    int Mare::getMCondition()
     { return condition;}
 
     vector<pair<int, int>> Mare::posAvailable(S::Nds shi, M::Mare m)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
-        int d = shi.Direction(shi.getPrua(), shi.getPoppa());
+        int d = shi.getDirezione();
         if(d=0)
         {
             int x = 0, y = 1;
