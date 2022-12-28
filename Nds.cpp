@@ -7,8 +7,8 @@ namespace S
         this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
         this -> pos = pos_;
-        this->prua = pos_.first;
-        this->poppa = pos_.second;
+        this -> prua = pos_.first;
+        this -> poppa = pos_.second;
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> pMedio;

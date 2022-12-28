@@ -45,9 +45,42 @@ namespace M
         }
     }
 
-    void Mare::insertShip(S::Ship* ship, pair<int, int> *pos)
+    void Mare::insertShip(S::Nds ship, pair<int, int> pos, M::Mare m)
     {
-
+        vector<pair<int, int>> v = posAvailable(ship, m);
+        if (find(v.begin(), v.end(), pos) != v.end())
+        {
+            if (ship.Direction(ship.getPrua(), ship.getPoppa()) == 0)//fixare
+            {
+                pair<int, int> temp2;
+                pair<int, int> temp1;
+                pair<int, int> temp2;
+                pair<pair<int, int>, pair<int, int>> temp3;
+                temp1.first = pos.first;
+                temp1.second = (pos.second) + 1;
+                temp2.first = pos.first;
+                temp2.second = (pos.second) - 1;
+                temp3.first = temp1;
+                temp3.second = temp2;
+                ship.setPos(temp3);
+            }
+            else
+            {
+                pair<int, int> temp2;
+                pair<int, int> temp1;
+                pair<int, int> temp2;
+                pair<pair<int, int>, pair<int, int>> temp3;
+                temp1.first = (pos.first) +1;
+                temp1.second = pos.second;
+                temp2.first = (pos.first) - 1;
+                temp2.second = pos.second;
+                temp3.first = temp1;
+                temp3.second = temp2;
+                ship.setPos(temp3);
+            }
+        }
+        //else
+            //error;
     }
 
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
@@ -198,13 +231,5 @@ namespace M
         }
         shi.Moves() = v1;
         return v1;
-    }
-
-    bool Mare::performMove()
-    {
-    }
-
-    bool Mare::performMove(string name, pair<int, int> &destination, char type)
-    {
     }
 }

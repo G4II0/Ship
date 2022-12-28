@@ -40,16 +40,6 @@ namespace M
         //ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<pair<int, int>> posAvailable(S::Sde ship, Mare m);
 
-        //metodo generale
-        //ritorna true se è possibile la mossa
-        bool performMove();
-        //metodo per computer: mossa presa automaticamente da nextPlayerMoves
-        //ritorna true se è possibile muovere
-        bool performMove();
-        //metodo per giocatore: fornire posizioni
-        //ritorna true se è possibile muovere
-        bool performMove(string name, pair<int, int> &destination, char type);
-
         // aggiorna log con informazioni su vittoria
         // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
         // 3 se patta per raggiungimento limite mosse in partita tra bot
@@ -91,7 +81,7 @@ namespace M
         bool scanBoundaries(pair<int, int>& pos);
         bool scanBoundaries(int row, int column);
         void initializeMare(char mar_[12][12]);
-        void insertShip(S::Ship* ship, pair<int, int>* pos);
+        void insertShip(S::Nds ship, pair<int, int> pos, M::Mare m);
         //s1 = Nds, s2 = Altra nave
         bool healConditions(S::Ship* p1, S::Ship* p2);
         //aggiorna log con mossa
