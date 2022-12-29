@@ -53,8 +53,8 @@ namespace S
     std::vector<std::pair<int, int>> Moves()
     {
         std::vector<std::vector<std::pair<int, int> >> Moves;
-        int y = 1;
-        int x = 1;
+        int y = 0;
+        int x = 0;
         std::vector<std::pair<int, int> > m1;
         while (x <12)
         {

@@ -24,7 +24,7 @@ namespace M
         //matrice del mare
         char mar_ [12][12];
         // matrice del mare (centri-oggetto)
-        S::Ship marC_[12][12];
+        pair<int, int> marC_[12][12];
         // salva la condizione di giocatore attuale
         int condition = -1;
 
@@ -47,15 +47,23 @@ namespace M
 
         //genera la board vuota
         void initializeMare(char mar_[12][12]);
-        void initializeMareC(S::Ship mar_[12][12]);
+        void initializeMareC(pair<int, int> mar_[8]);
         //inserisce la nave nella borad
-        void insertCor(S::Nds ship, pair<int, int> pos, M::Mare m);
+        void insertCor(S::Corazzata ship, pair<int, int> pos, M::Mare m);
         void insertNds(S::Nds ship, pair<int, int> pos, M::Mare m);
-        void insertSde(S::Nds ship, pair<int, int> pos, M::Mare m);
+        void insertSde(S::Sde ship, pair<int, int> pos, M::Mare m);
         //controlla se le coordinate di arrivo dello spostamento sono nella board
+        bool legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m);
         bool legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m);
-        //spostamento generale
+        bool legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m);
+        //spostamento Generale
         void Move(pair<int, int> start, pair<int, int> dest);
+        //spostamento Corazzata
+        void MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
+        //spostamento Nds
+        void MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
+        //spostamento Sde
+        void MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, M::Mare m);
         // s1 = Nds, s2 = Altra nave
         bool healConditions(S::Ship s1, S::Ship s2);
         // assegna la cura e aggiorna la board
@@ -64,9 +72,10 @@ namespace M
         void shipHit();
 
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
+        vector<pair<int, int>> posAvailable(S::Corazzata ship, Mare m);
         vector<pair<int, int>> posAvailable(S::Nds ship, Mare m);
-        // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<pair<int, int>> posAvailable(S::Sde ship, Mare m);
+        
 
         // aggiorna log con informazioni su vittoria
         // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
