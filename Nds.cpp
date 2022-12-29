@@ -60,8 +60,8 @@ namespace S
         std::vector<std::pair<int, int>> Mov;
         if(getDirezione() == 0)
         {
-            int y = 2;
-            int x = 1;
+            int y = 1;
+            int x = 0;
 
             while (x <12)
             {
@@ -75,8 +75,8 @@ namespace S
         }
         else
         {
-            int x = 2;
-            int y = 1;
+            int x = 1;
+            int y = 0;
 
             while (y <12)
             {

@@ -19,6 +19,8 @@ namespace S
         int direzione;
         int dimensione;
         int corazza;
+        //numero!!! aggiungilo!!
+        int numero;
         bool state;
 
         public:

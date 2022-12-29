@@ -2,13 +2,14 @@
 
 namespace S
 {
-    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
     {
         this -> structure = {'C', 'C', 'C', 'C', 'C'};
         this -> tipo = 'C';
         this -> pos = pos_;
-        this->prua = pos_.first;
-        this->poppa = pos_.second;
+        this -> prua = pos_.first;
+        this -> poppa = pos_.second;
+        this -> direzione = direzione_;
         this -> dimensione = 5;
         this -> corazza = 5;
         this -> pMedio;
@@ -27,6 +28,8 @@ namespace S
     {this->poppa = poppa_;}
     void Ship::setPMedio(std::pair<int, int> pMedio_)
     {this -> pMedio = pMedio_;}
+    void Ship::setDirezione(int direzione_)
+    {this -> direzione = direzione_;}
     void Ship::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
     void Ship::setCorazza(int corazza_)
@@ -48,6 +51,42 @@ namespace S
     {return this -> dimensione;}
     int Ship::getCorazza() const
     {return this -> corazza;}
+
+    std::vector<std::pair<int, int>> Ship::Moves()
+    {
+        std::vector<std::pair<int, int>> Mov;
+        if(getDirezione() == 0)
+        {
+            int y = 2;
+            int x = 0;
+
+            while (x <12)
+            {
+                while (y < 10)
+                {
+                    Mov.push_back(std::pair<int, int>(x, y));
+                    y++;
+                }
+                x++;
+            }
+        }
+        else
+        {
+            int x = 2;
+            int y = 0;
+
+            while (y <12)
+            {
+                while (x < 11)
+                {
+                    Mov.push_back(std::pair<int, int>(x, y));
+                    x++;
+                }
+                y++;
+            }
+        }
+        return Mov;
+    }
 
     void Corazzata::Damage()
     {
