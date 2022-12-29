@@ -2,7 +2,7 @@
 
 namespace S
 {
-    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
+    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
     {
         this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
@@ -13,6 +13,7 @@ namespace S
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> pMedio;
+        this -> numero = numero_;
         this -> state;
     }
  
@@ -32,6 +33,8 @@ namespace S
     {this->direzione = direzione_;}
     void Nds::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
+    void Nds::setNumero(int numero_)
+    {this -> numero = numero_;}
     void Nds::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
 
@@ -53,6 +56,8 @@ namespace S
     {return this -> dimensione;}
     int Nds::getCorazza() const
     {return this -> corazza;}
+    int Nds::getNumero() const
+    {return this -> numero;}
 
     //possibili posizioni del pMedio della Nds
     std::vector<std::pair<int, int>> Ship::Moves()

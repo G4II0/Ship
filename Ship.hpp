@@ -26,7 +26,7 @@ namespace S
         public:
 
         Ship();
-        Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_);
+        Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);

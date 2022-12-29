@@ -19,11 +19,12 @@ namespace S
         int direzione;
         int dimensione;
         int corazza;
+        int numero;
         bool state;
 
         public:
 
-        Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_);
+        Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
@@ -33,6 +34,8 @@ namespace S
         void setPMedio(std::pair<int, int> pMedio_);
         void setDirezione(int direzione);
         void setDimensione(int dimensione_);
+        void setCorazza(int corazza_);
+        void setNumero(int numero_);
         void setCorazza(int corazza_);
 
         std::vector<char> getStructure() const;

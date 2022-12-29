@@ -5,7 +5,7 @@ namespace S
 
     Ship::Ship()
     {}
-    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
+    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero)
     {
         this -> structure;
         this -> tipo;

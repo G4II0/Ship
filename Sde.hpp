@@ -18,11 +18,12 @@ namespace S
         std::pair<int, int> poppa;
         int dimensione;
         int corazza;
+        int numero;
         bool state;
 
         public:
 
-        Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos);
+        Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos, int numero);
 
         void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
@@ -31,6 +32,7 @@ namespace S
         void setPoppa(std::pair<int, int> poppa_);
         void setPMedio(std::pair<int, int> pMedio_);
         void setDimensione(int dimensione_);
+        void setNumero(int numero_);
         void setCorazza(int corazza_);
 
         std::vector<char> getStructure() const;
@@ -40,6 +42,7 @@ namespace S
         std::pair<int, int> getPoppa() const;
         std::pair<int, int> getPMedio() const;
         int getDimensione() const;
+        int getNumero() const;
         int getCorazza() const;
 
         //0 verticale, 1 se orizzontale

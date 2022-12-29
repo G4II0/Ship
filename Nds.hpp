@@ -19,11 +19,12 @@ namespace S
         int direzione;
         int dimensione;
         int corazza;
+        int numero;
         bool state;
 
         public:
 
-        Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_);
+        Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
@@ -34,6 +35,8 @@ namespace S
         void setDirezione(int direzione_);
         void setDimensione(int dimensione_);
         void setCorazza(int corazza_);
+        void setNumero(int numero_);
+        void setStato(int state_);
 
         std::vector<char> getStructure() const;
         char getTipo() const;
@@ -44,6 +47,8 @@ namespace S
         int getDirezione() const;
         int getDimensione() const;
         int getCorazza() const;
+        int getNumero() const;
+        bool getState() const;
 
         std::vector<std::pair<int, int>> Moves();
 

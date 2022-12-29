@@ -111,7 +111,7 @@ namespace M
             setMare(temp3, 'C');
             setMare(temp4, 'C');
             // posizionamento nel mareC
-            marCor[ship.getNumber()] = S::Corazzata(temp5, ship.getDirezione());
+            marCor[ship.getNumero()] = S::Corazzata(temp5, ship.getDirezione(), ship.getNumero());
         }
         // else
         // error;
@@ -150,7 +150,7 @@ namespace M
             setMare(temp1, 'S');
             setMare(temp2, 'S');
             // posizionamento nel mareC
-            marC_[pos.first][pos.second] = S::Nds(temp3, ship.getDirezione());
+            marNds[ship.getNumero()] = S::Nds(temp3, ship.getDirezione(), ship.getNumero());
         }
         // else
         // error;
@@ -172,33 +172,33 @@ namespace M
             // posizionamento nella board
             setMare(pos, 'E');
             // posizionamento nel mareC
-            marC_[pos.first][pos.second] = S::Sde(temp3);
+            marSde[ship.getNumero()] = S::Sde(temp3 , ship.getNumero());
         }
         // else
         // error;
     }
 
+//void MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
+
     //move generico
-    void Mare::Move(pair<int, int> start, pair<int, int> dest)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m)
     {
         pair<pair<int, int>, pair<int, int>> p;
         p.first = start;
         p.first = dest;
-        char t = marC_[start.first][start.second].getTipo();
-        int d = marC_[start.first][start.second].getDirezione();
-        if( t == 'C')
-        {
-            MoveCorazzata(start, dest, d, marC_[start.first][start.second]);
+        if(mar_[start.first][start.second] == 'C')
+        {S::Corazzata t = marCor[3];
+            MoveCorazzata(start, dest, t.getDirezione(), t, m);
         }
         else
-        if( t == 'S')
-        {
-            MoveNds(start, dest, d, marC_[start.first][start.second]);
+        if(mar_[start.first][start.second] == 'S')
+        {S::Nds t = marNds[3];
+            MoveNds(start, dest, t.getDirezione(), t, m);
         }
         else
-        if( t == 'E')
-        {
-            MoveSde(start, dest, marC_[start.first][start.second]);
+                if(mar_[start.first][start.second] == 'C')
+        {S::Sde t = marSde[2];
+            MoveSde(start, dest, t, m);
         }
         //errore
         
@@ -219,20 +219,9 @@ namespace M
     //move generico
     void Mare::MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
     {
-        if (legitMoveInput(s, s.getPos(), m) == true)
+        if (legitMoveInput(s, dest, m) == true)
         {
-            pair<int, int> temp1;
-            pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int>> temp3;
-            temp1.first = pos.first;         // x prua
-            temp1.second = (pos.second);     // y prua
-            temp3.first = temp1;             // c prua
-            temp3.second = temp1;            // c poppa
-            ship.setPos(temp3);
-            // posizionamento nella board
-            setMare(pos, 'E');
-            // posizionamento nel mareC
-            marC_[pos.first][pos.second] = S::Sde(temp3);
+
         }
     }
 

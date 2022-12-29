@@ -10,6 +10,7 @@
 #include <random>
 #include "Ship.hpp"
 #include "Players.hpp"
+#include "Corazzata.hpp"
 #include "Nds.hpp"
 #include "Sde.hpp"
 
@@ -24,11 +25,11 @@ namespace M
         //matrice del mare
         char mar_ [12][12];
         // matrice del mare (centri-Corazzate)
-        pair<pair<int, int>, S::Corazzata> marCor[3];
+        S::Corazzata marCor[3];
         // matrice del mare (centri-Supporto)
-        pair<pair<int, int>, S::Nds> marNds[3];
+        S::Nds marNds[3];
         // matrice del mare (centri-Esplorazione)
-        pair<pair<int, int>, S::Sde> marSde[2];
+        S::Sde marSde[2];
         // salva la condizione di giocatore attuale
         int condition = -1;
 
@@ -61,7 +62,7 @@ namespace M
         bool legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m);
         bool legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m);
         //spostamento Generale
-        void Move(pair<int, int> start, pair<int, int> dest);
+        void Move(pair<int, int> start, pair<int, int> dest, Mare m);
         //spostamento Corazzata
         void MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
         //spostamento Nds

@@ -2,7 +2,7 @@
 
 namespace S
 {
-    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_)
+    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
     {
         this -> structure = {'C', 'C', 'C', 'C', 'C'};
         this -> tipo = 'C';
@@ -13,6 +13,7 @@ namespace S
         this -> dimensione = 5;
         this -> corazza = 5;
         this -> pMedio;
+        this -> numero = numero_;
         this -> state;
     }
 
@@ -32,6 +33,8 @@ namespace S
     {this -> direzione = direzione_;}
     void Ship::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
+    void Ship::setNumero(int numero_)
+    {this -> numero = numero_;}
     void Ship::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
 
@@ -49,6 +52,8 @@ namespace S
     {return this -> pMedio;}
     int Ship::getDimensione() const
     {return this -> dimensione;}
+    int Ship::getNumero() const
+    {return this -> numero;}
     int Ship::getCorazza() const
     {return this -> corazza;}
 

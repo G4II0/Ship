@@ -2,7 +2,7 @@
 
 namespace S
 {
-    Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int numero_)
     {
         this -> structure = {'E'};
         this -> tipo = 'E';
@@ -12,6 +12,7 @@ namespace S
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> pMedio;
+        this -> numero = numero_;
         this -> state;
     }
 
@@ -29,6 +30,8 @@ namespace S
     {this -> pMedio = pMedio_;}
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
+    void Sde::setNumero(int numero_)
+    {this -> numero = numero_;}
     void Sde::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
 
@@ -46,6 +49,8 @@ namespace S
     {return this -> pMedio;}
     int Sde::getDimensione() const
     {return this -> dimensione;}
+    int Sde::getNumero() const
+    {return this -> numero;}
     int Sde::getCorazza() const
     {return this -> corazza;}
 
