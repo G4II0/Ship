@@ -37,6 +37,8 @@ namespace S
         void setDirezione(int direzione_);
         void setDimensione(int dimensione_);
         void setCorazza(int corazza_);
+        void setNumero(int num_);
+        void setState(bool state_);
 
         std::vector<char> getStructure() const;
         char getTipo() const;
@@ -47,6 +49,8 @@ namespace S
         int getDirezione() const;
         int getDimensione() const;
         int getCorazza() const;
+        int getNumero() const;
+        int getStato() const;
 
         std::vector<std::pair<int, int>> Moves();
 

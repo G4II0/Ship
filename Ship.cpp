@@ -16,6 +16,7 @@ namespace S
         this -> direzione;
         this -> corazza;
         this -> pMedio;
+        this -> numero;
         this -> state;
     }
 
@@ -37,6 +38,8 @@ namespace S
     {this -> direzione = direzione_;}
     void Ship::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
+    void Ship::setNumero(int numero_)
+    {this-> numero = numero;}
 
     std::vector<char> Ship::getStructure() const
     {return this -> structure;}
