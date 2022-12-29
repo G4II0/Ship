@@ -23,8 +23,12 @@ namespace M
 
         //matrice del mare
         char mar_ [12][12];
-        // matrice del mare (centri-oggetto)
-        pair<int, int> marC_[12][12];
+        // matrice del mare (centri-Corazzate)
+        pair<pair<int, int>, S::Corazzata> marCor[3];
+        // matrice del mare (centri-Supporto)
+        pair<pair<int, int>, S::Nds> marNds[3];
+        // matrice del mare (centri-Esplorazione)
+        pair<pair<int, int>, S::Sde> marSde[2];
         // salva la condizione di giocatore attuale
         int condition = -1;
 

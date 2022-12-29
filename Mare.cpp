@@ -111,7 +111,7 @@ namespace M
             setMare(temp3, 'C');
             setMare(temp4, 'C');
             // posizionamento nel mareC
-            marC_[pos.first][pos.second] = S::Corazzata(temp5, ship.getDirezione());;
+            marCor[ship.getNumber()] = S::Corazzata(temp5, ship.getDirezione());
         }
         // else
         // error;
@@ -361,7 +361,7 @@ namespace M
             {
                 while (y < 11)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0')
+                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0' || mar_[x][y+2] != '\0' || mar_[x][y-2] != '\0')
                         {v1.pop_back();}
                     else
                     {
@@ -381,7 +381,7 @@ namespace M
             {
                 while (y < 12)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0')
+                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0' || mar_[x+2][y] != '\0' || mar_[x-2][y] != '\0')
                     {v1.pop_back();}
                     else
                     {
