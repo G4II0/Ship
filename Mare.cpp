@@ -1,30 +1,44 @@
 #include "Mare.hpp"
 #include "Ship.hpp"
+#include "Corazzata.hpp"
+#include "Nds.hpp"
+#include "Sde.hpp"
 
 using namespace std;
 namespace M
 {
-/*
-    //move
-    Mare::Move::Move(S::Ship *p, pair<int, int> st, pair<int, int> dest) : ship{p}, start{st}, destination{dest} {}
-    Mare::Move::Move() : ship{nullptr}, start{pair(-1, -1)}, destination{pair(-1, -1)} {}
-*/
 
-void Mare::setMare(pair<int, int> p, char c)
-{
-    int x = p.first;
-    int y = p.second;
-    this -> mar_[x][y] = c;
-}
+    void Mare::setMare(pair<int, int> p, char c)
+    {
+        int x = p.first;
+        int y = p.second;
+        this -> mar_[x][y] = c;
+    }
 
-bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
-{
-    vector<pair<int, int>> v = posAvailable(ship, m);
-    if (find(v.begin(), v.end(), pos) != v.end())
-    return true;
-    else
-    return false;
-}
+    bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
+    {
+        vector<pair<int, int>> v = posAvailable(ship, m);
+        if (find(v.begin(), v.end(), pos) != v.end())
+        return true;
+        else
+        return false;
+    }
+        bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
+    {
+        vector<pair<int, int>> v = posAvailable(ship, m);
+        if (find(v.begin(), v.end(), pos) != v.end())
+        return true;
+        else
+        return false;
+    }
+        bool Mare::legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m)
+    {
+        vector<pair<int, int>> v = posAvailable(ship, m);
+        if (find(v.begin(), v.end(), pos) != v.end())
+        return true;
+        else
+        return false;
+    }
 
     void Mare::initializeMare(char mar_[12][12])
     {int x=0, y=0;
@@ -40,23 +54,20 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
         }
     }
 //fixare
-    void Mare::initializeMareC(S::Ship marC_[12][12])
+    void Mare::initializeMareC(pair<int, int> marC_[8])
     {
-        int x = 0, y = 0;
+        int i = 0;
 
-        while (x < 12)
+        while (i < 12)
         {
-            while (y < 12)
-            {
-                    marC_[x][y] = null;
-                    y++;
-            }
-            x++;
+                marC_[i].first = 0;
+                marC_[i].second = 0;
+            i++;
         }
     }
 
 //inserimento corazzata
-    void Mare::insertCor(S::Nds ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertCor(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -93,12 +104,14 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
                 temp5.second = temp2; // c poppa
                 ship.setPos(temp5);
             }
-            // posizionamento nella board
+            // posizionamento nel mare
             setMare(pos, 'C');
             setMare(temp1, 'C');
             setMare(temp2, 'C');
             setMare(temp3, 'C');
             setMare(temp4, 'C');
+            // posizionamento nel mareC
+            marCor[ship.getNumber()] = S::Corazzata(temp5, ship.getDirezione());
         }
         // else
         // error;
@@ -136,13 +149,15 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
             setMare(pos, 'S');
             setMare(temp1, 'S');
             setMare(temp2, 'S');
+            // posizionamento nel mareC
+            marC_[pos.first][pos.second] = S::Nds(temp3, ship.getDirezione());
         }
         // else
         // error;
     }
 
     // inserimento Sde
-    void Mare::insertSde(S::Nds ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertSde(S::Sde ship, pair<int, int> pos, M::Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -156,11 +171,70 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
             ship.setPos(temp3);
             // posizionamento nella board
             setMare(pos, 'E');
+            // posizionamento nel mareC
+            marC_[pos.first][pos.second] = S::Sde(temp3);
         }
         // else
         // error;
     }
 
+    //move generico
+    void Mare::Move(pair<int, int> start, pair<int, int> dest)
+    {
+        pair<pair<int, int>, pair<int, int>> p;
+        p.first = start;
+        p.first = dest;
+        char t = marC_[start.first][start.second].getTipo();
+        int d = marC_[start.first][start.second].getDirezione();
+        if( t == 'C')
+        {
+            MoveCorazzata(start, dest, d, marC_[start.first][start.second]);
+        }
+        else
+        if( t == 'S')
+        {
+            MoveNds(start, dest, d, marC_[start.first][start.second]);
+        }
+        else
+        if( t == 'E')
+        {
+            MoveSde(start, dest, marC_[start.first][start.second]);
+        }
+        //errore
+        
+    }
+
+    //move generico
+    void Mare::MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
+    {
+
+    }
+
+    //move generico
+    void Mare::MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
+    {
+
+    }
+
+    //move generico
+    void Mare::MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
+    {
+        if (legitMoveInput(s, s.getPos(), m) == true)
+        {
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<pair<int, int>, pair<int, int>> temp3;
+            temp1.first = pos.first;         // x prua
+            temp1.second = (pos.second);     // y prua
+            temp3.first = temp1;             // c prua
+            temp3.second = temp1;            // c poppa
+            ship.setPos(temp3);
+            // posizionamento nella board
+            setMare(pos, 'E');
+            // posizionamento nel mareC
+            marC_[pos.first][pos.second] = S::Sde(temp3);
+        }
+    }
 
     void Mare::shipHit()
     {
@@ -274,6 +348,55 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
 
     int Mare::getMCondition()
     { return condition;}
+
+    vector<pair<int, int>> Mare::posAvailable(S::Corazzata shi, M::Mare m)
+    {
+        vector<pair<int, int>> v1 = shi.Moves();
+        pair<int, int> p;
+        int d = shi.getDirezione();
+        if(d=0)
+        {
+            int x = 0, y = 1;
+            while (x < 12)
+            {
+                while (y < 11)
+                {
+                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0' || mar_[x][y+2] != '\0' || mar_[x][y-2] != '\0')
+                        {v1.pop_back();}
+                    else
+                    {
+                        p.first = x;
+                        p.second = y;
+                        v1.push_back(p);
+                    }
+                    y++;
+                }
+                x++;
+            }
+        }
+        else
+        {
+            int x = 1, y = 0;
+            while (x < 11)
+            {
+                while (y < 12)
+                {
+                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0' || mar_[x+2][y] != '\0' || mar_[x-2][y] != '\0')
+                    {v1.pop_back();}
+                    else
+                    {
+                        p.first = x;
+                        p.second = y;
+                        v1.push_back(p);
+                    }
+                    y++;
+                }
+                x++;
+            }
+        }
+        shi.Moves() = v1;
+        return v1;
+    }
 
     vector<pair<int, int>> Mare::posAvailable(S::Nds shi, M::Mare m)
     {
