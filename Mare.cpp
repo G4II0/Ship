@@ -161,8 +161,7 @@ bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
         // error;
     }
 
-
-    void Mare::shipHit()
+    void Mare::shipHeal()
     {
     }
 
