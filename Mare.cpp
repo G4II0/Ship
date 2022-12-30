@@ -111,7 +111,7 @@ namespace M
             setMare(temp3, 'C');
             setMare(temp4, 'C');
             // posizionamento nel mareC
-            marCor[ship.getNumero()] = S::Corazzata(temp5, ship.getDirezione(), ship.getNumero());
+            marCor[ship.getNumero()] = ship;
         }
         // else
         // error;
@@ -150,7 +150,7 @@ namespace M
             setMare(temp1, 'S');
             setMare(temp2, 'S');
             // posizionamento nel mareC
-            marNds[ship.getNumero()] = S::Nds(temp3, ship.getDirezione(), ship.getNumero());
+            marNds[ship.getNumero()] = ship;
         }
         // else
         // error;
@@ -172,7 +172,7 @@ namespace M
             // posizionamento nella board
             setMare(pos, 'E');
             // posizionamento nel mareC
-            marSde[ship.getNumero()] = S::Sde(temp3 , ship.getNumero());
+            marSde[ship.getNumero()] = ship;
         }
         // else
         // error;
@@ -183,9 +183,6 @@ namespace M
     //move generico
     void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m)
     {
-        pair<pair<int, int>, pair<int, int>> p;
-        p.first = start;
-        p.first = dest;
         if(mar_[start.first][start.second] == 'C')
         {S::Corazzata t = marCor[3];
             MoveCorazzata(start, dest, t.getDirezione(), t, m);
@@ -207,7 +204,50 @@ namespace M
     //move generico
     void Mare::MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
     {
-
+        if (legitMoveInput(s, dest, m) == true)
+        {
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<int, int> temp3;
+            pair<int, int> temp4;
+            pair<pair<int, int>, pair<int, int>> temp5;
+            if (s.getDirezione() == 0)
+            {
+                temp1.first = dest.first;         // x prua
+                temp1.second = (dest.second) + 2; // y prua
+                temp2.first = dest.first;         // x poppa
+                temp2.second = (dest.second) - 2; // y poppa
+                temp3.first = dest.first;
+                temp3.second = (dest.second) + 1;
+                temp4.first = dest.first;
+                temp2.second = (dest.second) - 1;
+                temp5.first = temp1;  // c prua
+                temp5.second = temp2; // c poppa
+                s.setPos(temp5);
+            }
+            else
+            {
+                temp1.first = (dest.first) + 2; // x prua
+                temp1.second = dest.second;     // y prua
+                temp2.first = (dest.first) - 2; // x poppa
+                temp2.second = dest.second;     // y poppa
+                temp3.first = (dest.first) + 1;
+                temp3.second = dest.second;
+                temp4.first = (dest.first) - 1;
+                temp2.second = dest.second;
+                temp5.first = temp1;  // c prua
+                temp5.second = temp2; // c poppa
+                s.setPos(temp5);
+            }
+            // posizionamento nel mare
+            setMare(dest, 'C');
+            setMare(temp1, 'C');
+            setMare(temp2, 'C');
+            setMare(temp3, 'C');
+            setMare(temp4, 'C');
+        }
+        // else
+        // error;
     }
 
     //move generico
