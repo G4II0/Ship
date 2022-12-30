@@ -54,14 +54,34 @@ namespace M
         }
     }
 //fixare
-    void Mare::initializeMareC(pair<int, int> marC_[8])
+    void Mare::initializeMareCor(S::Corazzata marCor_[3])
     {
         int i = 0;
 
         while (i < 12)
         {
-                marC_[i].first = 0;
-                marC_[i].second = 0;
+                marCor_[i] = Corazzata();
+            i++;
+        }
+    }
+
+        void Mare::initializeMareNds(S::Corazzata marNds_[3])
+    {
+        int i = 0;
+
+        while (i < 12)
+        {
+                marNds_[i] = Nds();
+            i++;
+        }
+    }
+        void Mare::initializeMareSde(S::Corazzata marSde_[2])
+    {
+        int i = 0;
+
+        while (i < 12)
+        {
+                marSde_[i] = Sde();
             i++;
         }
     }
@@ -177,8 +197,6 @@ namespace M
         // else
         // error;
     }
-
-//void MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
 
     //move generico
     void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m)
@@ -389,7 +407,7 @@ namespace M
         return out;
     }
 
-//sistemare
+//sistemare !!!!!!!!!!!!!!
     string Mare::printEMare()
     {
         string out = "";
