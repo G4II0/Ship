@@ -53,7 +53,7 @@ namespace M
             x++;
         }
     }
-//fixare
+
     void Mare::initializeMareCor(S::Corazzata marCor_[3])
     {
         int i = 0;
