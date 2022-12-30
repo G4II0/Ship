@@ -12,12 +12,12 @@ namespace S
         this -> pos = pos_;
         this -> prua = pos_.first;
         this -> poppa = pos_.second;
-        this -> direzione;
+        this -> direzione = direzione_;
         this -> dimensione = 3;
         this -> corazza = 3;
-        this -> pMedio;
+        this -> pMedio = {0, 0};
         this -> numero = numero_;
-        this -> state;
+        this -> state = true;
     }
  
     void Nds::setStructure(std::vector<char> structure_)

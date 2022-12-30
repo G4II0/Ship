@@ -15,9 +15,9 @@ namespace S
         this->poppa = pos_.second;
         this -> dimensione = 3;
         this -> corazza = 3;
-        this -> pMedio;
+        this -> pMedio = {0, 0};
         this -> numero = numero_;
-        this -> state;
+        this -> state = true;
     }
 
     void Sde::setStructure(std::vector<char> structure_)

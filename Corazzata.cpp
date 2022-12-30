@@ -15,9 +15,9 @@ namespace S
         this -> direzione = direzione_;
         this -> dimensione = 5;
         this -> corazza = 5;
-        this -> pMedio;
+        this -> pMedio = {0, 0};
         this -> numero = numero_;
-        this -> state;
+        this -> state = true;
     }
 
     void Ship::setStructure(std::vector<char> structure_)

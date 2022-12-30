@@ -31,22 +31,17 @@ namespace M
         // matrice del mare (centri-Esplorazione)
         S::Sde marSde[2];
         // salva la condizione di giocatore attuale
-        int condition = -1;
-
+        int condition;
+        //nome player
+        string player1;
         //nome del file su cui effettuare il log
         string logFile;
-        // mappa che salva le configurazioni apparse e il numero di apparizioni di ciascuna
-        map<string, int> positions;
         // numero di mosse effettuate
         int drawMoves;
 
-        /*
-                //vettore contenente le posizioni disponibili della nave attuale
-                vector<Move> nextShipMoves;
-        */
-
     public:
-        Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m);
+
+        Mare(string log, char mar_ [12][12], string player1);
 
         void setMare(pair<int, int> p, char c);
 

@@ -8,16 +8,16 @@ namespace S
     Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero)
     {
         this -> structure;
-        this -> tipo;
+        this -> tipo = ' ';
         this -> pos = pos_;
         this -> prua = pos_.first;
         this -> poppa = pos_.second;
-        this -> dimensione;
-        this -> direzione;
-        this -> corazza;
-        this -> pMedio;
-        this -> numero;
-        this -> state;
+        this -> dimensione = 0;
+        this -> direzione = -1;
+        this -> corazza = 0;
+        this -> pMedio = {0, 0};
+        this -> numero = -1;
+        this -> state = false;
     }
 
     void Ship::setStructure(std::vector<char> structure_)
