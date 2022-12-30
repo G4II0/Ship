@@ -8,6 +8,21 @@ using namespace std;
 namespace M
 {
 
+        Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
+    {
+        lastMove = Move();
+        nextShipMoves.push_back(Move());
+        logFile = log;
+        drawMoves = 0;
+        if (log != "" && player1!= "" && player2 != "")
+        {
+            ofstream write(logFile);
+            string playerRow = "P1: " + player1 + "\nP2: " + player2 + "\n\n";
+            write << playerRow;
+            write.close();
+        }
+    }
+
     void Mare::setMare(pair<int, int> p, char c)
     {
         int x = p.first;
@@ -133,8 +148,7 @@ namespace M
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
-        // else
-        // error;
+        throw InvalidMoveException();
     }
 
 //inserimento Nds
@@ -172,8 +186,7 @@ namespace M
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
-        // else
-        // error;
+        throw InvalidMoveException();
     }
 
     // inserimento Sde
@@ -194,8 +207,7 @@ namespace M
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
-        // else
-        // error;
+        throw InvalidMoveException();
     }
 
     //move generico
@@ -215,8 +227,7 @@ namespace M
         {S::Sde t = marSde[2];
             MoveSde(start, dest, t, m);
         }
-        //errore
-        
+        throw InvalidMoveException();
     }
 
     //move generico
@@ -264,8 +275,7 @@ namespace M
             setMare(temp3, 'C');
             setMare(temp4, 'C');
         }
-        // else
-        // error;
+        throw InvalidMoveException();
     }
 
     //move generico
@@ -301,8 +311,7 @@ namespace M
             setMare(temp1, 'S');
             setMare(temp2, 'S');
         }
-        // else
-        // error;
+        throw InvalidMoveException();
     }
 
     //move generico
@@ -322,17 +331,21 @@ namespace M
             setMare(dest, 'E');
         }
     }
+    
+    bool healConditions(S::Ship *p1, S::Ship *p2)
+    {}
 
     void Mare::shipHit()
     {
     }
 
-    void Mare::shipHit()
+    void Mare::shipHeal()
     {
     }
 
 //_______________________________________________________________________________________________________________________________________________
 
+    //fixare
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
     {
         ofstream write;
@@ -360,28 +373,7 @@ namespace M
         write.close();
     }
 
-//________________________________________________________________________________________________________________________________________________________
-
-    bool healConditions(S::Ship *p1, S::Ship *p2)
-    {}
-
-    // sistemare
-/*
-    Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
-    {
-        lastMove = Move();
-        nextShipMoves.push_back(Move());
-        logFile = log;
-        drawMoves = 0;
-        if (log != "" && player1!= "" && player2 != "")
-        {
-            ofstream write(logFile);
-            string playerRow = "P1: " + player1 + "\nP2: " + player2 + "\n\n";
-            write << playerRow;
-            write.close();
-        }
-    }
-*/
+//_________________________________________________________________________________________________________________________________________________________
 
     string Mare::printAMare()
     {
