@@ -8,19 +8,13 @@ using namespace std;
 namespace M
 {
 
-        Mare::Mare(string log, string player1, string player2, vector<vector<pair<int, int>>> m)
+    Mare::Mare(string log, char mar[12][12], string p1)
     {
-        lastMove = Move();
-        nextShipMoves.push_back(Move());
-        logFile = log;
-        drawMoves = 0;
-        if (log != "" && player1!= "" && player2 != "")
-        {
-            ofstream write(logFile);
-            string playerRow = "P1: " + player1 + "\nP2: " + player2 + "\n\n";
-            write << playerRow;
-            write.close();
-        }
+        this -> mar_ [12][12] = mar[12][12];
+        this -> condition = -1;
+        this -> player1 = p1;
+        this -> logFile = log;
+        this -> drawMoves = 0;
     }
 
     void Mare::setMare(pair<int, int> p, char c)
