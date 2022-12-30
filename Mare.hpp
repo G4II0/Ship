@@ -69,10 +69,14 @@ namespace M
         // s1 = Nds, s2 = Altra nave
         bool healConditions(S::Ship s1, S::Ship s2);
         // assegna la cura e aggiorna la board
-        void shipHeal();
+        void CorHeal(S::Corazzata s);
+        void NdsHeal(S::Nds s);
+        void SdeHeal(S::Sde s);
         // assegna l'hit e aggiorna la board
-        void shipHit();
-
+        void CorHit(S::Corazzata s);
+        void NdsHit(S::Nds s);
+        void SdeHit(S::Sde s);
+ 
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<pair<int, int>> posAvailable(S::Corazzata ship, Mare m);
         vector<pair<int, int>> posAvailable(S::Nds ship, Mare m);
