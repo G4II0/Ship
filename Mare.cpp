@@ -65,23 +65,23 @@ namespace M
         }
     }
 
-        void Mare::initializeMareNds(S::Corazzata marNds_[3])
+        void Mare::initializeMareNds(S::Nds marNds_[3])
     {
         int i = 0;
 
         while (i < 12)
         {
-                marNds_[i] = Nds();
+                marNds_[i] = S::Nds();
             i++;
         }
     }
-        void Mare::initializeMareSde(S::Corazzata marSde_[2])
+        void Mare::initializeMareSde(S::Sde marSde_[2])
     {
         int i = 0;
 
         while (i < 12)
         {
-                marSde_[i] = Sde();
+                marSde_[i] = S::Sde();
             i++;
         }
     }
