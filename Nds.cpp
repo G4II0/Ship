@@ -2,6 +2,9 @@
 
 namespace S
 {
+    Nds::Nds()
+    {}
+    
     Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
     {
         this -> structure = {'S', 'S', 'S'};

@@ -24,6 +24,7 @@ namespace S
 
         public:
 
+        Nds();
         Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);
