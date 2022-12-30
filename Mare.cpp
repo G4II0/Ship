@@ -253,7 +253,38 @@ namespace M
     //move generico
     void Mare::MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
     {
-
+        if (legitMoveInput(s, dest, m) == true)
+        {
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<pair<int, int>, pair<int, int>> temp3;
+            if (s.getDirezione() == 0)
+            {
+                temp1.first = dest.first;         // x prua
+                temp1.second = (dest.second) + 1; // y prua
+                temp2.first = dest.first;         // x poppa
+                temp2.second = (dest.second) - 1; // y poppa
+                temp3.first = temp1;             // c prua
+                temp3.second = temp2;            // c poppa
+                s.setPos(temp3);
+            }
+            else
+            {
+                temp1.first = (dest.first) + 1;
+                temp1.second = dest.second;
+                temp2.first = (dest.first) - 1;
+                temp2.second = dest.second;
+                temp3.first = temp1;
+                temp3.second = temp2;
+                s.setPos(temp3);
+            }
+            // posizionamento nella board
+            setMare(dest, 'S');
+            setMare(temp1, 'S');
+            setMare(temp2, 'S');
+        }
+        // else
+        // error;
     }
 
     //move generico
@@ -261,7 +292,16 @@ namespace M
     {
         if (legitMoveInput(s, dest, m) == true)
         {
-
+            pair<int, int> temp1;
+            pair<int, int> temp2;
+            pair<pair<int, int>, pair<int, int>> temp3;
+            temp1.first = dest.first;         // x prua
+            temp1.second = (dest.second);     // y prua
+            temp3.first = temp1;             // c prua
+            temp3.second = temp1;            // c poppa
+            s.setPos(temp3);
+            // posizionamento nella board
+            setMare(dest, 'E');
         }
     }
 
