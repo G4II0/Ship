@@ -60,7 +60,7 @@ namespace M
 
         while (i < 12)
         {
-                marCor_[i] = Corazzata();
+                marCor_[i] = S::Corazzata();
             i++;
         }
     }
