@@ -329,12 +329,34 @@ namespace M
     bool healConditions(S::Ship *p1, S::Ship *p2)
     {}
 
-    void Mare::shipHit()
+    void Mare::CorHit(S::Corazzta s)
     {
+        s.setCorazza() = (s.getCorazza) - 1;
     }
 
-    void Mare::shipHeal()
+    void Mare::NdsHit(S::Nds s)
     {
+        s.setCorazza() = (s.getCorazza) - 1;
+    }
+
+    void Mare::SdeHit(S::Sde s)
+    {
+        s.setCorazza() = (s.getCorazza) - 1;
+    }
+
+    void Mare::CorHeal(S::Corazzta s)
+    {
+        s.setCorazza() = (s.getCorazza) - 1;
+    }
+
+    void Mare::NdsHeal(S::Nds s)
+    {
+        s.setCorazza() = (s.getCorazza) - 1;
+    }
+
+    void Mare::SdeHeal(S::Sde s)
+    {
+        s.setCorazza() = (s.getCorazza) - 1;
     }
 
 //_______________________________________________________________________________________________________________________________________________
