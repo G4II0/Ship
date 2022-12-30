@@ -2,6 +2,10 @@
 
 namespace S
 {
+
+    Sde::Sde()
+    {}
+
     Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int numero_)
     {
         this -> structure = {'E'};

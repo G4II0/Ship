@@ -23,6 +23,7 @@ namespace S
 
         public:
 
+        Sde();
         Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos, int numero);
 
         void setStructure(std::vector<char> structure_);
