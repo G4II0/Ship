@@ -2,6 +2,9 @@
 
 namespace S
 {
+    Corazzata::Corazzata()
+    {}
+    
     Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
     {
         this -> structure = {'C', 'C', 'C', 'C', 'C'};
