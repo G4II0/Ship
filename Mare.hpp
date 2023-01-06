@@ -26,6 +26,8 @@ namespace M
         char mar_ [12][12];
         //matrice del mare nemico
         char marE_ [12][12];
+        //stampa matrice del mare nemico
+        char marES_ [12][12];
         // matrice del mare (centri-Corazzate)
         S::Corazzata marCor[3];
         // matrice del mare (centri-Supporto)
@@ -45,19 +47,22 @@ namespace M
 
         Mare(string log, char mar_ [12][12], string player1);
 
-        void setMareA(pair<int, int> p, char c);
-        void setMareE(pair<int, int> p, char c);
-        char [][] getMare();
+        void setMareA(pair<int, int> p, char c, char& mar_[12][12]);
+        void setMareE(pair<int, int> p, char c, char& marE_[12][12]); 
+        void setMareES(pair<int, int> p, char c, char& marES_[12][12]);
+        vector<vector<char>> getMare();
+        void getMareN(Mare& mN);
 
         //genera la board vuota
-        void initializeMare(char mar_[12][12]);
+        void initializeMare(char& mar_[12][12]);
+        void initializeMareES(char& marES_[12][12]);
         void initializeMareCor(S::Corazzata marCor_[3]);
         void initializeMareNds(S::Nds marNds_[3]);
         void initializeMareSde(S::Sde marSde_[2]);
         //inserisce la nave nella borad
-        void insertCor(S::Corazzata ship, pair<int, int> pos, M::Mare m);
-        void insertNds(S::Nds ship, pair<int, int> pos, M::Mare m);
-        void insertSde(S::Sde ship, pair<int, int> pos, M::Mare m);
+        void insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m);
+        void insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m);
+        void insertSde(S::Sde& ship, pair<int, int> pos, M::Mare m);
         //controlla se le coordinate di arrivo dello spostamento sono nella board
         bool legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m);
         bool legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m);
@@ -75,10 +80,10 @@ namespace M
         // s1 = Nds, s2 = Nds
         bool healConditionsNds(S::Nds s1, S::Nds s2);
         // assegna la cura
-        void CorHeal(S::Corazzata s);
-        void NdsHeal(S::Nds s);
+        void CorHeal(S::Corazzata& s);
+        void NdsHeal(S::Nds& s);
         // scansione del sottomarino
-        void SdeScan(S::Sde s, char marE_ [12][12], Mare mN);
+        void SdeScan(S::Sde s, char marE_ [12][12], char& marES_ [12][12]);
         // assegna l'hit
         void CorHit(S::Corazzata s);
         void NdsHit(S::Nds s);

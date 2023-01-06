@@ -18,22 +18,57 @@ namespace M
         this -> drawMoves = 0;
     }
 
-    void Mare::setMareA(pair<int, int> p, char c)
+    void Mare::setMareA(pair<int, int> p, char c, char& mar_[12][12])
     {
         int x = p.first;
         int y = p.second;
         this -> mar_[x][y] = c;
     }
 
-    void Mare::setMareE(pair<int, int> p, char c)
+    void Mare::setMareE(pair<int, int> p, char c, char& marE_[12][12])
     {
         int x = p.first;
         int y = p.second;
         this -> marE_[x][y] = c;
     }
 
-    char Mare::getMare()
-    {return mar_;}
+    void Mare::setMareES(pair<int, int> p, char c, char& marES_[12][12])
+    {
+        int x = p.first;
+        int y = p.second;
+        this -> marES_[x][y] = c;
+    }
+
+    vector<vector<char>> getMare()
+    {
+        vector<vector<char>> v;
+        vector<char> v1;
+
+        for(int y=0; y<12; y++)
+        {
+            for(int x=0; x<12; x++)
+            {
+                v1.push_back(mar_[x][y]);
+            }
+            v.push_back(v1);
+        }
+    }
+
+    void Mare::getMareN(Mare& mN)
+    {
+        vector<vector<char>> v;
+        vector<char> v1;
+        v=mN.getMare();
+
+        for(int y=0; y<12; y++)
+        {
+            v1=v.pop_back();
+            for(int x=0; x<12; x++)
+            {
+               marE_[x][y] = v1.pop_back();
+            }
+        }
+    }
 
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
@@ -60,7 +95,7 @@ namespace M
         return false;
     }
 
-    void Mare::initializeMare(char mar_[12][12])
+    void Mare::initializeMare(char& mar_[12][12])
     {int x=0, y=0;
 
         while (x < 12)
@@ -68,6 +103,20 @@ namespace M
             while (y < 12)
             {
                 mar_[x][y] = ' ';
+                    y++;
+            }
+            x++;
+        }
+    }
+
+    void Mare::initializeMareES(char& marES_[12][12])
+    {int x=0, y=0;
+
+        while (x < 12)
+        {
+            while (y < 12)
+            {
+                marES_[x][y] = ' ';
                     y++;
             }
             x++;
@@ -107,7 +156,7 @@ namespace M
     }
 
 //inserimento corazzata
-    void Mare::insertCor(S::Corazzata ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -157,7 +206,7 @@ namespace M
     }
 
 //inserimento Nds
-    void Mare::insertNds(S::Nds ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -195,7 +244,7 @@ namespace M
     }
 
     // inserimento Sde
-    void Mare::insertSde(S::Sde ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertSde(S::Sde& ship, pair<int, int> pos, M::Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -629,16 +678,30 @@ namespace M
         }
     }
 
-    void Mare::CorHeal(S::Corazzata s)
+    void Mare::CorHeal(S::Corazzata& s)
     {int c = 5; s.setCorazza(c);}
 
-    void Mare::NdsHeal(S::Nds s)
+    void Mare::NdsHeal(S::Nds& s)
     {int c = 3; s.setCorazza(c);}
 
-    void SdeScan(S::Sde s, char marE_ [12][12], Mare mN)
+    void SdeScan(S::Sde s, char marE_ [12][12], char& marES_ [12][12])
     {
         pair <int, int> c = s.getPMedio();
-        if()
+        int x=c.first;
+        int y=c.second;
+        
+        for(int y1=y-1; y1<=y+1; y1++)
+        {
+            for(int x1=x-1; x1<=x+1; x1++)
+            {
+                if(marE_[x1][y1]!=' ')
+                {
+                    marES_[x1][y1]='y';
+                }
+            }
+            
+        }
+        
     }
 
     void Mare::CorHit(S::Corazzata s)
@@ -715,7 +778,7 @@ namespace M
             for (int j = 0; j < 12; j++)
             {
                 if (mar_[i][j] != '\0')
-                    out += marE_[i][j];
+                    out += marES_[i][j];
                 else
                     out += " ";
                 out += " │ ";
