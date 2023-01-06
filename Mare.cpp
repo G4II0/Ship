@@ -18,28 +18,28 @@ namespace M
         this -> drawMoves = 0;
     }
 
-    void Mare::setMareA(pair<int, int> p, char c, char& mar_[12][12])
+    void Mare::setMareA(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
         this -> mar_[x][y] = c;
     }
 
-    void Mare::setMareE(pair<int, int> p, char c, char& marE_[12][12])
+    void Mare::setMareE(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
         this -> marE_[x][y] = c;
     }
 
-    void Mare::setMareES(pair<int, int> p, char c, char& marES_[12][12])
+    void Mare::setMareES(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
         this -> marES_[x][y] = c;
     }
 
-    vector<vector<char>> getMare()
+    vector<vector<char>> Mare::getMare()
     {
         vector<vector<char>> v;
         vector<char> v1;
@@ -48,13 +48,13 @@ namespace M
         {
             for(int x=0; x<12; x++)
             {
-                v1.push_back(mar_[x][y]);
+                v1.push_back(this -> mar_[x][y]);
             }
             v.push_back(v1);
         }
     }
 
-    void Mare::getMareN(Mare& mN)
+    void Mare::getMareE(Mare& mN)
     {
         vector<vector<char>> v;
         vector<char> v1;
@@ -62,10 +62,10 @@ namespace M
 
         for(int y=0; y<12; y++)
         {
-            v1=v.pop_back();
+            v1 = v[y];
             for(int x=0; x<12; x++)
             {
-               marE_[x][y] = v1.pop_back();
+               marE_[x][y] = v1[x];
             }
         }
     }
@@ -95,7 +95,7 @@ namespace M
         return false;
     }
 
-    void Mare::initializeMare(char& mar_[12][12])
+    void Mare::initializeMare(char (&mar_)[12][12])
     {int x=0, y=0;
 
         while (x < 12)
@@ -109,7 +109,7 @@ namespace M
         }
     }
 
-    void Mare::initializeMareES(char& marES_[12][12])
+    void Mare::initializeMareES(char (&marES_) [12][12])
     {int x=0, y=0;
 
         while (x < 12)
@@ -684,7 +684,7 @@ namespace M
     void Mare::NdsHeal(S::Nds& s)
     {int c = 3; s.setCorazza(c);}
 
-    void SdeScan(S::Sde s, char marE_ [12][12], char& marES_ [12][12])
+    void Mare::SdeScan(S::Sde s)
     {
         pair <int, int> c = s.getPMedio();
         int x=c.first;
@@ -699,9 +699,18 @@ namespace M
                     marES_[x1][y1]='y';
                 }
             }
-            
         }
-        
+    }
+
+    void Mare::HitSet(pair<int, int> p, Mare mN)
+    {
+        getMareE(mN);
+        int x = p.first;
+        int y = p.second;
+        if(marE_[x][y] != ' ')
+        {
+            setMareES(p, 'X');
+        }
     }
 
     void Mare::CorHit(S::Corazzata s)
@@ -742,6 +751,7 @@ namespace M
         write << type << "\n";
         write.close();
     }
+/*____________________________________________________________________________________________________________________________________________________________*/
 
     string Mare::printAMare()
     {
@@ -791,8 +801,6 @@ namespace M
         out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
     }
-
-    //______________________________________________________________________________________________________________________
 
     int Mare::getMCondition()
     { return condition;}

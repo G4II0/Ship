@@ -24,22 +24,31 @@ namespace M
 
         //matrice del mare alleato
         char mar_ [12][12];
+
         //matrice del mare nemico
         char marE_ [12][12];
+
         //stampa matrice del mare nemico
         char marES_ [12][12];
+
         // matrice del mare (centri-Corazzate)
         S::Corazzata marCor[3];
+
         // matrice del mare (centri-Supporto)
         S::Nds marNds[3];
+
         // matrice del mare (centri-Esplorazione)
         S::Sde marSde[2];
+
         // salva la condizione di giocatore attuale
         int condition;
+
         //nome player
         string player1;
+
         //nome del file su cui effettuare il log
         string logFile;
+
         // numero di mosse effettuate
         int drawMoves;
 
@@ -47,15 +56,15 @@ namespace M
 
         Mare(string log, char mar_ [12][12], string player1);
 
-        void setMareA(pair<int, int> p, char c, char& mar_[12][12]);
-        void setMareE(pair<int, int> p, char c, char& marE_[12][12]); 
-        void setMareES(pair<int, int> p, char c, char& marES_[12][12]);
+        void setMareA(pair<int, int> p, char c);
+        void setMareE(pair<int, int> p, char c);
+        void setMareES(pair<int, int> p, char c);
         vector<vector<char>> getMare();
-        void getMareN(Mare& mN);
+        void getMareE(Mare& mN);
 
         //genera la board vuota
-        void initializeMare(char& mar_[12][12]);
-        void initializeMareES(char& marES_[12][12]);
+        void initializeMare(char (&mar_)[12][12]);
+        void initializeMareES(char (&marES_)[12][12]);
         void initializeMareCor(S::Corazzata marCor_[3]);
         void initializeMareNds(S::Nds marNds_[3]);
         void initializeMareSde(S::Sde marSde_[2]);
@@ -83,7 +92,9 @@ namespace M
         void CorHeal(S::Corazzata& s);
         void NdsHeal(S::Nds& s);
         // scansione del sottomarino
-        void SdeScan(S::Sde s, char marE_ [12][12], char& marES_ [12][12]);
+        void SdeScan(S::Sde s);
+        // assegna la x dell'hit
+        void Mare::HitSet(pair<int, int> p, Mare mN);
         // assegna l'hit
         void CorHit(S::Corazzata s);
         void NdsHit(S::Nds s);
