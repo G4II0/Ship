@@ -3,6 +3,7 @@
 #include "Corazzata.hpp"
 #include "Nds.hpp"
 #include "Sde.hpp"
+#include "Exception.cpp"
 
 using namespace std;
 namespace M
@@ -17,12 +18,22 @@ namespace M
         this -> drawMoves = 0;
     }
 
-    void Mare::setMare(pair<int, int> p, char c)
+    void Mare::setMareA(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
         this -> mar_[x][y] = c;
     }
+
+    void Mare::setMareE(pair<int, int> p, char c)
+    {
+        int x = p.first;
+        int y = p.second;
+        this -> marE_[x][y] = c;
+    }
+
+    char Mare::getMare()
+    {return mar_;}
 
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
@@ -134,11 +145,11 @@ namespace M
                 ship.setPos(temp5);
             }
             // posizionamento nel mare
-            setMare(pos, 'C');
-            setMare(temp1, 'C');
-            setMare(temp2, 'C');
-            setMare(temp3, 'C');
-            setMare(temp4, 'C');
+            setMareA(pos, 'C');
+            setMareA(temp1, 'C');
+            setMareA(temp2, 'C');
+            setMareA(temp3, 'C');
+            setMareA(temp4, 'C');
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
@@ -174,9 +185,9 @@ namespace M
                 ship.setPos(temp3);
             }
             // posizionamento nella board
-            setMare(pos, 'S');
-            setMare(temp1, 'S');
-            setMare(temp2, 'S');
+            setMareA(pos, 'S');
+            setMareA(temp1, 'S');
+            setMareA(temp2, 'S');
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
@@ -197,7 +208,7 @@ namespace M
             temp3.second = temp1;            // c poppa
             ship.setPos(temp3);
             // posizionamento nella board
-            setMare(pos, 'E');
+            setMareA(pos, 'E');
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
@@ -224,7 +235,7 @@ namespace M
         throw InvalidMoveException();
     }
 
-    //move generico
+    //move Corazzata
     void Mare::MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
@@ -263,16 +274,16 @@ namespace M
                 s.setPos(temp5);
             }
             // posizionamento nel mare
-            setMare(dest, 'C');
-            setMare(temp1, 'C');
-            setMare(temp2, 'C');
-            setMare(temp3, 'C');
-            setMare(temp4, 'C');
+            setMareA(dest, 'C');
+            setMareA(temp1, 'C');
+            setMareA(temp2, 'C');
+            setMareA(temp3, 'C');
+            setMareA(temp4, 'C');
         }
         throw InvalidMoveException();
     }
 
-    //move generico
+    //move Nds
     void Mare::MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
@@ -301,14 +312,14 @@ namespace M
                 s.setPos(temp3);
             }
             // posizionamento nella board
-            setMare(dest, 'S');
-            setMare(temp1, 'S');
-            setMare(temp2, 'S');
+            setMareA(dest, 'S');
+            setMareA(temp1, 'S');
+            setMareA(temp2, 'S');
         }
         throw InvalidMoveException();
     }
 
-    //move generico
+    //move Sde
     void Mare::MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
@@ -322,30 +333,322 @@ namespace M
             temp3.second = temp1;            // c poppa
             s.setPos(temp3);
             // posizionamento nella board
-            setMare(dest, 'E');
+            setMareA(dest, 'E');
         }
     }
-    
-    bool healConditions(S::Ship *p1, S::Ship *p2)
-    {}
+
+    //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
+    bool healConditionsCor(S::Nds Nds, S::Corazzata Cor)
+    {
+        pair<int, int> cNds = Nds.getPMedio();
+        int dNds = Nds.getDirezione();
+        pair<int, int> cCor = Cor.getPMedio();
+        int dCor = Cor.getDirezione();
+        pair<int, int> tempN = {0, 0};
+        pair<int, int> tempN1 = {0, 0};
+        //s = v, c = v;
+        if(dNds == 0 || dCor == 0)
+        {
+            //sopra
+            tempN.first = (cCor.first);
+            tempN.second = (cCor.second + 4);
+            if((cNds) == (tempN))
+            {return true;}
+            //sotto
+            tempN.first = (cCor.first);
+            tempN.second = (cCor.second - 4);
+            if((cNds) == (tempN))
+            {return true;}
+            //dx
+            for(int y = -3; y <= 3; y++)
+            {
+                tempN.first = (cCor.first + 1);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -3; y <= 3; y++)
+            {
+                tempN.first = (cCor.first + 1);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = o, c = o;
+        if(dNds == 1 || dCor == 1)
+        {
+            //sopra
+            tempN.first = (cCor.first + 4);
+            tempN.second = (cCor.second);
+            if((cNds) == (tempN))
+            {return true;}
+            //sotto
+            tempN.first = (cCor.first - 4);
+            tempN.second = (cCor.second);
+            if((cNds) == (tempN))
+            {return true;}
+            //dx
+            for(int x = -3; x <= 3; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second + 1);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int x = -3; x <= 3; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second - 1);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = v, c = o;
+        if(dNds == 0 || dCor == 1)
+        {
+            //sopra
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second + 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sotto
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second - 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //dx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cCor.first + 3);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cCor.first - 3);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = o, c = v;
+        if(dNds == 0 || dCor == 1)
+        {
+            //sopra
+            for(int x = -1; x <= 1; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second + 3);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sotto
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cCor.first + x);
+                tempN.second = (cCor.second - 3);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //dx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cCor.first + 2);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -2; y <= 2; y++)
+            {
+                tempN.first = (cCor.first - 2);
+                tempN.second = (cCor.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+    }
+
+    //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
+    bool healConditionsNds(S::Nds NdsC, S::Nds Nds)
+    {
+        pair<int, int> cNds = Nds.getPMedio();
+        int dNds = Nds.getDirezione();
+        pair<int, int> cNdsC = NdsC.getPMedio();
+        int dNdsC = NdsC.getDirezione();
+        pair<int, int> tempN = {0, 0};
+        pair<int, int> tempN1 = {0, 0};
+        //s = v, sc = v;
+        if(dNds == 0 || dNdsC == 0)
+        {
+            //sopra
+            tempN.first = (cNdsC.first);
+            tempN.second = (cNdsC.second + 3);
+            if((cNds) == (tempN))
+            {return true;}
+            //sotto
+            tempN.first = (cNdsC.first);
+            tempN.second = (cNdsC.second - 3);
+            if((cNds) == (tempN))
+            {return true;}
+            //dx
+            for(int y = -2; y <= 2; y++)
+            {
+                tempN.first = (cNdsC.first + 1);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -2; y <= 2; y++)
+            {
+                tempN.first = (cNdsC.first + 1);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = o, sc = o;
+        if(dNds == 1 || dNdsC == 1)
+        {
+            //sopra
+            tempN.first = (cNdsC.first + 3);
+            tempN.second = (cNdsC.second);
+            if((cNds) == (tempN))
+            {return true;}
+            //sotto
+            tempN.first = (cNdsC.first - 3);
+            tempN.second = (cNdsC.second);
+            if((cNds) == (tempN))
+            {return true;}
+            //dx
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second + 1);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second - 1);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = v, sc = o;
+        if(dNds == 0 || dNdsC == 1)
+        {
+            //sopra
+            for(int x = -1; x <= 1; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second + 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sotto
+            for(int x = -1; x <= 1; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second - 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //dx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cNdsC.first + 2);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cNdsC.first - 2);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+        else
+        //s = o, sc = v;
+        if(dNds == 0 || dNdsC == 1)
+        {
+            //sopra
+            for(int x = -1; x <= 1; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second + 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sotto
+            for(int x = -2; x <= 2; x++)
+            {
+                tempN.first = (cNdsC.first + x);
+                tempN.second = (cNdsC.second - 2);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //dx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cNdsC.first + 2);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+            //sx
+            for(int y = -1; y <= 1; y++)
+            {
+                tempN.first = (cNdsC.first - 2);
+                tempN.second = (cNdsC.second + y);
+                if((cNds) == (tempN))
+                {return true;}
+            }
+        }
+    }
 
     void Mare::CorHeal(S::Corazzata s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    {int c = 5; s.setCorazza(c);}
 
     void Mare::NdsHeal(S::Nds s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    {int c = 3; s.setCorazza(c);}
 
-    void Mare::SdeHeal(S::Sde s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    void SdeScan(S::Sde s, char marE_ [12][12], Mare mN)
+    {
+        pair <int, int> c = s.getPMedio();
+        if()
+    }
 
     void Mare::CorHit(S::Corazzata s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    {int c = s.getCorazza() - 1; s.setCorazza(c);}
 
     void Mare::NdsHit(S::Nds s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    {int c = s.getCorazza() - 1; s.setCorazza(c);}
 
     void Mare::SdeHit(S::Sde s)
-    {int c = s.getCorazza() -1;s.setCorazza(c);}
+    {int c = s.getCorazza() - 1; s.setCorazza(c);}
 
 //_______________________________________________________________________________________________________________________________________________
 
@@ -377,13 +680,11 @@ namespace M
         write.close();
     }
 
-//_________________________________________________________________________________________________________________________________________________________
-
     string Mare::printAMare()
     {
         string out = "";
         out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
-            for (int i = 11; i >= 0; i--)
+        for (int i = 11; i >= 0; i--)
         {
             out += to_string(i + 1);
             out += " │ ";
@@ -403,7 +704,6 @@ namespace M
         return out;
     }
 
-//sistemare !!!!!!!!!!!!!!
     string Mare::printEMare()
     {
         string out = "";
@@ -415,7 +715,7 @@ namespace M
             for (int j = 0; j < 12; j++)
             {
                 if (mar_[i][j] != '\0')
-                    out += mar_[i][j];
+                    out += marE_[i][j];
                 else
                     out += " ";
                 out += " │ ";
@@ -428,6 +728,8 @@ namespace M
         out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
     }
+
+    //______________________________________________________________________________________________________________________
 
     int Mare::getMCondition()
     { return condition;}

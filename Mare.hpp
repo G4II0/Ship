@@ -22,8 +22,10 @@ namespace M
     {
         private:
 
-        //matrice del mare
+        //matrice del mare alleato
         char mar_ [12][12];
+        //matrice del mare nemico
+        char marE_ [12][12];
         // matrice del mare (centri-Corazzate)
         S::Corazzata marCor[3];
         // matrice del mare (centri-Supporto)
@@ -43,7 +45,9 @@ namespace M
 
         Mare(string log, char mar_ [12][12], string player1);
 
-        void setMare(pair<int, int> p, char c);
+        void setMareA(pair<int, int> p, char c);
+        void setMareE(pair<int, int> p, char c);
+        char [][] getMare();
 
         //genera la board vuota
         void initializeMare(char mar_[12][12]);
@@ -66,13 +70,16 @@ namespace M
         void MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
         //spostamento Sde
         void MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, M::Mare m);
-        // s1 = Nds, s2 = Altra nave
-        bool healConditions(S::Ship s1, S::Ship s2);
-        // assegna la cura e aggiorna la board
+        // s1 = Nds, s2 = Corazzata
+        bool healConditionsCor(S::Nds s1, S::Corazzata s2);
+        // s1 = Nds, s2 = Nds
+        bool healConditionsNds(S::Nds s1, S::Nds s2);
+        // assegna la cura
         void CorHeal(S::Corazzata s);
         void NdsHeal(S::Nds s);
-        void SdeHeal(S::Sde s);
-        // assegna l'hit e aggiorna la board
+        // scansione del sottomarino
+        void SdeScan(S::Sde s, char marE_ [12][12], Mare mN);
+        // assegna l'hit
         void CorHit(S::Corazzata s);
         void NdsHit(S::Nds s);
         void SdeHit(S::Sde s);
@@ -88,8 +95,9 @@ namespace M
         // 3 se patta per raggiungimento limite mosse in partita tra bot
         int getMCondition();
 
-        // stampa la griglia
+        // stampa la griglia alleata
         string printAMare();
+        // stampa la griglia nemica
         string printEMare();
 
         // aggiorna log con informazioni su vittoria
@@ -101,13 +109,6 @@ namespace M
         // aggiorna log con mossa
         void updateLogMove(pair<int, int> start, pair<int, int> finish);
         // eccezione: input non valido
-        class InvalidInputException
-        {
-        };
-        // eccezione: mossa non valida
-        class InvalidMoveException
-        {
-        };
     };
 }
 
