@@ -269,23 +269,23 @@ namespace M
     {
         if(mar_[start.first][start.second] == 'C')
         {S::Corazzata t = marCor[3];
-            MoveCorazzata(start, dest, t.getDirezione(), t, m);
+            Move(start, dest, t.getDirezione(), t, m);
         }
         else
         if(mar_[start.first][start.second] == 'S')
         {S::Nds t = marNds[3];
-            MoveNds(start, dest, t.getDirezione(), t, m);
+            Move(start, dest, t.getDirezione(), t, m);
         }
         else
                 if(mar_[start.first][start.second] == 'C')
         {S::Sde t = marSde[2];
-            MoveSde(start, dest, t, m);
+            Move(start, dest, t, m);
         }
         throw InvalidMoveException();
     }
 
     //move Corazzata
-    void Mare::MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -333,7 +333,7 @@ namespace M
     }
 
     //move Nds
-    void Mare::MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -369,7 +369,7 @@ namespace M
     }
 
     //move Sde
-    void Mare::MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -387,7 +387,7 @@ namespace M
     }
 
     //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditionsCor(S::Nds Nds, S::Corazzata Cor)
+    bool healConditions(S::Nds Nds, S::Corazzata Cor)
     {
         pair<int, int> cNds = Nds.getPMedio();
         int dNds = Nds.getDirezione();
@@ -481,7 +481,7 @@ namespace M
     }
 
     //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditionsNds(S::Nds NdsC, S::Nds Nds)
+    bool healConditions(S::Nds NdsC, S::Nds Nds)
     {
         pair<int, int> cNds = Nds.getPMedio();
         int dNds = Nds.getDirezione();
@@ -646,7 +646,7 @@ namespace M
         write << type << "\n";
         write.close();
     }
-    
+
 /*____________________________________________________________________________________________________________________________________________________________*/
 
     string Mare::printAMare()

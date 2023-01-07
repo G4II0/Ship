@@ -79,15 +79,15 @@ namespace M
         //spostamento Generale
         void Move(pair<int, int> start, pair<int, int> dest, Mare m);
         //spostamento Corazzata
-        void MoveCorazzata(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
         //spostamento Nds
-        void MoveNds(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
         //spostamento Sde
-        void MoveSde(pair<int, int> start, pair<int, int> dest, S::Sde s, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, S::Sde s, M::Mare m);
         // s1 = Nds, s2 = Corazzata
-        bool healConditionsCor(S::Nds s1, S::Corazzata s2);
+        bool healConditions(S::Nds s1, S::Corazzata s2);
         // s1 = Nds, s2 = Nds
-        bool healConditionsNds(S::Nds s1, S::Nds s2);
+        bool healConditions(S::Nds s1, S::Nds s2);
         // assegna la cura
         void CorHeal(S::Corazzata& s);
         void NdsHeal(S::Nds& s);
