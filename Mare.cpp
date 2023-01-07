@@ -398,16 +398,6 @@ namespace M
         //s = v, c = v;
         if(dNds == 0 || dCor == 0)
         {
-            //sopra
-            tempN.first = (cCor.first);
-            tempN.second = (cCor.second + 4);
-            if((cNds) == (tempN))
-            {return true;}
-            //sotto
-            tempN.first = (cCor.first);
-            tempN.second = (cCor.second - 4);
-            if((cNds) == (tempN))
-            {return true;}
             //dx
             for(int y = -3; y <= 3; y++)
             {
@@ -419,7 +409,7 @@ namespace M
             //sx
             for(int y = -3; y <= 3; y++)
             {
-                tempN.first = (cCor.first + 1);
+                tempN.first = (cCor.first - 1);
                 tempN.second = (cCor.second + y);
                 if((cNds) == (tempN))
                 {return true;}
@@ -429,16 +419,6 @@ namespace M
         //s = o, c = o;
         if(dNds == 1 || dCor == 1)
         {
-            //sopra
-            tempN.first = (cCor.first + 4);
-            tempN.second = (cCor.second);
-            if((cNds) == (tempN))
-            {return true;}
-            //sotto
-            tempN.first = (cCor.first - 4);
-            tempN.second = (cCor.second);
-            if((cNds) == (tempN))
-            {return true;}
             //dx
             for(int x = -3; x <= 3; x++)
             {
@@ -461,22 +441,6 @@ namespace M
         if(dNds == 0 || dCor == 1)
         {
             //sopra
-            for(int x = -2; x <= 2; x++)
-            {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second + 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sotto
-            for(int x = -2; x <= 2; x++)
-            {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second - 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //dx
             for(int y = -1; y <= 1; y++)
             {
                 tempN.first = (cCor.first + 3);
@@ -484,7 +448,7 @@ namespace M
                 if((cNds) == (tempN))
                 {return true;}
             }
-            //sx
+            //sotto
             for(int y = -1; y <= 1; y++)
             {
                 tempN.first = (cCor.first - 3);
@@ -506,26 +470,10 @@ namespace M
                 {return true;}
             }
             //sotto
-            for(int x = -2; x <= 2; x++)
+            for(int x = -1; x <= 1; x++)
             {
                 tempN.first = (cCor.first + x);
                 tempN.second = (cCor.second - 3);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //dx
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cCor.first + 2);
-                tempN.second = (cCor.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sx
-            for(int y = -2; y <= 2; y++)
-            {
-                tempN.first = (cCor.first - 2);
-                tempN.second = (cCor.second + y);
                 if((cNds) == (tempN))
                 {return true;}
             }
@@ -540,20 +488,9 @@ namespace M
         pair<int, int> cNdsC = NdsC.getPMedio();
         int dNdsC = NdsC.getDirezione();
         pair<int, int> tempN = {0, 0};
-        pair<int, int> tempN1 = {0, 0};
         //s = v, sc = v;
         if(dNds == 0 || dNdsC == 0)
         {
-            //sopra
-            tempN.first = (cNdsC.first);
-            tempN.second = (cNdsC.second + 3);
-            if((cNds) == (tempN))
-            {return true;}
-            //sotto
-            tempN.first = (cNdsC.first);
-            tempN.second = (cNdsC.second - 3);
-            if((cNds) == (tempN))
-            {return true;}
             //dx
             for(int y = -2; y <= 2; y++)
             {
@@ -565,7 +502,7 @@ namespace M
             //sx
             for(int y = -2; y <= 2; y++)
             {
-                tempN.first = (cNdsC.first + 1);
+                tempN.first = (cNdsC.first - 1);
                 tempN.second = (cNdsC.second + y);
                 if((cNds) == (tempN))
                 {return true;}
@@ -575,16 +512,6 @@ namespace M
         //s = o, sc = o;
         if(dNds == 1 || dNdsC == 1)
         {
-            //sopra
-            tempN.first = (cNdsC.first + 3);
-            tempN.second = (cNdsC.second);
-            if((cNds) == (tempN))
-            {return true;}
-            //sotto
-            tempN.first = (cNdsC.first - 3);
-            tempN.second = (cNdsC.second);
-            if((cNds) == (tempN))
-            {return true;}
             //dx
             for(int x = -2; x <= 2; x++)
             {
@@ -606,7 +533,7 @@ namespace M
         //s = v, sc = o;
         if(dNds == 0 || dNdsC == 1)
         {
-            //sopra
+            // sopra
             for(int x = -1; x <= 1; x++)
             {
                 tempN.first = (cNdsC.first + x);
@@ -614,27 +541,11 @@ namespace M
                 if((cNds) == (tempN))
                 {return true;}
             }
-            //sotto
+            // sotto
             for(int x = -1; x <= 1; x++)
             {
                 tempN.first = (cNdsC.first + x);
                 tempN.second = (cNdsC.second - 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //dx
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cNdsC.first + 2);
-                tempN.second = (cNdsC.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sx
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cNdsC.first - 2);
-                tempN.second = (cNdsC.second + y);
                 if((cNds) == (tempN))
                 {return true;}
             }
@@ -644,22 +555,6 @@ namespace M
         if(dNds == 0 || dNdsC == 1)
         {
             //sopra
-            for(int x = -1; x <= 1; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second + 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sotto
-            for(int x = -2; x <= 2; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second - 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //dx
             for(int y = -1; y <= 1; y++)
             {
                 tempN.first = (cNdsC.first + 2);
@@ -667,7 +562,7 @@ namespace M
                 if((cNds) == (tempN))
                 {return true;}
             }
-            //sx
+            //sotto
             for(int y = -1; y <= 1; y++)
             {
                 tempN.first = (cNdsC.first - 2);
@@ -690,13 +585,13 @@ namespace M
         int x=c.first;
         int y=c.second;
         
-        for(int y1=y-1; y1<=y+1; y1++)
+        for(int y1=y-2; y1<=y+2; y1++)
         {
-            for(int x1=x-1; x1<=x+1; x1++)
+            for(int x1 = x-2; x1 <= x+2; x1++)
             {
-                if(marE_[x1][y1]!=' ')
+                if(marE_[x1][y1] != ' ')
                 {
-                    marES_[x1][y1]='y';
+                    marES_[x1][y1] = 'y';
                 }
             }
         }
