@@ -24,31 +24,22 @@ namespace M
 
         //matrice del mare alleato
         char mar_ [12][12];
-
         //matrice del mare nemico
         char marE_ [12][12];
-
         //stampa matrice del mare nemico
         char marES_ [12][12];
-
         // matrice del mare (centri-Corazzate)
         S::Corazzata marCor[3];
-
         // matrice del mare (centri-Supporto)
         S::Nds marNds[3];
-
         // matrice del mare (centri-Esplorazione)
         S::Sde marSde[2];
-
         // salva la condizione di giocatore attuale
         int condition;
-
         //nome player
         string player1;
-
         //nome del file su cui effettuare il log
         string logFile;
-
         // numero di mosse effettuate
         int drawMoves;
 
@@ -65,9 +56,9 @@ namespace M
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
         void initializeMareES(char (&marES_)[12][12]);
-        void initializeMareCor(S::Corazzata marCor_[3]);
-        void initializeMareNds(S::Nds marNds_[3]);
-        void initializeMareSde(S::Sde marSde_[2]);
+        void initializeMare(S::Corazzata marCor_[3]);
+        void initializeMare(S::Nds marNds_[3]);
+        void initializeMare(S::Sde marSde_[2]);
         //inserisce la nave nella borad
         void insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m);
         void insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m);

@@ -123,7 +123,7 @@ namespace M
         }
     }
 
-    void Mare::initializeMareCor(S::Corazzata marCor_[3])
+    void Mare::initializeMare(S::Corazzata marCor_[3])
     {
         int i = 0;
 
@@ -134,7 +134,7 @@ namespace M
         }
     }
 
-        void Mare::initializeMareNds(S::Nds marNds_[3])
+        void Mare::initializeMare(S::Nds marNds_[3])
     {
         int i = 0;
 
@@ -144,7 +144,7 @@ namespace M
             i++;
         }
     }
-        void Mare::initializeMareSde(S::Sde marSde_[2])
+        void Mare::initializeMare(S::Sde marSde_[2])
     {
         int i = 0;
 
