@@ -22,25 +22,25 @@ namespace M
     {
         private:
 
-        //matrice del mare alleato
+        /*matrice del mare alleato*/
         char mar_ [12][12];
-        //matrice del mare nemico
+        /*matrice del mare nemico*/
         char marE_ [12][12];
-        //stampa matrice del mare nemico
+        /*stampa matrice del mare nemico*/
         char marES_ [12][12];
-        // matrice del mare (centri-Corazzate)
+        /*matrice del mare (centri-Corazzate)*/
         S::Corazzata marCor[3];
-        // matrice del mare (centri-Supporto)
+        /*matrice del mare (centri-Supporto)*/
         S::Nds marNds[3];
-        // matrice del mare (centri-Esplorazione)
+        /*matrice del mare (centri-Esplorazione)*/
         S::Sde marSde[2];
-        // salva la condizione di giocatore attuale
+        /*salva la condizione di giocatore attuale*/
         int condition;
-        //nome player
+        /*nome player*/
         string player1;
-        //nome del file su cui effettuare il log
+        /*nome del file su cui effettuare il log*/
         string logFile;
-        // numero di mosse effettuate
+        /*numero di mosse effettuate*/
         int drawMoves;
 
     public:
