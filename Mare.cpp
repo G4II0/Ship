@@ -85,7 +85,7 @@ namespace M
 
     S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos)
     {
-        for(int i=0; i<2; i++)
+        for(int i=0; i<3; i++)
         {
             if((marCor[i]).getPMedio() == pos)
             {
@@ -96,7 +96,7 @@ namespace M
 
     S::Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos)
     {
-        for(int i=0; i<2; i++)
+        for(int i=0; i<3; i++)
         {
             if((marNds[i]).getPMedio() == pos)
             {
