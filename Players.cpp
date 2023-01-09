@@ -5,7 +5,7 @@ namespace P
     Players::Players()
     {}
 
-    Players::Players(M::Mare *Mare, char N, char T)
+    Players::Players(M::Mare mare, char N, char T)
     {
         this -> Name= N;
         this -> Mare = mare;
@@ -21,7 +21,7 @@ namespace P
 
     char Players::getName() const
     {return this -> Name;}
-    Mare Players::getMare() const
+    M::Mare Players::getMare() const
     {return this -> Mare;}
     char Players::getType() const
     {return this -> Type;}
@@ -29,6 +29,6 @@ namespace P
     // player
     void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m)
     {
-        M::Mare::Move(pos, dest, m);
+        Mare.Move(pos, dest, m);
     }
 }
