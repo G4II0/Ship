@@ -28,9 +28,8 @@ namespace P
     {return this -> Type;}
 
     // player
-    bool Players::Move(pair<int, int> start, pair<int, int> dest, Mare m)
+    void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m)
     {
-        
-        return mare->performMove(s, f);
+        Mare::Move(pos, dest, m);
     }
 }
