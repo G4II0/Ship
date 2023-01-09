@@ -39,21 +39,21 @@ namespace B
         int r1_1 = rand()%2;
         if(r0 = 0)
         {
-            S::Corazzata a[3] = mare.getMarCor();
+            vector<S::Corazzata> a = mare.getMarCor();
             pos = (a[r1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }
         else
         if(r0 = 1)
         {
-            S::Nds a[3] = mare.getMarNds();
+            vector<S::Nds> a = mare.getMarNds();
             pos = (a[r1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }
         else
         if(r0 = 2)
         {
-            S::Sde a[2] = mare.getMarSde();
+            vector<S::Sde> a = mare.getMarSde();
             pos = (a[r1_1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }

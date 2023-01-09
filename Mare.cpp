@@ -74,14 +74,14 @@ namespace M
         }
     }
 
-    S::Corazzata Mare::getMarCor()
-    {return this -> marCor[3];}
+    vector<S::Corazzata> Mare::getMarCor()
+    {return this -> marCor;}
 
-    S::Nds Mare::getMarNds()
-    {return this -> marNds[3];}
+    vector<S::Nds> Mare::getMarNds()
+    {return this -> marNds;}
     
-    S::Sde Mare::getMarSde()
-    {return this -> marSde[3];}
+    vector<S::Sde> Mare::getMarSde()
+    {return this -> marSde;}
 
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {

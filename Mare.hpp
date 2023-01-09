@@ -29,11 +29,11 @@ namespace M
         /*stampa matrice del mare nemico*/
         char marES_ [12][12];
         /*matrice del mare (centri-Corazzate)*/
-        S::Corazzata marCor[3];
+        vector<S::Corazzata> marCor;
         /*matrice del mare (centri-Supporto)*/
-        S::Nds marNds[3];
+        vector<S::Nds> marNds;
         /*matrice del mare (centri-Esplorazione)*/
-        S::Sde marSde[2];
+        vector<S::Sde> marSde;
         /*salva la condizione di giocatore attuale*/
         int condition;
         /*nome player*/
@@ -54,9 +54,9 @@ namespace M
         vector<vector<char>> getMare();
         void getMareE(Mare& mN);
 
-        S::Corazzata getMarCor();
-        S::Nds getMarNds();
-        S::Sde getMarSde();
+        vector<S::Corazzata> getMarCor();
+        vector<S::Nds> getMarNds();
+        vector<S::Sde> getMarSde();
 
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
