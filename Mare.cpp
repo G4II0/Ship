@@ -277,7 +277,7 @@ namespace M
             Move(start, dest, t.getDirezione(), t, m);
         }
         else
-                if(mar_[start.first][start.second] == 'Ec')
+                if(mar_[start.first][start.second] == 'E')
         {S::Sde t = marSde[2];
             Move(start, dest, t, m);
         }
