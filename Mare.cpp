@@ -85,7 +85,7 @@ namespace M
 
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship, m);
+        vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -93,7 +93,7 @@ namespace M
     }
         bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship, m);
+        vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -101,7 +101,7 @@ namespace M
     }
         bool Mare::legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship, m);
+        vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -714,7 +714,7 @@ namespace M
     int Mare::getMCondition()
     { return condition;}
 
-    vector<pair<int, int>> Mare::posAvailable(S::Corazzata shi, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Corazzata shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
@@ -763,7 +763,7 @@ namespace M
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Nds shi, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Nds shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
@@ -812,7 +812,7 @@ namespace M
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Sde shi, M::Mare m)
+    vector<pair<int, int>> Mare::posAvailable(S::Sde shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;

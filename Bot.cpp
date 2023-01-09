@@ -33,27 +33,34 @@ namespace B
         srand(time(NULL));
         pair<int, int> pos;
         pair<int, int> dest;
+        vector<pair<int, int>> des;
+        dest.first = rand()%3;
+        dest.second = rand()%3;
         int r0 = rand()%3;
         int r1 = rand()%3;
         int r1_1 = rand()%2;
-        dest.first= rand()%3;
-        dest.second = rand()%3;
         if(r0 = 0)
         {
             S::Corazzata a[3] = mare.getMarCor();
             pos = (a[r1]).getPMedio();
+            mare.posAvailable(a[r1]);
+            des = mare.posAvailable(a[r1]);
         }
         else
         if(r0 = 1)
         {
             S::Nds a[3] = mare.getMarNds();
             pos = (a[r1]).getPMedio();
+            mare.posAvailable(a[r1]);
+            des = mare.posAvailable(a[r1]);
         }
         else
         if(r0 = 2)
         {
             S::Sde a[2] = mare.getMarSde();
             pos = (a[r1_1]).getPMedio();
+            des = mare.posAvailable(a[r1]);
+            dest[];
         }
         Mare.Move(pos, dest, mare);
     }

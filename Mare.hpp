@@ -97,9 +97,9 @@ namespace M
         void SdeHit(S::Sde s);
  
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(S::Corazzata ship, Mare m);
-        vector<pair<int, int>> posAvailable(S::Nds ship, Mare m);
-        vector<pair<int, int>> posAvailable(S::Sde ship, Mare m);
+        vector<pair<int, int>> posAvailable(S::Corazzata ship);
+        vector<pair<int, int>> posAvailable(S::Nds ship);
+        vector<pair<int, int>> posAvailable(S::Sde ship);
         
 
         // aggiorna log con informazioni su vittoria
