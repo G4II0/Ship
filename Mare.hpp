@@ -54,6 +54,10 @@ namespace M
         vector<vector<char>> getMare();
         void getMareE(Mare& mN);
 
+        S::Corazzata getMarCor();
+        S::Nds getMarNds();
+        S::Sde getMarSde();
+
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
         void initializeMareES(char (&marES_)[12][12]);

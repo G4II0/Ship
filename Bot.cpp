@@ -31,18 +31,49 @@ namespace B
     void Bot::Move(M::Mare mare)
     { 
         srand(time(NULL));
-        int q = 0;
-        int n = rand()%7;
         pair<int, int> pos;
         pair<int, int> dest;
-        pos = ;
-        do{
-        int x = rand()%12;
-        int y = rand()%12;
+        int r0 = rand()%2;
+        int r1 = rand()%2;
+        int r1_1 = rand()%1;
+        if(r0 = 0)
+        {
+            S::Corazzata a[3] = mare.getMarCor();
+            pos = (a[r1]).getPMedio();
+        }
+        else
+        if(r0 = 1)
+        {
+            S::Nds a[3] = mare.getMarNds();
+            pos = (a[r1]).getPMedio();
+        }
+        else
+        if(r0 = 2)
+        {
+            S::Sde a[2] = mare.getMarSde();
+            pos = (a[r1_1]).getPMedio();
+        }
+        
+        int x = rand()%3;
+        int y = rand()%3;
+        x = rand()%12;
+        y = rand()%12;
         dest.first= x;
         dest.second = y;
+        if(r0 = 0)
+        {
+            
+        }
+        else
+        if(r0 = 0)
+        {
+            
+        }
+        else
+        if(r0 = 0)
+        {
+            
+        }
         Mare.Move(pos, dest, mare);
-        if 
-        }while(q == 0);
     }
 }
