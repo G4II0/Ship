@@ -33,9 +33,13 @@ namespace B
         srand(time(NULL));
         pair<int, int> pos;
         pair<int, int> dest;
-        int r0 = rand()%2;
-        int r1 = rand()%2;
-        int r1_1 = rand()%1;
+        int dx = rand()%3;
+        int dy = rand()%3;
+        int r0 = rand()%3;
+        int r1 = rand()%3;
+        int r1_1 = rand()%2;
+        dest.first= dx;
+        dest.second = dy;
         if(r0 = 0)
         {
             S::Corazzata a[3] = mare.getMarCor();
@@ -52,27 +56,6 @@ namespace B
         {
             S::Sde a[2] = mare.getMarSde();
             pos = (a[r1_1]).getPMedio();
-        }
-        
-        int x = rand()%3;
-        int y = rand()%3;
-        x = rand()%12;
-        y = rand()%12;
-        dest.first= x;
-        dest.second = y;
-        if(r0 = 0)
-        {
-            
-        }
-        else
-        if(r0 = 0)
-        {
-            
-        }
-        else
-        if(r0 = 0)
-        {
-            
         }
         Mare.Move(pos, dest, mare);
     }
