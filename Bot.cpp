@@ -27,7 +27,7 @@ namespace B
     char Bot::getType() const
     {return this -> Type;}
 
-    // player
+    // bot
     void Bot::Move(M::Mare mare)
     { 
         srand(time(NULL));
