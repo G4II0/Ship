@@ -18,11 +18,11 @@ namespace P
 
         // costruttore
         Players();
-        Players(M::Mare *chessBoard, string N, char T);
+        Players(M::Mare *Mare, char N, char T);
 
         //set
         void Players::setName(char name);
-        void Players::setMare(char Mare);
+        void Players::setMare(M::Mare Mare);
         void Players::setType(char type);
         
         //get
@@ -31,7 +31,7 @@ namespace P
         void Players::getType();
 
         //Move
-        void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m);
+        void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m);
     };
 }
 #endif

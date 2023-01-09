@@ -5,7 +5,7 @@ namespace P
     Players::Players()
     {}
 
-    Players::Players(Mare *mare, char N, char T)
+    Players::Players(M::Mare *Mare, char N, char T)
     {
         this -> Name= N;
         this -> Mare = mare;
@@ -14,7 +14,7 @@ namespace P
 
     void Players::setName(char name)
     {this -> Name = name;}
-    void Players::setType(Mare mare)
+    void Players::setType(M::Mare mare)
     {this -> Mare = mare;}
     void Players::setType(char type)
     {this -> Type = type;}
@@ -27,8 +27,8 @@ namespace P
     {return this -> Type;}
 
     // player
-    void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m)
+    void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m)
     {
-        Mare::Move(pos, dest, m);
+        M::Mare::Move(pos, dest, m);
     }
 }
