@@ -277,7 +277,7 @@ namespace M
             Move(start, dest, t.getDirezione(), t, m);
         }
         else
-                if(mar_[start.first][start.second] == 'C')
+                if(mar_[start.first][start.second] == 'Ec')
         {S::Sde t = marSde[2];
             Move(start, dest, t, m);
         }
@@ -659,7 +659,7 @@ namespace M
             out += " │ ";
             for (int j = 0; j < 12; j++)
             {
-                if (mar_[i][j] != '\0')
+                if (mar_[i][j] != ' ')
                     out += mar_[i][j];
                 else
                     out += " ";
@@ -683,7 +683,7 @@ namespace M
             out += " │ ";
             for (int j = 0; j < 12; j++)
             {
-                if (mar_[i][j] != '\0')
+                if (mar_[i][j] != ' ')
                     out += marES_[i][j];
                 else
                     out += " ";
@@ -713,7 +713,7 @@ namespace M
             {
                 while (y < 11)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0' || mar_[x][y+2] != '\0' || mar_[x][y-2] != '\0')
+                    if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                         {v1.pop_back();}
                     else
                     {
@@ -733,7 +733,7 @@ namespace M
             {
                 while (y < 12)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0' || mar_[x+2][y] != '\0' || mar_[x-2][y] != '\0')
+                    if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {v1.pop_back();}
                     else
                     {
@@ -762,7 +762,7 @@ namespace M
             {
                 while (y < 11)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x][y+1] != '\0' || mar_[x][y-1] != '\0')
+                    if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ')
                         {v1.pop_back();}
                     else
                     {
@@ -782,7 +782,7 @@ namespace M
             {
                 while (y < 12)
                 {
-                    if (mar_[x][y] != '\0' || mar_[x+1][y] != '\0' || mar_[x-1][y] != '\0')
+                    if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ')
                     {v1.pop_back();}
                     else
                     {
@@ -808,7 +808,7 @@ namespace M
         {
             while (y < 12)
             {
-                if(mar_[x][y] != '\0')
+                if(mar_[x][y] != ' ')
                 v1.pop_back();
                 else
                 p.first = x;
