@@ -34,8 +34,6 @@ namespace B
         pair<int, int> pos;
         pair<int, int> dest;
         vector<pair<int, int>> des;
-        dest.first = rand()%3;
-        dest.second = rand()%3;
         int r0 = rand()%3;
         int r1 = rand()%3;
         int r1_1 = rand()%2;
@@ -60,8 +58,9 @@ namespace B
             S::Sde a[2] = mare.getMarSde();
             pos = (a[r1_1]).getPMedio();
             des = mare.posAvailable(a[r1]);
-            dest[];
         }
+        int d = (des.size());
+        dest = des[d];
         Mare.Move(pos, dest, mare);
     }
 }
