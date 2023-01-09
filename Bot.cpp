@@ -41,7 +41,6 @@ namespace B
         {
             S::Corazzata a[3] = mare.getMarCor();
             pos = (a[r1]).getPMedio();
-            mare.posAvailable(a[r1]);
             des = mare.posAvailable(a[r1]);
         }
         else
@@ -49,7 +48,6 @@ namespace B
         {
             S::Nds a[3] = mare.getMarNds();
             pos = (a[r1]).getPMedio();
-            mare.posAvailable(a[r1]);
             des = mare.posAvailable(a[r1]);
         }
         else
