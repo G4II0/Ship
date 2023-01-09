@@ -83,6 +83,39 @@ namespace M
     vector<S::Sde> Mare::getMarSde()
     {return this -> marSde;}
 
+    S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos)
+    {
+        for(int i=0; i<2; i++)
+        {
+            if((marCor[i]).getPMedio() == pos)
+            {
+                return marCor[i];
+            }
+        }
+    }
+
+    S::Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos)
+    {
+        for(int i=0; i<2; i++)
+        {
+            if((marNds[i]).getPMedio() == pos)
+            {
+                return marNds[i];
+            }
+        }
+    }
+
+    S::Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos)
+    {
+        for(int i=0; i<2; i++)
+        {
+            if((marSde[i]).getPMedio() == pos)
+            {
+                return marSde[i];
+            }
+        }
+    }
+
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
         vector<pair<int, int>> v = posAvailable(ship);

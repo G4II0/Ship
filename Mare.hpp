@@ -58,6 +58,10 @@ namespace M
         vector<S::Nds> getMarNds();
         vector<S::Sde> getMarSde();
 
+        S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos);
+        S::Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos);
+        S::Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos);
+
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
         void initializeMareES(char (&marES_)[12][12]);
