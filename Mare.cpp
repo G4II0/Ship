@@ -55,6 +55,7 @@ namespace M
             }
             v.push_back(v1);
         }
+        return v;
     }
 
     void Mare::getMareE(Mare& mN)
@@ -72,6 +73,15 @@ namespace M
             }
         }
     }
+
+    S::Corazzata Mare::getMarCor()
+    {return this -> marCor[3];}
+
+    S::Nds Mare::getMarNds()
+    {return this -> marNds[3];}
+    
+    S::Sde Mare::getMarSde()
+    {return this -> marSde[3];}
 
     bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
     {
