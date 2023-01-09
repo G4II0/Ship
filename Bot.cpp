@@ -33,13 +33,11 @@ namespace B
         srand(time(NULL));
         pair<int, int> pos;
         pair<int, int> dest;
-        int dx = rand()%3;
-        int dy = rand()%3;
         int r0 = rand()%3;
         int r1 = rand()%3;
         int r1_1 = rand()%2;
-        dest.first= dx;
-        dest.second = dy;
+        dest.first= rand()%3;
+        dest.second = rand()%3;
         if(r0 = 0)
         {
             S::Corazzata a[3] = mare.getMarCor();
