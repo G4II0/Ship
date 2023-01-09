@@ -27,8 +27,8 @@ namespace P
     {return this -> Type;}
 
     // player
-    void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m)
+    void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare Mare)
     {
-        Mare.Move(pos, dest, m);
+        Mare.Move(pos, dest, Mare);
     }
 }
