@@ -10,20 +10,28 @@ namespace P
 
         protected:
 
-        string Name;
+        char Name;
         M::Mare *Mare;
         char Type;
 
         public:
 
         // costruttore
+        Players();
         Players(M::Mare *chessBoard, string N, char T);
 
-        // player
-        bool Move(string start, string end);
-        int GetCondition();
-        // bot
-        bool Move();
+        //set
+        void Players::setName(char name);
+        void Players::setMare(char Mare);
+        void Players::setType(char type);
+        
+        //get
+        void Players::getName();
+        void Players::getMare();
+        void Players::getType();
+
+        //Move
+        void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m);
     };
 }
 #endif

@@ -3,10 +3,10 @@
 
 namespace P
 {
-    P::Players()
+    Players::Players()
     {}
 
-    P::Players(Mare *mare, char N, char T)
+    Players::Players(Mare *mare, char N, char T)
     {
         this -> Name= N;
         this -> Mare = mare;
