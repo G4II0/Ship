@@ -11,14 +11,14 @@ namespace P
         protected:
 
         char Name;
-        M::Mare *Mare;
+        M::Mare Mare;
         char Type;
 
         public:
 
         // costruttore
         Players();
-        Players(M::Mare *Mare, char N, char T);
+        Players(M::Mare Mare, char N, char T);
 
         //set
         void Players::setName(char name);
@@ -26,9 +26,9 @@ namespace P
         void Players::setType(char type);
         
         //get
-        void Players::getName() const;
-        void Players::getMare() const;
-        void Players::getType() const;
+        char Players::getName() const;
+        M::Mare Players::getMare() const;
+        char Players::getType() const;
 
         //Move
         void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m);
