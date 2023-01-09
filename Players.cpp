@@ -14,7 +14,7 @@ namespace P
 
     void Players::setName(char name)
     {this -> Name = name;}
-    void Players::setType(M::Mare mare)
+    void Players::setMare(M::Mare mare)
     {this -> Mare = mare;}
     void Players::setType(char type)
     {this -> Type = type;}

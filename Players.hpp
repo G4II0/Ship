@@ -26,9 +26,9 @@ namespace P
         void Players::setType(char type);
         
         //get
-        void Players::getName();
-        void Players::getMare();
-        void Players::getType();
+        void Players::getName() const;
+        void Players::getMare() const;
+        void Players::getType() const;
 
         //Move
         void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m);
