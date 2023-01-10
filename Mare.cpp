@@ -316,7 +316,7 @@ namespace M
         if(mar_[start.first][start.second] == 'C')
         {
             S::Corazzata t = m.whichCor(m.getMarCor(), start);
-            Move(start, dest, t.getDirezione(), t, m);
+            Move(start, dest, t, m);
         }
         else
         if(mar_[start.first][start.second] == 'S')
