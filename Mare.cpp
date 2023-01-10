@@ -339,19 +339,19 @@ namespace M
         if(marE_[dest.first][dest.second] == 'C')
         {
             S::Corazzata t = mN.whichCor(mN.getMarCor(), dest);
-            Move(start, dest, t, mN);
+            CorHit(t);
         }
         else
         if(mar_[dest.first][dest.second] == 'S')
         {
             S::Nds t = mN.whichNds(mN.getMarNds(), dest);
-            Move(start, dest, t.getDirezione(), t, mN);
+            NdsHit(t);
         }
         else
         if(mar_[dest.first][dest.second] == 'E')
         {
             S::Sde t = mN.whichSde(mN.getMarSde(), dest);
-            Move(start, dest, t, mN);
+            SdeHit(t);
         }
         throw InvalidMoveException();   
     }
