@@ -335,6 +335,7 @@ namespace M
     //move Corazzata
     void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare mN)
     {
+        getMareE(mN);
         if(marE_[dest.first][dest.second] == 'C')
         {
             S::Corazzata t = mN.whichCor(mN.getMarCor(), dest);
