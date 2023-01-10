@@ -336,49 +336,7 @@ namespace M
     //move Corazzata
     void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare m)
     {
-        if (legitMoveInput(s, dest, m) == true)
-        {
-            pair<int, int> temp1;
-            pair<int, int> temp2;
-            pair<int, int> temp3;
-            pair<int, int> temp4;
-            pair<pair<int, int>, pair<int, int>> temp5;
-            if (s.getDirezione() == 0)
-            {
-                temp1.first = dest.first;         // x prua
-                temp1.second = (dest.second) + 2; // y prua
-                temp2.first = dest.first;         // x poppa
-                temp2.second = (dest.second) - 2; // y poppa
-                temp3.first = dest.first;
-                temp3.second = (dest.second) + 1;
-                temp4.first = dest.first;
-                temp2.second = (dest.second) - 1;
-                temp5.first = temp1;  // c prua
-                temp5.second = temp2; // c poppa
-                s.setPos(temp5);
-            }
-            else
-            {
-                temp1.first = (dest.first) + 2; // x prua
-                temp1.second = dest.second;     // y prua
-                temp2.first = (dest.first) - 2; // x poppa
-                temp2.second = dest.second;     // y poppa
-                temp3.first = (dest.first) + 1;
-                temp3.second = dest.second;
-                temp4.first = (dest.first) - 1;
-                temp2.second = dest.second;
-                temp5.first = temp1;  // c prua
-                temp5.second = temp2; // c poppa
-                s.setPos(temp5);
-            }
-            // posizionamento nel mare
-            setMareA(dest, 'C');
-            setMareA(temp1, 'C');
-            setMareA(temp2, 'C');
-            setMareA(temp3, 'C');
-            setMareA(temp4, 'C');
-        }
-        throw InvalidMoveException();
+        
     }
 
     //move Nds
