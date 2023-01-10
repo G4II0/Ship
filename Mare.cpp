@@ -314,17 +314,20 @@ namespace M
     void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m)
     {
         if(mar_[start.first][start.second] == 'C')
-        {S::Corazzata t = marCor[3];
+        {
+            S::Corazzata t = m.whichCor(m.getMarCor(), start);
             Move(start, dest, t.getDirezione(), t, m);
         }
         else
         if(mar_[start.first][start.second] == 'S')
-        {S::Nds t = marNds[3];
+        {
+            S::Nds t = m.whichNds(m.getMarNds(), start);
             Move(start, dest, t.getDirezione(), t, m);
         }
         else
-                if(mar_[start.first][start.second] == 'E')
-        {S::Sde t = marSde[2];
+        if(mar_[start.first][start.second] == 'E')
+        {
+            S::Sde t = m.whichSde(m.getMarSde(), start);
             Move(start, dest, t, m);
         }
         throw InvalidMoveException();
