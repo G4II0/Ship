@@ -334,7 +334,7 @@ namespace M
     }
 
     //move Corazzata
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -386,6 +386,9 @@ namespace M
     {
         if (legitMoveInput(s, dest, m) == true)
         {
+            setMareA(start, ' ');
+            setMareA(s.getPrua(), ' ');
+            setMareA(s.getPoppa(), ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int>> temp3;
@@ -422,6 +425,7 @@ namespace M
     {
         if (legitMoveInput(s, dest, m) == true)
         {
+            setMareA(start, ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int>> temp3;

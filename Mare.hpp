@@ -79,7 +79,7 @@ namespace M
         //spostamento Generale
         void Move(pair<int, int> start, pair<int, int> dest, Mare m);
         //spostamento Corazzata
-        void Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Corazzata c, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, S::Corazzata c, M::Mare m);
         //spostamento Nds
         void Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
         //spostamento Sde
