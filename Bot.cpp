@@ -24,22 +24,25 @@ namespace B
     {return this -> Name;}
     M::Mare Bot::getMare() const
     {return this -> Mare;}
+    M::Mare Bot::getMareN(B::Bot b) const
+    {return b.getMare();}
     char Bot::getType() const
     {return this -> Type;}
 
     // bot
-    void Bot::Move(M::Mare mare)
+    void Bot::Move(M::Mare mare, B::Bot bN)
     { 
         srand(time(NULL));
         pair<int, int> pos;
         pair<int, int> dest;
         vector<pair<int, int>> des;
         int r0 = rand()%3;
-        int r1 = rand()%3;
         int r1_1 = rand()%2;
         if(r0 = 0)
         {
             vector<S::Corazzata> a = mare.getMarCor();
+            int s = a.size();
+            int r1 = rand()%s;
             pos = (a[r1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }
@@ -47,6 +50,8 @@ namespace B
         if(r0 = 1)
         {
             vector<S::Nds> a = mare.getMarNds();
+            int s = a.size();
+            int r1 = rand()%s;
             pos = (a[r1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }
@@ -54,11 +59,13 @@ namespace B
         if(r0 = 2)
         {
             vector<S::Sde> a = mare.getMarSde();
+            int s = a.size();
+            int r1 = rand()%s;
             pos = (a[r1_1]).getPMedio();
             des = mare.posAvailable(a[r1]);
         }
         int d = (des.size());
         dest = des[d];
-        Mare.Move(pos, dest, mare);
+        Mare.Move(pos, dest, mare, getMareN(bN));
     }
 }

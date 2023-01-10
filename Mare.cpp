@@ -644,21 +644,54 @@ namespace M
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
+        if(s.getCorazza() == 0)
+        {
+            CorAff(s); //sistemare
+        }
     }
 
     void Mare::NdsHit(S::Nds s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
+        if(s.getCorazza() == 0)
+        {
+            NdsAff(s); //sistemare
+        }
     }
 
     void Mare::SdeHit(S::Sde s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
+        if(s.getCorazza() == 0)
+        {
+            SdeAff(s); //sistemare
+        }
+    }
+
+    void Mare::CorAff(S::Corazzata s)
+    {
+        s.setState((-1));
+        if(s.getDirezione() == 0)
+        {
+            pair<int, int> pM = s.getPMedio();
+        }
+    }
+
+    void Mare::NdsAff(S::Nds s)
+    {
+        s.setState((-1));
+    }
+
+    void Mare::SdeAff(S::Sde s)
+    {
+        s.setState((-1));
     }
 
 /*____________________________________________________________________________________________________________________________________________________________*/
+
+//sistemare sopra
 
     //fixare
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)

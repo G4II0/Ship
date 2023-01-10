@@ -28,10 +28,11 @@ namespace B
         //get
         char Bot::getName() const;
         M::Mare Bot::getMare() const;
+        M::Mare Bot::getMareN(Bot b) const;
         char Bot::getType() const;
 
         //Move
-        void Bot::Move(M::Mare mare);
+        void Bot::Move(M::Mare mare, B::Bot bN);
     };
 }
 #endif

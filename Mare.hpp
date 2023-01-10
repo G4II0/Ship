@@ -99,6 +99,11 @@ namespace M
         void CorHit(S::Corazzata s);
         void NdsHit(S::Nds s);
         void SdeHit(S::Sde s);
+
+        // affonda la nave
+        void CorAff(S::Corazzata s);
+        void NdsAff(S::Nds s);
+        void SdeAff(S::Sde s);
  
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
         vector<pair<int, int>> posAvailable(S::Corazzata ship);
