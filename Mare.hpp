@@ -77,7 +77,7 @@ namespace M
         bool legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m);
         bool legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m);
         //spostamento Generale
-        void Move(pair<int, int> start, pair<int, int> dest, Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
         //spostamento Corazzata
         void Move(pair<int, int> start, pair<int, int> dest, S::Corazzata c, M::Mare m);
         //spostamento Nds

@@ -57,7 +57,6 @@ namespace M
         }
         return v;
     }
-
     void Mare::getMareE(Mare& mN)
     {
         vector<vector<char>> v;
@@ -311,12 +310,12 @@ namespace M
     }
 
     //move generico
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN)
     {
         if(mar_[start.first][start.second] == 'C')
         {
             S::Corazzata t = m.whichCor(m.getMarCor(), start);
-            Move(start, dest, t, m);
+            Move(start, dest, t, mN);
         }
         else
         if(mar_[start.first][start.second] == 'S')
@@ -336,7 +335,8 @@ namespace M
     //move Corazzata
     void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare mN)
     {
-        if(mar_[dest.first][dest.second] == 'C')
+        char marNemico [12][12] = mN.getMare();
+        if(marE_[dest.first][dest.second] == 'C')
         {
             S::Corazzata t = mN.whichCor(mN.getMarCor(), dest);
             Move(start, dest, t, mN);
