@@ -15,50 +15,62 @@ namespace S
         this -> direzione = direzione_;
         this -> dimensione = 5;
         this -> corazza = 5;
+        this -> segmenti = {true, true, true};
+        this -> corazza = 3;
         this -> pMedio = {0, 0};
         this -> numero = numero_;
         this -> state = true;
     }
 
-    void Ship::setStructure(std::vector<char> structure_)
+    void Corazzata::setStructure(std::vector<char> structure_)
     {this -> structure = structure_;}
-    void Ship::setTipo(char tipo_)
+    void Corazzata::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    void Corazzata::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
-    void Ship::setPrua(std::pair<int, int> poppa_)
+    void Ship::setPoppa(std::pair<int, int> poppa_)
     {this->poppa = poppa_;}
-    void Ship::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
-    void Ship::setDirezione(int direzione_)
-    {this -> direzione = direzione_;}
-    void Ship::setDimensione(int dimensione_)
+    void Corazzata::setDirezione(int direzione_)
+    {this->direzione = direzione_;}
+    void Corazzata::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
-    void Ship::setNumero(int numero_)
-    {this -> numero = numero_;}
-    void Ship::setCorazza(int corazza_)
+    void Corazzata::setSegmenti(bool Ssegmento_, int nS)
+    {this -> segmenti[nS] = Ssegmento_;}
+    void Corazzata::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
+    void Corazzata::setPMedio(std::pair<int, int> pMedio_)
+    {this -> pMedio = pMedio_;}
+    void Corazzata::setNumero(int numero_)
+    {this -> numero = numero_;}
+    void Corazzata::setState(int state_)
+    {this -> state = state_;}
 
-    std::vector<char> Ship::getStructure() const
+    std::vector<char> Corazzata::getStructure() const
     {return this -> structure;}
-    char Ship::getTipo() const
+    char Corazzata::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int>> Ship::getPos() const
+    std::pair<std::pair<int, int>, std::pair<int, int>> Corazzata::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
     std::pair<int, int> Ship::getPoppa() const
     {return this->poppa;}
-    std::pair<int, int> Ship::getPMedio() const
-    {return this -> pMedio;}
-    int Ship::getDimensione() const
+    int Corazzata::getDirezione() const
+    {return this -> direzione;}
+    int Corazzata::getDimensione() const
     {return this -> dimensione;}
-    int Ship::getNumero() const
-    {return this -> numero;}
-    int Ship::getCorazza() const
+    std::vector<bool> Corazzata::getSegmenti() const
+    {return this -> segmenti;}
+    int Corazzata::getCorazza() const
     {return this -> corazza;}
+    std::pair<int, int> Corazzata::getPMedio() const
+    {return this -> pMedio;}
+    int Corazzata::getNumero() const
+    {return this -> numero;}
+    int Corazzata::getState() const
+    {return this -> state;}
 
     std::vector<std::pair<int, int>> Ship::Moves()
     {

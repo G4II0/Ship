@@ -37,7 +37,7 @@ namespace S
         void setCorazza(int corazza_);
         void setPMedio(std::pair<int, int> pMedio_);
         void setNumero(int numero_);
-        void Sde::setState(int state_);
+        void setState(int state_);
 
         std::vector<char> getStructure() const;
         char getTipo() const;

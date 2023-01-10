@@ -29,7 +29,7 @@ namespace S
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
-    void Ship::setPrua(std::pair<int, int> poppa_)
+    void Ship::setPoppa(std::pair<int, int> poppa_)
     {this->poppa = poppa_;}
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
