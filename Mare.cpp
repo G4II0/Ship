@@ -353,7 +353,7 @@ namespace M
             S::Sde t = mN.whichSde(mN.getMarSde(), dest);
             SdeHit(t);
         }
-        throw InvalidMoveException();   
+        HitSet(dest, mN);  
     }
 
     //move Nds
