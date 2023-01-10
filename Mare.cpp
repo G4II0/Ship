@@ -334,9 +334,26 @@ namespace M
     }
 
     //move Corazzata
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare mN)
     {
-        
+        if(mar_[dest.first][dest.second] == 'C')
+        {
+            S::Corazzata t = mN.whichCor(mN.getMarCor(), dest);
+            Move(start, dest, t, mN);
+        }
+        else
+        if(mar_[dest.first][dest.second] == 'S')
+        {
+            S::Nds t = mN.whichNds(mN.getMarNds(), dest);
+            Move(start, dest, t.getDirezione(), t, mN);
+        }
+        else
+        if(mar_[dest.first][dest.second] == 'E')
+        {
+            S::Sde t = mN.whichSde(mN.getMarSde(), dest);
+            Move(start, dest, t, mN);
+        }
+        throw InvalidMoveException();   
     }
 
     //move Nds
