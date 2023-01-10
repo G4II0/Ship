@@ -1,9 +1,11 @@
 #include "Mare.hpp"
+#include "Players.hpp"
 #include "Ship.hpp"
 #include "Corazzata.hpp"
 #include "Nds.hpp"
 #include "Sde.hpp"
 #include "Exception.cpp"
+
 
 using namespace std;
 namespace M
@@ -239,11 +241,11 @@ namespace M
                 ship.setPos(temp5);
             }
             // posizionamento nel mare
-            setMareA(pos, 'C');
-            setMareA(temp1, 'C');
-            setMareA(temp2, 'C');
-            setMareA(temp3, 'C');
-            setMareA(temp4, 'C');
+            m.setMareA(pos, 'C');
+            m.setMareA(temp1, 'C');
+            m.setMareA(temp2, 'C');
+            m.setMareA(temp3, 'C');
+            m.setMareA(temp4, 'C');
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
@@ -279,9 +281,9 @@ namespace M
                 ship.setPos(temp3);
             }
             // posizionamento nella board
-            setMareA(pos, 'S');
-            setMareA(temp1, 'S');
-            setMareA(temp2, 'S');
+            m.setMareA(pos, 'S');
+            m.setMareA(temp1, 'S');
+            m.setMareA(temp2, 'S');
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
@@ -302,7 +304,7 @@ namespace M
             temp3.second = temp1;            // c poppa
             ship.setPos(temp3);
             // posizionamento nella board
-            setMareA(pos, 'E');
+            m.setMareA(pos, 'E');
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
@@ -625,6 +627,7 @@ namespace M
         }
     }
 
+    //sistemare
     void Mare::HitSet(pair<int, int> p, Mare mN)
     {
         getMareE(mN);
@@ -677,16 +680,66 @@ namespace M
         {
             pair<int, int> pM = s.getPMedio();
         }
+        marCor.erase(remove(marCor.begin(), marCor.end(), s));
+        int d = s.getDirezione();
+        pair<int, int> p = s.getPMedio();
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y];
+        if(d==0)
+        {
+            mar_[x][y+1];
+            mar_[x][y+2];
+            mar_[x][y-1];
+            mar_[x][y-2];
+        }
+        else
+        {
+            mar_[x+1][y];
+            mar_[x+2][y];
+            mar_[x-1][y];
+            mar_[x-2][y];
+        }
     }
 
     void Mare::NdsAff(S::Nds s)
     {
         s.setState((-1));
+        if(s.getDirezione() == 0)
+        {
+            pair<int, int> pM = s.getPMedio();
+        }
+        marNds.erase(remove(marNds.begin(), marNds.end(), s));
+        int d = s.getDirezione();
+        pair<int, int> p = s.getPMedio();
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y];
+        if(d==0)
+        {
+            mar_[x][y+1];
+            mar_[x][y-1];
+        }
+        else
+        {
+            mar_[x+1][y];
+            mar_[x-1][y];
+        }
     }
 
     void Mare::SdeAff(S::Sde s)
     {
         s.setState((-1));
+        if(s.getDirezione() == 0)
+        {
+            pair<int, int> pM = s.getPMedio();
+        }
+        marSde.erase(remove(marSde.begin(), marSde.end(), s));
+        int d = s.getDirezione();
+        pair<int, int> p = s.getPMedio();
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y];
     }
 
 /*____________________________________________________________________________________________________________________________________________________________*/

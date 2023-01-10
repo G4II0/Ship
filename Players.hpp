@@ -21,17 +21,17 @@ namespace P
         Players(M::Mare Mare, char N, char T);
 
         //set
-        void Players::setName(char name);
-        void Players::setMare(M::Mare Mare);
-        void Players::setType(char type);
+        void setName(char name);
+        void setMare(M::Mare Mare);
+        void setType(char type);
         
         //get
-        char Players::getName() const;
-        M::Mare Players::getMare() const;
-        char Players::getType() const;
+        char getName() const;
+        M::Mare getMare() const;
+        char getType() const;
 
         //Move
-        void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare m);
+        void Move(std::pair<int, int> pos, std::pair<int, int> dest, M::Mare m);
     };
 }
 #endif

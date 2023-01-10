@@ -1,6 +1,7 @@
 #ifndef BOT_HPP
 #define BOT_HPP
 
+#include <iostream>
 #include "Mare.hpp"
 
 namespace B
@@ -21,18 +22,18 @@ namespace B
         Bot(M::Mare Mare, char N, char T);
 
         //set
-        void Bot::setName(char name);
-        void Bot::setMare(M::Mare mare);
-        void Bot::setType(char type);
+        void setName(char name);
+        void setMare(M::Mare mare);
+        void setType(char type);
         
         //get
-        char Bot::getName() const;
-        M::Mare Bot::getMare() const;
-        M::Mare Bot::getMareN(Bot b) const;
-        char Bot::getType() const;
+        char getName() const;
+        M::Mare getMare() const;
+        M::Mare getMareN(Bot b) const;
+        char getType() const;
 
         //Move
-        void Bot::Move(M::Mare mare, B::Bot bN);
+        void Move(M::Mare mare, B::Bot bN);
     };
 }
 #endif

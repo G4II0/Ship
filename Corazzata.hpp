@@ -17,14 +17,14 @@ namespace S
         std::pair<int, int> poppa;
         int direzione;
         int dimensione;
-        vector<bool> segmenti;
+        std::vector<bool> segmenti;
         int corazza;
         std::pair<int, int> pMedio;
         int numero;
         bool state;
 
         public:
-        Corazzata::Corazzata();
+        Corazzata();
         Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);

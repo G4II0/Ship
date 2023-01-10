@@ -9,10 +9,10 @@
 #include <map>
 #include <random>
 #include "Ship.hpp"
-#include "Players.hpp"
 #include "Corazzata.hpp"
 #include "Nds.hpp"
 #include "Sde.hpp"
+
 
 using namespace std;
 
@@ -45,7 +45,7 @@ namespace M
 
     public:
 
-        Mare::Mare();
+        Mare();
         Mare(string log, char mar_ [12][12], string player1);
 
         void setMareA(pair<int, int> p, char c);
@@ -94,7 +94,7 @@ namespace M
         // scansione del sottomarino
         void SdeScan(S::Sde s);
         // assegna la x dell'hit
-        void Mare::HitSet(pair<int, int> p, Mare mN);
+        void HitSet(pair<int, int> p, Mare mN);
         // assegna l'hit
         void CorHit(S::Corazzata s);
         void NdsHit(S::Nds s);

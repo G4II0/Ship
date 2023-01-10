@@ -16,7 +16,7 @@ namespace S
         std::pair<int, int> prua;
         std::pair<int, int> poppa;
         int dimensione;
-        vector<bool> segmenti;
+        std::vector<bool> segmenti;
         int corazza;
         std::pair<int, int> pMedio;
         int numero;
