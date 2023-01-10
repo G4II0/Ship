@@ -169,34 +169,34 @@ namespace M
         }
     }
 
-    void Mare::initializeMare(S::Corazzata marCor_[3])
+    void Mare::initializeMare(vector<S::Corazzata> marCor)
     {
         int i = 0;
 
-        while (i < 12)
+        while (i < 3)
         {
-                marCor_[i] = S::Corazzata();
+                marCor[i] = S::Corazzata();
             i++;
         }
     }
 
-        void Mare::initializeMare(S::Nds marNds_[3])
+        void Mare::initializeMare(vector<S::Nds> marNds)
     {
         int i = 0;
 
-        while (i < 12)
+        while (i < 3)
         {
-                marNds_[i] = S::Nds();
+                marNds[i] = S::Nds();
             i++;
         }
     }
-        void Mare::initializeMare(S::Sde marSde_[2])
+        void Mare::initializeMare(vector<S::Sde> marSde)
     {
         int i = 0;
 
-        while (i < 12)
+        while (i < 2)
         {
-                marSde_[i] = S::Sde();
+                marSde[i] = S::Sde();
             i++;
         }
     }

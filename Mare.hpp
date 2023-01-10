@@ -65,9 +65,9 @@ namespace M
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
         void initializeMareES(char (&marES_)[12][12]);
-        void initializeMare(S::Corazzata marCor_[3]);
-        void initializeMare(S::Nds marNds_[3]);
-        void initializeMare(S::Sde marSde_[2]);
+        void initializeMare(vector<S::Corazzata> marCor);
+        void initializeMare(vector<S::Nds> marNds);
+        void initializeMare(vector<S::Sde> marSde);
         //inserisce la nave nella borad
         void insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m);
         void insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m);
