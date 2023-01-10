@@ -634,6 +634,10 @@ namespace M
         {
             setMareES(p, 'X');
         }
+        else
+        {
+            setMareES(p, 'O');
+        }
     }
 
     void Mare::CorHit(S::Corazzata s)
