@@ -11,9 +11,10 @@ namespace S
         this -> structure = {'E'};
         this -> tipo = 'E';
         this -> pos = pos_;
-        this->prua = pos_.first;
-        this->poppa = pos_.second;
+        this -> prua = pos_.first;
+        this -> poppa = pos_.second;
         this -> dimensione = 3;
+        this -> segmenti = {true, true, true};
         this -> corazza = 3;
         this -> pMedio = {0, 0};
         this -> numero = numero_;
@@ -30,14 +31,18 @@ namespace S
     {this->prua = prua_;}
     void Ship::setPrua(std::pair<int, int> poppa_)
     {this->poppa = poppa_;}
-    void Sde::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
-    void Sde::setNumero(int numero_)
-    {this -> numero = numero_;}
+    void Sde::setSegmenti(bool Ssegmento_, int nS)
+    {this -> segmenti[nS] = Ssegmento_;}
     void Sde::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
+    void Sde::setPMedio(std::pair<int, int> pMedio_)
+    {this -> pMedio = pMedio_;}
+    void Sde::setNumero(int numero_)
+    {this -> numero = numero_;}
+    void Sde::setState(int state_)
+    {this -> state = state_;}
 
     std::vector<char> Sde::getStructure() const
     {return this -> structure;}
@@ -49,14 +54,18 @@ namespace S
     {return this->prua;}
     std::pair<int, int> Ship::getPoppa() const
     {return this->poppa;}
-    std::pair<int, int> Sde::getPMedio() const
-    {return this -> pMedio;}
     int Sde::getDimensione() const
     {return this -> dimensione;}
-    int Sde::getNumero() const
-    {return this -> numero;}
+    std::vector<bool> Sde::getSegmenti() const
+    {return this -> segmenti;}
     int Sde::getCorazza() const
     {return this -> corazza;}
+    std::pair<int, int> Sde::getPMedio() const
+    {return this -> pMedio;}
+    int Sde::getNumero() const
+    {return this -> numero;}
+    int Sde::getState() const
+    {return this -> state;}
 
     //possibili posizioni del pMedio della Sde
     std::vector<std::pair<int, int>> Moves()

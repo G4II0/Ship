@@ -641,13 +641,22 @@ namespace M
     }
 
     void Mare::CorHit(S::Corazzata s)
-    {int c = s.getCorazza() - 1; s.setCorazza(c);}
+    {
+        int c = s.getCorazza() - 1;
+        s.setCorazza(c);
+    }
 
     void Mare::NdsHit(S::Nds s)
-    {int c = s.getCorazza() - 1; s.setCorazza(c);}
+    {
+        int c = s.getCorazza() - 1;
+        s.setCorazza(c);
+    }
 
     void Mare::SdeHit(S::Sde s)
-    {int c = s.getCorazza() - 1; s.setCorazza(c);}
+    {
+        int c = s.getCorazza() - 1;
+        s.setCorazza(c);
+    }
 
 /*____________________________________________________________________________________________________________________________________________________________*/
 
