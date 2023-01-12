@@ -116,3 +116,8 @@
        corazza = 5;
     }
 
+    bool operator==(const Corazzata& c1, const Corazzata& c2)
+    {
+        return c1.getTipo() == c2.getTipo() && c1.getNumero() == c2.getNumero() && c1.getPMedio() == c2.getPMedio();
+    }
+

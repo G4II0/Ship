@@ -56,5 +56,7 @@
         void Damage();
 
         void Heal();
+        
+        bool operator==(const Corazzata& c1, const Corazzata& c2);
     };
 #endif
