@@ -55,5 +55,7 @@
         std::vector<std::pair<int, int> > Moves();
 
         void Damage();
+
+        bool operator==(const Sde& c1, const Sde& c2);
     };
 #endif

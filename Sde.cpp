@@ -87,3 +87,8 @@
     {
        corazza = corazza - 1;
     }
+
+bool operator==(const Sde& n1, const Sde& n2)
+    {
+        return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();
+    }
