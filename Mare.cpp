@@ -4,7 +4,7 @@ using namespace std;
 namespace M
 {
     
-    Mare()
+    Mare::Mare()
     {
         this -> mar_ [12][12];
         this -> condition = -1;
