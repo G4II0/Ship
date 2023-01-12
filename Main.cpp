@@ -1,6 +1,4 @@
 #include <iostream>
-#include "Players.hpp"
-#include <iostream>
 #include <chrono>
 #include <thread>
 #include "Mare.hpp"
