@@ -28,11 +28,11 @@ using namespace std;
         /*stampa matrice del mare nemico*/
         char marES_ [12][12];
         /*matrice del mare (centri-Corazzate)*/
-        vector<S::Corazzata> marCor;
+        vector<Corazzata> marCor;
         /*matrice del mare (centri-Supporto)*/
-        vector<S::Nds> marNds;
+        vector<Nds> marNds;
         /*matrice del mare (centri-Esplorazione)*/
-        vector<S::Sde> marSde;
+        vector<Sde> marSde;
         /*salva la condizione di giocatore attuale*/
         int condition;
         /*nome player*/
@@ -52,61 +52,61 @@ using namespace std;
         vector<vector<char>> getMare();
         void getMareE(Mare& mN);
 
-        vector<S::Corazzata> getMarCor();
-        vector<S::Nds> getMarNds();
-        vector<S::Sde> getMarSde();
+        vector<Corazzata> getMarCor();
+        vector<Nds> getMarNds();
+        vector<Sde> getMarSde();
 
-        S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos);
-        S::Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos);
-        S::Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos);
+        Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos);
+        Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos);
+        Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos);
 
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
         void initializeMareES(char (&marES_)[12][12]);
-        void initializeMare(vector<S::Corazzata> marCor);
-        void initializeMare(vector<S::Nds> marNds);
-        void initializeMare(vector<S::Sde> marSde);
+        void initializeMare(vector<Corazzata> marCor);
+        void initializeMare(vector<Nds> marNds);
+        void initializeMare(vector<Sde> marSde);
         //inserisce la nave nella borad
-        void insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m);
-        void insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m);
-        void insertSde(S::Sde& ship, pair<int, int> pos, M::Mare m);
+        void insertCor(Corazzata& ship, pair<int, int> pos, Mare m);
+        void insertNds(Nds& ship, pair<int, int> pos, Mare m);
+        void insertSde(Sde& ship, pair<int, int> pos, Mare m);
         //controlla se le coordinate di arrivo dello spostamento sono nella board
-        bool legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m);
-        bool legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m);
-        bool legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m);
+        bool legitMoveInput(Corazzata ship, pair<int, int> pos, M::Mare m);
+        bool legitMoveInput(Nds ship, pair<int, int> pos, M::Mare m);
+        bool legitMoveInput(Sde ship, pair<int, int> pos, M::Mare m);
         //spostamento Generale
         void Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
         //spostamento Corazzata
-        void Move(pair<int, int> start, pair<int, int> dest, S::Corazzata c, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, Corazzata c, M::Mare m);
         //spostamento Nds
-        void Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds n, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds n, Mare m);
         //spostamento Sde
-        void Move(pair<int, int> start, pair<int, int> dest, S::Sde s, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, Sde s, Mare m);
         // s1 = Nds, s2 = Corazzata
-        bool healConditions(S::Nds s1, S::Corazzata s2);
+        bool healConditions(Nds s1, S::Corazzata s2);
         // s1 = Nds, s2 = Nds
-        bool healConditions(S::Nds s1, S::Nds s2);
+        bool healConditions(Nds s1, S::Nds s2);
         // assegna la cura
-        void CorHeal(S::Corazzata& s);
-        void NdsHeal(S::Nds& s);
+        void CorHeal(Corazzata& s);
+        void NdsHeal(Nds& s);
         // scansione del sottomarino
-        void SdeScan(S::Sde s);
+        void SdeScan(Sde s);
         // assegna la x dell'hit
         void HitSet(pair<int, int> p, Mare mN);
         // assegna l'hit
-        void CorHit(S::Corazzata s);
-        void NdsHit(S::Nds s);
-        void SdeHit(S::Sde s);
+        void CorHit(Corazzata s);
+        void NdsHit(Nds s);
+        void SdeHit(Sde s);
 
         // affonda la nave
-        void CorAff(S::Corazzata s);
-        void NdsAff(S::Nds s);
-        void SdeAff(S::Sde s);
+        void CorAff(Corazzata s);
+        void NdsAff(Nds s);
+        void SdeAff(Sde s);
  
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(S::Corazzata ship);
-        vector<pair<int, int>> posAvailable(S::Nds ship);
-        vector<pair<int, int>> posAvailable(S::Sde ship);
+        vector<pair<int, int>> posAvailable(Corazzata ship);
+        vector<pair<int, int>> posAvailable(Nds ship);
+        vector<pair<int, int>> posAvailable(Sde ship);
         
 
         // aggiorna log con informazioni su vittoria
