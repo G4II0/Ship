@@ -9,6 +9,10 @@
 #include <map>
 #include <random>
 #include "Ship.hpp"
+#include "Corazzata.hpp"
+#include "Nds.hpp"
+#include "Sde.hpp"
+
 
 using namespace std;
 
@@ -42,7 +46,6 @@ namespace M
     public:
 
         Mare();
-        Mare(string log, char mar_ [12][12], string player1);
 
         void setMareA(pair<int, int> p, char c);
         void setMareE(pair<int, int> p, char c);

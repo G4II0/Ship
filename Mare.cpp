@@ -3,12 +3,10 @@
 using namespace std;
 namespace M
 {
+    
     Mare::Mare()
-    {}
-
-    Mare::Mare(string log, char mar[12][12], string p1)
     {
-        this -> mar_ [12][12] = mar[12][12];
+        this -> mar_ [12][12];
         this -> condition = -1;
         this -> player1 = p1;
         this -> logFile = log;
