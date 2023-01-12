@@ -515,7 +515,9 @@ using namespace std;
         int dNds = Nds.getDirezione();
         pair<int, int> cNdsC = NdsC.getPMedio();
         int dNdsC = NdsC.getDirezione();
-        pair<int, int> tempN = {0, 0};
+        pair<int, int> tempN;
+        tempN.first = 0;
+        tempN.second = 0;
         //s = v, sc = v;
         if(dNds == 0 || dNdsC == 0)
         {
