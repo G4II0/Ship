@@ -10,18 +10,18 @@
         protected:
 
         char Name;
-        M::Mare Mare;
+        Mare Mare;
         char Type;
 
         public:
 
         // costruttore
         Players();
-        Players(M::Mare Mare, char N, char T);
+        Players(Mare Mare, char N, char T);
 
         //set
         void setName(char name);
-        void setMare(M::Mare Mare);
+        void setMare(Mare Mare);
         void setType(char type);
         
         //get
@@ -30,6 +30,6 @@
         char getType() const;
 
         //Move
-        void Move(std::pair<int, int> pos, std::pair<int, int> dest, M::Mare m);
+        void Move(std::pair<int, int> pos, std::pair<int, int> dest, Mare m);
     };
 #endif
