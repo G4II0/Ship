@@ -3,7 +3,7 @@
     Sde::Sde()
     {}
 
-    Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int numero_)
+    Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int numero_)
     {
         this -> structure = {'E'};
         this -> tipo = 'E';
@@ -22,7 +22,7 @@
     {this -> structure = structure_;}
     void Sde::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
@@ -45,7 +45,7 @@
     {return this -> structure;}
     char Sde::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int>> Sde::getPos() const
+    std::pair<std::pair<int, int>, std::pair<int, int> > Sde::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
@@ -65,9 +65,9 @@
     {return this -> state;}
 
     //possibili posizioni del pMedio della Sde
-    std::vector<std::pair<int, int>> Moves()
+    std::vector<std::pair<int, int> > Moves()
     {
-        std::vector<std::vector<std::pair<int, int> >> Moves;
+        std::vector<std::vector<std::pair<int, int> > > Moves;
         int y = 0;
         int x = 0;
         std::vector<std::pair<int, int> > m1;

@@ -30,9 +30,9 @@ using namespace std;
         this -> marES_[x][y] = c;
     }
 
-    vector<vector<char>> Mare::getMare()
+    vector<vector<char> > Mare::getMare()
     {
-        vector<vector<char>> v;
+        vector<vector<char> > v;
         vector<char> v1;
 
         for(int y=0; y<12; y++)
@@ -47,7 +47,7 @@ using namespace std;
     }
     void Mare::getMareE(Mare& mN)
     {
-        vector<vector<char>> v;
+        vector<vector<char> > v;
         vector<char> v1;
         v=mN.getMare();
 
@@ -111,7 +111,7 @@ using namespace std;
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship);
+        vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -119,7 +119,7 @@ using namespace std;
     }
         bool Mare::legitMoveInput(Nds ship, pair<int, int> pos, Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship);
+        vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -127,7 +127,7 @@ using namespace std;
     }
         bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
     {
-        vector<pair<int, int>> v = posAvailable(ship);
+        vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
         return true;
         else
@@ -203,7 +203,7 @@ using namespace std;
             pair<int, int> temp2;
             pair<int, int> temp3;
             pair<int, int> temp4;
-            pair<pair<int, int>, pair<int, int>> temp5;
+            pair<pair<int, int>, pair<int, int> > temp5;
             if (ship.getDirezione() == 0)
             {
                 temp1.first = pos.first;         // x prua
@@ -251,7 +251,7 @@ using namespace std;
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int>> temp3;
+            pair<pair<int, int>, pair<int, int> > temp3;
             if (ship.getDirezione() == 0)
             {
                 temp1.first = pos.first;         // x prua
@@ -289,7 +289,7 @@ using namespace std;
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int>> temp3;
+            pair<pair<int, int>, pair<int, int> > temp3;
             temp1.first = pos.first;         // x prua
             temp1.second = (pos.second);     // y prua
             temp3.first = temp1;             // c prua
@@ -360,7 +360,7 @@ using namespace std;
             setMareA(s.getPoppa(), ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int>> temp3;
+            pair<pair<int, int>, pair<int, int> > temp3;
             if (s.getDirezione() == 0)
             {
                 temp1.first = dest.first;         // x prua
@@ -397,7 +397,7 @@ using namespace std;
             setMareA(start, ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int>> temp3;
+            pair<pair<int, int>, pair<int, int> > temp3;
             temp1.first = dest.first;         // x prua
             temp1.second = (dest.second);     // y prua
             temp3.first = temp1;             // c prua
@@ -825,9 +825,9 @@ using namespace std;
     int Mare::getMCondition()
     { return condition;}
 
-    vector<pair<int, int>> Mare::posAvailable(Corazzata shi)
+    vector<pair<int, int> > Mare::posAvailable(Corazzata shi)
     {
-        vector<pair<int, int>> v1 = shi.Moves();
+        vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
         if(d=0)
@@ -874,9 +874,9 @@ using namespace std;
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(Nds shi)
+    vector<pair<int, int> > Mare::posAvailable(Nds shi)
     {
-        vector<pair<int, int>> v1 = shi.Moves();
+        vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
         if(d=0)
@@ -923,9 +923,9 @@ using namespace std;
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(Sde shi)
+    vector<pair<int, int> > Mare::posAvailable(Sde shi)
     {
-        vector<pair<int, int>> v1 = shi.Moves();
+        vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int x=0, y=0;
         while (x <12)

@@ -3,7 +3,7 @@
 
     Ship::Ship()
     {}
-    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero)
+    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero)
     {
         this -> structure;
         this -> tipo = ' ';
@@ -22,7 +22,7 @@
     {this -> structure = structure_;}
     void Ship::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
@@ -43,7 +43,7 @@
     {return this -> structure;}
     char Ship::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int>> Ship::getPos() const
+    std::pair<std::pair<int, int>, std::pair<int, int> > Ship::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
@@ -59,7 +59,7 @@
     {return this -> corazza;}
     
     //possibili posizioni del pMedio della Nds
-    std::vector<std::pair<int, int>> Moves()
+    std::vector<std::pair<int, int> > Moves()
     {}
 
     void Ship::Damage()

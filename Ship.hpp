@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-    class Ship
+    class Shipe
     {
         private:
 

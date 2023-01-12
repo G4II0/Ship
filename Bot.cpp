@@ -35,7 +35,7 @@
         srand(time(NULL));
         pair<int, int> pos;
         pair<int, int> dest;
-        vector<pair<int, int>> des;
+        vector<pair<int, int> > des;
         int r0 = rand()%3;
         int r1_1 = rand()%2;
         if(r0 = 0)

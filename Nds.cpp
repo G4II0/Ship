@@ -3,7 +3,7 @@
     Nds::Nds()
     {}
     
-    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
+    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
     {
         this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
@@ -23,7 +23,7 @@
     {this -> structure = structure_;}
     void Nds::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
@@ -48,7 +48,7 @@
     {return this -> structure;}
     char Nds::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int>> Nds::getPos() const
+    std::pair<std::pair<int, int>, std::pair<int, int> > Nds::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
@@ -70,9 +70,9 @@
     {return this -> state;}
 
     //possibili posizioni del pMedio della Nds
-    std::vector<std::pair<int, int>> Ship::Moves()
+    std::vector<std::pair<int, int> > Ship::Moves()
     {
-        std::vector<std::pair<int, int>> Mov;
+        std::vector<std::pair<int, int> > Mov;
         if(getDirezione() == 0)
         {
             int y = 1;
