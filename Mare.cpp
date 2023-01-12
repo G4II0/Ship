@@ -415,8 +415,12 @@ using namespace std;
         int dNds = Nds.getDirezione();
         pair<int, int> cCor = Cor.getPMedio();
         int dCor = Cor.getDirezione();
-        pair<int, int> tempN = {0, 0};
-        pair<int, int> tempN1 = {0, 0};
+        pair<int, int> tempN;
+        tempN.first = 0;
+        tempN.second = 0;
+        pair<int, int> tempN1;
+        tempN1.first = 0;
+        tempN1s.second = 0;
         //s = v, c = v;
         if(dNds == 0 || dCor == 0)
         {
