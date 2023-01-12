@@ -2,14 +2,12 @@
 #include <chrono>
 #include <thread>
 #include "Mare.hpp"
+#include "Mare.cpp"
 using namespace std;
 
 int main()
 {
-    string s = "s";
-    char mar[12][12];
-    string p1 = "p";
     Mare board = Mare();
-    board.printAMare();
+    cout<<board.printAMare();
     return 0;
 }

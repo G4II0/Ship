@@ -70,37 +70,43 @@ using namespace std;
     vector<Sde> Mare::getMarSde()
     {return this -> marSde;}
 
-    S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos)
+    Corazzata whichCor(vector<Corazzata> marCor, pair<int, int> pos)
     {
+        int t;
         for(int i=0; i<3; i++)
         {
             if((marCor[i]).getPMedio() == pos)
             {
-                return marCor[i];
+                t=i;
             }
         }
+        return marCor[t];
     }
 
-    S::Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos)
+    Nds whichNds(vector<Nds> marNds, pair<int, int> pos)
     {
+        int t;
         for(int i=0; i<3; i++)
         {
             if((marNds[i]).getPMedio() == pos)
             {
-                return marNds[i];
+                t=i;
             }
         }
+        return marNds[t];
     }
 
-    S::Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos)
+    Sde whichSde(vector<Sde> marSde, pair<int, int> pos)
     {
+        int t;
         for(int i=0; i<2; i++)
         {
             if((marSde[i]).getPMedio() == pos)
             {
-                return marSde[i];
+                t=i;
             }
         }
+        return marSde[t];
     }
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m)
@@ -111,7 +117,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(S::Nds ship, pair<int, int> pos, M::Mare m)
+        bool Mare::legitMoveInput(Nds ship, pair<int, int> pos, Mare m)
     {
         vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -119,7 +125,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(S::Sde ship, pair<int, int> pos, Mare m)
+        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
     {
         vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -156,40 +162,40 @@ using namespace std;
         }
     }
 
-    void Mare::initializeMare(vector<S::Corazzata> marCor)
+    void Mare::initializeMare(vector<Corazzata> marCor)
     {
         int i = 0;
 
         while (i < 3)
         {
-                marCor[i] = S::Corazzata();
+                marCor[i] = Corazzata();
             i++;
         }
     }
 
-        void Mare::initializeMare(vector<S::Nds> marNds)
+        void Mare::initializeMare(vector<Nds> marNds)
     {
         int i = 0;
 
         while (i < 3)
         {
-                marNds[i] = S::Nds();
+                marNds[i] = Nds();
             i++;
         }
     }
-        void Mare::initializeMare(vector<S::Sde> marSde)
+        void Mare::initializeMare(vector<Sde> marSde)
     {
         int i = 0;
 
         while (i < 2)
         {
-                marSde[i] = S::Sde();
+                marSde[i] = Sde();
             i++;
         }
     }
 
 //inserimento corazzata
-    void Mare::insertCor(S::Corazzata& ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertCor(Corazzata& ship, pair<int, int> pos, Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -235,11 +241,11 @@ using namespace std;
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
-        throw InvalidMoveException();
+        //throw InvalidMoveException();
     }
 
 //inserimento Nds
-    void Mare::insertNds(S::Nds& ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertNds(Nds& ship, pair<int, int> pos, Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -273,11 +279,11 @@ using namespace std;
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
-        throw InvalidMoveException();
+        //throw InvalidMoveException();
     }
 
     // inserimento Sde
-    void Mare::insertSde(S::Sde& ship, pair<int, int> pos, M::Mare m)
+    void Mare::insertSde(Sde& ship, pair<int, int> pos, Mare m)
     {
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -294,7 +300,7 @@ using namespace std;
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
-        throw InvalidMoveException();
+        //throw InvalidMoveException();
     }
 
     //move generico
@@ -302,50 +308,50 @@ using namespace std;
     {
         if(mar_[start.first][start.second] == 'C')
         {
-            S::Corazzata t = m.whichCor(m.getMarCor(), start);
+            Corazzata t = m.whichCor(m.getMarCor(), start);
             Move(start, dest, t, mN);
         }
         else
         if(mar_[start.first][start.second] == 'S')
         {
-            S::Nds t = m.whichNds(m.getMarNds(), start);
+            Nds t = m.whichNds(m.getMarNds(), start);
             Move(start, dest, t.getDirezione(), t, m);
         }
         else
         if(mar_[start.first][start.second] == 'E')
         {
-            S::Sde t = m.whichSde(m.getMarSde(), start);
+            Sde t = m.whichSde(m.getMarSde(), start);
             Move(start, dest, t, m);
         }
-        throw InvalidMoveException();
+        //throw InvalidMoveException();
     }
 
     //move Corazzata
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Corazzata s, Mare mN)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, Corazzata s, Mare mN)
     {
         getMareE(mN);
         if(marE_[dest.first][dest.second] == 'C')
         {
-            S::Corazzata t = mN.whichCor(mN.getMarCor(), dest);
+            Corazzata t = mN.whichCor(mN.getMarCor(), dest);
             CorHit(t);
         }
         else
         if(mar_[dest.first][dest.second] == 'S')
         {
-            S::Nds t = mN.whichNds(mN.getMarNds(), dest);
+            Nds t = mN.whichNds(mN.getMarNds(), dest);
             NdsHit(t);
         }
         else
         if(mar_[dest.first][dest.second] == 'E')
         {
-            S::Sde t = mN.whichSde(mN.getMarSde(), dest);
+            Sde t = mN.whichSde(mN.getMarSde(), dest);
             SdeHit(t);
         }
         HitSet(dest, mN);  
     }
 
     //move Nds
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, S::Nds s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -380,11 +386,11 @@ using namespace std;
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
         }
-        throw InvalidMoveException();
+        //throw InvalidMoveException();
     }
 
     //move Sde
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, S::Sde s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, Sde s, Mare m)
     {
         if (legitMoveInput(s, dest, m) == true)
         {
@@ -403,7 +409,7 @@ using namespace std;
     }
 
     //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditions(S::Nds Nds, S::Corazzata Cor)
+    bool healConditions(Nds Nds, Corazzata Cor)
     {
         pair<int, int> cNds = Nds.getPMedio();
         int dNds = Nds.getDirezione();
@@ -494,10 +500,12 @@ using namespace std;
                 {return true;}
             }
         }
+
+        return false;
     }
 
     //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditions(S::Nds NdsC, S::Nds Nds)
+    bool healConditions(Nds NdsC, Nds Nds)
     {
         pair<int, int> cNds = Nds.getPMedio();
         int dNds = Nds.getDirezione();
@@ -587,15 +595,17 @@ using namespace std;
                 {return true;}
             }
         }
+
+        return false;
     }
 
-    void Mare::CorHeal(S::Corazzata& s)
+    void Mare::CorHeal(Corazzata& s)
     {int c = 5; s.setCorazza(c);}
 
-    void Mare::NdsHeal(S::Nds& s)
+    void Mare::NdsHeal(Nds& s)
     {int c = 3; s.setCorazza(c);}
 
-    void Mare::SdeScan(S::Sde s)
+    void Mare::SdeScan(Sde s)
     {
         pair <int, int> c = s.getPMedio();
         int x=c.first;
@@ -629,7 +639,7 @@ using namespace std;
         }
     }
 
-    void Mare::CorHit(S::Corazzata s)
+    void Mare::CorHit(Corazzata s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -639,7 +649,7 @@ using namespace std;
         }
     }
 
-    void Mare::NdsHit(S::Nds s)
+    void Mare::NdsHit(Nds s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -649,7 +659,7 @@ using namespace std;
         }
     }
 
-    void Mare::SdeHit(S::Sde s)
+    void Mare::SdeHit(Sde s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -659,7 +669,7 @@ using namespace std;
         }
     }
 
-    void Mare::CorAff(S::Corazzata s)
+    void Mare::CorAff(Corazzata s)
     {
         s.setState((-1));
         if(s.getDirezione() == 0)
@@ -688,7 +698,7 @@ using namespace std;
         }
     }
 
-    void Mare::NdsAff(S::Nds s)
+    void Mare::NdsAff(Nds s)
     {
         s.setState((-1));
         if(s.getDirezione() == 0)
@@ -713,7 +723,7 @@ using namespace std;
         }
     }
 
-    void Mare::SdeAff(S::Sde s)
+    void Mare::SdeAff(Sde s)
     {
         s.setState((-1));
         if(s.getDirezione() == 0)
@@ -732,11 +742,12 @@ using namespace std;
 
 //sistemare sopra
 
+/*
     //fixare
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
     {
         ofstream write;
-        write.open(logFile, ofstream::app);
+        write.open(logFile, ofstreaapp);
         string out;
         out += to_string(start.first) + to_string(start.second) + " ";
         out += to_string(end.first) + to_string(end.second) + "\n";
@@ -747,7 +758,7 @@ using namespace std;
     void Mare::updateLogVictory(int ending)
     {
         ofstream write;
-        write.open(logFile, ofstream::app);
+        write.open(logFile, ofstreaapp);
         write << "END:" << ending;
         write.close();
     }
@@ -755,11 +766,11 @@ using namespace std;
     void Mare::updateLogGameType(string type)
     {
         ofstream write;
-        write.open(logFile, ofstream::app);
+        write.open(logFile, ofstreaapp);
         write << type << "\n";
         write.close();
     }
-
+*/
 /*____________________________________________________________________________________________________________________________________________________________*/
 
     string Mare::printAMare()
@@ -814,7 +825,7 @@ using namespace std;
     int Mare::getMCondition()
     { return condition;}
 
-    vector<pair<int, int>> Mare::posAvailable(S::Corazzata shi)
+    vector<pair<int, int>> Mare::posAvailable(Corazzata shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
@@ -863,7 +874,7 @@ using namespace std;
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Nds shi)
+    vector<pair<int, int>> Mare::posAvailable(Nds shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
@@ -912,7 +923,7 @@ using namespace std;
         return v1;
     }
 
-    vector<pair<int, int>> Mare::posAvailable(S::Sde shi)
+    vector<pair<int, int>> Mare::posAvailable(Sde shi)
     {
         vector<pair<int, int>> v1 = shi.Moves();
         pair<int, int> p;
