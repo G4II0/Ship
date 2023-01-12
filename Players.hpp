@@ -3,8 +3,7 @@
 
 #include "Mare.hpp"
 
-namespace P
-{
+
     class Players
     {
 
@@ -33,5 +32,4 @@ namespace P
         //Move
         void Move(std::pair<int, int> pos, std::pair<int, int> dest, M::Mare m);
     };
-}
 #endif

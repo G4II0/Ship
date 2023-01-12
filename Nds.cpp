@@ -1,7 +1,5 @@
 #include "Nds.hpp"
 
-namespace S
-{
     Nds::Nds()
     {}
     
@@ -117,4 +115,3 @@ namespace S
     {
        corazza = 3;
     }
-}

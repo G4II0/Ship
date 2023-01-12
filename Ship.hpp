@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 
-namespace S
-{
     class Ship
     {
         private:
@@ -57,5 +55,4 @@ namespace S
 
         void Heal();
     };
-}
 #endif

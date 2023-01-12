@@ -16,8 +16,7 @@
 
 using namespace std;
 
-namespace M
-{
+
     class Mare
     {
         private:
@@ -120,16 +119,16 @@ namespace M
         // stampa la griglia nemica
         string printEMare();
 
-        // aggiorna log con informazioni su vittoria
-        // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
-        // 3 se patta per raggiungimento limite mosse in partita tra bot
-        void updateLogVictory(int ending);
-        // aggiorna log con tipo di partita
-        void updateLogGameType(string type);
-        // aggiorna log con mossa
-        void updateLogMove(pair<int, int> start, pair<int, int> finish);
-        // eccezione: input non valido
-    };
-}
+   // aggiorna log con informazioni su vittoria
+    // 0 se vittoria, 1 se stallo, 2 se patta per numero di mosse,
+    // 3 se patta per raggiungimento limite mosse in partita tra bot
+    void updateLogVictory(int ending);
+    // aggiorna log con tipo di partita
+    void updateLogGameType(string type);
+    // aggiorna log con mossa
+    void updateLogMove(pair<int, int> start, pair<int, int> finish);
+    // eccezione: input non valido
+};
+
 
 #endif

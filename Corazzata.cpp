@@ -1,7 +1,6 @@
 #include "Corazzata.hpp"
 
-namespace S
-{
+
     Corazzata::Corazzata()
     {}
     
@@ -117,4 +116,4 @@ namespace S
     {
        corazza = 5;
     }
-}
+

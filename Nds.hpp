@@ -4,8 +4,6 @@
 #include "Ship.hpp"
 #include <iostream>
 
-namespace S
-{
     class Nds : public Ship
     {
         private:
@@ -60,5 +58,4 @@ namespace S
 
         void Heal();
     };
-}
 #endif

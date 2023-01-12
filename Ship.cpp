@@ -1,7 +1,5 @@
 #include "Ship.hpp"
 #include "Mare.hpp"
-namespace S
-{
 
     Ship::Ship()
     {}
@@ -69,4 +67,3 @@ namespace S
 
     void Heal()
     {}
-}

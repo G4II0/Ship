@@ -2,8 +2,7 @@
 #include "Mare.hpp"
 #include <cstdlib>
 
-namespace B
-{
+
     Bot::Bot()
     {}
 
@@ -69,4 +68,3 @@ namespace B
         dest = des[d];
         Mare.Move(pos, dest, mare, getMareN(bN));
     }
-}

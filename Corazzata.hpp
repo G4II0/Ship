@@ -4,8 +4,6 @@
 #include "Ship.hpp"
 #include <iostream>
 
-namespace S
-{
     class Corazzata : public Ship
     {
         private:
@@ -59,5 +57,4 @@ namespace S
 
         void Heal();
     };
-}
 #endif

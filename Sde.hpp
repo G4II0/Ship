@@ -4,8 +4,6 @@
 #include "Ship.hpp"
 #include <iostream>
 
-namespace S
-{
     class Sde : public Ship
     {
         private:
@@ -58,5 +56,4 @@ namespace S
 
         void Damage();
     };
-}
 #endif

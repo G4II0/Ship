@@ -1,9 +1,7 @@
 #include "Mare.hpp"
 
 using namespace std;
-namespace M
-{
-    
+  
     Mare::Mare()
     {
         this -> mar_ [12][12];
@@ -938,4 +936,3 @@ namespace M
         shi.Moves() = v1;
         return v1;
     }
-}

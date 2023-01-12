@@ -1,7 +1,5 @@
 #include "Players.hpp"
 
-namespace P
-{
     Players::Players()
     {}
 
@@ -31,4 +29,3 @@ namespace P
     {
         Mare.Move(pos, dest, Mare);
     }
-}

@@ -3,8 +3,6 @@
 
 #include "Mare.hpp"
 
-namespace B
-{
     class Bot
     {
 
@@ -33,5 +31,5 @@ namespace B
         //Move
         void Move(M::Mare mare, B::Bot bN);
     };
-}
+
 #endif

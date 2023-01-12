@@ -1,8 +1,5 @@
 #include "Sde.hpp"
 
-namespace S
-{
-
     Sde::Sde()
     {}
 
@@ -90,4 +87,3 @@ namespace S
     {
        corazza = corazza - 1;
     }
-}
