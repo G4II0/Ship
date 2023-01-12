@@ -1,7 +1,6 @@
 #ifndef BOT_HPP
 #define BOT_HPP
 
-#include <iostream>
 #include "Mare.hpp"
 
 namespace B
@@ -10,7 +9,6 @@ namespace B
     {
 
         protected:
-
         char Name;
         M::Mare Mare;
         char Type;

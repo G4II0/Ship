@@ -1,16 +1,8 @@
 #include "Mare.hpp"
-#include "Players.hpp"
-#include "Ship.hpp"
-#include "Corazzata.hpp"
-#include "Nds.hpp"
-#include "Sde.hpp"
-#include "Exception.cpp"
-
 
 using namespace std;
 namespace M
 {
-
     Mare::Mare()
     {}
 

@@ -1,4 +1,5 @@
 #include "Bot.hpp"
+#include "Mare.hpp"
 #include <cstdlib>
 
 namespace B

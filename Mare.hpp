@@ -9,10 +9,6 @@
 #include <map>
 #include <random>
 #include "Ship.hpp"
-#include "Corazzata.hpp"
-#include "Nds.hpp"
-#include "Sde.hpp"
-
 
 using namespace std;
 
