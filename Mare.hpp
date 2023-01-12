@@ -127,7 +127,8 @@ using namespace std;
     void updateLogGameType(string type);
     // aggiorna log con mossa
     void updateLogMove(pair<int, int> start, pair<int, int> finish);
-    // eccezione: input non valido
+
+    bool operator==(const Nds& c1);
 };
 
 
