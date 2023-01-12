@@ -56,6 +56,6 @@
 
         void Damage();
 
-        bool operator==(const Sde& c1, const Sde& c2);
+        bool operator==(const Sde& c1);
     };
 #endif
