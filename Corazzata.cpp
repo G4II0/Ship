@@ -1,10 +1,9 @@
 #include "Corazzata.hpp"
 
-
     Corazzata::Corazzata()
     {}
     
-    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_)
+    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
     {
         this -> structure = {'C', 'C', 'C', 'C', 'C'};
         this -> tipo = 'C';
@@ -25,7 +24,7 @@
     {this -> structure = structure_;}
     void Corazzata::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Corazzata::setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_)
+    void Corazzata::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
     void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
@@ -50,7 +49,7 @@
     {return this -> structure;}
     char Corazzata::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int>> Corazzata::getPos() const
+    std::pair<std::pair<int, int>, std::pair<int, int> > Corazzata::getPos() const
     {return this -> pos;}
     std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
@@ -71,9 +70,9 @@
     int Corazzata::getState() const
     {return this -> state;}
 
-    std::vector<std::pair<int, int>> Ship::Moves()
+    std::vector<std::pair<int, int> > Ship::Moves()
     {
-        std::vector<std::pair<int, int>> Mov;
+        std::vector<std::pair<int, int> > Mov;
         if(getDirezione() == 0)
         {
             int y = 2;
