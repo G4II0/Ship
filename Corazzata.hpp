@@ -10,7 +10,7 @@
 
         std::vector<char> structure;
         char tipo;
-        std::pair<std::pair<int, int>, std::pair<int, int>> pos;
+        std::pair<std::pair<int, int>, std::pair<int, int> > pos;
         std::pair<int, int> prua;
         std::pair<int, int> poppa;
         int direzione;
@@ -23,11 +23,11 @@
 
         public:
         Corazzata();
-        Corazzata(std::pair<std::pair<int, int>, std::pair<int, int>> pos_, int direzione_, int numero_);
+        Corazzata(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_);
 
         void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
-        void setPos(std::pair<std::pair<int, int>, std::pair<int, int>> pos_);
+        void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
         void setPrua(std::pair<int, int> prua_);
         void setPoppa(std::pair<int, int> poppa_);
         void setDirezione(int direzione);
@@ -40,7 +40,7 @@
 
         std::vector<char> getStructure() const;
         char getTipo() const;
-        std::pair<std::pair<int, int>, std::pair<int, int>> getPos() const;
+        std::pair<std::pair<int, int>, std::pair<int, int> > getPos() const;
         std::pair<int, int> getPrua() const;
         std::pair<int, int> getPoppa() const;
         int getDirezione() const;
@@ -51,7 +51,7 @@
         int getNumero() const;
         int getState() const;
 
-        std::vector<std::pair<int, int>> Moves();
+        std::vector<std::pair<int, int> > Moves();
 
         void Damage();
 

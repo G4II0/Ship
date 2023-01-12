@@ -49,7 +49,7 @@ using namespace std;
         void setMareA(pair<int, int> p, char c);
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
-        vector<vector<char>> getMare();
+        vector<vector<char> > getMare();
         void getMareE(Mare& mN);
 
         vector<Corazzata> getMarCor();
@@ -104,9 +104,9 @@ using namespace std;
         void SdeAff(Sde s);
  
         // ritorna vettore con tutte le posizioni possibili per il pMedio della nave
-        vector<pair<int, int>> posAvailable(Corazzata ship);
-        vector<pair<int, int>> posAvailable(Nds ship);
-        vector<pair<int, int>> posAvailable(Sde ship);
+        vector<pair<int, int> > posAvailable(Corazzata ship);
+        vector<pair<int, int> > posAvailable(Nds ship);
+        vector<pair<int, int> > posAvailable(Sde ship);
         
 
         // aggiorna log con informazioni su vittoria
