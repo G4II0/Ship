@@ -420,7 +420,7 @@ using namespace std;
         tempN.second = 0;
         pair<int, int> tempN1;
         tempN1.first = 0;
-        tempN1s.second = 0;
+        tempN1.second = 0;
         //s = v, c = v;
         if(dNds == 0 || dCor == 0)
         {
