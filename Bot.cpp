@@ -6,7 +6,7 @@
     Bot::Bot()
     {}
 
-    Bot::Bot(M::Mare mare, char N, char T)
+    Bot::Bot(Mare mare, char N, char T)
     {
         this -> Name= N;
         this -> Mare = mare;
@@ -15,22 +15,22 @@
 
     void Bot::setName(char name)
     {this -> Name = name;}
-    void Bot::setMare(M::Mare mare)
+    void Bot::setMare(Mare mare)
     {this -> Mare = mare;}
     void Bot::setType(char type)
     {this -> Type = type;}
 
     char Bot::getName() const
     {return this -> Name;}
-    M::Mare Bot::getMare() const
+    Mare Bot::getMare() const
     {return this -> Mare;}
-    M::Mare Bot::getMareN(B::Bot b) const
+    Mare Bot::getMareN(B::Bot b) const
     {return b.getMare();}
     char Bot::getType() const
     {return this -> Type;}
 
     // bot
-    void Bot::Move(M::Mare mare, B::Bot bN)
+    void Bot::Move(Mare mare, B::Bot bN)
     { 
         srand(time(NULL));
         pair<int, int> pos;
@@ -40,7 +40,7 @@
         int r1_1 = rand()%2;
         if(r0 = 0)
         {
-            vector<S::Corazzata> a = mare.getMarCor();
+            vector<Corazzata> a = mare.getMarCor();
             int s = a.size();
             int r1 = rand()%s;
             pos = (a[r1]).getPMedio();
@@ -49,7 +49,7 @@
         else
         if(r0 = 1)
         {
-            vector<S::Nds> a = mare.getMarNds();
+            vector<Nds> a = mare.getMarNds();
             int s = a.size();
             int r1 = rand()%s;
             pos = (a[r1]).getPMedio();
@@ -58,7 +58,7 @@
         else
         if(r0 = 2)
         {
-            vector<S::Sde> a = mare.getMarSde();
+            vector<Sde> a = mare.getMarSde();
             int s = a.size();
             int r1 = rand()%s;
             pos = (a[r1_1]).getPMedio();

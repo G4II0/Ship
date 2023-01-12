@@ -6,8 +6,6 @@ using namespace std;
     {
         this -> mar_ [12][12];
         this -> condition = -1;
-        this -> player1 = p1;
-        this -> logFile = log;
         this -> drawMoves = 0;
     }
 
@@ -63,13 +61,13 @@ using namespace std;
         }
     }
 
-    vector<S::Corazzata> Mare::getMarCor()
+    vector<Corazzata> Mare::getMarCor()
     {return this -> marCor;}
 
-    vector<S::Nds> Mare::getMarNds()
+    vector<Nds> Mare::getMarNds()
     {return this -> marNds;}
     
-    vector<S::Sde> Mare::getMarSde()
+    vector<Sde> Mare::getMarSde()
     {return this -> marSde;}
 
     S::Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos)
@@ -105,7 +103,7 @@ using namespace std;
         }
     }
 
-    bool Mare::legitMoveInput(S::Corazzata ship, pair<int, int> pos, M::Mare m)
+    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m)
     {
         vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -121,7 +119,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(S::Sde ship, pair<int, int> pos, M::Mare m)
+        bool Mare::legitMoveInput(S::Sde ship, pair<int, int> pos, Mare m)
     {
         vector<pair<int, int>> v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())

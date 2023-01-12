@@ -3,7 +3,7 @@
     Players::Players()
     {}
 
-    Players::Players(M::Mare mare, char N, char T)
+    Players::Players(Mare mare, char N, char T)
     {
         this -> Name= N;
         this -> Mare = mare;

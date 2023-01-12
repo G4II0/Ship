@@ -56,9 +56,9 @@ using namespace std;
         vector<Nds> getMarNds();
         vector<Sde> getMarSde();
 
-        Corazzata whichCor(vector<S::Corazzata> marCor, pair<int, int> pos);
-        Nds whichNds(vector<S::Nds> marNds, pair<int, int> pos);
-        Sde whichSde(vector<S::Sde> marSde, pair<int, int> pos);
+        Corazzata whichCor(vector<Corazzata> marCor, pair<int, int> pos);
+        Nds whichNds(vector<Nds> marNds, pair<int, int> pos);
+        Sde whichSde(vector<Sde> marSde, pair<int, int> pos);
 
         //genera la board vuota
         void initializeMare(char (&mar_)[12][12]);
@@ -71,21 +71,21 @@ using namespace std;
         void insertNds(Nds& ship, pair<int, int> pos, Mare m);
         void insertSde(Sde& ship, pair<int, int> pos, Mare m);
         //controlla se le coordinate di arrivo dello spostamento sono nella board
-        bool legitMoveInput(Corazzata ship, pair<int, int> pos, M::Mare m);
-        bool legitMoveInput(Nds ship, pair<int, int> pos, M::Mare m);
-        bool legitMoveInput(Sde ship, pair<int, int> pos, M::Mare m);
+        bool legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m);
+        bool legitMoveInput(Nds ship, pair<int, int> pos, Mare m);
+        bool legitMoveInput(Sde ship, pair<int, int> pos, Mare m);
         //spostamento Generale
         void Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
         //spostamento Corazzata
-        void Move(pair<int, int> start, pair<int, int> dest, Corazzata c, M::Mare m);
+        void Move(pair<int, int> start, pair<int, int> dest, Corazzata c, Mare m);
         //spostamento Nds
         void Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds n, Mare m);
         //spostamento Sde
         void Move(pair<int, int> start, pair<int, int> dest, Sde s, Mare m);
         // s1 = Nds, s2 = Corazzata
-        bool healConditions(Nds s1, S::Corazzata s2);
+        bool healConditions(Nds s1, Corazzata s2);
         // s1 = Nds, s2 = Nds
-        bool healConditions(Nds s1, S::Nds s2);
+        bool healConditions(Nds s1, Nds s2);
         // assegna la cura
         void CorHeal(Corazzata& s);
         void NdsHeal(Nds& s);

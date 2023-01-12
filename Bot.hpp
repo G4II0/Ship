@@ -24,12 +24,12 @@
         
         //get
         char getName() const;
-        M::Mare getMare() const;
-        M::Mare getMareN(Bot b) const;
+        Mare getMare() const;
+        Mare getMareN(Bot b) const;
         char getType() const;
 
         //Move
-        void Move(M::Mare mare, B::Bot bN);
+        void Move(Mare mare, Bot bN);
     };
 
 #endif

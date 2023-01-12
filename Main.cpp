@@ -11,7 +11,7 @@ int main()
     string s = "s";
     char mar[12][12];
     string p1 = "p";
-    Mare board = M::Mare();
+    Mare board = Mare();
     board.printAMare();
     return 0;
 }

@@ -17,7 +17,7 @@
 
         // costruttore
         Players();
-        Players(Mare Mare, char N, char T);
+        Players(Mare::Mare Mare, char N, char T);
 
         //set
         void setName(char name);
@@ -26,7 +26,7 @@
         
         //get
         char getName() const;
-        M::Mare getMare() const;
+        Mare getMare() const;
         char getType() const;
 
         //Move
