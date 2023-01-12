@@ -925,7 +925,7 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        if(d=0)
+        if(d==0)
         {
             int x = 0, y = 1;
             while (x < 12)
@@ -974,7 +974,7 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        if(d=0)
+        if(d==0)
         {
             int x = 0, y = 1;
             while (x < 12)
