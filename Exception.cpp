@@ -4,16 +4,20 @@
 
 class InvalidInputException
         {
-                std::string InvalidInputException() const
-                {
-                        return "Input non valido";
-                }
+                public:
+                InvalidInputException();
+                InvalidInputException(const exception&);
+                exception& operator=(const exception&);
+                virtual InvalidInputException();
+                virtual const char* what() const;
         };
         // eccezione: mossa non valida
         class InvalidMoveException
         {
-                std::string InvalidMoveException() const
-                {
-                        return "Mossa non valida";
-                }
+                public:
+                InvalidMoveException();
+                InvalidMoveException(const exception&);
+                exception& operator=(const exception&);
+                virtual InvalidMoveException();
+                virtual const char* what() const;
         };
