@@ -113,7 +113,7 @@ namespace S
        corazza = corazza - 1;
     }
 
-    void Corazzata::Damage()
+    void Corazzata::Heal()
     {
        corazza = 5;
     }
