@@ -3,8 +3,6 @@
 #include <thread>
 #include "Mare.hpp"
 #include "Mare.cpp"
-#include "Nds.hpp"
-#include "Nds.cpp"
 using namespace std;
 
 int main()
