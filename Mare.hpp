@@ -130,4 +130,5 @@ namespace M {
 
     bool operator==(const Nds& c1);
 };
+}
 #endif
