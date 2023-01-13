@@ -131,5 +131,4 @@ using namespace std;
     bool operator==(const Nds& c1);
 };
 
-
 #endif
