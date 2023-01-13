@@ -384,6 +384,7 @@ namespace M {
             setMareA(dest, 'S');
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
+            healConditions(s);
         }
         //throw InvalidMoveException();
     }
@@ -408,199 +409,154 @@ namespace M {
     }
 
     //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditions(Nds Nds, Corazzata Cor)
+    void healConditions(Nds Nds)
     {
         pair<int, int> cNds = Nds.getPMedio();
+        pair<int, int> cNds1 = Nds.getPMedio();
         int dNds = Nds.getDirezione();
-        pair<int, int> cCor = Cor.getPMedio();
+        pair<int, int> cCor;
         int dCor = Cor.getDirezione();
         pair<int, int> tempN;
         tempN.first = 0;
         tempN.second = 0;
-        pair<int, int> tempN1;
-        tempN1.first = 0;
-        tempN1.second = 0;
-        //s = v, c = v;
-        if(dNds == 0 || dCor == 0)
+        int c = 0;
+        if(dNds == 0)
         {
-            //dx
-            for(int y = -3; y <= 3; y++)
+            for(int i = 0; i<marCor.size(); i++)
             {
-                tempN.first = (cCor.first + 1);
-                tempN.second = (cCor.second + y);
-                if((cNds) == (tempN))
-                {return true;}
+                cCor = marCor[i].getPMedio();
+                int dCor = marCor[i].getDirezione();
+                for(int y = -3; y <= 3; y++)
+                {
+                    tempN.first = (cCor.first + 1);
+                    tempN.second = (cCor.second + y);
+                    if((cNds) == (tempN) || dCor == 0)
+                    {CorHeal(marCor[i])}
+                }
+                for(int y = -3; y <= 3; y++)
+                {
+                    tempN.first = (cCor.first - 1);
+                    tempN.second = (cCor.second + y);
+                    if((cNds) == (tempN) || dCor == 0)
+                    {CorHeal(marCor[i])}
+                }
+                for(int x = -1; x <= 1; x++)
+                {
+                    tempN.first = (cCor.first + x);
+                    tempN.second = (cCor.second + 3);
+                    if((cNds) == (tempN) || dCor == 0)
+                    {CorHeal(marCor[i])}
+                }
+                for(int x = -1; x <= 1; x++)
+                {
+                    tempN.first = (cCor.first + x);
+                    tempN.second = (cCor.second - 3);
+                    if((cNds) == (tempN) || dCor == 0)
+                    {CorHeal(marCor[i])}
+                }
             }
-            //sx
-            for(int y = -3; y <= 3; y++)
+            for(int i = 0; i<marNds.size(); i++)
             {
-                tempN.first = (cCor.first - 1);
-                tempN.second = (cCor.second + y);
-                if((cNds) == (tempN))
-                {return true;}
+                cNds = marNds[i].getPMedio();
+                int dNds1 = marNds[i].getDirezione();
+                for(int y = -2; y <= 2; y++)
+                {
+                    tempN.first = (cNds1.first + 1);
+                    tempN.second = (cNds1.second + y);
+                    if((cNds) == (tempN) || dNds1 == 0)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int y = -2; y <= 2; y++)
+                {
+                    tempN.first = (cNds1.first - 1);
+                    tempN.second = (cNds1.second + y);
+                    if((cNds) == (tempN) || dNds1 == 0)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int x = -1; x <= 1; x++)
+                {
+                    tempN.first = (cNds1.first + x);
+                    tempN.second = (cNds1.second + 2);
+                    if((cNds) == (tempN) || dNds1 == 0)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int x = -1; x <= 1; x++)
+                {
+                    tempN.first = (cNds1.first + x);
+                    tempN.second = (cNds1.second - 2);
+                    if((cNds) == (tempN) || dNds1 == 0)
+                    {NdsHeal(marCorNds[i])}
+                }
             }
         }
-        //s = o, c = o;
-        else if(dNds == 1 || dCor == 1)
+        if(dNds == 1)
         {
-            //dx
-            for(int x = -3; x <= 3; x++)
+            for(int i = 0; i<marCor.size(); i++)
             {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second + 1);
-                if((cNds) == (tempN))
-                {return true;}
+                for(int x = -3; x <= 3; x++)
+                {
+                    tempN.first = (cCor.first + x);
+                    tempN.second = (cCor.second + 1);
+                    if((cNds) == (tempN) || dCor == 1)
+                    {CorHeal(marCor[i])}
+                }
+            
+                for(int x = -3; x <= 3; x++)
+                {
+                    tempN.first = (cCor.first + x);
+                    tempN.second = (cCor.second - 1);
+                    if((cNds) == (tempN) || dCor == 1)
+                    {CorHeal(marCor[i])}
+                }
+                for(int y = -3; y <= 3; y++)
+                {
+                    tempN.first = (cCor.first + 3);
+                    tempN.second = (cCor.second + y);
+                    if((cNds) == (tempN) || dCor == 1)
+                    {CorHeal(marCor[i])}
+                }
+                for(int y = -3; y <= 3; y++)
+                {
+                    tempN.first = (cCor.first - 3);
+                    tempN.second = (cCor.second + y);
+                    if((cNds) == (tempN) || dCor == 1)
+                    {CorHeal(marCor[i])}
+                }
             }
-            //sx
-            for(int x = -3; x <= 3; x++)
+            for(int i = 0; i<marNds.size(); i++)
             {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second - 1);
-                if((cNds) == (tempN))
-                {return true;}
+                cNds = marNds[i].getPMedio();
+                int dNds = marNds[i].getDirezione();
+                for(int x = -2; x <= 2; x++)
+                {
+                    tempN.first = (cNds1.first + x);
+                    tempN.second = (cNds1.second + 1);
+                    if((cNds) == (tempN) || dNds == 1)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int x = -2; x <= 2; x++)
+                {
+                    tempN.first = (cNds1.first - x);
+                    tempN.second = (cNds1.second - 1);
+                    if((cNds) == (tempN) || dNds == 1)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int y = -2; y <= 2; x++)
+                {
+                    tempN.first = (cNds1.first + 2);
+                    tempN.second = (cNds1.second + y);
+                    if((cNds) == (tempN) || dNds == 1)
+                    {NdsHeal(marNds[i])}
+                }
+                for(int x = -2; x <= 2; x++)
+                {
+                    tempN.first = (cNds1.first - 2);
+                    tempN.second = (cNds1.second + y);
+                    if((cNds) == (tempN) || dNds == 1)
+                    {NdsHeal(marNds[i])}
+                }
             }
         }
-        else
-        //s = v, c = o;
-        if(dNds == 0 || dCor == 1)
-        {
-            //sopra
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cCor.first + 3);
-                tempN.second = (cCor.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sotto
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cCor.first - 3);
-                tempN.second = (cCor.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-        else
-        //s = o, c = v;
-        if(dNds == 0 || dCor == 1)
-        {
-            //sopra
-            for(int x = -1; x <= 1; x++)
-            {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second + 3);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sotto
-            for(int x = -1; x <= 1; x++)
-            {
-                tempN.first = (cCor.first + x);
-                tempN.second = (cCor.second - 3);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-
-        return false;
-    }
-
-    //controllare se hanno almeno 1 coppia di coordinate adiacenti lungo x o y
-    bool healConditions(Nds NdsC, Nds Nds)
-    {
-        pair<int, int> cNds = Nds.getPMedio();
-        int dNds = Nds.getDirezione();
-        pair<int, int> cNdsC = NdsC.getPMedio();
-        int dNdsC = NdsC.getDirezione();
-        pair<int, int> tempN;
-        tempN.first = 0;
-        tempN.second = 0;
-        //s = v, sc = v;
-        if(dNds == 0 || dNdsC == 0)
-        {
-            //dx
-            for(int y = -2; y <= 2; y++)
-            {
-                tempN.first = (cNdsC.first + 1);
-                tempN.second = (cNdsC.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sx
-            for(int y = -2; y <= 2; y++)
-            {
-                tempN.first = (cNdsC.first - 1);
-                tempN.second = (cNdsC.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-        else
-        //s = o, sc = o;
-        if(dNds == 1 || dNdsC == 1)
-        {
-            //dx
-            for(int x = -2; x <= 2; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second + 1);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sx
-            for(int x = -2; x <= 2; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second - 1);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-        else
-        //s = v, sc = o;
-        if(dNds == 0 || dNdsC == 1)
-        {
-            // sopra
-            for(int x = -1; x <= 1; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second + 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            // sotto
-            for(int x = -1; x <= 1; x++)
-            {
-                tempN.first = (cNdsC.first + x);
-                tempN.second = (cNdsC.second - 2);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-        else
-        //s = o, sc = v;
-        if(dNds == 0 || dNdsC == 1)
-        {
-            //sopra
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cNdsC.first + 2);
-                tempN.second = (cNdsC.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-            //sotto
-            for(int y = -1; y <= 1; y++)
-            {
-                tempN.first = (cNdsC.first - 2);
-                tempN.second = (cNdsC.second + y);
-                if((cNds) == (tempN))
-                {return true;}
-            }
-        }
-
-        return false;
     }
 
     void Mare::CorHeal(Corazzata& s)
