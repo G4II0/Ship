@@ -1,6 +1,5 @@
 #include "Mare.hpp"
 using namespace std;
-namespace M {
     Mare::Mare()
     {
         //this -> mar_ [12][12];
@@ -911,4 +910,4 @@ namespace M {
     {
         return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();
     }
-}
+

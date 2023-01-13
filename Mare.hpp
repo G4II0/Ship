@@ -16,7 +16,7 @@
 
 using namespace std;
 
-namespace M {
+
     class Mare
     {
         private:
@@ -130,5 +130,5 @@ namespace M {
 
     bool operator==(const Nds& c1);
 };
-}
+
 #endif

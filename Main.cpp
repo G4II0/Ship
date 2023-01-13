@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    M::Mare board;
+    Mare board;
     cout<<board.printAMare();
     return 0;
 }
