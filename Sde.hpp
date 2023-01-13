@@ -8,7 +8,6 @@
     {
         private:
 
-        std::vector<char> structure;
         char tipo;
         std::pair<std::pair<int, int>, std::pair<int, int> > pos;
         std::pair<int, int> prua;
@@ -25,7 +24,6 @@
         Sde();
         Sde(std::pair<std::pair<int, int>, std::pair<int, int> > pos, int numero);
 
-        void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
         void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
         void setPrua(std::pair<int, int> prua_);
@@ -37,7 +35,6 @@
         void setNumero(int numero_);
         void setState(int state_);
 
-        std::vector<char> getStructure() const;
         char getTipo() const;
         std::pair<std::pair<int, int>, std::pair<int, int> > getPos() const;
         std::pair<int, int> getPrua() const;

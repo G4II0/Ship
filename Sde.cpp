@@ -5,7 +5,6 @@
 
     Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int numero_)
     {
-        this -> structure = {'E'};
         this -> tipo = 'E';
         this -> pos = pos_;
         this -> prua = pos_.first;
@@ -18,8 +17,6 @@
         this -> state = true;
     }
 
-    void Sde::setStructure(std::vector<char> structure_)
-    {this -> structure = structure_;}
     void Sde::setTipo(char tipo_)
     {this -> tipo = tipo_;}
     void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
@@ -41,8 +38,6 @@
     void Sde::setState(int state_)
     {this -> state = state_;}
 
-    std::vector<char> Sde::getStructure() const
-    {return this -> structure;}
     char Sde::getTipo() const
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Sde::getPos() const

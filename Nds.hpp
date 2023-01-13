@@ -8,7 +8,6 @@
     {
         private:
 
-        std::vector<char> structure;
         char tipo;
         std::pair<std::pair<int, int>, std::pair<int, int> > pos;
         std::pair<int, int> prua;

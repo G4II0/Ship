@@ -5,7 +5,6 @@
     
     Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
     {
-        this -> structure = {'C', 'C', 'C', 'C', 'C'};
         this -> tipo = 'C';
         this -> pos = pos_;
         this -> prua = pos_.first;
@@ -20,8 +19,6 @@
         this -> state = true;
     }
 
-    void Corazzata::setStructure(std::vector<char> structure_)
-    {this -> structure = structure_;}
     void Corazzata::setTipo(char tipo_)
     {this -> tipo = tipo_;}
     void Corazzata::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
@@ -45,8 +42,6 @@
     void Corazzata::setState(int state_)
     {this -> state = state_;}
 
-    std::vector<char> Corazzata::getStructure() const
-    {return this -> structure;}
     char Corazzata::getTipo() const
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Corazzata::getPos() const
