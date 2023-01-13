@@ -11,9 +11,9 @@
         this -> poppa = pos_.second;
         this -> direzione = direzione_;
         this -> dimensione = 3;
-        this -> segmenti = {true, true, true};
+        this -> segmenti;
         this -> corazza = 3;
-        this -> pMedio = {0, 0};
+        this -> pMedio;
         this -> numero = numero_;
         this -> state = true;
     }
