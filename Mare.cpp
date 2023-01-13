@@ -385,95 +385,8 @@ using namespace std;
             setMareA(dest, 'S');
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
-
-            //aggiungi heal
-
-            pair<int,int> Mid = s.getPMedio();
-            int xc = Mid.first;
-            int yc = Mid.second;
-
-            pair<int,int> Ms;
-
-            for(int i=0; i<marCor.size(); i++)
-            {
-                for(int x=-2; x<=2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc+1;
-                    if(marCor[i].getPMedio() == Ms)
-                    {
-                        CorHeal(marCor[i]);
-                    }
-                }
-                for(int x=-2; x<=2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc-1;
-                    if(marCor[i].getPMedio() == Ms)
-                    {
-                        CorHeal(marCor[i]);
-                    }
-                }
-                for(int x=-3; x<=-2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc;
-                    if(marCor[i].getPMedio() == Ms)
-                    {
-                        CorHeal(marCor[i]);
-                    }
-                }
-                for(int x=2; x<=3; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc;
-                    if(marCor[i].getPMedio() == Ms)
-                    {
-                        CorHeal(marCor[i]);
-                    }
-                }
-            }
-            for(int i=0; i<marNds.size(); i++)
-            {
-                for(int x=-2; x<=2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc+1;
-                    if(marNds[i].getPMedio() == Ms)
-                    {
-                        NdsHeal(marNds[i]);
-                    }
-                    else
-                }
-                for(int x=-2; x<=2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc-1;
-                    if(marNds[i].getPMedio() == Ms)
-                    {
-                        NdsHeal(marNds[i]);
-                    }
-                }
-                for(int x=-3; x<=-2; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc;
-                    if(marNds[i].getPMedio() == Ms)
-                    {
-                        NdsHeal(marNds[i]);
-                    }
-                }
-                for(int x=2; x<=3; x++)
-                {
-                    Ms.first = xc+x;
-                    Ms.second = yc;
-                    if(marNds[i].getPMedio() == Ms)
-                    {
-                        NdsHeal(marNds[i]);
-                    }
-                }
-            }
         }
+        //throw InvalidMoveException();
     }
 
     //move Sde
@@ -492,8 +405,6 @@ using namespace std;
             s.setPos(temp3);
             // posizionamento nella board
             setMareA(dest, 'E');
-
-            SdeScan(s);
         }
     }
 
@@ -530,9 +441,8 @@ using namespace std;
                 {return true;}
             }
         }
-        else
         //s = o, c = o;
-        if(dNds == 1 || dCor == 1)
+        else if(dNds == 1 || dCor == 1)
         {
             //dx
             for(int x = -3; x <= 3; x++)
