@@ -5,7 +5,6 @@
     
     Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
     {
-        this -> structure = {'S', 'S', 'S'};
         this -> tipo = 'S';
         this -> pos = pos_;
         this -> prua = pos_.first;
@@ -19,8 +18,6 @@
         this -> state = true;
     }
  
-    void Nds::setStructure(std::vector<char> structure_)
-    {this -> structure = structure_;}
     void Nds::setTipo(char tipo_)
     {this -> tipo = tipo_;}
     void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
@@ -44,8 +41,6 @@
     void Nds::setState(int state_)
     {this -> state = state_;}
 
-    std::vector<char> Nds::getStructure() const
-    {return this -> structure;}
     char Nds::getTipo() const
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Nds::getPos() const
