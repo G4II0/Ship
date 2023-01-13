@@ -414,7 +414,6 @@ using namespace std;
         pair<int, int> cNds1 = Nds.getPMedio();
         int dNds = Nds.getDirezione();
         pair<int, int> cCor;
-        int dCor = Cor.getDirezione();
         pair<int, int> tempN;
         tempN.first = 0;
         tempN.second = 0;
