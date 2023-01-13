@@ -12,9 +12,7 @@
         this -> direzione = direzione_;
         this -> dimensione = 5;
         this -> corazza = 5;
-        this -> segmenti;
         this -> corazza = 3;
-        this -> pMedio;
         this -> numero = numero_;
         this -> state = true;
     }

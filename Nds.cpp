@@ -11,9 +11,7 @@
         this -> poppa = pos_.second;
         this -> direzione = direzione_;
         this -> dimensione = 3;
-        this -> segmenti;
         this -> corazza = 3;
-        this -> pMedio;
         this -> numero = numero_;
         this -> state = true;
     }
@@ -106,7 +104,7 @@
        corazza = corazza - 1;
     }
 
-    void Nds::Damage()
+    void Nds::Heal()
     {
        corazza = 3;
     }

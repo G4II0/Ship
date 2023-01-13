@@ -10,9 +10,7 @@
         this -> prua = pos_.first;
         this -> poppa = pos_.second;
         this -> dimensione = 3;
-        this -> segmenti;
         this -> corazza = 3;
-        this -> pMedio;
         this -> numero = numero_;
         this -> state = true;
     }
