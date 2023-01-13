@@ -4,7 +4,7 @@ using namespace std;
   
     Mare::Mare()
     {
-        this -> mar_ [12][12];
+        //this -> mar_ [12][12];
         this -> condition = -1;
         this -> drawMoves = 0;
     }
@@ -676,7 +676,7 @@ using namespace std;
 
     void Mare::CorAff(Corazzata s)
     {
-        s.setState((-1));
+        /* s.setState((-1));
         if(s.getDirezione() == 0)
         {
             pair<int, int> pM = s.getPMedio();
@@ -686,7 +686,7 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        mar_[x][y];
+        //mar_[x][y];
         if(d==0)
         {
             mar_[x][y+1];
@@ -701,11 +701,12 @@ using namespace std;
             mar_[x-1][y];
             mar_[x-2][y];
         }
+    */
     }
 
     void Mare::NdsAff(Nds s)
     {
-        s.setState((-1));
+        /* s.setState((-1));
         if(s.getDirezione() == 0)
         {
             pair<int, int> pM = s.getPMedio();
@@ -726,6 +727,7 @@ using namespace std;
             mar_[x+1][y];
             mar_[x-1][y];
         }
+        */
     }
 
     void Mare::SdeAff(Sde s)
@@ -740,13 +742,12 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        mar_[x][y];
+        //mar_[x][y];
     }
 
 /*____________________________________________________________________________________________________________________________________________________________*/
 
 //sistemare sopra
-
 /*
     //fixare
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
