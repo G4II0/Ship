@@ -413,6 +413,8 @@ using namespace std;
         pair<int, int> cNds = Nds.getPMedio();
         pair<int, int> cNds1 = Nds.getPMedio();
         int dNds = Nds.getDirezione();
+        vector<Corazzata> marCor;
+        marCor = getMarCor();
         pair<int, int> cCor;
         pair<int, int> tempN;
         tempN.first = 0;
