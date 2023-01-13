@@ -55,6 +55,6 @@
 
         void Heal();
 
-        bool operator==(const Nds& c1);
+        bool operator==(const Nds& n1, const Nds& n2);
     };
 #endif
