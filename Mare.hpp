@@ -83,9 +83,7 @@ using namespace std;
         //spostamento Sde
         void Move(pair<int, int> start, pair<int, int> dest, Sde s, Mare m);
         // s1 = Nds, s2 = Corazzata
-        bool healConditions(Nds s1, Corazzata s2);
-        // s1 = Nds, s2 = Nds
-        bool healConditions(Nds s1, Nds s2);
+        void healConditions(Nds s1);
         // assegna la cura
         void CorHeal(Corazzata& s);
         void NdsHeal(Nds& s);
