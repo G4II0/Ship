@@ -14,8 +14,6 @@
         this -> state = false;
     }
 
-    void Ship::setStructure(std::vector<char> structure_)
-    {this -> structure = structure_;}
     void Ship::setTipo(char tipo_)
     {this -> tipo = tipo_;}
     void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
@@ -31,8 +29,6 @@
     void Ship::setNumero(int numero_)
     {this-> numero = numero_;}
 
-    std::vector<char> Ship::getStructure() const
-    {return this -> structure;}
     char Ship::getTipo() const
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Ship::getPos() const
@@ -47,11 +43,11 @@
     {return this -> corazza;}
     
     //possibili posizioni del pMedio
-    std::vector<std::pair<int, int> > Moves()
+    std::vector<std::pair<int, int> > Ship::Moves()
     {}
 
     void Ship::Damage()
     {}
 
-    void Heal()
+    void Ship::Heal()
     {}
