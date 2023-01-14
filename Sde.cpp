@@ -7,8 +7,6 @@
     {
         this -> tipo = 'E';
         this -> pos = pos_;
-        this -> prua = pos_.first;
-        this -> poppa = pos_.second;
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> numero = numero_;
@@ -19,14 +17,8 @@
     {this -> tipo = tipo_;}
     void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
-    /*void Ship::setPrua(std::pair<int, int> prua_)
-    {this->prua = prua_;}
-    void Ship::setPoppa(std::pair<int, int> poppa_)
-    {this->poppa = poppa_;}*/
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
-    void Sde::setSegmenti(bool Ssegmento_, int nS)
-    {this -> segmenti[nS] = Ssegmento_;}
     void Sde::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
     void Sde::setPMedio(std::pair<int, int> pMedio_)
@@ -40,14 +32,8 @@
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Sde::getPos() const
     {return this -> pos;}
-    /*std::pair<int, int> Ship::getPrua() const
-    {return this->prua;}
-    std::pair<int, int> Ship::getPoppa() const
-    {return this->poppa;}*/
     int Sde::getDimensione() const
     {return this -> dimensione;}
-    std::vector<bool> Sde::getSegmenti() const
-    {return this -> segmenti;}
     int Sde::getCorazza() const
     {return this -> corazza;}
     std::pair<int, int> Sde::getPMedio() const
