@@ -1,7 +1,7 @@
 CMakeFiles/ship.dir/Players.cpp.o: \
-  /Users/alvisestella/desktop/Ship/Players.cpp \
-  /Users/alvisestella/desktop/Ship/Players.hpp \
-  /Users/alvisestella/desktop/Ship/Mare.hpp \
+  /Users/alvisestella/Desktop/Ship/Players.cpp \
+  /Users/alvisestella/Desktop/Ship/Players.hpp \
+  /Users/alvisestella/Desktop/Ship/Mare.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -432,8 +432,8 @@ CMakeFiles/ship.dir/Players.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
-  /Users/alvisestella/desktop/Ship/Ship.hpp \
+  /Users/alvisestella/Desktop/Ship/Ship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
-  /Users/alvisestella/desktop/Ship/Corazzata.hpp \
-  /Users/alvisestella/desktop/Ship/Nds.hpp \
-  /Users/alvisestella/desktop/Ship/Sde.hpp
+  /Users/alvisestella/Desktop/Ship/Corazzata.hpp \
+  /Users/alvisestella/Desktop/Ship/Nds.hpp \
+  /Users/alvisestella/Desktop/Ship/Sde.hpp

@@ -1,6 +1,6 @@
-CMakeFiles/ship.dir/Sde.cpp.o: /Users/alvisestella/desktop/Ship/Sde.cpp \
-  /Users/alvisestella/desktop/Ship/Sde.hpp \
-  /Users/alvisestella/desktop/Ship/Ship.hpp \
+CMakeFiles/ship.dir/Sde.cpp.o: /Users/alvisestella/Desktop/Ship/Sde.cpp \
+  /Users/alvisestella/Desktop/Ship/Sde.hpp \
+  /Users/alvisestella/Desktop/Ship/Ship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

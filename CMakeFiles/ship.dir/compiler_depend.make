@@ -863,7 +863,6 @@ CMakeFiles/ship.dir/Corazzata.cpp.o: Corazzata.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer
 
 CMakeFiles/ship.dir/Mare.cpp.o: Mare.cpp \
-  Mare.cpp \
   Mare.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
@@ -1302,7 +1301,6 @@ CMakeFiles/ship.dir/Mare.cpp.o: Mare.cpp \
   Sde.hpp
 
 CMakeFiles/ship.dir/Nds.cpp.o: Nds.cpp \
-  Nds.cpp \
   Nds.hpp \
   Ship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \

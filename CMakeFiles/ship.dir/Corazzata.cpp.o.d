@@ -1,7 +1,7 @@
 CMakeFiles/ship.dir/Corazzata.cpp.o: \
-  /Users/alvisestella/desktop/Ship/Corazzata.cpp \
-  /Users/alvisestella/desktop/Ship/Corazzata.hpp \
-  /Users/alvisestella/desktop/Ship/Ship.hpp \
+  /Users/alvisestella/Desktop/Ship/Corazzata.cpp \
+  /Users/alvisestella/Desktop/Ship/Corazzata.hpp \
+  /Users/alvisestella/Desktop/Ship/Ship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
