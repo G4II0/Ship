@@ -369,9 +369,9 @@ using namespace std;
                 tmp1.first = tmp.second + 1;
                 tmp2.first = tmp.second - 1;
             }
+            setMareA(tmp, ' ');
             setMareA(tmp1, ' ');
             setMareA(tmp2, ' ');
-            setMareA(s.getPoppa(), ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
