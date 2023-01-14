@@ -47,7 +47,7 @@
     int Ship::getCorazza() const
     {return this -> corazza;}
     
-    //possibili posizioni del pMedio della Nds
+    //possibili posizioni del pMedio
     std::vector<std::pair<int, int> > Moves()
     {}
 
