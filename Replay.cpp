@@ -1,7 +1,7 @@
 #include "Ship.hpp"
 #include "PTE.cpp"
-using namespace std;
 
+using namespace std;
 int main(int argc, char **args)
 {
     if (argc <= 2)
