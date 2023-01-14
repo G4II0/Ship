@@ -109,9 +109,9 @@
        corazza = 3;
     }
 
-   /* bool operator==(const Nds& n1, const Nds& n2)
+    bool operator==(const Nds& n1, const Nds& n2)
     {
         return n1.getTipo() == n2.getTipo() &&
             n1.getNumero() == n2.getNumero() &&
             n1.getPMedio() == n2.getPMedio();
-    }*/
+    }

@@ -1,6 +1,6 @@
-CMakeFiles/ship.dir/Nds.cpp.o: /Users/alvisestella/desktop/Ship/Nds.cpp \
-  /Users/alvisestella/desktop/Ship/Nds.hpp \
-  /Users/alvisestella/desktop/Ship/Ship.hpp \
+CMakeFiles/ship.dir/Nds.cpp.o: /Users/alvisestella/Desktop/Ship/Nds.cpp \
+  /Users/alvisestella/Desktop/Ship/Nds.hpp \
+  /Users/alvisestella/Desktop/Ship/Ship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

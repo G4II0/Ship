@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/alvisestella/Desktop/Ship
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alvisestella/desktop/Ship
+CMAKE_BINARY_DIR = /Users/alvisestella/Desktop/Ship
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/ship.dir/clean
 CMakeFiles/ship.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target ship"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target ship"
 .PHONY : CMakeFiles/ship.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ship.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/desktop/Ship/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/Desktop/Ship/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ship.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/desktop/Ship/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/Desktop/Ship/CMakeFiles 0
 .PHONY : CMakeFiles/ship.dir/rule
 
 # Convenience name for target.
