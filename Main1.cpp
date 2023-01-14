@@ -3,8 +3,8 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-using namespace std;
 
+using namespace std;
 void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
 {
     for (int i = 0; i < s.size(); i++)
