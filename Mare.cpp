@@ -355,13 +355,27 @@ using namespace std;
     {
         if (legitMoveInput(s, dest, m) == true)
         {
-            setMareA(start, ' ');
-            setMareA(s.getPrua(), ' ');
+            int d = s.getDirezione();
+            pair<int, int> tmp = s.getPMedio();
+            pair<int, int> tmp1;
+            pair<int, int> tmp2;
+            if(d==0)
+            {
+                tmp1.second = tmp.second + 1;
+                tmp2.second = tmp.second - 1;
+            }
+            else
+            {
+                tmp1.first = tmp.second + 1;
+                tmp2.first = tmp.second - 1;
+            }
+            setMareA(tmp1, ' ');
+            setMareA(tmp2, ' ');
             setMareA(s.getPoppa(), ' ');
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
-            if (s.getDirezione() == 0)
+            if (d == 0)
             {
                 temp1.first = dest.first;         // x prua
                 temp1.second = (dest.second) + 1; // y prua
