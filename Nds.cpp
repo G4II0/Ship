@@ -7,8 +7,6 @@
     {
         this -> tipo = 'S';
         this -> pos = pos_;
-        this -> prua = pos_.first;
-        this -> poppa = pos_.second;
         this -> direzione = direzione_;
         this -> dimensione = 3;
         this -> corazza = 3;
@@ -20,16 +18,10 @@
     {this -> tipo = tipo_;}
     void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
-    /*void Ship::setPrua(std::pair<int, int> prua_)
-    {this->prua = prua_;}
-    void Ship::setPoppa(std::pair<int, int> poppa_)
-    {this->poppa = poppa_;}*/
     void Nds::setDirezione(int direzione_)
     {this->direzione = direzione_;}
     void Nds::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
-    void Nds::setSegmenti(bool Ssegmento_, int nS)
-    {this -> segmenti[nS] = Ssegmento_;}
     void Nds::setCorazza(int corazza_)
     {this -> corazza = corazza_;}
     void Nds::setPMedio(std::pair<int, int> pMedio_)
@@ -43,16 +35,10 @@
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Nds::getPos() const
     {return this -> pos;}
-    std::pair<int, int> Nds::getPrua() const
-    {return this->prua;}
-    std::pair<int, int> Nds::getPoppa() const
-    {return this->poppa;}
     int Nds::getDirezione() const
     {return this -> direzione;}
     int Nds::getDimensione() const
     {return this -> dimensione;}
-    std::vector<bool> Nds::getSegmenti() const
-    {return this -> segmenti;}
     int Nds::getCorazza() const
     {return this -> corazza;}
     std::pair<int, int> Nds::getPMedio() const
