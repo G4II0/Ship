@@ -792,7 +792,7 @@ using namespace std;
                 if (mar_[i][j] != ' ')
                     out += mar_[i][j];
                 else
-                    out += " ";
+                    out += "   ";
                 out += " │ ";
             }
             out += "\n";
