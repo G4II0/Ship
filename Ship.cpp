@@ -5,7 +5,6 @@
     {}
     Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero)
     {
-        this -> structure;
         this -> tipo = ' ';
         this -> pos = pos_;
         this -> dimensione = 0;
