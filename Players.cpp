@@ -3,29 +3,29 @@
     Players::Players()
     {}
 
-    Players::Players(Mare mare, char N, char T)
+    Players::Players(Mare m, char N, char T)
     {
         this -> Name= N;
-        this -> Mare = mare;
+        this -> mare = m;
         this -> Type = T;
     }
 
     void Players::setName(char name)
     {this -> Name = name;}
-    void Players::setMare(M::Mare mare)
-    {this -> Mare = mare;}
+    void Players::setMare(Mare m)
+    {this -> mare = m;}
     void Players::setType(char type)
     {this -> Type = type;}
 
     char Players::getName() const
     {return this -> Name;}
-    M::Mare Players::getMare() const
-    {return this -> Mare;}
+    Mare Players::getMare() const
+    {return this -> mare;}
     char Players::getType() const
     {return this -> Type;}
 
     // player
-    void Players::Move(pair<int, int> pos, pair<int, int> dest, M::Mare Mare)
+    /*void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m)
     {
-        Mare.Move(pos, dest, Mare);
-    }
+        mare.Move(pos, dest, m);
+    }*/

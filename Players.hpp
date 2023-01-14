@@ -10,18 +10,18 @@
         protected:
 
         char Name;
-        Mare Mare;
+        Mare mare;
         char Type;
 
         public:
 
         // costruttore
         Players();
-        Players(Mare::Mare Mare, char N, char T);
+        Players(Mare m, char N, char T);
 
         //set
         void setName(char name);
-        void setMare(Mare Mare);
+        void setMare(Mare m);
         void setType(char type);
         
         //get
