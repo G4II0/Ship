@@ -60,20 +60,19 @@
     //possibili posizioni del pMedio della Sde
     std::vector<std::pair<int, int> > Sde::Moves()
     {
-        std::vector<std::vector<std::pair<int, int> > > Moves;
+        std::vector<std::vector<std::pair<int, int> > > Mov;
         int y = 0;
         int x = 0;
-        std::vector<std::pair<int, int> > m1;
         while (x <12)
         {
             while (y < 12)
             {
-                m1.push_back(std::pair<int, int>(x, y));
+                Mov.push_back(std::pair<int, int>(x, y));
                 y++;
             }
             x++;
         }
-        Moves.push_back(m1);
+        return Mov;
     }
 
     void Sde::Damage()
