@@ -43,10 +43,10 @@
         int getNumero() const;
         int getStato() const;
 
-        std::vector<std::pair<int, int> > Moves();
+        std::vector<std::pair<int, int> > Moves(); //metodo da sovrascrivere
 
-        void Damage();
+        void Damage(); //metodo da sovrascrivere
 
-        void Heal();
+        void Heal(); //metodo da sovrascrivere
     };
 #endif
