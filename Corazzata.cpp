@@ -63,7 +63,7 @@
     int Corazzata::getState() const
     {return this -> state;}
 
-    std::vector<std::pair<int, int> > Ship::Moves()
+    std::vector<std::pair<int, int> > Corazzata::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
         if(getDirezione() == 0)

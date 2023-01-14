@@ -19,10 +19,10 @@
     {this -> tipo = tipo_;}
     void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
-    void Ship::setPrua(std::pair<int, int> prua_)
+    /*void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
     void Ship::setPoppa(std::pair<int, int> poppa_)
-    {this->poppa = poppa_;}
+    {this->poppa = poppa_;}*/
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
     void Sde::setSegmenti(bool Ssegmento_, int nS)
@@ -40,10 +40,10 @@
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Sde::getPos() const
     {return this -> pos;}
-    std::pair<int, int> Ship::getPrua() const
+    /*std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
     std::pair<int, int> Ship::getPoppa() const
-    {return this->poppa;}
+    {return this->poppa;}*/
     int Sde::getDimensione() const
     {return this -> dimensione;}
     std::vector<bool> Sde::getSegmenti() const
@@ -58,7 +58,7 @@
     {return this -> state;}
 
     //possibili posizioni del pMedio della Sde
-    std::vector<std::pair<int, int> > Moves()
+    std::vector<std::pair<int, int> > Sde::Moves()
     {
         std::vector<std::vector<std::pair<int, int> > > Moves;
         int y = 0;

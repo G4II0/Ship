@@ -70,7 +70,7 @@ using namespace std;
     vector<Sde> Mare::getMarSde()
     {return this -> marSde;}
 
-    Corazzata whichCor(vector<Corazzata> marCor, pair<int, int> pos)
+    Corazzata Mare::whichCor(vector<Corazzata> marCor, pair<int, int> pos)
     {
         int t;
         for(int i=0; i<3; i++)
@@ -83,7 +83,7 @@ using namespace std;
         return marCor[t];
     }
 
-    Nds whichNds(vector<Nds> marNds, pair<int, int> pos)
+    Nds Mare::whichNds(vector<Nds> marNds, pair<int, int> pos)
     {
         int t;
         for(int i=0; i<3; i++)
@@ -96,7 +96,7 @@ using namespace std;
         return marNds[t];
     }
 
-    Sde whichSde(vector<Sde> marSde, pair<int, int> pos)
+    Sde Mare::whichSde(vector<Sde> marSde, pair<int, int> pos)
     {
         int t;
         for(int i=0; i<2; i++)

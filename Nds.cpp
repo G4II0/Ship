@@ -20,10 +20,10 @@
     {this -> tipo = tipo_;}
     void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
-    void Ship::setPrua(std::pair<int, int> prua_)
+    /*void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
     void Ship::setPoppa(std::pair<int, int> poppa_)
-    {this->poppa = poppa_;}
+    {this->poppa = poppa_;}*/
     void Nds::setDirezione(int direzione_)
     {this->direzione = direzione_;}
     void Nds::setDimensione(int dimensione_)
@@ -43,9 +43,9 @@
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Nds::getPos() const
     {return this -> pos;}
-    std::pair<int, int> Ship::getPrua() const
+    std::pair<int, int> Nds::getPrua() const
     {return this->prua;}
-    std::pair<int, int> Ship::getPoppa() const
+    std::pair<int, int> Nds::getPoppa() const
     {return this->poppa;}
     int Nds::getDirezione() const
     {return this -> direzione;}
@@ -63,7 +63,7 @@
     {return this -> state;}
 
     //possibili posizioni del pMedio della Nds
-    std::vector<std::pair<int, int> > Ship::Moves()
+    std::vector<std::pair<int, int> > Nds::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
         if(getDirezione() == 0)
@@ -109,9 +109,9 @@
        corazza = 3;
     }
 
-    bool operator==(const Nds& n1, const Nds& n2)
+   /* bool operator==(const Nds& n1, const Nds& n2)
     {
         return n1.getTipo() == n2.getTipo() &&
             n1.getNumero() == n2.getNumero() &&
             n1.getPMedio() == n2.getPMedio();
-    }
+    }*/

@@ -125,8 +125,8 @@ using namespace std;
     void updateLogGameType(string type);
     // aggiorna log con mossa
     void updateLogMove(pair<int, int> start, pair<int, int> finish);
-
-    bool operator==(const Nds& c1);
 };
+
+bool operator==(const Nds& c1, const Nds& c2);
 
 #endif

@@ -24,10 +24,11 @@
     {this -> tipo = tipo_;}
     void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
     {this -> pos = pos_;}
-    void Ship::setPrua(std::pair<int, int> prua_)
+    /*void Ship::setPrua(std::pair<int, int> prua_)
     {this->prua = prua_;}
     void Ship::setPoppa(std::pair<int, int> poppa_)
     {this->poppa = poppa_;}
+    */
     void Ship::setPMedio(std::pair<int, int> pMedio_)
     {this -> pMedio = pMedio_;}
     void Ship::setDimensione(int dimensione_)
@@ -45,10 +46,11 @@
     {return this -> tipo;}
     std::pair<std::pair<int, int>, std::pair<int, int> > Ship::getPos() const
     {return this -> pos;}
-    std::pair<int, int> Ship::getPrua() const
+    /*std::pair<int, int> Ship::getPrua() const
     {return this->prua;}
     std::pair<int, int> Ship::getPoppa() const
     {return this->poppa;}
+    */
     std::pair<int, int> Ship::getPMedio() const
     {return this -> pMedio;}
     int Ship::getDirezione() const
