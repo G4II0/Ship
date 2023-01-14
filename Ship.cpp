@@ -41,13 +41,3 @@
     {return this -> dimensione;}
     int Ship::getCorazza() const
     {return this -> corazza;}
-    
-    //possibili posizioni del pMedio
-    std::vector<std::pair<int, int> > Ship::Moves()
-    {}
-
-    void Ship::Damage()
-    {}
-
-    void Ship::Heal()
-    {}
