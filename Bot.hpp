@@ -8,18 +8,18 @@
 
         protected:
         char Name;
-        M::Mare Mare;
+        Mare mare;
         char Type;
 
         public:
 
         // costruttore
         Bot();
-        Bot(M::Mare Mare, char N, char T);
+        Bot(Mare m, char N, char T);
 
         //set
         void setName(char name);
-        void setMare(M::Mare mare);
+        void setMare(Mare m);
         void setType(char type);
         
         //get
@@ -29,7 +29,7 @@
         char getType() const;
 
         //Move
-        void Move(Mare mare, Bot bN);
+        void Move(Mare m, Bot bN);
     };
 
 #endif
