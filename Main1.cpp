@@ -82,7 +82,7 @@ insertGame:
         switch (cond)
         {
         case 0:
-            message = names[index] + " tutte le navi di " + names[index] + " sono state affondate";
+            message = names[index] + " tutte le navi di " + names[index] + " sono state affondate" + "\n";
             if (index = 0)
                 message += names[1];
             else
@@ -93,8 +93,6 @@ insertGame:
             continue;
         case 1:
             printTextEffect("La partita termina in patta! Sono state eseguite 50 mosse:");
-            //----------------------------------------------------------------------------------------------------
-            cout << board.printBoard();
             endgame = true;
             continue;
         }
@@ -107,7 +105,7 @@ insertGame:
             cin >> code;
             //-------------------------------------------------------------------------------------------------------
             if (code == 'XX XX')
-                {cout << board.printBoard();}
+                {cout << board.printBoard();}//________________________________________________________________
             string start;
             string end;
             bool result;
