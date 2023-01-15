@@ -65,8 +65,8 @@ int main(int argc, char **args)
     getline(scanner, scannerLine);
     string player1 = scannerLine.substr(3);
     getline(scanner, scannerLine);
-    string player2 = scannerLine.substr(3);   _______________________________________________________________________________________
-
+    string player2 = scannerLine.substr(3);
+    
     int i = -1;
     // se viene effettuato replay su file, viene aperto oggetto per scrivere su file
     ofstream replayWrite;
