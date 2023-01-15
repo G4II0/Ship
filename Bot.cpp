@@ -19,6 +19,8 @@
     {this -> mare = m;}
     void Bot::setType(char type)
     {this -> Type = type;}
+    void Bot::setCondition(int c)
+    {this -> condition = c;}
 
     char Bot::getName() const
     {return this -> Name;}
@@ -28,7 +30,8 @@
     {return b.getMare();}
     char Bot::getType() const
     {return this -> Type;}
-
+    int Bot::getCondition() const
+    {return this -> condition;}
     // bot
     void Bot::Move(Mare m, Bot bN)
     { 
