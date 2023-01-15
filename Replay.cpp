@@ -57,8 +57,8 @@ int main(int argc, char **args)
     // stringa usata per salvare i messaggi da stampare nel corso del programma
     string message;
     message = "Verrà effettuato il replay ";
-//    message += (op == 'v') ? "a video " : "sul file '" + replayFile + "' "; ___________________________________________________________
-//    message += "della partita salvata sul file di log '" + logFile + "'!";  ___________________________________________________________
+    message += (op == 'v') ? "a video " : "sul file '" + replayFile + "' ";
+    message += "della partita salvata sul file di log '" + logFile + "'!";
     PTE(message);
     // ottiene nomi giocatori (prime due righe del log)
     string scannerLine;
@@ -66,7 +66,7 @@ int main(int argc, char **args)
     string player1 = scannerLine.substr(3);
     getline(scanner, scannerLine);
     string player2 = scannerLine.substr(3);
-    
+
     int i = -1;
     // se viene effettuato replay su file, viene aperto oggetto per scrivere su file
     ofstream replayWrite;
