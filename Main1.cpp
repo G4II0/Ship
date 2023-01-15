@@ -55,7 +55,6 @@ insertGame:
         goto insertGame;
         //da sistemare ______________________________________________________________________________________________
     }
-    //---------------------------------------------------------------------------------------------------------------
     Mare boardP1;
     Mare boardP2;
     players.push_back(Players(boardP1, names[0], types[0]));
@@ -67,7 +66,7 @@ insertGame:
     if (game == "cc")
         movesLimit = 50;
     else
-        movesLimit = -1; //-------------------------------------------------------------------
+        movesLimit = -1;
     bool endgame = false;
     while (i != movesLimit && !endgame)
     {
@@ -100,9 +99,11 @@ insertGame:
             printTextEffect("Se vuoi stampare le griglie, inserire 'XX XX': ");
             string code;
             cin >> code;
-            //-------------------------------------------------------------------------------------------------------
             if (code == 'XX XX')
-                {cout << board.printBoard();}//________________________________________________________________
+            {
+                cout << boardP1.printAMare();
+                cout << boardP2.printEMare();
+            }//__________________________________________________________________________________________________________
             string start;
             string end;
             bool result;
@@ -118,6 +119,33 @@ insertGame:
                 else
                 {
                     result = p.Move(start, end, boardP2);
+                }
+            }
+            catch (InvalidMoveException e)
+            {
+                printTextEffect("La mossa inserita non è valida.");
+                //______________________________________________________________________________________
+                goto insertMove;
+            }
+            catch (InvalidInputException e)
+            {
+                printTextEffect("L'input inserito non è valido");
+                //_______________________________________________________________________________________
+                goto insertMove;
+            }
+        }
+        else
+        {
+        insertMove:
+            try
+            {
+                if(index == 0)
+                {
+                    result = p.Move(boardP1, players[index].getName());
+                }
+                else
+                {
+                    result = p.Move(boardP2, players[index].getName());
                 }
             }
             catch (InvalidMoveException e)
