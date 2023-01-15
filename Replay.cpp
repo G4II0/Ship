@@ -10,9 +10,9 @@ int main(int argc, char **args)
         PTE("Non sono stati inseriti gli argomenti necessari; rieseguire il programma.");
         return 0;
     }
-/*
+
     char op = *args[1];
-    if (!(op == 'v' || op == 'f'))
+/*    if (!(op == 'v' || op == 'f'))
     {
         PTE("Il codice per l'operazione inserito non è valido; rieseguire il programma.");
         return 0;
