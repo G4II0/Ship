@@ -138,7 +138,7 @@ insertGame:
         }
         i++;
     }
-    if (game == "cc" && i == movesThreshold)
+    if (game == "cc" && i == movesLimit)
         printTextEffect("La partita termina in patta! È stata effettuata la 50esima mossa totale!");
     printTextEffect("Grazie per aver giocato!");
 }
