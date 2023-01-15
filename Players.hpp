@@ -24,7 +24,7 @@
         void setName(char name);
         void setMare(Mare m);
         void setType(char type);
-        void setCondition(int condition);
+        void setCondition(int c);
         
         //get
         char getName() const;

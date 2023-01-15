@@ -16,6 +16,8 @@
     {this -> mare = m;}
     void Players::setType(char type)
     {this -> Type = type;}
+    void Players::setCondition(int c)
+    {this -> condition = c;}
 
     char Players::getName() const
     {return this -> Name;}
@@ -23,6 +25,8 @@
     {return this -> mare;}
     char Players::getType() const
     {return this -> Type;}
+    int Players::getCondition() const
+    {return this -> condition;}
 
     // player
     /*void Players::Move(pair<int, int> pos, pair<int, int> dest, Mare m)
