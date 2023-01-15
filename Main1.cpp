@@ -114,18 +114,25 @@ insertGame:
             cin >> start >> end;
             try
             {
-                result = p.Move(start, end, boardP1);
+                if(index == 0)
+                {
+                    result = p.Move(start, end, boardP1);
+                }
+                else
+                {
+                    result = p.Move(start, end, boardP2);
+                }
             }
-            catch (ChessBoard::InvalidMoveException e)
+            catch (InvalidMoveException e)
             {
                 printTextEffect("La mossa inserita non è valida.");
-                //--------------------------------------------------------------------------------
+                //______________________________________________________________________________________
                 goto insertMove;
             }
-            catch (ChessBoard::InvalidInputException e)
+            catch (InvalidInputException e)
             {
                 printTextEffect("L'input inserito non è valido");
-                //--------------------------------------------------------------------------------
+                //_______________________________________________________________________________________
                 goto insertMove;
             }
         }
