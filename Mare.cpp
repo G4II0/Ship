@@ -142,7 +142,7 @@ using namespace std;
         {
             while (y < 12)
             {
-                mar_[x][y] = ' ';
+                mar_[x][y] = 'X';
                     y++;
             }
             x++;
