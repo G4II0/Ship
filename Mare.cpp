@@ -793,7 +793,7 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
-    /*string Mare::printAMare()
+    string Mare::printAMare()
     {
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
@@ -808,10 +808,10 @@ using namespace std;
             out += " ¦ ";
             for (int j = 0; j < 12; j++)
             {
-                if (mar_[i][j] != ' ')
+                /*if (mar_[i][j] != ' ')
                     out += mar_[i][j];
-                else
-                    out += "   ";
+                else*/
+                    out += " ";
                 //out += " │ ";
                 out += " ¦ ";
             }
@@ -825,9 +825,9 @@ using namespace std;
         out += "   +-----------------------------------------------+\n";
         out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         return out;
-    }*/
+    }
 
-    string Mare::printAMare()
+    string Mare::printEMare()
     {
         string out = "";
         // out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
