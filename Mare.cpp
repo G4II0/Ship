@@ -4,10 +4,9 @@ using namespace std;
   
     Mare::Mare()
     {
-        //this -> mar_ [12][12];
         this -> condition = -1;
         this -> drawMoves = 0;
-        initializeMare(this -> mar_);
+        initializeMare(this.mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, char c)
@@ -142,7 +141,7 @@ using namespace std;
         {
             while (y < 12)
             {
-                mar_[x][y] = 'X';
+                mar_[x][y] = ' ';
                     y++;
             }
             x++;
