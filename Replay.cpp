@@ -1,5 +1,6 @@
 #include "Ship.hpp"
 #include "PTE.cpp"
+#include "Mare.hpp"
 
 using namespace std;
 int main(int argc, char **args)
@@ -78,12 +79,11 @@ int main(int argc, char **args)
         replayWrite.open(replayFile);
     }
 
-    ChessBoard board = ChessBoard();
+    Mare board = Mare();
     int movesNumber = 0;
 
     while (getline(scanner, scannerLine))
     {
-        color = (i % 2 == 0) ? 'B' : 'N';
         string message;
         bool pb = true;
         // terza riga: riga vuota, nessuna mossa
