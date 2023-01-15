@@ -135,16 +135,14 @@ using namespace std;
     }
 
     void Mare::initializeMare(char (&mar_)[12][12])
-    {int x=0, y=0;
+    {
 
-        while (x < 12)
+        for(int x = 0; x < 12; x++)
         {
-            while (y < 12)
+            for(int y = 0; y < 12; y++)
             {
                 mar_[x][y] = 'X';
-                    y++;
             }
-            x++;
         }
     }
 
