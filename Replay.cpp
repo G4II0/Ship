@@ -12,7 +12,7 @@ int main(int argc, char **args)
     }
 
     char op = *args[1];
-/*    if (!(op == 'v' || op == 'f'))
+    if (!(op == 'v' || op == 'f'))
     {
         PTE("Il codice per l'operazione inserito non è valido; rieseguire il programma.");
         return 0;
@@ -22,20 +22,20 @@ int main(int argc, char **args)
     {
         PTE("Gli argomenti inseriti non sono sufficienti per il replay su file; rieseguire il programma.");
         return 0;
-    }*/
+    }
 
     if (op == 'v' && argc > 3)
     {
         PTE("Sono stati inseriti troppi argomenti per il replay a video; rieseguire il programma.");
         return 0;
     }
-/*
+
     if (op == 'f' && argc > 4)
     {
         PTE("Sono stati inseriti troppi argomenti per il replay su file; rieseguire il programma.");
         return 0;
     }
-*/
+
     string logFile(args[2]);
     string replayFile;
     if (argc >= 4)
