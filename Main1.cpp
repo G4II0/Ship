@@ -30,10 +30,7 @@ insertGame:
     vector<string> names(2);
     vector<char> types;
     vector<Players> players;
-    vector<string> botNames{"Giorgio", "Michele"};
-    // se white == 0, primo giocatore inserito (giocatore oppure computer) ha il bianco
-    // se white == 1, secondo giocatore inserito (computer) ha il bianco
-//    int whiteCode = rand() % 2;
+    vector<string> botNames{"Giorgio", "Michele", 'Claudio', 'Piripillo', 'Roberto', 'Assenzio', 'Barabba', 'Adolfo', 'Rolando', 'Maurizio'};
     if (game == "pc")
     {
         printTextEffect("Inserisci il nome del giocatore umano: ");
