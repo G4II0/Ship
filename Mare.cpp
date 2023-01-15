@@ -141,7 +141,7 @@ using namespace std;
         {
             for(int y = 0; y < 12; y++)
             {
-                mar_[x][y] = 'X';
+                mar_[x][y] = ' ';
             }
         }
     }
