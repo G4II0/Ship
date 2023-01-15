@@ -398,7 +398,6 @@ using namespace std;
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
         }
-        //throw InvalidMoveException();
     }
 
     //move Sde
