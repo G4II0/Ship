@@ -1,4 +1,4 @@
-# Install script for directory: /Users/alvisestella/Desktop/Ship
+# Install script for directory: /Users/alvisestella/desktop/Ship
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/alvisestella/Desktop/Ship/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/alvisestella/desktop/Ship/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

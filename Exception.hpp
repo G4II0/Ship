@@ -6,11 +6,13 @@
 // Generic class for exceptions
 class Exception {
     private:
-		std::string description_{"[Exception::Generic] Generic error"};
+		std::string description_;
         
 	public:
 		// empty constructor with default value
-		Exception(void) {}
+		Exception(void) {
+			description_ = "[Exception::Generic] Generic error";
+		}
 
 		// constructor with error description as argument
 		Exception(const std::string& description) {
