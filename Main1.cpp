@@ -3,6 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <string>
 
 using namespace std;
 void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
@@ -30,7 +31,7 @@ insertGame:
     vector<string> names(2);
     vector<char> types;
     vector<Players> players;
-    vector<string> botNames{"Giorgio", "Michele", 'Claudio', 'Piripillo', 'Roberto', 'Assenzio', 'Barabba', 'Adolfo', 'Rolando', 'Maurizio'};
+    std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
     if (game == "pc")
     {
         printTextEffect("Inserisci il nome del giocatore umano: ");

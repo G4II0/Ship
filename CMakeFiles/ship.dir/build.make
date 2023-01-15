@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/alvisestella/Desktop/Ship
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alvisestella/desktop/Ship
+CMAKE_BINARY_DIR = /Users/alvisestella/Desktop/Ship
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ship.dir/depend.make
@@ -69,148 +69,133 @@ include CMakeFiles/ship.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ship.dir/flags.make
 
-CMakeFiles/ship.dir/main.cpp.o: CMakeFiles/ship.dir/flags.make
-CMakeFiles/ship.dir/main.cpp.o: main.cpp
-CMakeFiles/ship.dir/main.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ship.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/main.cpp.o -MF CMakeFiles/ship.dir/main.cpp.o.d -o CMakeFiles/ship.dir/main.cpp.o -c /Users/alvisestella/desktop/Ship/main.cpp
+CMakeFiles/ship.dir/Replay.cpp.o: CMakeFiles/ship.dir/flags.make
+CMakeFiles/ship.dir/Replay.cpp.o: Replay.cpp
+CMakeFiles/ship.dir/Replay.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ship.dir/Replay.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Replay.cpp.o -MF CMakeFiles/ship.dir/Replay.cpp.o.d -o CMakeFiles/ship.dir/Replay.cpp.o -c /Users/alvisestella/Desktop/Ship/Replay.cpp
 
-CMakeFiles/ship.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/main.cpp > CMakeFiles/ship.dir/main.cpp.i
+CMakeFiles/ship.dir/Replay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Replay.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Replay.cpp > CMakeFiles/ship.dir/Replay.cpp.i
 
-CMakeFiles/ship.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/main.cpp -o CMakeFiles/ship.dir/main.cpp.s
+CMakeFiles/ship.dir/Replay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Replay.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Replay.cpp -o CMakeFiles/ship.dir/Replay.cpp.s
 
 CMakeFiles/ship.dir/Mare.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Mare.cpp.o: Mare.cpp
 CMakeFiles/ship.dir/Mare.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ship.dir/Mare.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Mare.cpp.o -MF CMakeFiles/ship.dir/Mare.cpp.o.d -o CMakeFiles/ship.dir/Mare.cpp.o -c /Users/alvisestella/desktop/Ship/Mare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ship.dir/Mare.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Mare.cpp.o -MF CMakeFiles/ship.dir/Mare.cpp.o.d -o CMakeFiles/ship.dir/Mare.cpp.o -c /Users/alvisestella/Desktop/Ship/Mare.cpp
 
 CMakeFiles/ship.dir/Mare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Mare.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Mare.cpp > CMakeFiles/ship.dir/Mare.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Mare.cpp > CMakeFiles/ship.dir/Mare.cpp.i
 
 CMakeFiles/ship.dir/Mare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Mare.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Mare.cpp -o CMakeFiles/ship.dir/Mare.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Mare.cpp -o CMakeFiles/ship.dir/Mare.cpp.s
 
 CMakeFiles/ship.dir/Ship.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Ship.cpp.o: Ship.cpp
 CMakeFiles/ship.dir/Ship.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ship.dir/Ship.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Ship.cpp.o -MF CMakeFiles/ship.dir/Ship.cpp.o.d -o CMakeFiles/ship.dir/Ship.cpp.o -c /Users/alvisestella/desktop/Ship/Ship.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ship.dir/Ship.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Ship.cpp.o -MF CMakeFiles/ship.dir/Ship.cpp.o.d -o CMakeFiles/ship.dir/Ship.cpp.o -c /Users/alvisestella/Desktop/Ship/Ship.cpp
 
 CMakeFiles/ship.dir/Ship.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Ship.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Ship.cpp > CMakeFiles/ship.dir/Ship.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Ship.cpp > CMakeFiles/ship.dir/Ship.cpp.i
 
 CMakeFiles/ship.dir/Ship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Ship.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Ship.cpp -o CMakeFiles/ship.dir/Ship.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Ship.cpp -o CMakeFiles/ship.dir/Ship.cpp.s
 
 CMakeFiles/ship.dir/Nds.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Nds.cpp.o: Nds.cpp
 CMakeFiles/ship.dir/Nds.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ship.dir/Nds.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Nds.cpp.o -MF CMakeFiles/ship.dir/Nds.cpp.o.d -o CMakeFiles/ship.dir/Nds.cpp.o -c /Users/alvisestella/desktop/Ship/Nds.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ship.dir/Nds.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Nds.cpp.o -MF CMakeFiles/ship.dir/Nds.cpp.o.d -o CMakeFiles/ship.dir/Nds.cpp.o -c /Users/alvisestella/Desktop/Ship/Nds.cpp
 
 CMakeFiles/ship.dir/Nds.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Nds.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Nds.cpp > CMakeFiles/ship.dir/Nds.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Nds.cpp > CMakeFiles/ship.dir/Nds.cpp.i
 
 CMakeFiles/ship.dir/Nds.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Nds.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Nds.cpp -o CMakeFiles/ship.dir/Nds.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Nds.cpp -o CMakeFiles/ship.dir/Nds.cpp.s
 
 CMakeFiles/ship.dir/Sde.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Sde.cpp.o: Sde.cpp
 CMakeFiles/ship.dir/Sde.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ship.dir/Sde.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Sde.cpp.o -MF CMakeFiles/ship.dir/Sde.cpp.o.d -o CMakeFiles/ship.dir/Sde.cpp.o -c /Users/alvisestella/desktop/Ship/Sde.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ship.dir/Sde.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Sde.cpp.o -MF CMakeFiles/ship.dir/Sde.cpp.o.d -o CMakeFiles/ship.dir/Sde.cpp.o -c /Users/alvisestella/Desktop/Ship/Sde.cpp
 
 CMakeFiles/ship.dir/Sde.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Sde.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Sde.cpp > CMakeFiles/ship.dir/Sde.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Sde.cpp > CMakeFiles/ship.dir/Sde.cpp.i
 
 CMakeFiles/ship.dir/Sde.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Sde.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Sde.cpp -o CMakeFiles/ship.dir/Sde.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Sde.cpp -o CMakeFiles/ship.dir/Sde.cpp.s
 
 CMakeFiles/ship.dir/Corazzata.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Corazzata.cpp.o: Corazzata.cpp
 CMakeFiles/ship.dir/Corazzata.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ship.dir/Corazzata.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Corazzata.cpp.o -MF CMakeFiles/ship.dir/Corazzata.cpp.o.d -o CMakeFiles/ship.dir/Corazzata.cpp.o -c /Users/alvisestella/desktop/Ship/Corazzata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ship.dir/Corazzata.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Corazzata.cpp.o -MF CMakeFiles/ship.dir/Corazzata.cpp.o.d -o CMakeFiles/ship.dir/Corazzata.cpp.o -c /Users/alvisestella/Desktop/Ship/Corazzata.cpp
 
 CMakeFiles/ship.dir/Corazzata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Corazzata.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Corazzata.cpp > CMakeFiles/ship.dir/Corazzata.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Corazzata.cpp > CMakeFiles/ship.dir/Corazzata.cpp.i
 
 CMakeFiles/ship.dir/Corazzata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Corazzata.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Corazzata.cpp -o CMakeFiles/ship.dir/Corazzata.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Corazzata.cpp -o CMakeFiles/ship.dir/Corazzata.cpp.s
 
 CMakeFiles/ship.dir/Bot.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Bot.cpp.o: Bot.cpp
 CMakeFiles/ship.dir/Bot.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ship.dir/Bot.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Bot.cpp.o -MF CMakeFiles/ship.dir/Bot.cpp.o.d -o CMakeFiles/ship.dir/Bot.cpp.o -c /Users/alvisestella/desktop/Ship/Bot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ship.dir/Bot.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Bot.cpp.o -MF CMakeFiles/ship.dir/Bot.cpp.o.d -o CMakeFiles/ship.dir/Bot.cpp.o -c /Users/alvisestella/Desktop/Ship/Bot.cpp
 
 CMakeFiles/ship.dir/Bot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Bot.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Bot.cpp > CMakeFiles/ship.dir/Bot.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Bot.cpp > CMakeFiles/ship.dir/Bot.cpp.i
 
 CMakeFiles/ship.dir/Bot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Bot.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Bot.cpp -o CMakeFiles/ship.dir/Bot.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Bot.cpp -o CMakeFiles/ship.dir/Bot.cpp.s
 
 CMakeFiles/ship.dir/Players.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Players.cpp.o: Players.cpp
 CMakeFiles/ship.dir/Players.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ship.dir/Players.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Players.cpp.o -MF CMakeFiles/ship.dir/Players.cpp.o.d -o CMakeFiles/ship.dir/Players.cpp.o -c /Users/alvisestella/desktop/Ship/Players.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ship.dir/Players.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Players.cpp.o -MF CMakeFiles/ship.dir/Players.cpp.o.d -o CMakeFiles/ship.dir/Players.cpp.o -c /Users/alvisestella/Desktop/Ship/Players.cpp
 
 CMakeFiles/ship.dir/Players.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Players.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/Players.cpp > CMakeFiles/ship.dir/Players.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Players.cpp > CMakeFiles/ship.dir/Players.cpp.i
 
 CMakeFiles/ship.dir/Players.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Players.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/Players.cpp -o CMakeFiles/ship.dir/Players.cpp.s
-
-CMakeFiles/ship.dir/PTE.cpp.o: CMakeFiles/ship.dir/flags.make
-CMakeFiles/ship.dir/PTE.cpp.o: PTE.cpp
-CMakeFiles/ship.dir/PTE.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ship.dir/PTE.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/PTE.cpp.o -MF CMakeFiles/ship.dir/PTE.cpp.o.d -o CMakeFiles/ship.dir/PTE.cpp.o -c /Users/alvisestella/desktop/Ship/PTE.cpp
-
-CMakeFiles/ship.dir/PTE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/PTE.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/desktop/Ship/PTE.cpp > CMakeFiles/ship.dir/PTE.cpp.i
-
-CMakeFiles/ship.dir/PTE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/PTE.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/desktop/Ship/PTE.cpp -o CMakeFiles/ship.dir/PTE.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Players.cpp -o CMakeFiles/ship.dir/Players.cpp.s
 
 # Object files for target ship
 ship_OBJECTS = \
-"CMakeFiles/ship.dir/main.cpp.o" \
+"CMakeFiles/ship.dir/Replay.cpp.o" \
 "CMakeFiles/ship.dir/Mare.cpp.o" \
 "CMakeFiles/ship.dir/Ship.cpp.o" \
 "CMakeFiles/ship.dir/Nds.cpp.o" \
 "CMakeFiles/ship.dir/Sde.cpp.o" \
 "CMakeFiles/ship.dir/Corazzata.cpp.o" \
 "CMakeFiles/ship.dir/Bot.cpp.o" \
-"CMakeFiles/ship.dir/Players.cpp.o" \
-"CMakeFiles/ship.dir/PTE.cpp.o"
+"CMakeFiles/ship.dir/Players.cpp.o"
 
 # External object files for target ship
 ship_EXTERNAL_OBJECTS =
 
-ship: CMakeFiles/ship.dir/main.cpp.o
+ship: CMakeFiles/ship.dir/Replay.cpp.o
 ship: CMakeFiles/ship.dir/Mare.cpp.o
 ship: CMakeFiles/ship.dir/Ship.cpp.o
 ship: CMakeFiles/ship.dir/Nds.cpp.o
@@ -218,10 +203,9 @@ ship: CMakeFiles/ship.dir/Sde.cpp.o
 ship: CMakeFiles/ship.dir/Corazzata.cpp.o
 ship: CMakeFiles/ship.dir/Bot.cpp.o
 ship: CMakeFiles/ship.dir/Players.cpp.o
-ship: CMakeFiles/ship.dir/PTE.cpp.o
 ship: CMakeFiles/ship.dir/build.make
 ship: CMakeFiles/ship.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alvisestella/desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ship"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ship"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ship.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -233,6 +217,6 @@ CMakeFiles/ship.dir/clean:
 .PHONY : CMakeFiles/ship.dir/clean
 
 CMakeFiles/ship.dir/depend:
-	cd /Users/alvisestella/desktop/Ship && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alvisestella/Desktop/Ship /Users/alvisestella/desktop/Ship /Users/alvisestella/desktop/Ship /Users/alvisestella/desktop/Ship /Users/alvisestella/desktop/Ship/CMakeFiles/ship.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alvisestella/Desktop/Ship && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alvisestella/Desktop/Ship /Users/alvisestella/Desktop/Ship /Users/alvisestella/Desktop/Ship /Users/alvisestella/Desktop/Ship /Users/alvisestella/Desktop/Ship/CMakeFiles/ship.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ship.dir/depend
 
