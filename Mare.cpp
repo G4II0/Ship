@@ -808,9 +808,9 @@ using namespace std;
             out += " ¦ ";
             for (int j = 0; j < 12; j++)
             {
-                /*if (mar_[i][j] != ' ')
+                if (mar_[i][j] != ' ')
                     out += mar_[i][j];
-                else*/
+                else
                     out += " ";
                 //out += " │ ";
                 out += " ¦ ";
