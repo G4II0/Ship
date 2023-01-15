@@ -84,7 +84,7 @@ int main(int argc, char **args)
 
     while (getline(scanner, scannerLine))
     {
-        player (i % 2 == 0) ? 'P1' : 'P2';
+        player = (i % 2 == 0) ? '1' : '2';
         string message;
         bool pb = true;
         // terza riga: riga vuota, nessuna mossa
@@ -104,9 +104,9 @@ int main(int argc, char **args)
             switch (ending)
             {
             case 0: // Vince uno dei due giocatori
-                message = (player == 'P1') ? player1 : player2;
-                message += " è in scaccomatto, ";
-                message += (color == 'P1') ? player2 : player1;
+                message = (player == '1') ? player1 : player2;
+                message += " perde, ";
+                message += (player == '1') ? player2 : player1;
                 message += " vince!";
                 break;
             case 2: // patta per 50 mosse
@@ -173,7 +173,7 @@ int main(int argc, char **args)
             string endString;
             endString.push_back(static_cast<char>(endColumn + 17));
             endString.push_back(static_cast<char>(endRow + 1));
-            message = "Turno di " + ((player == 'P1') ? player1 : player2);
+            message = "Turno di " + ((player == '1') ? player1 : player2);
 
             if (check)
                 message += " (è sotto scacco!)";
@@ -192,7 +192,7 @@ int main(int argc, char **args)
             PTE(message);
             if (pb)
             {
-                cout << board.printBoard();
+                cout << board.printAMare() << "    " << board.printEMare();
                 this_thread::sleep_for(chrono::seconds(3));
             }
         }
@@ -202,7 +202,7 @@ int main(int argc, char **args)
         {
             replayWrite << message << "\n";
             if (pb)
-                replayWrite << board.printBoard() << "\n\n";
+                replayWrite <<  board.printAMare() << "    " << board.printEMare() << "\n\n";
         }
     }
 
