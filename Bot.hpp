@@ -10,7 +10,8 @@
         char Name;
         Mare mare;
         char Type;
-
+        int condition;
+        
         public:
 
         // costruttore
@@ -21,13 +22,14 @@
         void setName(char name);
         void setMare(Mare m);
         void setType(char type);
+        void setCondition(int c);
         
         //get
         char getName() const;
         Mare getMare() const;
         Mare getMareN(Bot b) const;
         char getType() const;
-
+        int getCondition() const;
         //Move
         void Move(Mare m, Bot bN);
     };
