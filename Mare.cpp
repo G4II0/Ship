@@ -6,7 +6,7 @@ using namespace std;
     {
         this -> condition = -1;
         this -> drawMoves = 0;
-        initializeMare(this.mar_);
+        initializeMare(mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, char c)
