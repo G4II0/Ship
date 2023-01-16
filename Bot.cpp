@@ -28,12 +28,14 @@
     {return this -> mare;}
     Mare Bot::getMareN(Bot b) const
     {return b.getMare();}
+    Mare Bot::getMareN(Players p) const
+    {return b.getMare();}
     char Bot::getType() const
     {return this -> Type;}
     int Bot::getCondition() const
     {return this -> condition;}
     // bot
-    void Bot::Moves(Mare m, Bot bN)
+    void Bot::MovesB(Mare m, Players pN)
     { 
         srand(time(NULL));
         pair<int, int> pos;
@@ -69,5 +71,5 @@
         }
         int d = (des.size());
         dest = des[d];
-        m.MoveG(pos, dest, m, getMareN(bN));
+        m.MoveG(pos, dest, m, getMareN(pN));
     }
