@@ -69,5 +69,5 @@
         }
         int d = (des.size());
         dest = des[d];
-        m.Moves(m, getMareN(bN));
+        m.MoveG(pos, dest, m, getMareN(bN));
     }
