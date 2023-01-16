@@ -79,82 +79,82 @@ inizializeGrill:
         {
             Corazzata c1 = new Corazzata(p, d, i);
             insertCor(c1, d, i);
-    }
-    else          
-    if(i=1)
-    {
-        Corazzata c2 = new Corazzata(p, d, i);
-        insertCor(c2, d, i);
-    }
-    else
-    if(i=2)
-    {
-        Corazzata c3 = new Corazzata(p, d, i);
-        insertCor(c3, d, i);
-    }
-}
-        for(int i = 0; i<3; i++)
-        {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + (i+1));
-            pair<int, int> p;
-            int x;
-            int y;
-            cin>>x;
-            cin>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della Nds n" + (i+1));
-            int d;
-            cin>>d;
-            if(i=0)
-            {
-                Nds n1 = new Nds(p, d, i);
-                insertNds(n1, d, i);
-            }
-            else
-            if(i=1)
-            {
-                Nds n2 = new Nds(p, d, i);
-                insertNds(n2, d, i);
-            }
-            else
-            if(i=2)
-            {
-                Nds n3 = new Nds(p, d, i);
-                insertNds(n3, d, i);
-            }
         }
-        for(int i = 0; i<2; i++)
+        else          
+        if(i=1)
         {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del sottomarino da esplorazione (Sde) n" + (i+1));
-            pair<int, int> p;
-            int x;
-            int y;
-            cin>>x;
-            cin>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della Sde n" + (i+1));
-            int d;
-            cin>>d;
-            if(i=0)
-            {
-                Sde n1 = new Sde(p, d, i);
-                insertSde(n1, d, i);
-            }
-            else
-            if(i=1)
-            {
-                Sde n2 = new Sde(p, d, i);
-                insertSde(n2, d, i);
-            }
-            else
-            if(i=2)
-            {
-                Sde n3 = new Sde(p, d, i);
-                insertSde(n3, d, i);
-            }
+           Corazzata c2 = new Corazzata(p, d, i);
+          insertCor(c2, d, i);
         }
+        else
+        if(i=2)
+        {
+            Corazzata c3 = new Corazzata(p, d, i);
+            insertCor(c3, d, i);
+        }
+    }
+    for(int i = 0; i<3; i++)
+    {
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + (i+1));
+        pair<int, int> p;
+        int x;
+        int y;
+        cin>>x;
+        cin>>y;
+        p.first = x;
+        p.second = y;
+        printTextEffect("Inserisci la direzione della Nds n" + (i+1));
+        int d;
+        cin>>d;
+        if(i=0)
+        {
+            Nds n1 = new Nds(p, d, i);
+            insertNds(n1, d, i);
+        }
+        else
+        if(i=1)
+        {
+            Nds n2 = new Nds(p, d, i);
+            insertNds(n2, d, i);
+        }
+        else
+        if(i=2)
+        {
+            Nds n3 = new Nds(p, d, i);
+            insertNds(n3, d, i);
+        }
+    }
+    for(int i = 0; i<2; i++)
+    {
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del sottomarino da esplorazione (Sde) n" + (i+1));
+        pair<int, int> p;
+        int x;
+        int y;
+        cin>>x;
+        cin>>y;
+        p.first = x;
+        p.second = y;
+        printTextEffect("Inserisci la direzione della Sde n" + (i+1));
+        int d;
+        cin>>d;
+        if(i=0)
+        {
+            Sde n1 = new Sde(p, d, i);
+            insertSde(n1, d, i);
+        }
+        else
+        if(i=1)
+        {
+            Sde n2 = new Sde(p, d, i);
+            insertSde(n2, d, i);
+        }
+        else
+        if(i=2)
+        {
+            Sde n3 = new Sde(p, d, i);
+            insertSde(n3, d, i);
+        }
+    }
     if(ind == 0)
     {
         ind = 1;
