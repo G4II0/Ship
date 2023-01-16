@@ -33,7 +33,7 @@
     int Bot::getCondition() const
     {return this -> condition;}
     // bot
-    void Bot::Move(Mare m, Bot bN)
+    void Bot::Moves(Mare m, Bot bN)
     { 
         srand(time(NULL));
         pair<int, int> pos;

@@ -31,7 +31,7 @@
         char getType() const;
         int getCondition() const;
         //Move
-        void Move(Mare m, Bot bN);
+        void Moves(Mare m, Bot bN);
     };
 
 #endif
