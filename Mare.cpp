@@ -357,7 +357,7 @@ using namespace std;
     }
 
     //move Nds
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
+    void Mare::MoveG(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
     {   
         if(legitMoveInput(s,dest,m) == false)
         {
