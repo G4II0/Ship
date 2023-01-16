@@ -3,12 +3,6 @@
     Players::Players()
     {}
 
-    Players::Players(Mare m, std::string N, char T)
-    {
-        this -> Name= N;
-        this -> mare = m;
-        this -> Type = T;
-    }
     Players::Players(Mare m, std::string N, char T, Mare mN)
     {
         this -> Name= N;
