@@ -672,7 +672,7 @@ using namespace std;
         }
     }
 
-    void Mare::CorHit(Corazzata s, Mare mn)
+    void Mare::CorHit(Corazzata s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
