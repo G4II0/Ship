@@ -31,5 +31,5 @@
     // player
     void Players::Moves(pair<int, int> pos, pair<int, int> dest, Mare m)
     {
-        mare.Move(pos, dest, m);
+        m.Move(pos, dest, m);
     }
