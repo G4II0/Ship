@@ -44,7 +44,7 @@
     {
         m.MoveG(pos, dest, m, mN);
     }
-    void Players::MovesB(Mare m, Players pN)
+    void Players::MovesB(Mare m, Mare mN)
     { 
         srand(time(NULL));
         pair<int, int> pos;
@@ -80,5 +80,5 @@
         }
         int d = (des.size());
         dest = des[d];
-        m.MoveG(pos, dest, m, getMareN(pN));
+        m.MoveG(pos, dest, m, getMareN(mN));
     }
