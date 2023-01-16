@@ -92,9 +92,9 @@ using namespace std;
         // assegna la x dell'hit
         void HitSet(pair<int, int> p, Mare mN);
         // assegna l'hit
-        void CorHit(Corazzata s);
-        void NdsHit(Nds s);
-        void SdeHit(Sde s);
+        void CorHit(Corazzata s, Mare mN);
+        void NdsHit(Nds s, Mare mN);
+        void SdeHit(Sde s, Mare mN)s;
 
         // affonda la nave
         void CorAff(Corazzata s);
