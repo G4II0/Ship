@@ -657,8 +657,9 @@ using namespace std;
     }
 
     //sistemare
-    void Mare::HitSet(pair<int, int> p)
+    void Mare::HitSet(pair<int, int> p, Mare mN)
     {
+        getMareE(mN);
         int x = p.first;
         int y = p.second;
         if(marE_[x][y] != ' ')
