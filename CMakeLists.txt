@@ -13,6 +13,5 @@ add_executable(
     Nds.cpp
     Sde
     Corazzata.cpp
-    Bot.cpp
     Players.cpp
 )

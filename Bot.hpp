@@ -1,3 +1,4 @@
+/*
 #ifndef BOT_HPP
 #define BOT_HPP
 
@@ -34,4 +35,4 @@
         void MovesB(Mare m, Bot bN);
     };
 
-#endif
+#endif*/

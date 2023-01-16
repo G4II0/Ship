@@ -33,3 +33,41 @@
     {
         m.MoveG(pos, dest, m, mN);
     }
+    void Bot::MovesB(Mare m, Players pN)
+    { 
+        srand(time(NULL));
+        pair<int, int> pos;
+        pair<int, int> dest;
+        vector<pair<int, int> > des;
+        int r0 = rand()%3;
+        int r1_1 = rand()%2;
+        if(r0 == 0)
+        {
+            vector<Corazzata> a = m.getMarCor();
+            int s = a.size();
+            int r1 = rand()%s;
+            pos = (a[r1]).getPMedio();
+            des = m.posAvailable(a[r1]);
+        }
+        else
+        if(r0 == 1)
+        {
+            vector<Nds> a = m.getMarNds();
+            int s = a.size();
+            int r1 = rand()%s;
+            pos = (a[r1]).getPMedio();
+            des = m.posAvailable(a[r1]);
+        }
+        else
+        if(r0 == 2)
+        {
+            vector<Sde> a = m.getMarSde();
+            int s = a.size();
+            int r1 = rand()%s;
+            pos = (a[r1_1]).getPMedio();
+            des = m.posAvailable(a[r1]);
+        }
+        int d = (des.size());
+        dest = des[d];
+        m.MoveG(pos, dest, m, getMareN(pN));
+    }

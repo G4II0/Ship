@@ -1,4 +1,4 @@
-#include "Bot.hpp"
+/*#include "Bot.hpp"
 #include "Mare.hpp"
 #include <cstdlib>
 
@@ -73,3 +73,4 @@
         dest = des[d];
         m.MoveG(pos, dest, m, getMareN(pN));
     }
+*/
