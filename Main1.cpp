@@ -81,19 +81,19 @@ inizializeGrill:
         if(i==0)
         {
             Corazzata c1 = Corazzata(p, d, i);
-            insertCor(c1, p, boardP1);
+            insertCor(c1, p);
         }
         else          
         if(i==1)
         {
            Corazzata c2 = Corazzata(p, d, i);
-           boardP1.insertCor(c2, p, boardP1);
+           boardP1.insertCor(c2, p);
         }
         else
         if(i==2)
         {
             Corazzata c3 = Corazzata(p, d, i);
-            insertCor(c3, p, boardP1);
+            insertCor(c3, p);
         }
     }
     for(int i = 0; i<3; i++)
@@ -112,19 +112,19 @@ inizializeGrill:
         if(i==0)
         {
             Nds n1 = Nds(p, d, i);
-            insertNds(n1, d, boardP1);
+            MoveGinsertNds(n1, d);
         }
         else
         if(i==1)
         {
             Nds n2 = Nds(p, d, i);
-            insertNds(n2, d, boardP1);
+            MoveGinsertNds(n1, d);
         }
         else
         if(i==2)
         {
             Nds n3 = Nds(p, d, i);
-            insertNds(n3, d, boardP1);
+            MoveGinsertNds(n1, d);
         }
     }
     for(int i = 0; i<2; i++)
