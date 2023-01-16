@@ -9,11 +9,20 @@
         this -> mare = m;
         this -> Type = T;
     }
+    Players::Players(Mare m, std::string N, char T, Mare mN)
+    {
+        this -> Name= N;
+        this -> MareNemico = mN;
+        this -> mare = m;
+        this -> Type = T;
+    }
 
     void Players::setName(char name)
     {this -> Name = name;}
     void Players::setMare(Mare m)
     {this -> mare = m;}
+    void Players::setMareN(Mare mN)
+    {this -> mare = mN;}
     void Players::setType(char type)
     {this -> Type = type;}
     void Players::setCondition(int c)
@@ -23,6 +32,8 @@
     {return this -> Name;}
     Mare Players::getMare() const
     {return this -> mare;}
+    Mare Players::getMareN() const
+    {return this -> mareNemico;}
     char Players::getType() const
     {return this -> Type;}
     int Players::getCondition() const
@@ -33,7 +44,7 @@
     {
         m.MoveG(pos, dest, m, mN);
     }
-    void Player::MovesB(Mare m, Players pN)
+    void Players::MovesB(Mare m, Players pN)
     { 
         srand(time(NULL));
         pair<int, int> pos;

@@ -13,6 +13,7 @@
         Mare mare;
         char Type;
         int condition;
+        Mare mareNemico;
 
         public:
 
@@ -23,12 +24,14 @@
         //set
         void setName(char name);
         void setMare(Mare m);
+        void setMareN(Mare mN);
         void setType(char type);
         void setCondition(int c);
         
         //get
         std::string getName() const;
         Mare getMare() const;
+        Mare getMareN() const;
         char getType() const;
         int getCondition() const;
 
