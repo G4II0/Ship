@@ -77,19 +77,19 @@ inizializeGrill:
         cin>>d;
         if(i=0)
         {
-            Corazzata c1 = new Corazzata(p, d, i);
+            Corazzata c1 = Corazzata(p, d, i);
             insertCor(c1, d, i);
         }
         else          
         if(i=1)
         {
-           Corazzata c2 = new Corazzata(p, d, i);
+           Corazzata c2 = Corazzata(p, d, i);
           insertCor(c2, p, i);
         }
         else
         if(i=2)
         {
-            Corazzata c3 = new Corazzata(p, d, i);
+            Corazzata c3 = Corazzata(p, d, i);
             insertCor(c3, p, i);
         }
     }
@@ -108,19 +108,19 @@ inizializeGrill:
         cin>>d;
         if(i=0)
         {
-            Nds n1 = new Nds(p, d, i);
+            Nds n1 = Nds(p, d, i);
             insertNds(n1, d, i);
         }
         else
         if(i=1)
         {
-            Nds n2 = new Nds(p, d, i);
+            Nds n2 = Nds(p, d, i);
             insertNds(n2, d, i);
         }
         else
         if(i=2)
         {
-            Nds n3 = new Nds(p, d, i);
+            Nds n3 = Nds(p, d, i);
             insertNds(n3, d, i);
         }
     }
@@ -139,13 +139,13 @@ inizializeGrill:
         cin>>d;
         if(i=0)
         {
-            Sde n1 = new Sde(p, d, i);
+            Sde n1 = Sde(p, d, i);
             insertSde(n1, d, i);
         }
         else
         if(i=1)
         {
-            Sde n2 = new Sde(p, d, i);
+            Sde n2 = Sde(p, d, i);
             insertSde(n2, d, i);
         }
     }
