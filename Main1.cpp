@@ -77,7 +77,7 @@ inizializeGrill:
         cin>>d;
         if(i=0)
         {
-            Corazzata c1 = new Corazzata(p, d, i);
+            Corazzata c1 = Corazzata(p, d, i);
             insertCor(c1, d, i);
         }
         else          
