@@ -166,9 +166,8 @@ inizializeGrill:
         ind = 1;
         goto inizializeGrill;//-------------------------------------------------------------------------------------
     }
-
-    players.push_back(Players(boardP1, names[0], types[0]));
-    players.push_back(Players(boardP2, names[1], types[1]));
+    players.push_back(Players(boardP1, names[0], types[0], boardP2));
+    players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
     int i = 0;
     int index = 1;
