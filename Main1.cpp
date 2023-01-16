@@ -66,7 +66,16 @@ inizializeGrill:
         printTextEffect("Inserisci le navi nella griglia: ");
         for(int i = 0; i<3; i++)
         {
+            pair<int, int> p;
+            int x;
+            int y;
             printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
+            cin>>x;
+            cin>>y;
+            p.first = x;
+            p.second = y;
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
+            insertCor();
         }
 
 
