@@ -311,7 +311,7 @@ using namespace std;
     }
 
     //move generico
-    void Mare::Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN)
+    void Mare::MoveG(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN)
     {
         if(mar_[start.first][start.second] == 'C')
         {
@@ -357,7 +357,7 @@ using namespace std;
     }
 
     //move Nds
-    void Mare::MoveG(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
+    void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
     {   
         if(legitMoveInput(s,dest,m) == false)
         {
