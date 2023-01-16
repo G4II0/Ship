@@ -17,8 +17,9 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
-pair<int,int> stringToPair(string input, pair<int,int> output)
+pair<int,int> stringToPair(string input)
 {
+    pair<int,int> output;
     int X = std::stoi(input.substr(0, 2));
     int Y = std::stoi(input.substr(3, 2));
     output.first = X;
