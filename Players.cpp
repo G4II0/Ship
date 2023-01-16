@@ -3,7 +3,7 @@
     Players::Players()
     {}
 
-    Players::Players(Mare m, char N, char T)
+    Players::Players(Mare m, std::string N, char T)
     {
         this -> Name= N;
         this -> mare = m;
@@ -19,7 +19,7 @@
     void Players::setCondition(int c)
     {this -> condition = c;}
 
-    char Players::getName() const
+    std::string Players::getName() const
     {return this -> Name;}
     Mare Players::getMare() const
     {return this -> mare;}
