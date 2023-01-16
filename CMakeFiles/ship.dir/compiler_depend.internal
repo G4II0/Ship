@@ -440,6 +440,7 @@ CMakeFiles/ship.dir/Bot.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.hpp
  /Users/alvisestella/Desktop/Ship/Nds.hpp
  /Users/alvisestella/Desktop/Ship/Sde.hpp
+ /Users/alvisestella/Desktop/Ship/Exception.hpp
 
 CMakeFiles/ship.dir/Corazzata.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.cpp
@@ -1300,6 +1301,7 @@ CMakeFiles/ship.dir/Mare.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.hpp
  /Users/alvisestella/Desktop/Ship/Nds.hpp
  /Users/alvisestella/Desktop/Ship/Sde.hpp
+ /Users/alvisestella/Desktop/Ship/Exception.hpp
 
 CMakeFiles/ship.dir/Nds.cpp.o
  /Users/alvisestella/Desktop/Ship/Nds.cpp
@@ -2161,6 +2163,7 @@ CMakeFiles/ship.dir/Players.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.hpp
  /Users/alvisestella/Desktop/Ship/Nds.hpp
  /Users/alvisestella/Desktop/Ship/Sde.hpp
+ /Users/alvisestella/Desktop/Ship/Exception.hpp
 
 CMakeFiles/ship.dir/Replay.cpp.o
  /Users/alvisestella/Desktop/Ship/Replay.cpp
@@ -2602,6 +2605,7 @@ CMakeFiles/ship.dir/Replay.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.hpp
  /Users/alvisestella/Desktop/Ship/Nds.hpp
  /Users/alvisestella/Desktop/Ship/Sde.hpp
+ /Users/alvisestella/Desktop/Ship/Exception.hpp
 
 CMakeFiles/ship.dir/Sde.cpp.o
  /Users/alvisestella/Desktop/Ship/Sde.cpp
@@ -3462,4 +3466,5 @@ CMakeFiles/ship.dir/Ship.cpp.o
  /Users/alvisestella/Desktop/Ship/Corazzata.hpp
  /Users/alvisestella/Desktop/Ship/Nds.hpp
  /Users/alvisestella/Desktop/Ship/Sde.hpp
+ /Users/alvisestella/Desktop/Ship/Exception.hpp
 
