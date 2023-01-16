@@ -109,7 +109,7 @@ using namespace std;
         return marSde[t];
     }
 
-    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m)
+    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -117,7 +117,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(Nds ship, pair<int, int> pos, Mare m)
+        bool Mare::legitMoveInput(Nds ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -125,7 +125,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
+        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -193,13 +193,13 @@ using namespace std;
     }
 
 //inserimento corazzata
-    void Mare::insertCor(Corazzata& ship, pair<int, int> pos, Mare m)
+    void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -246,13 +246,13 @@ using namespace std;
     }
 
 //inserimento Nds
-    void Mare::insertNds(Nds& ship, pair<int, int> pos, Mare m)
+    void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -287,13 +287,13 @@ using namespace std;
     }
 
     // inserimento Sde
-    void Mare::insertSde(Sde& ship, pair<int, int> pos, Mare m)
+    void Mare::insertSde(Sde& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
