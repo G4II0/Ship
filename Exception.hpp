@@ -6,22 +6,22 @@
 // Generic class for exceptions
 class Exception {
     private:
-		std::string description_;
+		std::string message_;
         
 	public:
 		// empty constructor with default value
 		Exception(void) {
-			description_ = "[Exception::Generic] Generic error";
+			message_ = "[Exception::Generic] Generic error";
 		}
 
 		// constructor with error description as argument
 		Exception(const std::string& description) {
-			this->description_ = description;
+			this->message_ = description;
 		}
 
 		// function member to get error description
 		const std::string what(void) const {
-			return this->description_;
+			return this->message_;
 		}
 };
 
@@ -30,6 +30,17 @@ class invalidMoveException {
         std::string message_;
     public:
         invalidMoveException(const std::string &msg) : message_(msg) {}
+
+        const std::string what(void) const {
+            return message_;
+        }
+};
+
+class invalidInputException {
+    private:
+        std::string message_;
+    public:
+        invalidInputException(const std::string &msg) : message_(msg) {}
 
         const std::string what(void) const {
             return message_;
