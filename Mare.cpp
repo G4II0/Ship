@@ -109,7 +109,7 @@ using namespace std;
         return marSde[t];
     }
 
-    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m)
+    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -117,7 +117,7 @@ using namespace std;
         else
         return false;
     }
-    bool Mare::legitMoveInput(Nds ship, pair<int, int> pos, Mare m)
+    bool Mare::legitMoveInput(Nds ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -125,7 +125,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
+        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
