@@ -437,4 +437,5 @@ CMakeFiles/ship.dir/Main1.cpp.o: \
   /Users/alvisestella/Desktop/Ship/Corazzata.hpp \
   /Users/alvisestella/Desktop/Ship/Nds.hpp \
   /Users/alvisestella/Desktop/Ship/Sde.hpp \
+  /Users/alvisestella/Desktop/Ship/Exception.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread

@@ -29,7 +29,7 @@ class invalidMoveException {
     private:
         std::string message_;
     public:
-        invalidMoveException(const std::string &msg) : message_(msg) {}
+        InvalidMoveException(const std::string &msg) : message_(msg) {}
 
         const std::string what(void) const {
             return message_;
@@ -40,7 +40,7 @@ class invalidInputException {
     private:
         std::string message_;
     public:
-        invalidInputException(const std::string &msg) : message_(msg) {}
+        InvalidInputException(const std::string &msg) : message_(msg) {}
 
         const std::string what(void) const {
             return message_;

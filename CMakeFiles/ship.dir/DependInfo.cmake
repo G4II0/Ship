@@ -10,10 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/alvisestella/Desktop/Ship/Bot.cpp" "CMakeFiles/ship.dir/Bot.cpp.o" "gcc" "CMakeFiles/ship.dir/Bot.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Corazzata.cpp" "CMakeFiles/ship.dir/Corazzata.cpp.o" "gcc" "CMakeFiles/ship.dir/Corazzata.cpp.o.d"
+  "/Users/alvisestella/Desktop/Ship/Main1.cpp" "CMakeFiles/ship.dir/Main1.cpp.o" "gcc" "CMakeFiles/ship.dir/Main1.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Mare.cpp" "CMakeFiles/ship.dir/Mare.cpp.o" "gcc" "CMakeFiles/ship.dir/Mare.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Nds.cpp" "CMakeFiles/ship.dir/Nds.cpp.o" "gcc" "CMakeFiles/ship.dir/Nds.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Players.cpp" "CMakeFiles/ship.dir/Players.cpp.o" "gcc" "CMakeFiles/ship.dir/Players.cpp.o.d"
-  "/Users/alvisestella/Desktop/Ship/Replay.cpp" "CMakeFiles/ship.dir/Replay.cpp.o" "gcc" "CMakeFiles/ship.dir/Replay.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Sde.cpp" "CMakeFiles/ship.dir/Sde.cpp.o" "gcc" "CMakeFiles/ship.dir/Sde.cpp.o.d"
   "/Users/alvisestella/Desktop/Ship/Ship.cpp" "CMakeFiles/ship.dir/Ship.cpp.o" "gcc" "CMakeFiles/ship.dir/Ship.cpp.o.d"
   )

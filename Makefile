@@ -177,6 +177,30 @@ Corazzata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Corazzata.cpp.s
 .PHONY : Corazzata.cpp.s
 
+Main1.o: Main1.cpp.o
+.PHONY : Main1.o
+
+# target to build an object file
+Main1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.o
+.PHONY : Main1.cpp.o
+
+Main1.i: Main1.cpp.i
+.PHONY : Main1.i
+
+# target to preprocess a source file
+Main1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.i
+.PHONY : Main1.cpp.i
+
+Main1.s: Main1.cpp.s
+.PHONY : Main1.s
+
+# target to generate assembly for a file
+Main1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.s
+.PHONY : Main1.cpp.s
+
 Mare.o: Mare.cpp.o
 .PHONY : Mare.o
 
@@ -249,30 +273,6 @@ Players.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Players.cpp.s
 .PHONY : Players.cpp.s
 
-Replay.o: Replay.cpp.o
-.PHONY : Replay.o
-
-# target to build an object file
-Replay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.o
-.PHONY : Replay.cpp.o
-
-Replay.i: Replay.cpp.i
-.PHONY : Replay.i
-
-# target to preprocess a source file
-Replay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.i
-.PHONY : Replay.cpp.i
-
-Replay.s: Replay.cpp.s
-.PHONY : Replay.s
-
-# target to generate assembly for a file
-Replay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.s
-.PHONY : Replay.cpp.s
-
 Sde.o: Sde.cpp.o
 .PHONY : Sde.o
 
@@ -336,6 +336,9 @@ help:
 	@echo "... Corazzata.o"
 	@echo "... Corazzata.i"
 	@echo "... Corazzata.s"
+	@echo "... Main1.o"
+	@echo "... Main1.i"
+	@echo "... Main1.s"
 	@echo "... Mare.o"
 	@echo "... Mare.i"
 	@echo "... Mare.s"
@@ -345,9 +348,6 @@ help:
 	@echo "... Players.o"
 	@echo "... Players.i"
 	@echo "... Players.s"
-	@echo "... Replay.o"
-	@echo "... Replay.i"
-	@echo "... Replay.s"
 	@echo "... Sde.o"
 	@echo "... Sde.i"
 	@echo "... Sde.s"
