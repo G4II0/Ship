@@ -214,8 +214,10 @@ inizializeGrill:
             }//__________________________________________________________________________________________________________
             pair<int, int> start;
             pair<int, int> end;
-            int x;
-            int y;
+            int xs;
+            int ys;
+            int xe;
+            int ye;
         insertMove:
             printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
             cin >> xs;
