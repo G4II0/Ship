@@ -125,7 +125,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
+        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
