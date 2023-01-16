@@ -259,7 +259,7 @@ inizializeGrill:
             {
                 if(index == 0)
                 {
-                    p.MovesB(boardP1, players[index].getName(),);
+                    p.Moves(boardP1, players[index].getName(),);
                 }
                 else
                 {
