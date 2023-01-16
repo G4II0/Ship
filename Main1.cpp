@@ -56,6 +56,35 @@ insertGame:
         goto insertGame;
         //da sistemare ______________________________________________________________________________________________
     }
+    int ind = 0;
+inizializeGrill:
+    {
+        if(game == "pc" && ind <2)
+        {
+            printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi");
+        }
+        printTextEffect("Inserisci le navi nella griglia: ");
+        for(int i = 0; i<3; i++)
+        {
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
     Mare boardP1;
     Mare boardP2;
     players.push_back(Players(boardP1, names[0], types[0]));
@@ -107,7 +136,6 @@ insertGame:
             }//__________________________________________________________________________________________________________
             string start;
             string end;
-            bool result;
         insertMove:
             printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
             cin >> start >> end;
@@ -115,11 +143,11 @@ insertGame:
             {
                 if(index == 0)
                 {
-                    result = p.Move(start, end, boardP1);
+                    p.Move(start, end, boardP1);
                 }
                 else
                 {
-                    result = p.Move(start, end, boardP2);
+                    p.Move(start, end, boardP2);
                 }
             }
             catch (InvalidMoveException e)
