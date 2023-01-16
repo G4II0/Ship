@@ -278,9 +278,9 @@ using namespace std;
                 ship.setPos(temp3);
             }
             // posizionamento nella board
-            m.setMareA(pos, 'S');
-            m.setMareA(temp1, 'S');
-            m.setMareA(temp2, 'S');
+            setMareA(pos, 'S');
+            setMareA(temp1, 'S');
+            setMareA(temp2, 'S');
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
@@ -304,7 +304,7 @@ using namespace std;
             temp3.second = temp1;            // c poppa
             ship.setPos(temp3);
             // posizionamento nella board
-            m.setMareA(pos, 'E');
+            setMareA(pos, 'E');
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
@@ -359,12 +359,12 @@ using namespace std;
     //move Nds
     void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
     {   
-        if(legitMoveInput(s,dest,m) == false)
+        if(legitMoveInput(s,dest) == false)
         {
             throw InvalidMoveException("Spostamento non valido");
         }
         else
-        if (legitMoveInput(s, dest, m) == true)
+        if (legitMoveInput(s, dest) == true)
         {
             int d = s.getDirezione();
             pair<int, int> tmp = s.getPMedio();
@@ -416,11 +416,11 @@ using namespace std;
     //move Sde
     void Mare::Move(pair<int, int> start, pair<int, int> dest, Sde s, Mare m)
     {   
-         if(legitMoveInput(s,dest,m) == false)
+         if(legitMoveInput(s,dest) == false)
         {
             throw InvalidMoveException("Spostamento non valido");
         }
-        if (legitMoveInput(s, dest, m) == true)
+        if (legitMoveInput(s, dest) == true)
         {
             setMareA(start, ' ');
             pair<int, int> temp1;
