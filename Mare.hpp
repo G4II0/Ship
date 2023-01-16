@@ -94,7 +94,7 @@ using namespace std;
         // assegna l'hit
         void CorHit(Corazzata s, Mare mN);
         void NdsHit(Nds s, Mare mN);
-        void SdeHit(Sde s, Mare mN)s;
+        void SdeHit(Sde s, Mare mN);
 
         // affonda la nave
         void CorAff(Corazzata s);
