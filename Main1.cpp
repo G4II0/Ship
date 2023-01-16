@@ -58,7 +58,6 @@ insertGame:
     }
     int ind = 0;
 inizializeGrill:
-    {
         if(game == "pc" && ind <2)
         {
             printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi");
@@ -157,21 +156,6 @@ inizializeGrill:
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 
     Mare boardP1;
     Mare boardP2;

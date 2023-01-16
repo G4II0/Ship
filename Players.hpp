@@ -33,6 +33,6 @@
         int getCondition() const;
 
         //Move
-        void Move(std::pair<int, int> pos, std::pair<int, int> dest, Mare m);
+        void Moves(std::pair<int, int> pos, std::pair<int, int> dest, Mare m);
     };
 #endif
