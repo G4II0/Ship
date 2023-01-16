@@ -29,7 +29,7 @@
     {return this -> condition;}
 
     // player
-    void Players::Moves(pair<int, int> pos, pair<int, int> dest, Mare m)
+    void Players::Moves(pair<int, int> pos, pair<int, int> dest, Mare m, Mare mN)
     {
-        m.MoveG(pos, dest, m);
+        m.MoveG(pos, dest, m, mN);
     }
