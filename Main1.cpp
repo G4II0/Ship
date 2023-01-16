@@ -75,14 +75,14 @@ inizializeGrill:
     printTextEffect("Inserisci le navi nella griglia: ");
     for(int i = 0; i<3; i++)
     {
-        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + to_string((i+1)));
         pair<int, int> p;
         int x;
         int y;
         cin>>x>>y;
         p.first = x;
         p.second = y;
-        printTextEffect("Inserisci la direzione della corazzata n" + (i+1));
+        printTextEffect("Inserisci la direzione della corazzata n" + to_string((i+1)));
         int d;
         cin>>d;
         if(i==0)
@@ -105,7 +105,7 @@ inizializeGrill:
     }
     for(int i = 0; i<3; i++)
     {
-        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + (i+1));
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + to_string((i+1)));
         pair<int, int> p;
         int x;
         int y;
@@ -113,7 +113,7 @@ inizializeGrill:
         cin>>y;
         p.first = x;
         p.second = y;
-        printTextEffect("Inserisci la direzione della Nds n" + (i+1));
+        printTextEffect("Inserisci la direzione della Nds n" + to_string((i+1)));
         int d;
         cin>>d;
         if(i==0)
@@ -136,7 +136,7 @@ inizializeGrill:
     }
     for(int i = 0; i<2; i++)
     {
-        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del sottomarino da esplorazione (Sde) n" + (i+1));
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del sottomarino da esplorazione (Sde) n" + to_string((i+1)));
         pair<int, int> p;
         int x;
         int y;
@@ -144,7 +144,7 @@ inizializeGrill:
         cin>>y;
         p.first = x;
         p.second = y;
-        printTextEffect("Inserisci la direzione della Sde n" + (i+1));
+        printTextEffect("Inserisci la direzione della Sde n" + to_string((i+1)));
         int d;
         cin>>d;
         if(i==0)
