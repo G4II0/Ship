@@ -239,7 +239,7 @@ inizializeGrill:
                     p.Move(start, end, boardP2);
                 }
             }
-            catch (InvalidMoveException e)
+            catch (InvalidMoveException &e)
             {
                 printTextEffect("La mossa inserita non è valida.");
                 //______________________________________________________________________________________
@@ -266,13 +266,13 @@ inizializeGrill:
                     result = p.Move(boardP2, players[index].getName());
                 }
             }
-            catch (InvalidMoveException e)
+            catch (InvalidMoveException &e)
             {
                 printTextEffect("La mossa inserita non è valida.");
                 //______________________________________________________________________________________
                 goto insertMove;
             }
-            catch (InvalidInputException e)
+            catch (InvalidInputException &e)
             {
                 printTextEffect("L'input inserito non è valido");
                 //_______________________________________________________________________________________
