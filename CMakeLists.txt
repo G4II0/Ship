@@ -7,7 +7,7 @@ project(ship)
 
 add_executable(
     ship
-    Replay.cpp
+    Main1.cpp
     Mare.cpp
     Ship.cpp
     Nds.cpp
