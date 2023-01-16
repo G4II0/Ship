@@ -78,19 +78,19 @@ inizializeGrill:
         printTextEffect("Inserisci la direzione della corazzata n" + (i+1));
         int d;
         cin>>d;
-        if(i=0)
+        if(i==0)
         {
             Corazzata c1 = Corazzata(p, d, i);
             insertCor(c1, p, boardP1);
         }
         else          
-        if(i=1)
+        if(i==1)
         {
            Corazzata c2 = Corazzata(p, d, i);
           insertCor(c2, p, boardP1);
         }
         else
-        if(i=2)
+        if(i==2)
         {
             Corazzata c3 = Corazzata(p, d, i);
             insertCor(c3, p, boardP1);
@@ -109,19 +109,19 @@ inizializeGrill:
         printTextEffect("Inserisci la direzione della Nds n" + (i+1));
         int d;
         cin>>d;
-        if(i=0)
+        if(i==0)
         {
             Nds n1 = Nds(p, d, i);
             insertNds(n1, d, boardP1);
         }
         else
-        if(i=1)
+        if(i==1)
         {
             Nds n2 = Nds(p, d, i);
             insertNds(n2, d, boardP1);
         }
         else
-        if(i=2)
+        if(i==2)
         {
             Nds n3 = Nds(p, d, i);
             insertNds(n3, d, boardP1);
@@ -140,19 +140,19 @@ inizializeGrill:
         printTextEffect("Inserisci la direzione della Sde n" + (i+1));
         int d;
         cin>>d;
-        if(i=0)
+        if(i==0)
         {
             Sde n1 = Sde(p, d, i);
             insertSde(n1, d, boardP1);
         }
         else
-        if(i=1)
+        if(i==1)
         {
             Sde n2 = Sde(p, d, i);
             insertSde(n2, d, boardP1);
         }
     }
-    if(ind == 0)
+    if(ind==0)
     {
         ind = 1;
         goto inizializeGrill;
