@@ -19,7 +19,6 @@
 
         // costruttore
         Players();
-        Players(Mare m, std::string N, char T);
         Players(Mare m, std::string N, char T, Mare mN);
 
         //set
