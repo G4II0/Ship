@@ -17,6 +17,13 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
+/*void stringToPair(string& input, pair<int,int>& start, pair<int,int> end)
+{
+    int startX = std::stoi(input.substr(0, 2));
+    int startY = std::stoi(input.substr(3, 2));
+    int endX = std::stoi(input.substr(6, 2));
+    int endY = std::stoi(input.substr(9, 2));
+}*/
 int main()
 {
     const char B = 66;
