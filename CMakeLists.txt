@@ -7,7 +7,7 @@ project(ship)
 
 add_executable(
     ship
-    main.cpp
+    Replay.cpp
     Mare.cpp
     Ship.cpp
     Nds.cpp
@@ -15,5 +15,4 @@ add_executable(
     Corazzata.cpp
     Bot.cpp
     Players.cpp
-    PTE.cpp
 )

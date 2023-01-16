@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/alvisestella/Desktop/Ship
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alvisestella/desktop/Ship
+CMAKE_BINARY_DIR = /Users/alvisestella/Desktop/Ship
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/desktop/Ship/CMakeFiles /Users/alvisestella/desktop/Ship//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/Desktop/Ship/CMakeFiles /Users/alvisestella/Desktop/Ship//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/desktop/Ship/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alvisestella/Desktop/Ship/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -225,30 +225,6 @@ Nds.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Nds.cpp.s
 .PHONY : Nds.cpp.s
 
-PTE.o: PTE.cpp.o
-.PHONY : PTE.o
-
-# target to build an object file
-PTE.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/PTE.cpp.o
-.PHONY : PTE.cpp.o
-
-PTE.i: PTE.cpp.i
-.PHONY : PTE.i
-
-# target to preprocess a source file
-PTE.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/PTE.cpp.i
-.PHONY : PTE.cpp.i
-
-PTE.s: PTE.cpp.s
-.PHONY : PTE.s
-
-# target to generate assembly for a file
-PTE.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/PTE.cpp.s
-.PHONY : PTE.cpp.s
-
 Players.o: Players.cpp.o
 .PHONY : Players.o
 
@@ -272,6 +248,30 @@ Players.s: Players.cpp.s
 Players.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Players.cpp.s
 .PHONY : Players.cpp.s
+
+Replay.o: Replay.cpp.o
+.PHONY : Replay.o
+
+# target to build an object file
+Replay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.o
+.PHONY : Replay.cpp.o
+
+Replay.i: Replay.cpp.i
+.PHONY : Replay.i
+
+# target to preprocess a source file
+Replay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.i
+.PHONY : Replay.cpp.i
+
+Replay.s: Replay.cpp.s
+.PHONY : Replay.s
+
+# target to generate assembly for a file
+Replay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Replay.cpp.s
+.PHONY : Replay.cpp.s
 
 Sde.o: Sde.cpp.o
 .PHONY : Sde.o
@@ -321,30 +321,6 @@ Ship.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Ship.cpp.s
 .PHONY : Ship.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -366,21 +342,18 @@ help:
 	@echo "... Nds.o"
 	@echo "... Nds.i"
 	@echo "... Nds.s"
-	@echo "... PTE.o"
-	@echo "... PTE.i"
-	@echo "... PTE.s"
 	@echo "... Players.o"
 	@echo "... Players.i"
 	@echo "... Players.s"
+	@echo "... Replay.o"
+	@echo "... Replay.i"
+	@echo "... Replay.s"
 	@echo "... Sde.o"
 	@echo "... Sde.i"
 	@echo "... Sde.s"
 	@echo "... Ship.o"
 	@echo "... Ship.i"
 	@echo "... Ship.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
