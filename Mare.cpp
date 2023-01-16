@@ -346,7 +346,12 @@ using namespace std;
 
     //move Nds
     void Mare::Move(pair<int, int> start, pair<int, int> dest, int direzione, Nds s, Mare m)
-    {
+    {   
+        if(legitMoveInput(s,dest,m) == false)
+        {
+            throw invalidMoveException("Spostamento non valido");
+        }
+        else
         if (legitMoveInput(s, dest, m) == true)
         {
             int d = s.getDirezione();
@@ -651,7 +656,7 @@ using namespace std;
         }
     }
 
-    void Mare::CorHit(Corazzata s, Mare mN)
+    void Mare::CorHit(Corazzata s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -662,7 +667,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::NdsHit(Nds s, Mare mN)
+    void Mare::NdsHit(Nds s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -673,7 +678,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::SdeHit(Sde s, Mare mN)
+    void Mare::SdeHit(Sde s)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);

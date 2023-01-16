@@ -12,7 +12,7 @@
 #include "Corazzata.hpp"
 #include "Nds.hpp"
 #include "Sde.hpp"
-
+#include "Exception.hpp"
 
 using namespace std;
 
