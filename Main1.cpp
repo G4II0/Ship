@@ -58,41 +58,41 @@ insertGame:
     }
     int ind = 0;
 inizializeGrill:
-        if(game == "pc" && ind <2)
+    if(game == "pc" && ind <2)
+    {
+        printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi");
+    }
+    printTextEffect("Inserisci le navi nella griglia: ");
+    for(int i = 0; i<3; i++)
+    {
+        printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
+        pair<int, int> p;
+        int x;
+        int y;
+        cin>>x>>y;
+        p.first = x;
+        p.second = y;
+        printTextEffect("Inserisci la direzione della corazzata n" + (i+1));
+        int d;
+        cin>>d;
+        if(i=0)
         {
-            printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi");
-        }
-        printTextEffect("Inserisci le navi nella griglia: ");
-        for(int i = 0; i<3; i++)
-        {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata n" + (i+1));
-            pair<int, int> p;
-            int x;
-            int y;
-            cin>>x>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della corazzata n" + (i+1));
-            int d;
-            cin>>d;
-            if(i=0)
-            {
-                Corazzata c1 = new Corazzata(p, d, i);
-                insertCor(c1, d, i);
-            }
-            else
-            if(i=1)
-            {
-                Corazzata c2 = new Corazzata(p, d, i);
-                insertCor(c2, d, i);
-            }
-            else
-            if(i=2)
-            {
-                Corazzata c3 = new Corazzata(p, d, i);
-                insertCor(c3, d, i);
-            }
-        }
+            Corazzata c1 = new Corazzata(p, d, i);
+            insertCor(c1, d, i);
+    }
+    else          
+    if(i=1)
+    {
+        Corazzata c2 = new Corazzata(p, d, i);
+        insertCor(c2, d, i);
+    }
+    else
+    if(i=2)
+    {
+        Corazzata c3 = new Corazzata(p, d, i);
+        insertCor(c3, d, i);
+    }
+}
         for(int i = 0; i<3; i++)
         {
             printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + (i+1));
