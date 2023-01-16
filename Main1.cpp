@@ -78,7 +78,7 @@ inizializeGrill:
         if(i=0)
         {
             Corazzata c1 = Corazzata(p, d, i);
-            insertCor(c1, d, i);
+            insertCor(c1, p, i);
         }
         else          
         if(i=1)
