@@ -214,11 +214,11 @@ inizializeGrill:
             {
                 if(index == 0)
                 {
-                    p.Moves(start, end, boardP1);
+                    p.Moves(start, end, boardP1, boardP2);
                 }
                 else
                 {
-                    p.Moves(start, end, boardP2);
+                    p.Moves(start, end, boardP2, boardP1);
                 }
             }
             catch (InvalidMoveException &e)
