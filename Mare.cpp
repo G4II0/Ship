@@ -197,7 +197,7 @@ using namespace std;
     {   
         if(legitMoveInput(ship, pos, m) == false)
         {
-            throw invalidInputException("Inserimento non valido");
+            throw InvalidInputException("Inserimento non valido");
         }
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -250,7 +250,7 @@ using namespace std;
     {
         if(legitMoveInput(ship, pos, m) == false)
         {
-            throw invalidInputException("Inserimento non valido");
+            throw InvalidInputException("Inserimento non valido");
         }
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -291,7 +291,7 @@ using namespace std;
     {   
         if(legitMoveInput(ship, pos, m) == false)
         {
-            throw invalidInputException("Inserimento non valido");
+            throw InvalidInputException("Inserimento non valido");
         }
         if (legitMoveInput(ship, pos, m) == true)
         {
@@ -361,7 +361,7 @@ using namespace std;
     {   
         if(legitMoveInput(s,dest,m) == false)
         {
-            throw invalidMoveException("Spostamento non valido");
+            throw InvalidMoveException("Spostamento non valido");
         }
         else
         if (legitMoveInput(s, dest, m) == true)
@@ -418,7 +418,7 @@ using namespace std;
     {   
          if(legitMoveInput(s,dest,m) == false)
         {
-            throw invalidMoveException("Spostamento non valido");
+            throw InvalidMoveException("Spostamento non valido");
         }
         if (legitMoveInput(s, dest, m) == true)
         {
