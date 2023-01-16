@@ -12,7 +12,7 @@
     Players::Players(Mare m, std::string N, char T, Mare mN)
     {
         this -> Name= N;
-        this -> MareNemico = mN;
+        this -> mareNemico = mN;
         this -> mare = m;
         this -> Type = T;
     }
