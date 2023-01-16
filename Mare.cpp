@@ -693,7 +693,6 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        //mar_[x][y];
         if(d==0)
         {
             mar_[x][y+1] = ' ';
@@ -718,7 +717,6 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        //mar_[x][y];
         if(d==0)
         {
             mar_[x][y+1] = ' ';
