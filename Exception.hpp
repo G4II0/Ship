@@ -31,8 +31,8 @@ class invalidMoveException {
     public:
         invalidMoveException(const std::string &msg) : message_(msg) {}
 
-        const char* what(void) const {
-            return message_.c_str();
+        const std::string what(void) const {
+            return message_;
         }
 };
 
