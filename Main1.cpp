@@ -148,12 +148,6 @@ inizializeGrill:
             Sde n2 = new Sde(p, d, i);
             insertSde(n2, d, i);
         }
-        else
-        if(i=2)
-        {
-            Sde n3 = new Sde(p, d, i);
-            insertSde(n3, d, i);
-        }
     }
     if(ind == 0)
     {
