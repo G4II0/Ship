@@ -205,11 +205,20 @@ inizializeGrill:
                 cout << boardP1.printAMare();
                 cout << boardP2.printEMare();
             }//__________________________________________________________________________________________________________
-            string start;
-            string end;
+            pair<int, int> start;
+            pair<int, int> end;
+            int x;
+            int y;
         insertMove:
             printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
-            cin >> start >> end;
+            cin >> xs;
+            cin >> ys;
+            start. first = xs;
+            start.second = ys;
+            cin >> xs;
+            cin >> ys;
+            end. first = xe;
+            end.second = ye;
             try
             {
                 if(index == 0)
