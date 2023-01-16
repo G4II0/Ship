@@ -438,7 +438,8 @@ CMakeFiles/ship.dir/Bot.cpp.o: Bot.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   Corazzata.hpp \
   Nds.hpp \
-  Sde.hpp
+  Sde.hpp \
+  Exception.hpp
 
 CMakeFiles/ship.dir/Corazzata.cpp.o: Corazzata.cpp \
   Corazzata.hpp \
@@ -1296,7 +1297,8 @@ CMakeFiles/ship.dir/Mare.cpp.o: Mare.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   Corazzata.hpp \
   Nds.hpp \
-  Sde.hpp
+  Sde.hpp \
+  Exception.hpp
 
 CMakeFiles/ship.dir/Nds.cpp.o: Nds.cpp \
   Nds.hpp \
@@ -2155,7 +2157,8 @@ CMakeFiles/ship.dir/Players.cpp.o: Players.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   Corazzata.hpp \
   Nds.hpp \
-  Sde.hpp
+  Sde.hpp \
+  Exception.hpp
 
 CMakeFiles/ship.dir/Replay.cpp.o: Replay.cpp \
   Ship.hpp \
@@ -2595,7 +2598,8 @@ CMakeFiles/ship.dir/Replay.cpp.o: Replay.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
   Corazzata.hpp \
   Nds.hpp \
-  Sde.hpp
+  Sde.hpp \
+  Exception.hpp
 
 CMakeFiles/ship.dir/Sde.cpp.o: Sde.cpp \
   Sde.hpp \
@@ -3453,7 +3457,8 @@ CMakeFiles/ship.dir/Ship.cpp.o: Ship.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
   Corazzata.hpp \
   Nds.hpp \
-  Sde.hpp
+  Sde.hpp \
+  Exception.hpp
 
 
 Ship.cpp:
@@ -3839,6 +3844,8 @@ Mare.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iterator:
+
+Exception.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/iterator.h:
 
