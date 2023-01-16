@@ -58,6 +58,7 @@ insertGame:
     }
     Mare boardP1;
     Mare boardP2;
+    
     players.push_back(Players(boardP1, names[0], types[0]));
     players.push_back(Players(boardP2, names[1], types[1]));
     //__________________________________________________________________
@@ -75,12 +76,12 @@ insertGame:
         {index = 1;}
         else{index = 0;}
         string message = "Turno di " + names[index];
-        int cond = players[index].GetCondition();
+        int cond = players[index].getCondition();
         switch (cond)
         {
         case 0:
             message = names[index] + " tutte le navi di " + names[index] + " sono state affondate" + "\n";
-            if (index = 0)
+            if (index == 0)
                 message += names[1];
             else
                 message += names[0];
@@ -100,7 +101,7 @@ insertGame:
             printTextEffect("Se vuoi stampare le griglie, inserire 'XX XX': ");
             string code;
             cin >> code;
-            if (code == 'XX XX')
+            if (code == "XX XX")
             {
                 cout << boardP1.printAMare();
                 cout << boardP2.printEMare();

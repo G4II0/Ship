@@ -9,7 +9,7 @@
 
         protected:
 
-        char Name;
+        std::string Name;
         Mare mare;
         char Type;
         int condition;
@@ -18,7 +18,7 @@
 
         // costruttore
         Players();
-        Players(Mare m, char N, char T);
+        Players(Mare m, std::string N, char T);
 
         //set
         void setName(char name);
@@ -27,7 +27,7 @@
         void setCondition(int c);
         
         //get
-        char getName() const;
+        std::string getName() const;
         Mare getMare() const;
         char getType() const;
         int getCondition() const;
