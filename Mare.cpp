@@ -687,11 +687,7 @@ using namespace std;
 
     void Mare::CorAff(Corazzata s)
     {
-        /* s.setState((-1));
-        if(s.getDirezione() == 0)
-        {
-            pair<int, int> pM = s.getPMedio();
-        }
+        s.setState((-1));
         marCor.erase(remove(marCor.begin(), marCor.end(), s));
         int d = s.getDirezione();
         pair<int, int> p = s.getPMedio();
@@ -700,45 +696,39 @@ using namespace std;
         //mar_[x][y];
         if(d==0)
         {
-            mar_[x][y+1];
-            mar_[x][y+2];
-            mar_[x][y-1];
-            mar_[x][y-2];
+            mar_[x][y+1] = ' ';
+            mar_[x][y+2] = ' ';
+            mar_[x][y-1] = ' ';
+            mar_[x][y-2] = ' ';
         }
         else
         {
-            mar_[x+1][y];
-            mar_[x+2][y];
-            mar_[x-1][y];
-            mar_[x-2][y];
+            mar_[x+1][y] = ' ';
+            mar_[x+2][y] = ' ';
+            mar_[x-1][y] = ' ';
+            mar_[x-2][y] = ' ';
         }
-    */
     }
 
     void Mare::NdsAff(Nds s)
     {
-        /* s.setState((-1));
-        if(s.getDirezione() == 0)
-        {
-            pair<int, int> pM = s.getPMedio();
-        }
+        s.setState((-1));
         marNds.erase(remove(marNds.begin(), marNds.end(), s));
         int d = s.getDirezione();
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        mar_[x][y];
+        //mar_[x][y];
         if(d==0)
         {
-            mar_[x][y+1];
-            mar_[x][y-1];
+            mar_[x][y+1] = ' ';
+            mar_[x][y-1] = ' ';
         }
         else
         {
-            mar_[x+1][y];
-            mar_[x-1][y];
+            mar_[x+1][y] = ' ';
+            mar_[x-1][y] = ' ';
         }
-        */
     }
 
     void Mare::SdeAff(Sde s)
@@ -985,8 +975,3 @@ using namespace std;
         shi.Moves() = v1;
         return v1;
     }
-
-    /*bool operator==(const Nds& n1, const Nds& n2)
-    {
-        return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();
-    }*/

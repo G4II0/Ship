@@ -127,6 +127,4 @@ using namespace std;
     void updateLogMove(pair<int, int> start, pair<int, int> finish);
 };
 
-bool operator==(const Nds& c1, const Nds& c2);
-
 #endif
