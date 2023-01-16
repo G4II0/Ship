@@ -195,11 +195,11 @@ using namespace std;
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -248,11 +248,11 @@ using namespace std;
 //inserimento Nds
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -289,11 +289,11 @@ using namespace std;
     // inserimento Sde
     void Mare::insertSde(Sde& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos, m) == false)
+        if(legitMoveInput(ship, pos) == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos, m) == true)
+        if (legitMoveInput(ship, pos) == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
