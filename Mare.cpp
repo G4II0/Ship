@@ -239,7 +239,6 @@ using namespace std;
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
-        //throw InvalidMoveException();
     }
 
 //inserimento Nds
@@ -277,7 +276,6 @@ using namespace std;
             // posizionamento nel mareC
             marNds[ship.getNumero()] = ship;
         }
-        //throw InvalidMoveException();
     }
 
     // inserimento Sde
@@ -298,7 +296,6 @@ using namespace std;
             // posizionamento nel mareC
             marSde[ship.getNumero()] = ship;
         }
-        //throw InvalidMoveException();
     }
 
     //move generico
@@ -321,7 +318,6 @@ using namespace std;
             Sde t = m.whichSde(m.getMarSde(), start);
             Move(start, dest, t, m);
         }
-        //throw InvalidMoveException();
     }
 
     //move Corazzata
@@ -655,34 +651,37 @@ using namespace std;
         }
     }
 
-    void Mare::CorHit(Corazzata s)
+    void Mare::CorHit(Corazzata s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
         if(s.getCorazza() == 0)
         {
-            CorAff(s); //sistemare
+            CorAff(s);
         }
+        HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::NdsHit(Nds s)
+    void Mare::NdsHit(Nds s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
         if(s.getCorazza() == 0)
         {
-            NdsAff(s); //sistemare
+            NdsAff(s);
         }
+        HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::SdeHit(Sde s)
+    void Mare::SdeHit(Sde s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
         if(s.getCorazza() == 0)
         {
-            SdeAff(s); //sistemare
+            SdeAff(s);
         }
+        HitSet(s.getPMedio(), mN);
     }
 
     void Mare::CorAff(Corazzata s)
