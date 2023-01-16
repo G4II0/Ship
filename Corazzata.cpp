@@ -3,10 +3,10 @@
     Corazzata::Corazzata()
     {}
     
-    Corazzata::Corazzata(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
+    Corazzata::Corazzata(std::pair<int, int> pM_, int direzione_, int numero_)
     {
         this -> tipo = 'C';
-        this -> pos = pos_;
+        this -> pMedio = pM_;
         this -> direzione = direzione_;
         this -> dimensione = 5;
         this -> corazza = 5;

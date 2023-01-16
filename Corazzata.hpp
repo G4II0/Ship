@@ -19,7 +19,7 @@
 
         public:
         Corazzata();
-        Corazzata(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_);
+        Corazzata(std::pair<int, int> pM_, int direzione_, int numero_);
 
         void setTipo(char tipo);
         void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
