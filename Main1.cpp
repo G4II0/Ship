@@ -169,7 +169,7 @@ inizializeGrill:
                 //______________________________________________________________________________________
                 goto insertMove;
             }
-            catch (InvalidInputException e)
+            catch (const InvalidInputException &e)
             {
                 printTextEffect("L'input inserito non è valido");
                 //_______________________________________________________________________________________
