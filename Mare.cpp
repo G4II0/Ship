@@ -125,7 +125,7 @@ using namespace std;
         else
         return false;
     }
-        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos)
+        bool Mare::legitMoveInput(Sde ship, pair<int, int> pos, Mare m)
     {
         vector<pair<int, int> > v = posAvailable(ship);
         if (find(v.begin(), v.end(), pos) != v.end())
@@ -235,11 +235,11 @@ using namespace std;
                 ship.setPos(temp5);
             }
             // posizionamento nel mare
-            m.setMareA(pos, 'C');
-            m.setMareA(temp1, 'C');
-            m.setMareA(temp2, 'C');
-            m.setMareA(temp3, 'C');
-            m.setMareA(temp4, 'C');
+            setMareA(pos, 'C');
+            setMareA(temp1, 'C');
+            setMareA(temp2, 'C');
+            setMareA(temp3, 'C');
+            setMareA(temp4, 'C');
             // posizionamento nel mareC
             marCor[ship.getNumero()] = ship;
         }
