@@ -57,6 +57,9 @@ insertGame:
         //da sistemare ______________________________________________________________________________________________
     }
     int ind = 0;
+    Mare boardP1;
+    Mare boardP2;
+    
 inizializeGrill:
     if(game == "pc" && ind <2)
     {
@@ -78,19 +81,19 @@ inizializeGrill:
         if(i=0)
         {
             Corazzata c1 = Corazzata(p, d, i);
-            insertCor(c1, p, i);
+            insertCor(c1, p, boardP1);
         }
         else          
         if(i=1)
         {
            Corazzata c2 = Corazzata(p, d, i);
-          insertCor(c2, p, i);
+          insertCor(c2, p, boardP1);
         }
         else
         if(i=2)
         {
             Corazzata c3 = Corazzata(p, d, i);
-            insertCor(c3, p, i);
+            insertCor(c3, p, boardP1);
         }
     }
     for(int i = 0; i<3; i++)
@@ -109,19 +112,19 @@ inizializeGrill:
         if(i=0)
         {
             Nds n1 = Nds(p, d, i);
-            insertNds(n1, d, i);
+            insertNds(n1, d, boardP1);
         }
         else
         if(i=1)
         {
             Nds n2 = Nds(p, d, i);
-            insertNds(n2, d, i);
+            insertNds(n2, d, boardP1);
         }
         else
         if(i=2)
         {
             Nds n3 = Nds(p, d, i);
-            insertNds(n3, d, i);
+            insertNds(n3, d, boardP1);
         }
     }
     for(int i = 0; i<2; i++)
@@ -140,13 +143,13 @@ inizializeGrill:
         if(i=0)
         {
             Sde n1 = Sde(p, d, i);
-            insertSde(n1, d, i);
+            insertSde(n1, d, boardP1);
         }
         else
         if(i=1)
         {
             Sde n2 = Sde(p, d, i);
-            insertSde(n2, d, i);
+            insertSde(n2, d, boardP1);
         }
     }
     if(ind == 0)
@@ -155,9 +158,6 @@ inizializeGrill:
         goto inizializeGrill;
     }
 
-    Mare boardP1;
-    Mare boardP2;
-    
     players.push_back(Players(boardP1, names[0], types[0]));
     players.push_back(Players(boardP2, names[1], types[1]));
     //__________________________________________________________________
