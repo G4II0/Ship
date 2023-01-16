@@ -339,19 +339,19 @@ using namespace std;
         if(marE_[dest.first][dest.second] == 'C')
         {
             Corazzata t = mN.whichCor(mN.getMarCor(), dest);
-            CorHit(t);
+            CorHit(t, mN);
         }
         else
         if(mar_[dest.first][dest.second] == 'S')
         {
             Nds t = mN.whichNds(mN.getMarNds(), dest);
-            NdsHit(t);
+            NdsHit(t, mN);
         }
         else
         if(mar_[dest.first][dest.second] == 'E')
         {
             Sde t = mN.whichSde(mN.getMarSde(), dest);
-            SdeHit(t);
+            SdeHit(t, mN);
         }
         HitSet(dest, mN);  
     }
@@ -672,7 +672,7 @@ using namespace std;
         }
     }
 
-    void Mare::CorHit(Corazzata s)
+    void Mare::CorHit(Corazzata s, Mare mn)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -683,7 +683,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::NdsHit(Nds s)
+    void Mare::NdsHit(Nds s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
@@ -694,7 +694,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
-    void Mare::SdeHit(Sde s)
+    void Mare::SdeHit(Sde s, Mare mN)
     {
         int c = s.getCorazza() - 1;
         s.setCorazza(c);
