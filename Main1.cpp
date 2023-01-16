@@ -81,7 +81,7 @@ inizializeGrill:
         if(i==0)
         {
             Corazzata c1 = Corazzata(p, d, i);
-            insertCor(c1, p);
+            insertCor(c1, p, boardP1);
         }
         else          
         if(i==1)
@@ -93,7 +93,7 @@ inizializeGrill:
         if(i==2)
         {
             Corazzata c3 = Corazzata(p, d, i);
-            insertCor(c3, p);
+            insertCor(c3, p, boardP1);
         }
     }
     for(int i = 0; i<3; i++)
