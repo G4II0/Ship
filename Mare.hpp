@@ -75,7 +75,7 @@ using namespace std;
         bool legitMoveInput(Nds ship, pair<int, int> pos, Mare m);
         bool legitMoveInput(Sde ship, pair<int, int> pos, Mare m);
         //spostamento Generale
-        void Move(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
+        void MoveG(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
         //spostamento Corazzata
         void Move(pair<int, int> start, pair<int, int> dest, Corazzata c, Mare m);
         //spostamento Nds
