@@ -87,7 +87,7 @@ inizializeGrill:
         if(i==1)
         {
            Corazzata c2 = Corazzata(p, d, i);
-          insertCor(c2, p, boardP1);
+           boardP1.insertCor(c2, p, boardP1);
         }
         else
         if(i==2)
