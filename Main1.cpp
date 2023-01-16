@@ -70,15 +70,27 @@ inizializeGrill:
             pair<int, int> p;
             int x;
             int y;
-            cin>>x;
-            cin>>y;
+            cin>>x>>y;
             p.first = x;
             p.second = y;
             printTextEffect("Inserisci la direzione della corazzata n" + (i+1));
             int d;
             cin>>d;
-            Corazzata c1 = new Corazzata(p, d, i);
-            insertCor(c1, d, i);
+            if(i=0)
+            {
+                Corazzata c1 = new Corazzata(p, d, i);
+                insertCor(c1, d, i);
+            }
+            if(i=1)
+            {
+                Corazzata c2 = new Corazzata(p, d, i);
+                insertCor(c2, d, i);
+            }
+            if(i=2)
+            {
+                Corazzata c3 = new Corazzata(p, d, i);
+                insertCor(c3, d, i);
+            }
         }
         for(int i = 0; i<3; i++)
         {
