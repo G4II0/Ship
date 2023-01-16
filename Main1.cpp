@@ -78,19 +78,19 @@ inizializeGrill:
         if(i=0)
         {
             Corazzata c1 = new Corazzata(p, d, i);
-            insertCor(c1, d, i);
+            insertCor(c1, p, i);
         }
         else          
         if(i=1)
         {
            Corazzata c2 = new Corazzata(p, d, i);
-          insertCor(c2, d, i);
+          insertCor(c2, p, i);
         }
         else
         if(i=2)
         {
             Corazzata c3 = new Corazzata(p, d, i);
-            insertCor(c3, d, i);
+            insertCor(c3, p, i);
         }
     }
     for(int i = 0; i<3; i++)
