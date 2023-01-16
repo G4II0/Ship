@@ -59,6 +59,8 @@ insertGame:
     int ind = 0;
     Mare boardP1;
     Mare boardP2;
+    players.push_back(Players(boardP1, names[0], types[0]));
+    players.push_back(Players(boardP2, names[1], types[1]));
     
 inizializeGrill:
     if(game == "pc" && ind <2)
@@ -157,9 +159,6 @@ inizializeGrill:
         ind = 1;
         goto inizializeGrill;
     }
-
-    players.push_back(Players(boardP1, names[0], types[0]));
-    players.push_back(Players(boardP2, names[1], types[1]));
     //__________________________________________________________________
     int i = 0;
     int index = 1;
