@@ -80,6 +80,22 @@ inizializeGrill:
             Corazzata c1 = new Corazzata(p, d, i);
             insertCor(c1, d, i);
         }
+        for(int i = 0; i<3; i++)
+        {
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della nave da supporto (Nds) n" + (i+1));
+            pair<int, int> p;
+            int x;
+            int y;
+            cin>>x;
+            cin>>y;
+            p.first = x;
+            p.second = y;
+            printTextEffect("Inserisci la direzione della Nds n" + (i+1));
+            int d;
+            cin>>d;
+            Nds c1 = new Nds(p, d, i);
+            insertCor(c1, d, i);
+        }
 
 
 
