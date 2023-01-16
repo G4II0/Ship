@@ -33,7 +33,7 @@
     {
         m.MoveG(pos, dest, m, mN);
     }
-    void Bot::MovesB(Mare m, Players pN)
+    void Player::MovesB(Mare m, Players pN)
     { 
         srand(time(NULL));
         pair<int, int> pos;
