@@ -3,10 +3,10 @@
     Nds::Nds()
     {}
     
-    Nds::Nds(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_)
+    Nds::Nds(std::pair<int, int> pM_, int direzione_, int numero_)
     {
         this -> tipo = 'S';
-        this -> pos = pos_;
+        this -> pMedio = pM_;
         this -> direzione = direzione_;
         this -> dimensione = 3;
         this -> corazza = 3;

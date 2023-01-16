@@ -20,7 +20,7 @@
         public:
 
         Sde();
-        Sde(std::pair<std::pair<int, int>, std::pair<int, int> > pos, int numero);
+        Sde(std::pair<int, int> pM_, int direzione_, int numero_);
 
         void setTipo(char tipo);
         void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
