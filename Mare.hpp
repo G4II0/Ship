@@ -67,13 +67,13 @@ using namespace std;
         void initializeMare(vector<Nds> marNds);
         void initializeMare(vector<Sde> marSde);
         //inserisce la nave nella borad
-        void insertCor(Corazzata& ship, pair<int, int> pos, Mare m);
-        void insertNds(Nds& ship, pair<int, int> pos, Mare m);
-        void insertSde(Sde& ship, pair<int, int> pos, Mare m);
+        void insertCor(Corazzata& ship, pair<int, int> pos);
+        void insertNds(Nds& ship, pair<int, int> pos);
+        void insertSde(Sde& ship, pair<int, int> pos);
         //controlla se le coordinate di arrivo dello spostamento sono nella board
-        bool legitMoveInput(Corazzata ship, pair<int, int> pos, Mare m);
-        bool legitMoveInput(Nds ship, pair<int, int> pos, Mare m);
-        bool legitMoveInput(Sde ship, pair<int, int> pos, Mare m);
+        bool legitMoveInput(Corazzata ship, pair<int, int> pos);
+        bool legitMoveInput(Nds ship, pair<int, int> pos);
+        bool legitMoveInput(Sde ship, pair<int, int> pos);
         //spostamento Generale
         void MoveG(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN);
         //spostamento Corazzata
