@@ -25,7 +25,7 @@ class Exception {
 		}
 };
 
-class invalidMoveException {
+class InvalidMoveException {
     private:
         std::string message_;
     public:
@@ -36,7 +36,7 @@ class invalidMoveException {
         }
 };
 
-class invalidInputException {
+class InvalidInputException {
     private:
         std::string message_;
     public:
