@@ -155,7 +155,11 @@ inizializeGrill:
                 insertSde(n3, d, i);
             }
         }
-
+    if(ind == 0)
+    {
+        ind = 1;
+        goto inizializeGrill;
+    }
 
     Mare boardP1;
     Mare boardP2;
