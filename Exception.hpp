@@ -1,7 +1,6 @@
 #ifndef EXCEPTION_HPP
 #define EXCEPTION_HPP
 
-#include <exception>
 #include <string>
 
 // Generic class for exceptions
@@ -26,7 +25,7 @@ class Exception {
 		}
 };
 
-class invalidMoveException : public std::exception {
+class invalidMoveException {
     private:
         std::string message_;
     public:
