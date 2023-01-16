@@ -259,11 +259,11 @@ inizializeGrill:
             {
                 if(index == 0)
                 {
-                    result = p.MoveG(boardP1, players[index].getName());
+                    p.Moves(boardP1, players[index].getName());
                 }
                 else
                 {
-                    result = p.MoveG(boardP2, players[index].getName());
+                    p.Moves(boardP2, players[index].getName());
                 }
             }
             catch (InvalidMoveException &e)
