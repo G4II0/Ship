@@ -33,7 +33,7 @@ int main()
     const char U = 85;
     printTextEffect("Benvenuto nella nostra versione della battaglia navale");
     printTextEffect("Che partita vuoi fare? Inserire:");
-insertGame:
+insertGame://------------------------------------------------------------------------------------------------ Ins Game
     printTextEffect("- pc: partita player vs. computer");
     printTextEffect("- cc: partita computer vs. computer");
     string game;
@@ -63,8 +63,7 @@ insertGame:
     else
     {
         printTextEffect("Input non valido, riprovare; si può inserire solo:");
-        goto insertGame;
-        //da sistemare ______________________________________________________________________________________________
+        goto insertGame;//-------------------------------------------------------------------------------- InsGame
     }
     int ind = 0;
     Mare boardP1;
@@ -165,15 +164,16 @@ inizializeGrill:
     if(ind==0)
     {
         ind = 1;
-        goto inizializeGrill;
+        goto inizializeGrill;//-------------------------------------------------------------------------------------
     }
 
     players.push_back(Players(boardP1, names[0], types[0]));
     players.push_back(Players(boardP2, names[1], types[1]));
-    //__________________________________________________________________
+
     int i = 0;
     int index = 1;
     int movesLimit;
+
     if (game == "cc")
         movesLimit = 50;
     else
@@ -221,7 +221,7 @@ inizializeGrill:
             int ys;
             int xe;
             int ye;
-        insertMove:
+        insertMove1://------------------------------------------------------------------------------------------------------------------------------
             printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
             cin >> xs;
             cin >> ys;
@@ -246,13 +246,13 @@ inizializeGrill:
             {
                 printTextEffect("La mossa inserita non è valida.");
                 //______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove1;
             }
             catch (const InvalidInputException &e)
             {
                 printTextEffect("L'input inserito non è valido");
                 //_______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove1;
             }
         }
         else
