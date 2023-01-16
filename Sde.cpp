@@ -3,10 +3,10 @@
     Sde::Sde()
     {}
 
-    Sde::Sde(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int numero_)
+    Sde::Sde(std::pair<int, int> pM_, int direzione_, int numero_)
     {
         this -> tipo = 'E';
-        this -> pos = pos_;
+        this -> pMedio = pM_;
         this -> dimensione = 3;
         this -> corazza = 3;
         this -> numero = numero_;
