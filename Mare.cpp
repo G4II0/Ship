@@ -204,8 +204,9 @@ using namespace std;
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {   
+        cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
-        cout << "chiamato InsertCor" << endl;
+        cout << "qualcosa";
         if (b == true)
         {   
             cout << " b è true!!!!";
@@ -896,10 +897,12 @@ using namespace std;
         cout << "sono in PosAvailableCor" << endl;
         if(d==0)
         {
-            for(int x = 0; x < 12; x++)
+            int x = 0;
+            while(x < 12)
             {
                 cout<< "Xtemp = " << x << " "; 
-                for(int y = 2; y < 10; y++)
+                int y = 2;
+                while(y < 10)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
@@ -930,14 +933,18 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
+                    y++;
                 }
+                x++;
             }
         }
         else
         {
-            for(int x = 2; x < 10; x++)
+            int x = 2;
+            while(x < 10)
             {
-                for(int y = 0; y < 12; y++)
+                int y = 0;
+                while(y < 12)
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
@@ -967,7 +974,9 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
+                    y++;
                 }
+                x++;
             }
         }
         shi.Moves() = v1;
