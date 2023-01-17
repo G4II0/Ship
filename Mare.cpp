@@ -709,7 +709,7 @@ using namespace std;
     }
 
     void Mare::CorAff(Corazzata s)
-    {
+    {//-
         s.setState((-1));
         marCor_.erase(remove(marCor_.begin(), marCor_.end(), s));
         int d = s.getDirezione();
