@@ -114,8 +114,7 @@ using namespace std;
         cout << "check" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
-        {   
-            cout << "xC =" << v[i].first << " yC = " << v[i].second <<endl;
+        {
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;}
         }
