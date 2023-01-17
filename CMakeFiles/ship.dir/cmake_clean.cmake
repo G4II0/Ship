@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ship.dir/Bot.cpp.o"
-  "CMakeFiles/ship.dir/Bot.cpp.o.d"
   "CMakeFiles/ship.dir/Corazzata.cpp.o"
   "CMakeFiles/ship.dir/Corazzata.cpp.o.d"
   "CMakeFiles/ship.dir/Main1.cpp.o"

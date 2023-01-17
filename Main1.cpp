@@ -1,5 +1,8 @@
-#include "Ship.hpp"
+#include "Mare.hpp"
 #include "Players.hpp"
+#include "Corazzata.hpp"
+#include "Nds.hpp"
+#include "Sde.hpp"
 #include <iostream>
 #include <chrono>
 #include <thread>
