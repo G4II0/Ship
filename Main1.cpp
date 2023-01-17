@@ -42,7 +42,8 @@ int main()
         printTextEffect("- pc: partita player vs. computer");
         printTextEffect("- cc: partita computer vs. computer");
         cin >> game;
-        if (game == "pc") {
+        if (game == "pc") 
+        {
             printTextEffect("Inserisci il nome del giocatore umano: ");
             cin >> names[0];
             names[1] = botNames[rand() % 10];
@@ -50,7 +51,9 @@ int main()
             types.push_back(U);
             types.push_back(B);
             break;
-        } else if (game == "cc") {
+        }
+        else if (game == "cc") 
+        {
             names[0] = botNames[rand() % 10];
             names[1] = botNames[rand() % 10];
             printTextEffect("Il bot1 si chiama " + names[0] + ".");
@@ -58,7 +61,9 @@ int main()
             types.push_back(B);
             types.push_back(B);
             break;
-        } else {
+        } 
+        else 
+        {
             printTextEffect("Input non valido, riprovare; si può inserire solo:");
         }
     }
