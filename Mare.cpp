@@ -110,10 +110,12 @@ using namespace std;
     }
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
-    {
+    {   
+        cout << "check" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
-        {
+        {   
+            cout << "x =" << v[i].first << " y = " << v[i].second <<endl;
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;}
         }
@@ -201,12 +203,17 @@ using namespace std;
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos) == false)
+        bool b = legitMoveInput(ship, pos);
+        cout << "chiamato InsertCor" << endl;
+        if(b == false)
         {
-            throw InvalidInputException("Inserimento non valido");
+            //throw InvalidInputException("Inserimento non valido");
+            cout << "torno in insertcor" << endl;
         }
-        if (legitMoveInput(ship, pos) == true)
-        {
+        else
+        if (b == true)
+        {   
+            cout << "è true!!!!";
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<int, int> temp3;
