@@ -323,6 +323,7 @@ int main()
         movesLimit = -1;
     bool endgame = false;
     //____________________________________________________________________________________________________________
+    //inizio del gioco_________________
     while (i != movesLimit && !endgame)
     {
         if(index == 0)
@@ -365,38 +366,38 @@ int main()
             int ys;
             int xe;
             int ye;
-        insertMove1://------------------------------------------------------------------------------------------------------------------------------
-            printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
-            cin >> xs;
-            cin >> ys;
-            start. first = xs;
-            start.second = ys;
-            cin >> xs;
-            cin >> ys;
-            end. first = xe;
-            end.second = ye;
-            try
+            int i = 0;
+            while(i < 1)//------------------------------------------------------------------------------------------------------------------------------
             {
-                if(index == 0)
+                printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
+                cin >> xs;
+                cin >> ys;
+                start. first = xs;
+                start.second = ys;
+                cin >> xs;
+                cin >> ys;
+                end. first = xe;
+                end.second = ye;
+                try
                 {
-                    p.Moves(start, end, boardP1, boardP2);
+                    if(index == 0)
+                    {
+                        p.Moves(start, end, boardP1, boardP2);
+                    }
+                    else
+                    {
+                        p.Moves(start, end, boardP2, boardP1);
+                    }
+                    i++;
                 }
-                else
+                catch (InvalidMoveException &e)
                 {
-                    p.Moves(start, end, boardP2, boardP1);
+                    printTextEffect(e.what());
                 }
-            }
-            catch (InvalidMoveException &e)
-            {
-                printTextEffect(e.what());
-                //______________________________________________________________________________________
-                goto insertMove1;
-            }
-            catch (const InvalidInputException &e)
-            {
-                printTextEffect(e.what());
-                //_______________________________________________________________________________________
-                goto insertMove1;
+                catch (const InvalidInputException &e)
+                {
+                    printTextEffect(e.what());
+                }
             }
         }
         else
