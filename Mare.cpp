@@ -232,7 +232,7 @@ using namespace std;
                 temp5.first = temp1;  // c prua
                 temp5.second = temp2; // c poppa
             }
-            //ship.setPMedio(temp5);
+            ship.setPMedio(pos);
             // posizionamento nel mare
             setMareA(pos, 'C');
             setMareA(temp1, 'C');
