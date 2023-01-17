@@ -74,7 +74,7 @@ insertGame://-------------------------------------------------------------------
 inizializeGrill:
     if(game == "pc" && ind < 2)
     {
-        printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
+        printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
         printTextEffect("Inserisci le navi nella griglia: ");
     }
     try
