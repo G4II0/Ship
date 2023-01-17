@@ -208,8 +208,7 @@ using namespace std;
         cout << "chiamato InsertCor" << endl;
         if(b == false)
         {
-            //throw InvalidInputException("Inserimento non valido");
-            cout << "torno in b == false" << endl;
+            throw InvalidInputException("Inserimento non valido");
         }
         else
         if (b == true)
