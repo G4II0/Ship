@@ -97,18 +97,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Corazzata c1 = Corazzata(p, d, i);
+                    c1.setNumero(i);
                     players[ind].getMare().insertCor(c1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Corazzata c2 = Corazzata(p, d, i);
+                    c2.setNumero(i);
                     players[ind].getMare().insertCor(c2, p);
                 }
                 else
                 if(i==2)
                 {
                     Corazzata c3 = Corazzata(p, d, i);
+                    c3.setNumero(i);
                     players[ind].getMare().insertCor(c3, p);
                 }
             }
@@ -128,18 +131,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Corazzata c1 = Corazzata(p, d, i);
+                    c1.setNumero(i);
                     players[ind].getMare().insertCor(c1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Corazzata c2 = Corazzata(p, d, i);
+                    c2.setNumero(i);
                     players[ind].getMare().insertCor(c2, p);
                 }
                 else
                 if(i==2)
                 {
                     Corazzata c3 = Corazzata(p, d, i);
+                    c3.setNumero(i);
                     players[ind].getMare().insertCor(c3, p);
                 }
             }
@@ -162,18 +168,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Nds s1 = Nds(p, d, i);
+                    s1..setNumero(i);
                     players[ind].getMare().insertNds(s1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Nds s2 = Nds(p, d, i);
+                    s2..setNumero(i);
                     players[ind].getMare().insertNds(s2, p);
                 }
                 else
                 if(i==2)
                 {
                     Nds s3 = Nds(p, d, i);
+                    s3.setNumero(i);
                     players[ind].getMare().insertNds(s3, p);
                 }
             }
@@ -193,18 +202,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Nds s1 = Nds(p, d, i);
+                    s1.setNumero(i);
                     players[ind].getMare().insertNds(s1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Nds s2 = Nds(p, d, i);
+                    s2.setNumero(i);
                     players[ind].getMare().insertNds(s2, p);
                 }
                 else
                 if(i==2)
                 {
                     Nds s3 = Nds(p, d, i);
+                    s3.setNumero(i);
                     players[ind].getMare().insertNds(s3, p);
                 }
             }
@@ -227,18 +239,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Sde e1 = Sde(p, d, i);
+                    e1.setNumero(i);
                     players[ind].getMare().insertSde(e1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Sde e2 = Sde(p, d, i);
+                    e2.setNumero(i);
                     players[ind].getMare().insertSde(e2, p);
                 }
                 else
                 if(i==2)
                 {
                     Sde e3 = Sde(p, d, i);
+                    e3.setNumero(i);
                     players[ind].getMare().insertSde(e3, p);
                 }
             }
@@ -252,18 +267,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Sde e1 = Sde(p, d, i);
+                    e1.setNumero(i);
                     players[ind].getMare().insertSde(e1, p);
                 }
                 else
                 if(i==1)
                 {
                     Sde e2 = Sde(p, d, i);
+                    e2.setNumero(i);
                     players[ind].getMare().insertSde(e2, p);
                 }
                 else
                 if(i==2)
                 {
                     Sde e3 = Sde(p, d, i);
+                    e3.setNumero(i);
                     players[ind].getMare().insertSde(e3, p);
                 }
             }
