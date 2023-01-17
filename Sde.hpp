@@ -38,9 +38,6 @@
         int getNumero() const;
         int getState() const;
 
-        //0 verticale, 1 se orizzontale
-        int Direction(std::pair<std::pair<int, int>, std::pair<int, int> > pos);
-
         //possibili posizioni del del sottomarino da esplorazione
         std::vector<std::pair<int, int> > Moves();
     
