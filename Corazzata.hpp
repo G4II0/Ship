@@ -7,7 +7,7 @@
     class Corazzata : public Ship
     {
         private:
-
+        //dichiarazione delle variabili della classe Corazzata
         char tipo_;
         int direzione_;
         int dimensione_;
@@ -17,9 +17,11 @@
         bool state_;
 
         public:
+        //costruttori
         Corazzata();
         Corazzata(std::pair<int, int> pM, int direzione, int numero);
 
+        //set
         void setTipo(char tipo);
         void setDirezione(int direzione);
         void setDimensione(int dimensione);
@@ -28,6 +30,7 @@
         void setNumero(int numero);
         void setState(int state);
 
+        //get
         char getTipo() const;
         int getDirezione() const;
         int getDimensione() const;
@@ -35,6 +38,7 @@
         std::pair<int, int> getPMedio() const;
         int getNumero() const;
         int getState() const;
+
 
         std::vector<std::pair<int, int> > Moves();
 

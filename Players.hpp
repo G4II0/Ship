@@ -8,7 +8,7 @@
     {
 
         protected:
-
+        //dichiarazione delle variabili della classe Players
         std::string name_;
         Mare mare_;
         char type_;
@@ -20,7 +20,7 @@
 
         public:
 
-        // costruttore
+        // costruttori
         Players();
         Players(Mare m, std::string N, char T, Mare mN);
 
