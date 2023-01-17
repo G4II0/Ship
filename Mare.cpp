@@ -894,7 +894,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.remove(i);
+                                v1.erase(i);
                                 break;
                             }
                         }
@@ -909,7 +909,7 @@ using namespace std;
                                 temp = 1;
                             }
                         }
-                        if(tmp == 0)
+                        if(temp == 0)
                         {
                             p.first = x;
                             p.second = y;
@@ -934,7 +934,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.remove(i);
+                                v1.erase(i);
                                 break;
                             }
                         }
@@ -949,7 +949,7 @@ using namespace std;
                                 temp = 1;
                             }
                         }
-                        if(tmp == 0)
+                        if(temp == 0)
                         {
                             p.first = x;
                             p.second = y;
@@ -983,7 +983,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.remove(i);
+                                v1.erase(i);
                                 break;
                             }
                         }
@@ -998,7 +998,7 @@ using namespace std;
                                 temp = 1;
                             }
                         }
-                        if(tmp == 0)
+                        if(temp == 0)
                         {
                             p.first = x;
                             p.second = y;
@@ -1023,7 +1023,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.remove(i);
+                                v1.erase(i);
                                 break;
                             }
                         }
@@ -1038,7 +1038,7 @@ using namespace std;
                                 temp = 1;
                             }
                         }
-                        if(tmp == 0)
+                        if(temp == 0)
                         {
                             p.first = x;
                             p.second = y;
@@ -1069,7 +1069,7 @@ using namespace std;
                     {
                         if(v1[i].first == x && v1[i].first == y)
                         {
-                            v1.remove(i);
+                            v1.erase(i);
                             break;
                         }
                     }
@@ -1084,7 +1084,7 @@ using namespace std;
                             temp = 1;
                         }
                     }
-                    if(tmp == 0)
+                    if(temp == 0)
                     {
                         p.first = x;
                         p.second = y;
