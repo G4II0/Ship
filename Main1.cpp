@@ -157,7 +157,8 @@ int main()
             }
         }
         //Nds
-        for(int i = 0; i<3; i++)
+        i = 0;
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -229,6 +230,7 @@ int main()
                         players[ind].getMare().insertNds(s3, p);
                     }
                 }
+                i++;
             }
             catch(const InvalidInputException &e)
             {
@@ -236,7 +238,8 @@ int main()
             }
         }
         //Sde
-        for(int i = 0; i<2; i++)
+        i = 0;
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -299,6 +302,7 @@ int main()
                         players[ind].getMare().insertSde(e3, p);
                     }
                 }
+                i++;
             }
             catch(const InvalidInputException &e)
             {
