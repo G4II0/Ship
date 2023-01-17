@@ -894,7 +894,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.erase(i);
+                                v1.erase(v1.begin() + i);
                                 break;
                             }
                         }
@@ -934,7 +934,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.erase(i);
+                                v1.erase(v1.begin() + i);
                                 break;
                             }
                         }
@@ -983,7 +983,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.erase(i);
+                                v1.erase(v1.begin() + i);
                                 break;
                             }
                         }
@@ -1023,7 +1023,7 @@ using namespace std;
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
-                                v1.erase(i);
+                                v1.erase(v1.begin() + i);
                                 break;
                             }
                         }
@@ -1069,7 +1069,7 @@ using namespace std;
                     {
                         if(v1[i].first == x && v1[i].first == y)
                         {
-                            v1.erase(i);
+                            v1.erase(v1.begin() + i);
                             break;
                         }
                     }
