@@ -92,7 +92,7 @@ int main()
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
+                    printTextEffect("Inserisci la direzione della Corazzata: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     if(i==0)
                     {
@@ -168,11 +168,11 @@ int main()
             {
                 if(players[ind].getType() == U)
                 {
-                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
+                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
+                    printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
                     cin>>d;
                     if(i==0)
                     {
