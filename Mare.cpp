@@ -903,6 +903,7 @@ using namespace std;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < 10; y++)
                 {
+                    cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
