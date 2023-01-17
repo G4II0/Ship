@@ -31,50 +31,47 @@ int main()
 {
     const char B = 66;
     const char U = 85;
-    printTextEffect("Benvenuto nella nostra versione della battaglia navale");
-    printTextEffect("Che partita vuoi fare? Inserire:");
-insertGame://------------------------------------------------------------------------------------------------ Ins Game
-    printTextEffect("- pc: partita player vs. computer");
-    printTextEffect("- cc: partita computer vs. computer");
     string game;
-    cin >> game;
     vector<string> names(2);
     vector<char> types;
     vector<Players> players;
     std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
-    if (game == "pc")
-    {
-        printTextEffect("Inserisci il nome del giocatore umano: ");
-        cin >> names[0];
-        names[1] = botNames[rand() % 10];
-        printTextEffect("Il bot si chiama " + names[1]);
-        types.push_back(U);
-        types.push_back(B);
+    printTextEffect("Benvenuto nella nostra versione della battaglia navale");
+    printTextEffect("Che partita vuoi fare? Inserire:");
+    while(true) {
+        printTextEffect("- pc: partita player vs. computer");
+        printTextEffect("- cc: partita computer vs. computer");
+        cin >> game;
+        if (game == "pc") {
+            printTextEffect("Inserisci il nome del giocatore umano: ");
+            cin >> names[0];
+            names[1] = botNames[rand() % 10];
+            printTextEffect("Il bot si chiama " + names[1]);
+            types.push_back(U);
+            types.push_back(B);
+            break;
+        } else if (game == "cc") {
+            names[0] = botNames[rand() % 10];
+            names[1] = botNames[rand() % 10];
+            printTextEffect("Il bot1 si chiama " + names[0] + ".");
+            printTextEffect("Il bot2 si chiama " + names[1] + ".");
+            types.push_back(B);
+            types.push_back(B);
+            break;
+        } else {
+            printTextEffect("Input non valido, riprovare; si può inserire solo:");
+        }
     }
-    else if (game == "cc")
-    {
-        names[0] = names[rand() % 10];
-        names[1] = names[rand() % 10];
-        printTextEffect("Il bot1 si chiama " + names[0] + ".");
-        printTextEffect("Il bot2 si chiama " + names[1] + ".");
-        types.push_back(B);
-        types.push_back(B);
-    }
-    else
-    {
-        printTextEffect("Input non valido, riprovare; si può inserire solo:");
-        goto insertGame;//-------------------------------------------------------------------------------- InsGame
-    }
-    int ind = 0;
     Mare boardP1;
     Mare boardP2;
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
     
 inizializeGrill:
-    if(game == "pc" && ind == 0)
+    int ind = 0;
+    if(game == "pc" && ind < 2)
     {
-        printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
+        printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
         printTextEffect("Inserisci le navi nella griglia: ");
     }
     try
@@ -92,23 +89,26 @@ inizializeGrill:
                 cin>>x>>y;
                 p.first = x;
                 p.second = y;
-                printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
+                printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)));
                 cin>>d;
                 if(i==0)
                 {
                     Corazzata c1 = Corazzata(p, d, i);
+                    c1.setNumero(i);
                     players[ind].getMare().insertCor(c1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Corazzata c2 = Corazzata(p, d, i);
+                    c2.setNumero(i);
                     players[ind].getMare().insertCor(c2, p);
                 }
                 else
                 if(i==2)
                 {
                     Corazzata c3 = Corazzata(p, d, i);
+                    c3.setNumero(i);
                     players[ind].getMare().insertCor(c3, p);
                 }
             }
@@ -128,18 +128,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Corazzata c1 = Corazzata(p, d, i);
+                    c1.setNumero(i);
                     players[ind].getMare().insertCor(c1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Corazzata c2 = Corazzata(p, d, i);
+                    c2.setNumero(i);
                     players[ind].getMare().insertCor(c2, p);
                 }
                 else
                 if(i==2)
                 {
                     Corazzata c3 = Corazzata(p, d, i);
+                    c3.setNumero(i);
                     players[ind].getMare().insertCor(c3, p);
                 }
             }
@@ -162,18 +165,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Nds s1 = Nds(p, d, i);
+                    s1.setNumero(i);
                     players[ind].getMare().insertNds(s1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Nds s2 = Nds(p, d, i);
+                    s2.setNumero(i);
                     players[ind].getMare().insertNds(s2, p);
                 }
                 else
                 if(i==2)
                 {
                     Nds s3 = Nds(p, d, i);
+                    s3.setNumero(i);
                     players[ind].getMare().insertNds(s3, p);
                 }
             }
@@ -193,18 +199,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Nds s1 = Nds(p, d, i);
+                    s1.setNumero(i);
                     players[ind].getMare().insertNds(s1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Nds s2 = Nds(p, d, i);
+                    s2.setNumero(i);
                     players[ind].getMare().insertNds(s2, p);
                 }
                 else
                 if(i==2)
                 {
                     Nds s3 = Nds(p, d, i);
+                    s3.setNumero(i);
                     players[ind].getMare().insertNds(s3, p);
                 }
             }
@@ -227,18 +236,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Sde e1 = Sde(p, d, i);
+                    e1.setNumero(i);
                     players[ind].getMare().insertSde(e1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Sde e2 = Sde(p, d, i);
+                    e2.setNumero(i);
                     players[ind].getMare().insertSde(e2, p);
                 }
                 else
                 if(i==2)
                 {
                     Sde e3 = Sde(p, d, i);
+                    e3.setNumero(i);
                     players[ind].getMare().insertSde(e3, p);
                 }
             }
@@ -252,18 +264,21 @@ inizializeGrill:
                 if(i==0)
                 {
                     Sde e1 = Sde(p, d, i);
+                    e1.setNumero(i);
                     players[ind].getMare().insertSde(e1, p);
                 }
                 else
                 if(i==1)
                 {
                     Sde e2 = Sde(p, d, i);
+                    e2.setNumero(i);
                     players[ind].getMare().insertSde(e2, p);
                 }
                 else
                 if(i==2)
                 {
                     Sde e3 = Sde(p, d, i);
+                    e3.setNumero(i);
                     players[ind].getMare().insertSde(e3, p);
                 }
             }
@@ -288,6 +303,7 @@ inizializeGrill:
     else
         movesLimit = -1;
     bool endgame = false;
+    //____________________________________________________________________________________________________________
     while (i != movesLimit && !endgame)
     {
         if(index == 0)
@@ -366,7 +382,7 @@ inizializeGrill:
         }
         else
         {
-        insertMove:
+        insertMove2:
             try
             {
                 if(index == 0)
@@ -382,13 +398,13 @@ inizializeGrill:
             {
                 printTextEffect(e.what());
                 //______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove2;
             }
             catch (InvalidInputException &e)
             {
                 printTextEffect(e.what());
                 //_______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove2;
             }
         }
         i++;

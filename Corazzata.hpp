@@ -24,7 +24,7 @@
         void setDirezione(int direzione);
         void setDimensione(int dimensione);
         void setCorazza(int corazza);
-        void setPMedio(std::pair<int, int> pMedio);
+        void setPMedio(std::pair<int, int> pM);
         void setNumero(int numero);
         void setState(int state);
 
