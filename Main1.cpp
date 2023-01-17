@@ -112,11 +112,17 @@ inizializeGrill:
         }
         else
         {
-            x = rand()%12;
-            y = rand()%12;
-            p.first = x;
-            p.second = y;
             d = rand()%2;
+            if(d==0)
+            {
+                x = rand()%12;
+                y = rand()%9+2;
+            }
+            else
+            {
+                x = rand()%9+2;
+                y = rand()%12;
+            }
             if(i==0)
             {
                 Corazzata c1 = Corazzata(p, d, i);
@@ -171,11 +177,17 @@ inizializeGrill:
         }
         else
         {
-            x = rand()%12;
-            y = rand()%12;
-            p.first = x;
-            p.second = y;
             d = rand()%2;
+            if(d==0)
+            {
+                x = rand()%12;
+                y = rand()%10+1;
+            }
+            else
+            {
+                x = rand()%10+1;
+                y = rand()%12;
+            }
             if(i==0)
             {
                 Nds c1 = Nds(p, d, i);
@@ -230,11 +242,11 @@ inizializeGrill:
         }
         else
         {
+            d = rand()%2;
             x = rand()%12;
             y = rand()%12;
             p.first = x;
             p.second = y;
-            d = rand()%2;
             if(i==0)
             {
                 Sde c1 = Sde(p, d, i);
