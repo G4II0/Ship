@@ -84,7 +84,7 @@ inizializeGrill:
         int x;
         int y;
         int d;
-        if(players[ind].getType() == "U")
+        if(players[ind].getType() == U)
         {
             printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
             cin>>x>>y;
