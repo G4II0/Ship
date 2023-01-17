@@ -42,7 +42,8 @@ int main()
         printTextEffect("- pc: partita player vs. computer");
         printTextEffect("- cc: partita computer vs. computer");
         cin >> game;
-        if (game == "pc") {
+        if (game == "pc") 
+        {
             printTextEffect("Inserisci il nome del giocatore umano: ");
             cin >> names[0];
             names[1] = botNames[rand() % 10];
@@ -50,7 +51,9 @@ int main()
             types.push_back(U);
             types.push_back(B);
             break;
-        } else if (game == "cc") {
+        }
+        else if (game == "cc") 
+        {
             names[0] = botNames[rand() % 10];
             names[1] = botNames[rand() % 10];
             printTextEffect("Il bot1 si chiama " + names[0] + ".");
@@ -58,7 +61,9 @@ int main()
             types.push_back(B);
             types.push_back(B);
             break;
-        } else {
+        } 
+        else 
+        {
             printTextEffect("Input non valido, riprovare; si può inserire solo:");
         }
     }
@@ -366,8 +371,8 @@ int main()
             int ys;
             int xe;
             int ye;
-            int i = 0;
-            while(i < 1)//------------------------------------------------------------------------------------------------------------------------------
+            int a = 0;
+            while(a < 1)//------------------------------------------------------------------------------------------------------------------------------
             {
                 printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
                 cin >> xs;
@@ -388,7 +393,7 @@ int main()
                     {
                         p.Moves(start, end, boardP2, boardP1);
                     }
-                    i++;
+                    a++;
                 }
                 catch (InvalidMoveException &e)
                 {
@@ -402,7 +407,9 @@ int main()
         }
         else
         {
-        insertMove2:
+            int b = 0;
+            while(b < 1)
+            {
             try
             {
                 if(index == 0)
@@ -413,18 +420,15 @@ int main()
                 {
                     p.MovesB(boardP2, players[index].getMareN());
                 }
+                b++;
             }
             catch (InvalidMoveException &e)
             {
                 printTextEffect(e.what());
-                //______________________________________________________________________________________
-                goto insertMove2;
             }
             catch (InvalidInputException &e)
             {
                 printTextEffect(e.what());
-                //_______________________________________________________________________________________
-                goto insertMove2;
             }
         }
         i++;
@@ -435,15 +439,3 @@ int main()
     }
     printTextEffect("Grazie per aver giocato!");
 }
-
-/*string game;
-while (true) {
-    printTextEffect("Che partita vuoi fare? Inserire:");
-    printTextEffect("- pc: partita player vs. computer");
-    printTextEffect("- cc: partita computer vs. computer");
-    cin >> game;
-    if (game == "pc" || game == "cc") {
-        break;
-    }
-    printTextEffect("Input non valido, riprovare; si può inserire solo:");
-}*/
