@@ -115,7 +115,7 @@ using namespace std;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
         {   
-            cout << "x =" << v[i].first << " y = " << v[i].second <<endl;
+            cout << "xC =" << v[i].first << " yC = " << v[i].second <<endl;
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;}
         }
@@ -126,6 +126,7 @@ using namespace std;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
         {
+            cout << "xN =" << v[i].first << " yN = " << v[i].second <<endl;
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;} 
         }
@@ -136,6 +137,7 @@ using namespace std;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
         {
+            cout << "xS =" << v[i].first << " yS = " << v[i].second <<endl;
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;} 
         }
@@ -208,12 +210,12 @@ using namespace std;
         if(b == false)
         {
             //throw InvalidInputException("Inserimento non valido");
-            cout << "torno in insertcor" << endl;
+            cout << "torno in b == false" << endl;
         }
         else
         if (b == true)
         {   
-            cout << "è true!!!!";
+            cout << " b è true!!!!";
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<int, int> temp3;
@@ -260,11 +262,12 @@ using namespace std;
 //inserimento Nds
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        if(legitMoveInput(ship, pos) == false)
+        bool b =legitMoveInput(ship, pos);
+        if(b == false)
         {
             throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos) == true)
+        if (b == true)
         {
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -300,12 +303,16 @@ using namespace std;
     // inserimento Sde
     void Mare::insertSde(Sde& ship, pair<int, int> pos)
     {   
-        if(legitMoveInput(ship, pos) == false)
+        bool b = legitMoveInput(ship, pos);
+        cout << "torno in insertSde" << endl;
+        if(b == false)
         {
-            throw InvalidInputException("Inserimento non valido");
+            cout << "torno in b == false" << endl;
+            //throw InvalidInputException("Inserimento non valido");
         }
-        if (legitMoveInput(ship, pos) == true)
+        if (b == true)
         {
+            cout << "b è true!!!!!!" << endl;
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
@@ -888,12 +895,14 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
+        cout << "sono in PosAvailableCor" << endl;
         if(d==0)
         {
-            int x = 0, y = 2;
-            while (x < 12)
+            for(int x = 0; x < 12; x++)
             {
-                while (y < 10)
+                y = 2;
+                cout<< "Xtemp = " << x << " "; 
+                for(int y = 2; y < 10; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
@@ -923,17 +932,14 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         else
         {
-            int x = 2, y = 0;
-            while (x < 10)
+            for(int x = 2; x < 10; x++)
             {
-                while (y < 12)
+                for(int y = 0; y < 12; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
@@ -963,9 +969,7 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         shi.Moves() = v1;
@@ -979,10 +983,9 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            int x = 0, y = 1;
-            while (x < 12)
+            for(int x = 0; x < 12; x++)
             {
-                while (y < 11)
+                for(int y = 1; y < 11; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ')
                     {
@@ -1012,17 +1015,14 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         else
         {
-            int x = 1, y = 0;
-            while (x < 11)
+            for(int x = 1; x < 11; x++)
             {
-                while (y < 12)
+                for(int y = 0; y < 12; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ')
                     {
@@ -1052,9 +1052,7 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         shi.Moves() = v1;
@@ -1065,10 +1063,9 @@ using namespace std;
     {
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
-        int x=0, y=0;
-        while (x <12)
+        for(int x = 0; x < 12; x++)
         {
-            while (y < 12)
+            for(int y = 0; y < 12; y++)
             {
                 if(mar_[x][y] != ' ')
                 {
@@ -1098,9 +1095,7 @@ using namespace std;
                         v1.push_back(p);
                     }
                 }
-                y++;
             }
-            x++;
         }
         shi.Moves() = v1;
         return v1;
