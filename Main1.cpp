@@ -78,7 +78,7 @@ int main()
     {
         if(game == "pc")
         {
-            printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
+            printTextEffect("E' il momento per "+ names[0] + " di posizionare le sue navi: " + "\n");
             printTextEffect("Inserisci le navi nella griglia: ");
         }
         //richiede al player o al bot di inserire la corazzata, continua finchè tutte le corazzate sono inserite
