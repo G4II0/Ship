@@ -77,7 +77,8 @@ int main()
         }
         
             //Corazzata
-        for(int i = 0; i<3; i++)
+        int i = 0;
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -91,7 +92,7 @@ int main()
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)) + " 1 = orizzontale, 0 = verticale ");
+                    printTextEffect("Inserisci la direzione della Corazzata: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     if(i==0)
                     {
@@ -154,6 +155,7 @@ int main()
             {
                 printTextEffect(e.what());
             }
+            i++;
         }
         //Nds
         for(int i = 0; i<3; i++)
@@ -166,11 +168,11 @@ int main()
             {
                 if(players[ind].getType() == U)
                 {
-                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)) + " 1 = orizzontale, 0 = verticale ");
+                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
+                    printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
                     cin>>d;
                     if(i==0)
                     {
