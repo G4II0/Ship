@@ -206,11 +206,6 @@ using namespace std;
     {   
         bool b = legitMoveInput(ship, pos);
         cout << "chiamato InsertCor" << endl;
-        if(b == false)
-        {
-            throw InvalidInputException("Inserimento non valido");
-        }
-        else
         if (b == true)
         {   
             cout << " b è true!!!!";
@@ -254,6 +249,11 @@ using namespace std;
             setMareA(temp4, 'C');
             // posizionamento nel mareC
             marCor_[ship.getNumero()] = ship;
+        }
+        else
+        {
+            cout << "errore" << endl;
+            throw InvalidInputException("Inserimento non valido");
         }
     }
 
