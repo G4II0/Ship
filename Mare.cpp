@@ -108,7 +108,6 @@ using namespace std;
         }
         return marSde[t];
     }
-    //-
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
