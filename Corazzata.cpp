@@ -3,47 +3,46 @@
     Corazzata::Corazzata()
     {}
     
-    Corazzata::Corazzata(std::pair<int, int> pM_, int direzione_, int numero_)
+    Corazzata::Corazzata(std::pair<int, int> pM, int direzione, int numero)
     {
-        this -> tipo = 'C';
-        this -> pMedio = pM_;
-        this -> direzione = direzione_;
-        this -> dimensione = 5;
-        this -> corazza = 5;
-        this -> corazza = 3;
-        this -> numero = numero_;
-        this -> state = true;
+        this -> tipo_ = 'C';
+        this -> pMedio_ = pM;
+        this -> direzione_ = direzione;
+        this -> dimensione_ = 5;
+        this -> corazza_ = 5;
+        this -> numero_ = numero;
+        this -> state_ = true;
     }
 
-    void Corazzata::setTipo(char tipo_)
-    {this -> tipo = tipo_;}
-    void Corazzata::setDirezione(int direzione_)
-    {this->direzione = direzione_;}
-    void Corazzata::setDimensione(int dimensione_)
-    {this -> dimensione = dimensione_;}
-    void Corazzata::setCorazza(int corazza_)
-    {this -> corazza = corazza_;}
-    void Corazzata::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
-    void Corazzata::setNumero(int numero_)
-    {this -> numero = numero_;}
-    void Corazzata::setState(int state_)
-    {this -> state = state_;}
+    void Corazzata::setTipo(char tipo)
+    {this -> tipo_ = tipo;}
+    void Corazzata::setDirezione(int direzione)
+    {this->direzione_ = direzione;}
+    void Corazzata::setDimensione(int dimensione)
+    {this -> dimensione_ = dimensione;}
+    void Corazzata::setCorazza(int corazza)
+    {this -> corazza_ = corazza;}
+    void Corazzata::setPMedio(std::pair<int, int> pMedio)
+    {this -> pMedio_ = pMedio;}
+    void Corazzata::setNumero(int numero)
+    {this -> numero_ = numero;}
+    void Corazzata::setState(int state)
+    {this -> state_ = state;}
 
     char Corazzata::getTipo() const
-    {return this -> tipo;}
+    {return this -> tipo_;}
     int Corazzata::getDirezione() const
-    {return this -> direzione;}
+    {return this -> direzione_;}
     int Corazzata::getDimensione() const
-    {return this -> dimensione;}
+    {return this -> dimensione_;}
     int Corazzata::getCorazza() const
-    {return this -> corazza;}
+    {return this -> corazza_;}
     std::pair<int, int> Corazzata::getPMedio() const
-    {return this -> pMedio;}
+    {return this -> pMedio_;}
     int Corazzata::getNumero() const
-    {return this -> numero;}
+    {return this -> numero_;}
     int Corazzata::getState() const
-    {return this -> state;}
+    {return this -> state_;}
 
     std::vector<std::pair<int, int> > Corazzata::Moves()
     {
@@ -83,12 +82,12 @@
 
     void Corazzata::Damage()
     {
-       corazza = corazza - 1;
+       corazza_ = corazza_ - 1;
     }
 
     void Corazzata::Heal()
     {
-       corazza = 5;
+       corazza_ = 5;
     }
 
     bool operator==(const Corazzata& n1, const Corazzata& n2)
