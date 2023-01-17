@@ -88,7 +88,7 @@ int main()
             {                           
                 if(players[ind].getType() == U)
                 {
-                    printTextEffect("Inserisci la direzione della Corazzata: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
+                    printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin>>x>>y;
