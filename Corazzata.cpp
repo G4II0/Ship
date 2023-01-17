@@ -17,8 +17,6 @@
 
     void Corazzata::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Corazzata::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
-    {this -> pos = pos_;}
     void Corazzata::setDirezione(int direzione_)
     {this->direzione = direzione_;}
     void Corazzata::setDimensione(int dimensione_)
@@ -34,8 +32,6 @@
 
     char Corazzata::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int> > Corazzata::getPos() const
-    {return this -> pos;}
     int Corazzata::getDirezione() const
     {return this -> direzione;}
     int Corazzata::getDimensione() const

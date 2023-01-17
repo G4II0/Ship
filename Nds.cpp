@@ -16,8 +16,6 @@
  
     void Nds::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Nds::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
-    {this -> pos = pos_;}
     void Nds::setDirezione(int direzione_)
     {this->direzione = direzione_;}
     void Nds::setDimensione(int dimensione_)
@@ -33,8 +31,6 @@
 
     char Nds::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int> > Nds::getPos() const
-    {return this -> pos;}
     int Nds::getDirezione() const
     {return this -> direzione;}
     int Nds::getDimensione() const

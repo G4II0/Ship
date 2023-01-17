@@ -9,7 +9,6 @@
         private:
 
         char tipo;
-        std::pair<std::pair<int, int>, std::pair<int, int> > pos;
         int dimensione;
         std::vector<bool> segmenti;
         int corazza;
@@ -23,7 +22,6 @@
         Sde(std::pair<int, int> pM_, int direzione_, int numero_);
 
         void setTipo(char tipo);
-        void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
         void setDimensione(int dimensione_);
         void setCorazza(int corazza_);
         void setPMedio(std::pair<int, int> pMedio_);
@@ -31,7 +29,6 @@
         void setState(int state_);
 
         char getTipo() const;
-        std::pair<std::pair<int, int>, std::pair<int, int> > getPos() const;
         int getDimensione() const;
         int getCorazza() const;
         std::pair<int, int> getPMedio() const;

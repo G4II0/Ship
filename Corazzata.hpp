@@ -9,7 +9,6 @@
         private:
 
         char tipo;
-        std::pair<std::pair<int, int>, std::pair<int, int> > pos;
         int direzione;
         int dimensione;
         int corazza;
@@ -22,7 +21,6 @@
         Corazzata(std::pair<int, int> pM_, int direzione_, int numero_);
 
         void setTipo(char tipo);
-        void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
         void setDirezione(int direzione);
         void setDimensione(int dimensione_);
         void setCorazza(int corazza_);
@@ -31,7 +29,6 @@
         void setState(int state_);
 
         char getTipo() const;
-        std::pair<std::pair<int, int>, std::pair<int, int> > getPos() const;
         int getDirezione() const;
         int getDimensione() const;
         int getCorazza() const;

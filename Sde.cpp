@@ -15,8 +15,6 @@
 
     void Sde::setTipo(char tipo_)
     {this -> tipo = tipo_;}
-    void Sde::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
-    {this -> pos = pos_;}
     void Sde::setDimensione(int dimensione_)
     {this -> dimensione = dimensione_;}
     void Sde::setCorazza(int corazza_)
@@ -30,8 +28,6 @@
 
     char Sde::getTipo() const
     {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int> > Sde::getPos() const
-    {return this -> pos;}
     int Sde::getDimensione() const
     {return this -> dimensione;}
     int Sde::getCorazza() const
