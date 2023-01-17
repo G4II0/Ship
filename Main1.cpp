@@ -92,7 +92,7 @@ inizializeGrill:
                 cin>>x>>y;
                 p.first = x;
                 p.second = y;
-                printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
+                printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)));
                 cin>>d;
                 if(i==0)
                 {
