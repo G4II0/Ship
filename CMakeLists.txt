@@ -11,7 +11,7 @@ add_executable(
     Mare.cpp
     Ship.cpp
     Nds.cpp
-    Sde
+    Sde.cpp
     Corazzata.cpp
     Players.cpp
 )
