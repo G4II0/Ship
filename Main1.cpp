@@ -334,13 +334,13 @@ inizializeGrill:
             }
             catch (InvalidMoveException &e)
             {
-                printTextEffect("La mossa inserita non è valida.");
+                printTextEffect(e.what());
                 //______________________________________________________________________________________
                 goto insertMove1;
             }
             catch (const InvalidInputException &e)
             {
-                printTextEffect("L'input inserito non è valido");
+                printTextEffect(e.what());
                 //_______________________________________________________________________________________
                 goto insertMove1;
             }
@@ -361,13 +361,13 @@ inizializeGrill:
             }
             catch (InvalidMoveException &e)
             {
-                printTextEffect("La mossa inserita non è valida.");
+                printTextEffect(e.what());
                 //______________________________________________________________________________________
                 goto insertMove;
             }
             catch (InvalidInputException &e)
             {
-                printTextEffect("L'input inserito non è valido");
+                printTextEffect(e.what());
                 //_______________________________________________________________________________________
                 goto insertMove;
             }
