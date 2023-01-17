@@ -14,6 +14,9 @@
         char type_;
         int condition_;
         Mare mareNemico_;
+        int count_;
+        int count2_;
+        int count3_;
 
         public:
 
