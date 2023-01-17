@@ -46,7 +46,7 @@
         m.MoveG(pos, dest, m, mN);
     }
 
-    //mosse randomiche del bot (pc)
+    //mosse randomiche del bot
     void Players::MovesB(Mare m, Mare mN)
     { 
         int r0 = 0;

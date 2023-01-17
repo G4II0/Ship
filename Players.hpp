@@ -24,22 +24,24 @@
         Players();
         Players(Mare m, std::string N, char T, Mare mN);
 
-        //set
+        //setter
         void setName(char name);
         void setMare(Mare m);
         void setMareN(Mare mN);
         void setType(char type);
         void setCondition(int c);
         
-        //get
+        //getter
         std::string getName() const;
         Mare getMare() const;
         Mare getMareN() const;
         char getType() const;
         int getCondition() const;
 
-        //Move
+        //metodo che lette le istruzioni da tastiera muove le navi
         void Moves(std::pair<int, int> pos, std::pair<int, int> dest, Mare m, Mare mN);
+        
+        //mosse randomiche del bot
         void MovesB(Mare m, Mare mN);
     };
 #endif
