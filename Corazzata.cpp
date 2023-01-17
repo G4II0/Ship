@@ -85,19 +85,19 @@
         return Mov;
     }
 
-    //metodo che toglie 1 punto vita ogni volta che la corazzata viene colpita
+    //metodo che toglie un punto vita ogni volta che la corazzata viene colpita
     void Corazzata::Damage()
     {
        corazza_ = corazza_ - 1;
     }
 
-    //metodo che ripristina la corazza della corazzata
+    //metodo che ripristina la corazza della nave corazzata
     void Corazzata::Heal()
     {
        corazza_ = 5;
     }
 
-    //metodo che ritorna true se le due corazzate passate per riferimento sono le stesse
+    //overload dell'operatore ==
     bool operator==(const Corazzata& n1, const Corazzata& n2)
     {
         return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();
