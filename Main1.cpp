@@ -42,28 +42,35 @@ insertGame://-------------------------------------------------------------------
     vector<char> types;
     vector<Players> players;
     std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
-    if (game == "pc")
+    try
     {
-        printTextEffect("Inserisci il nome del giocatore umano: ");
-        cin >> names[0];
-        names[1] = botNames[rand() % 10];
-        printTextEffect("Il bot si chiama " + names[1]);
-        types.push_back(U);
-        types.push_back(B);
+        if (game == "pc")
+        {
+            printTextEffect("Inserisci il nome del giocatore umano: ");
+            cin >> names[0];
+            names[1] = botNames[rand() % 10];
+            printTextEffect("Il bot si chiama " + names[1]);
+            types.push_back(U);
+            types.push_back(B);
+        }
+        else if (game == "cc")
+        {
+            names[0] = names[rand() % 10];
+            names[1] = names[rand() % 10];
+            printTextEffect("Il bot1 si chiama " + names[0] + ".");
+            printTextEffect("Il bot2 si chiama " + names[1] + ".");
+            types.push_back(B);
+            types.push_back(B);
+        }
+        else
+        {
+            throw(InvalidInputException("Input non valido, riprovare; si può inserire solo:"));
+            goto insertGame;//-------------------------------------------------------------------------------- InsGame
+        }
     }
-    else if (game == "cc")
+    catch(const InvalidInputException &e)
     {
-        names[0] = names[rand() % 10];
-        names[1] = names[rand() % 10];
-        printTextEffect("Il bot1 si chiama " + names[0] + ".");
-        printTextEffect("Il bot2 si chiama " + names[1] + ".");
-        types.push_back(B);
-        types.push_back(B);
-    }
-    else
-    {
-        printTextEffect("Input non valido, riprovare; si può inserire solo:");
-        goto insertGame;//-------------------------------------------------------------------------------- InsGame
+        printTextEffect(e.what());
     }
     int ind = 0;
     Mare boardP1;
