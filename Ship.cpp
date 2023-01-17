@@ -1,8 +1,11 @@
 #include "Ship.hpp"
 #include "Mare.hpp"
 
+    //costruttore vuoto
     Ship::Ship()
     {}
+
+    //costruttore
     Ship::Ship(std::pair<int, int> pM, int direzione, int numero)
     {
         this -> tipo_ = ' ';
@@ -14,6 +17,7 @@
         this -> state_ = false;
     }
 
+    //setter
     void Ship::setTipo(char tipo)
     {this -> tipo_ = tipo;}
     void Ship::setPMedio(std::pair<int, int> pMedio)
@@ -27,6 +31,7 @@
     void Ship::setNumero(int numero)
     {this-> numero_ = numero;}
 
+    //getter
     char Ship::getTipo() const
     {return this -> tipo_;}
     std::pair<int, int> Ship::getPMedio() const
