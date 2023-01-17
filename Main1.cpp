@@ -167,12 +167,13 @@ int main()
             {
                 if(players[ind].getType() == U)
                 {
+                    printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
+                    cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
-                    cin>>d;
+                    
                     if(i==0)
                     {
                         Nds s1 = Nds(p, d, i);
