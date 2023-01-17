@@ -366,8 +366,8 @@ int main()
             int ys;
             int xe;
             int ye;
-            int i = 0;
-            while(i < 1)//------------------------------------------------------------------------------------------------------------------------------
+            int a = 0;
+            while(a < 1)//------------------------------------------------------------------------------------------------------------------------------
             {
                 printTextEffect("Inserisci le coordinate della nave a cui vuoi far fare un azione e le coordinate di dove avverra': ");
                 cin >> xs;
@@ -388,7 +388,7 @@ int main()
                     {
                         p.Moves(start, end, boardP2, boardP1);
                     }
-                    i++;
+                    a++;
                 }
                 catch (InvalidMoveException &e)
                 {
@@ -402,7 +402,9 @@ int main()
         }
         else
         {
-        insertMove2:
+            int b = 0;
+            while(b < 1)
+            {
             try
             {
                 if(index == 0)
@@ -413,18 +415,15 @@ int main()
                 {
                     p.MovesB(boardP2, players[index].getMareN());
                 }
+                b++;
             }
             catch (InvalidMoveException &e)
             {
                 printTextEffect(e.what());
-                //______________________________________________________________________________________
-                goto insertMove2;
             }
             catch (InvalidInputException &e)
             {
                 printTextEffect(e.what());
-                //_______________________________________________________________________________________
-                goto insertMove2;
             }
         }
         i++;
