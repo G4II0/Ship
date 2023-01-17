@@ -101,13 +101,13 @@ inizializeGrill:
             if(i==1)
             {
                 Corazzata c2 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
+                players[ind].getMare().insertCor(c2, p);
             }
             else
             if(i==2)
             {
                 Corazzata c3 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
+                players[ind].getMare().insertCor(c3, p);
             }
         }
         else
@@ -132,13 +132,13 @@ inizializeGrill:
             if(i==1)
             {
                 Corazzata c2 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
+                players[ind].getMare().insertCor(c2, p);
             }
             else
             if(i==2)
             {
                 Corazzata c3 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
+                players[ind].getMare().insertCor(c3, p);
             }
         }
     }
@@ -149,7 +149,7 @@ inizializeGrill:
         int x;
         int y;
         int d;
-        if(players[ind].getType() == "U")
+        if(players[ind].getType() == U)
         {
             printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
             cin>>x>>y;
@@ -159,20 +159,20 @@ inizializeGrill:
             cin>>d;
             if(i==0)
             {
-                Nds c1 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s1 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s1, p);
             }
             else          
             if(i==1)
             {
-                Nds c2 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s2 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s2, p);
             }
             else
             if(i==2)
             {
-                Nds c3 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s3 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s3, p);
             }
         }
         else
@@ -190,20 +190,20 @@ inizializeGrill:
             }
             if(i==0)
             {
-                Nds c1 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s1 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s1, p);
             }
             else          
             if(i==1)
             {
-                Nds c2 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s2 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s1, p);
             }
             else
             if(i==2)
             {
-                Nds c3 = Nds(p, d, i);
-                players[ind].getMare().insertNds(c1, p);
+                Nds s3 = Nds(p, d, i);
+                players[ind].getMare().insertNds(s1, p);
             }
         }
     }
@@ -214,7 +214,7 @@ inizializeGrill:
         int x;
         int y;
         int d;
-        if(players[ind].getType() == "U")
+        if(players[ind].getType() == U)
         {
             printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
             cin>>x>>y;
@@ -224,20 +224,20 @@ inizializeGrill:
             cin>>d;
             if(i==0)
             {
-                Sde c1 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e1 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e1, p);
             }
             else          
             if(i==1)
             {
-                Sde c2 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e2 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e2, p);
             }
             else
             if(i==2)
             {
-                Sde c3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e3 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e1, p);
             }
         }
         else
@@ -249,20 +249,20 @@ inizializeGrill:
             p.second = y;
             if(i==0)
             {
-                Sde c1 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e1 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e1, p);
             }
-            else          
+            else
             if(i==1)
             {
-                Sde c2 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e2 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e1, p);
             }
             else
             if(i==2)
             {
-                Sde c3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(c1, p);
+                Sde e3 = Sde(p, d, i);
+                players[ind].getMare().insertSde(e1, p);
             }
         }
     }
