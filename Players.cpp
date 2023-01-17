@@ -49,8 +49,7 @@
     //mosse randomiche del bot (pc)
     void Players::MovesB(Mare m, Mare mN)
     { 
-        int randCount = 3;
-        int r3 = 0;
+        int r0 = 0;
         bool esistonoNavi = true;
         srand(time(NULL));
         pair<int, int> pos;
@@ -100,7 +99,7 @@
         }
         else
         {         
-            int r0 = rand()%randCount+r3;
+            r0 = rand()%3;
         }
         //scelta randomica della nave
         if(r0 == 0)
