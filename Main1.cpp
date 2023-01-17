@@ -72,7 +72,7 @@ insertGame://-------------------------------------------------------------------
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
     
 inizializeGrill:
-    if(game == "pc" && ind == 0)
+    if(game == "pc" && ind < 2)
     {
         printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
         printTextEffect("Inserisci le navi nella griglia: ");
@@ -288,6 +288,7 @@ inizializeGrill:
     else
         movesLimit = -1;
     bool endgame = false;
+    //____________________________________________________________________________________________________________
     while (i != movesLimit && !endgame)
     {
         if(index == 0)
@@ -366,7 +367,7 @@ inizializeGrill:
         }
         else
         {
-        insertMove:
+        insertMove2:
             try
             {
                 if(index == 0)
@@ -382,13 +383,13 @@ inizializeGrill:
             {
                 printTextEffect(e.what());
                 //______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove2;
             }
             catch (InvalidInputException &e)
             {
                 printTextEffect(e.what());
                 //_______________________________________________________________________________________
-                goto insertMove;
+                goto insertMove2;
             }
         }
         i++;
