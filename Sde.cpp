@@ -7,8 +7,8 @@
     {
         this -> tipo_ = 'E';
         this -> pMedio_ = pM;
-        this -> dimensione_ = 3;
-        this -> corazza_ = 3;
+        this -> dimensione_ = 1;
+        this -> corazza_ = 1;
         this -> numero_ = numero;
         this -> state_ = true;
     }
