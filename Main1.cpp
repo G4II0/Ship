@@ -78,7 +78,7 @@ int main()
         
             //Corazzata
         int i = 0;
-        while(i < 3)
+        while(true)
         {
             pair<int, int> p;
             int x;
@@ -149,7 +149,7 @@ int main()
                         players[ind].getMare().insertCor(c3, p);
                     }
                 }
-                    
+                break; 
             }
             catch(const InvalidInputException &e)
             {
