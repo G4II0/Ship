@@ -27,7 +27,7 @@
     Mare Players::getMare() const
     {return this -> mare_;}
     Mare Players::getMareN() const
-    {return this -> marenemico_;}
+    {return this -> mareNemico_;}
     char Players::getType() const
     {return this -> type_;}
     int Players::getCondition() const
