@@ -62,13 +62,13 @@ int main()
             printTextEffect("Input non valido, riprovare; si può inserire solo:");
         }
     }
-    int ind = 0;
     Mare boardP1;
     Mare boardP2;
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
     
 inizializeGrill:
+    int ind = 0;
     if(game == "pc" && ind < 2)
     {
         printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
