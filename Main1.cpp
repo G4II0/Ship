@@ -116,11 +116,11 @@ inizializeGrill:
             if(d==0)
             {
                 x = rand()%12;
-                y = rand()%9+2;
+                y = rand()%8+2;
             }
             else
             {
-                x = rand()%9+2;
+                x = rand()%8+2;
                 y = rand()%12;
             }
             if(i==0)
