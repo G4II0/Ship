@@ -1,8 +1,9 @@
 #include "Nds.hpp"
-
+    //costruttore vuoto
     Nds::Nds()
     {}
     
+    //costruttore
     Nds::Nds(std::pair<int, int> pM, int direzione, int numero)
     {
         this -> tipo_ = 'S';
@@ -14,6 +15,7 @@
         this -> state_ = true;
     }
  
+    //setter
     void Nds::setTipo(char tipo)
     {this -> tipo_ = tipo;}
     void Nds::setDirezione(int direzione)
@@ -29,6 +31,7 @@
     void Nds::setState(int state)
     {this -> state_ = state;}
 
+    //getter
     char Nds::getTipo() const
     {return this -> tipo_;}
     int Nds::getDirezione() const
@@ -81,16 +84,19 @@
         return Mov;
     }
 
+    //metodo che toglie un punto vita ogni volta che la nave da supporto viene colpita
     void Nds::Damage()
     {
        corazza_ = corazza_ - 1;
     }
 
+    //metodo che ripristina la corazza della nave da supporto
     void Nds::Heal()
     {
        corazza_ = 3;
     }
 
+    //overload dell'operatore ==
     bool operator==(const Nds& n1, const Nds& n2)
     {
         return n1.getTipo() == n2.getTipo() &&
