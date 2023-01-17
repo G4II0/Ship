@@ -21,8 +21,8 @@
         Nds();
         Nds(std::pair<int, int> pM_, int direzione_, int numero_);
 
-        void setTipo(char tipo);
-        void setDirezione(int direzione);
+        void setTipo(char tipo_);
+        void setDirezione(int direzione_);
         void setDimensione(int dimensione_);
         void setCorazza(int corazza_);
         void setPMedio(std::pair<int, int> pMedio_);
