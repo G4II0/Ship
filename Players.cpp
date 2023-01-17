@@ -62,10 +62,8 @@
         {
             if(count2_ == 1)
             {
-                if(count3_ == 2)
-                {/*messaggio non ci sono più navi*/}
-                else
-                r0 = 2;
+                if(count3_ != 2)
+                {r0 = 2;}
             }
             else
             if(count3_ == 2)
