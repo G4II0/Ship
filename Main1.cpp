@@ -78,7 +78,7 @@ int main()
         
             //Corazzata
         int i = 0;
-        while(true)
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -88,19 +88,19 @@ int main()
             {                           
                 if(players[ind].getType() == U)
                 {
-                    printTextEffect("Inserisci la direzione della Corazzata: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
-                    cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
+                    printTextEffect("Inserisci la direzione della Corazzata: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale ");
+                    cin>>d;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
                         c1.setNumero(i);
                         players[ind].getMare().insertCor(c1, p);
                     }
-                    else 
+                    else          
                     if(i==1)
                     {
                         Corazzata c2 = Corazzata(p, d, i);
@@ -149,13 +149,12 @@ int main()
                         players[ind].getMare().insertCor(c3, p);
                     }
                 } 
+                i++;
             }
             catch(const InvalidInputException &e)
             {
                 printTextEffect(e.what());
             }
-            i++;
-            break;
         }
         //Nds
         for(int i = 0; i<3; i++)
