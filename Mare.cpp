@@ -218,7 +218,6 @@ using namespace std;
                 temp2.second = (pos.second) - 1;
                 temp5.first = temp1;  // c prua
                 temp5.second = temp2; // c poppa
-                ship.setPos(temp5);
             }
             else
             {
@@ -232,8 +231,8 @@ using namespace std;
                 temp2.second = pos.second;
                 temp5.first = temp1;  // c prua
                 temp5.second = temp2; // c poppa
-                ship.setPos(temp5);
             }
+            ship.setPos(temp5);
             // posizionamento nel mare
             setMareA(pos, 'C');
             setMareA(temp1, 'C');
@@ -265,7 +264,6 @@ using namespace std;
                 temp2.second = (pos.second) - 1; // y poppa
                 temp3.first = temp1;             // c prua
                 temp3.second = temp2;            // c poppa
-                ship.setPos(temp3);
             }
             else
             {
@@ -275,9 +273,9 @@ using namespace std;
                 temp2.second = pos.second;
                 temp3.first = temp1;
                 temp3.second = temp2;
-                ship.setPos(temp3);
             }
             // posizionamento nella board
+            ship.setPos(pos);
             setMareA(pos, 'S');
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
@@ -302,7 +300,7 @@ using namespace std;
             temp1.second = (pos.second);     // y prua
             temp3.first = temp1;             // c prua
             temp3.second = temp1;            // c poppa
-            ship.setPos(temp3);
+            ship.setPos(pos);
             // posizionamento nella board
             setMareA(pos, 'E');
             // posizionamento nel mareC
