@@ -197,13 +197,13 @@ inizializeGrill:
             if(i==1)
             {
                 Nds s2 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s1, p);
+                players[ind].getMare().insertNds(s2, p);
             }
             else
             if(i==2)
             {
                 Nds s3 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s1, p);
+                players[ind].getMare().insertNds(s3, p);
             }
         }
     }
@@ -237,7 +237,7 @@ inizializeGrill:
             if(i==2)
             {
                 Sde e3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e1, p);
+                players[ind].getMare().insertSde(e3, p);
             }
         }
         else
@@ -256,13 +256,13 @@ inizializeGrill:
             if(i==1)
             {
                 Sde e2 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e1, p);
+                players[ind].getMare().insertSde(e2, p);
             }
             else
             if(i==2)
             {
                 Sde e3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e1, p);
+                players[ind].getMare().insertSde(e3, p);
             }
         }
     }
