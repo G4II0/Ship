@@ -37,8 +37,8 @@ int main()
     vector<Players> players;
     std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
     printTextEffect("Benvenuto nella nostra versione della battaglia navale");
+    printTextEffect("Che partita vuoi fare? Inserire:");
     while(true) {
-        printTextEffect("Che partita vuoi fare? Inserire:");
         printTextEffect("- pc: partita player vs. computer");
         printTextEffect("- cc: partita computer vs. computer");
         cin >> game;
