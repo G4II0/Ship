@@ -1,8 +1,10 @@
 #include "Corazzata.hpp"
 
+    //costruttore vuoto
     Corazzata::Corazzata()
     {}
     
+    //costruttore
     Corazzata::Corazzata(std::pair<int, int> pM, int direzione, int numero)
     {
         this -> tipo_ = 'C';
@@ -14,6 +16,7 @@
         this -> state_ = true;
     }
 
+    //setter
     void Corazzata::setTipo(char tipo)
     {this -> tipo_ = tipo;}
     void Corazzata::setDirezione(int direzione)
@@ -29,6 +32,7 @@
     void Corazzata::setState(int state)
     {this -> state_ = state;}
 
+    //getter
     char Corazzata::getTipo() const
     {return this -> tipo_;}
     int Corazzata::getDirezione() const
@@ -44,6 +48,7 @@
     int Corazzata::getState() const
     {return this -> state_;}
 
+    //metodo che restituisce tutte le posizioni in cui può essere posizionata la corazzata
     std::vector<std::pair<int, int> > Corazzata::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
@@ -80,16 +85,19 @@
         return Mov;
     }
 
+    //metodo che toglie un punto vita ogni volta che la corazzata viene colpita
     void Corazzata::Damage()
     {
        corazza_ = corazza_ - 1;
     }
 
+    //metodo che ripristina la corazza della nave corazzata
     void Corazzata::Heal()
     {
        corazza_ = 5;
     }
 
+    //overload dell'operatore ==
     bool operator==(const Corazzata& n1, const Corazzata& n2)
     {
         return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();

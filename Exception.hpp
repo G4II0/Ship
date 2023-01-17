@@ -25,23 +25,31 @@ class Exception {
 		}
 };
 
+//eccezione mossa invalida
 class InvalidMoveException {
     private:
+        //variabile della classe
         std::string message_;
     public:
+        //costruttore della classe
         InvalidMoveException(const std::string &msg) : message_(msg) {}
 
+        //funzione membro che da la descrizione dell'errore
         const std::string what(void) const {
             return message_;
         }
 };
 
+//eccezione di un input errato
 class InvalidInputException {
     private:
+        //variabile della classe
         std::string message_;
     public:
+        //costruttore
         InvalidInputException(const std::string &msg) : message_(msg) {}
 
+        //funzione membro che da la descrizione dell'errore
         const std::string what(void) const {
             return message_;
         }
