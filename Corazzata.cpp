@@ -49,7 +49,7 @@
         std::vector<std::pair<int, int> > Mov;
         if(getDirezione() == 0)
         {
-            int y = 3;
+            int y = 2;
             int x = 0;
 
             while (x <12)
@@ -64,7 +64,7 @@
         }
         else
         {
-            int x = 3;
+            int x = 2;
             int y = 0;
 
             while (y <12)
