@@ -75,15 +75,16 @@ int main()
             printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
             printTextEffect("Inserisci le navi nella griglia: ");
         }
-        try
-        {
+        
             //Corazzata
-            for(int i = 0; i<3; i++)
-            {
-                pair<int, int> p;
-                int x;
-                int y;
-                int d;
+        for(int i = 0; i<3; i++)
+        {
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            try
+            {                           
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
@@ -147,14 +148,22 @@ int main()
                         players[ind].getMare().insertCor(c3, p);
                     }
                 }
+                    
             }
-            //Nds
-            for(int i = 0; i<3; i++)
+            catch(const InvalidInputException &e)
             {
-                pair<int, int> p;
-                int x;
-                int y;
-                int d;
+                printTextEffect(e.what());
+            }
+        }
+        //Nds
+        for(int i = 0; i<3; i++)
+        {
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            try
+            {
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)) + " 1 = orizzontale, 0 = verticale ");
@@ -219,13 +228,20 @@ int main()
                     }
                 }
             }
-            //Sde
-            for(int i = 0; i<2; i++)
+            catch(const InvalidInputException &e)
             {
-                pair<int, int> p;
-                int x;
-                int y;
-                int d;
+                printTextEffect(e.what());
+            }
+        }
+        //Sde
+        for(int i = 0; i<2; i++)
+        {
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            try
+            {
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
@@ -282,10 +298,10 @@ int main()
                     }
                 }
             }
-        }
-        catch(const InvalidInputException &e)
-        {
-            printTextEffect(e.what());
+            catch(const InvalidInputException &e)
+            {
+                printTextEffect(e.what());
+            }
         }
         ind++;
     }
