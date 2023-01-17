@@ -77,194 +77,201 @@ inizializeGrill:
         printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
         printTextEffect("Inserisci le navi nella griglia: ");
     }
-    //Corazzata
-    for(int i = 0; i<3; i++)
+    try
     {
-        pair<int, int> p;
-        int x;
-        int y;
-        int d;
-        if(players[ind].getType() == U)
+        //Corazzata
+        for(int i = 0; i<3; i++)
         {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-            cin>>x>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
-            cin>>d;
-            if(i==0)
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            if(players[ind].getType() == U)
             {
-                Corazzata c1 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
-            }
-            else          
-            if(i==1)
-            {
-                Corazzata c2 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c2, p);
+                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
+                cin>>x>>y;
+                p.first = x;
+                p.second = y;
+                printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
+                cin>>d;
+                if(i==0)
+                {
+                    Corazzata c1 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c1, p);
+                }
+                else          
+                if(i==1)
+                {
+                    Corazzata c2 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Corazzata c3 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c3, p);
+                }
             }
             else
-            if(i==2)
             {
-                Corazzata c3 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c3, p);
+                d = rand()%2;
+                if(d==0)
+                {
+                    x = rand()%12;
+                    y = rand()%8+2;
+                }
+                else
+                {
+                    x = rand()%8+2;
+                    y = rand()%12;
+                }
+                if(i==0)
+                {
+                    Corazzata c1 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c1, p);
+                }
+                else          
+                if(i==1)
+                {
+                    Corazzata c2 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Corazzata c3 = Corazzata(p, d, i);
+                    players[ind].getMare().insertCor(c3, p);
+                }
             }
         }
-        else
+        //Nds
+        for(int i = 0; i<3; i++)
         {
-            d = rand()%2;
-            if(d==0)
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            if(players[ind].getType() == U)
             {
+                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
+                cin>>x>>y;
+                p.first = x;
+                p.second = y;
+                printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
+                cin>>d;
+                if(i==0)
+                {
+                    Nds s1 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s1, p);
+                }
+                else          
+                if(i==1)
+                {
+                    Nds s2 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Nds s3 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s3, p);
+                }
+            }
+            else
+            {
+                d = rand()%2;
+                if(d==0)
+                {
+                    x = rand()%12;
+                    y = rand()%10+1;
+                }
+                else
+                {
+                    x = rand()%10+1;
+                    y = rand()%12;
+                }
+                if(i==0)
+                {
+                    Nds s1 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s1, p);
+                }
+                else          
+                if(i==1)
+                {
+                    Nds s2 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Nds s3 = Nds(p, d, i);
+                    players[ind].getMare().insertNds(s3, p);
+                }
+            }
+        }
+        //Sde
+        for(int i = 0; i<2; i++)
+        {
+            pair<int, int> p;
+            int x;
+            int y;
+            int d;
+            if(players[ind].getType() == U)
+            {
+                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
+                cin>>x>>y;
+                p.first = x;
+                p.second = y;
+                printTextEffect("Inserisci la direzione della Sde" + to_string((i+1)));
+                cin>>d;
+                if(i==0)
+                {
+                    Sde e1 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e1, p);
+                }
+                else          
+                if(i==1)
+                {
+                    Sde e2 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Sde e3 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e3, p);
+                }
+            }
+            else
+            {
+                d = rand()%2;
                 x = rand()%12;
-                y = rand()%8+2;
-            }
-            else
-            {
-                x = rand()%8+2;
                 y = rand()%12;
-            }
-            if(i==0)
-            {
-                Corazzata c1 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c1, p);
-            }
-            else          
-            if(i==1)
-            {
-                Corazzata c2 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c2, p);
-            }
-            else
-            if(i==2)
-            {
-                Corazzata c3 = Corazzata(p, d, i);
-                players[ind].getMare().insertCor(c3, p);
+                p.first = x;
+                p.second = y;
+                if(i==0)
+                {
+                    Sde e1 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e1, p);
+                }
+                else
+                if(i==1)
+                {
+                    Sde e2 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e2, p);
+                }
+                else
+                if(i==2)
+                {
+                    Sde e3 = Sde(p, d, i);
+                    players[ind].getMare().insertSde(e3, p);
+                }
             }
         }
     }
-    //Nds
-    for(int i = 0; i<3; i++)
+    catch(const InvalidInputException &e)
     {
-        pair<int, int> p;
-        int x;
-        int y;
-        int d;
-        if(players[ind].getType() == U)
-        {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
-            cin>>x>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
-            cin>>d;
-            if(i==0)
-            {
-                Nds s1 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s1, p);
-            }
-            else          
-            if(i==1)
-            {
-                Nds s2 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s2, p);
-            }
-            else
-            if(i==2)
-            {
-                Nds s3 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s3, p);
-            }
-        }
-        else
-        {
-            d = rand()%2;
-            if(d==0)
-            {
-                x = rand()%12;
-                y = rand()%10+1;
-            }
-            else
-            {
-                x = rand()%10+1;
-                y = rand()%12;
-            }
-            if(i==0)
-            {
-                Nds s1 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s1, p);
-            }
-            else          
-            if(i==1)
-            {
-                Nds s2 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s2, p);
-            }
-            else
-            if(i==2)
-            {
-                Nds s3 = Nds(p, d, i);
-                players[ind].getMare().insertNds(s3, p);
-            }
-        }
-    }
-    //Sde
-    for(int i = 0; i<2; i++)
-    {
-        pair<int, int> p;
-        int x;
-        int y;
-        int d;
-        if(players[ind].getType() == U)
-        {
-            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-            cin>>x>>y;
-            p.first = x;
-            p.second = y;
-            printTextEffect("Inserisci la direzione della Sde" + to_string((i+1)));
-            cin>>d;
-            if(i==0)
-            {
-                Sde e1 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e1, p);
-            }
-            else          
-            if(i==1)
-            {
-                Sde e2 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e2, p);
-            }
-            else
-            if(i==2)
-            {
-                Sde e3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e3, p);
-            }
-        }
-        else
-        {
-            d = rand()%2;
-            x = rand()%12;
-            y = rand()%12;
-            p.first = x;
-            p.second = y;
-            if(i==0)
-            {
-                Sde e1 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e1, p);
-            }
-            else
-            if(i==1)
-            {
-                Sde e2 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e2, p);
-            }
-            else
-            if(i==2)
-            {
-                Sde e3 = Sde(p, d, i);
-                players[ind].getMare().insertSde(e3, p);
-            }
-        }
+        printTextEffect(e.what());
     }
     if(ind==0)
     {
