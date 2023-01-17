@@ -4,8 +4,8 @@ using namespace std;
   
     Mare::Mare()
     {
-        this -> condition = -1;
-        this -> drawMoves = 0;
+        this -> condition_ = -1;
+        this -> drawMoves_ = 0;
         initializeMare(mar_);
     }
 
@@ -62,13 +62,13 @@ using namespace std;
     }
 
     vector<Corazzata> Mare::getMarCor()
-    {return this -> marCor;}
+    {return this -> marCor_;}
 
     vector<Nds> Mare::getMarNds()
-    {return this -> marNds;}
+    {return this -> marNds_;}
     
     vector<Sde> Mare::getMarSde()
-    {return this -> marSde;}
+    {return this -> marSde_;}
 
     Corazzata Mare::whichCor(vector<Corazzata> marCor, pair<int, int> pos)
     {
@@ -240,7 +240,7 @@ using namespace std;
             setMareA(temp3, 'C');
             setMareA(temp4, 'C');
             // posizionamento nel mareC
-            marCor[ship.getNumero()] = ship;
+            marCor_[ship.getNumero()] = ship;
         }
     }
 
@@ -280,7 +280,7 @@ using namespace std;
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
             // posizionamento nel mareC
-            marNds[ship.getNumero()] = ship;
+            marNds_[ship.getNumero()] = ship;
         }
     }
 
@@ -304,7 +304,7 @@ using namespace std;
             // posizionamento nella board
             setMareA(pos, 'E');
             // posizionamento nel mareC
-            marSde[ship.getNumero()] = ship;
+            marSde_[ship.getNumero()] = ship;
         }
     }
 
@@ -706,7 +706,7 @@ using namespace std;
     void Mare::CorAff(Corazzata s)
     {
         s.setState((-1));
-        marCor.erase(remove(marCor.begin(), marCor.end(), s));
+        marCor_.erase(remove(marCor_.begin(), marCor_.end(), s));
         int d = s.getDirezione();
         pair<int, int> p = s.getPMedio();
         int x = p.first;
@@ -730,7 +730,7 @@ using namespace std;
     void Mare::NdsAff(Nds s)
     {
         s.setState((-1));
-        marNds.erase(remove(marNds.begin(), marNds.end(), s));
+        marNds_.erase(remove(marNds_.begin(), marNds_.end(), s));
         int d = s.getDirezione();
         pair<int, int> p = s.getPMedio();
         int x = p.first;
@@ -754,7 +754,7 @@ using namespace std;
         {
             pair<int, int> pM = s.getPMedio();
         }
-        marSde.erase(remove(marSde.begin(), marSde.end(), s));
+        marSde_.erase(remove(marSde_.begin(), marSde_.end(), s));
         int d = s.getDirezione();
         pair<int, int> p = s.getPMedio();
         int x = p.first;
@@ -770,7 +770,7 @@ using namespace std;
     void Mare::updateLogMove(pair<int, int> start, pair<int, int> end)
     {
         ofstream write;
-        write.open(logFile, ofstreaapp);
+        write.open(logFile_, ofstreaapp);
         string out;
         out += to_string(start.first) + to_string(start.second) + " ";
         out += to_string(end.first) + to_string(end.second) + "\n";
@@ -781,7 +781,7 @@ using namespace std;
     void Mare::updateLogVictory(int ending)
     {
         ofstream write;
-        write.open(logFile, ofstreaapp);
+        write.open(logFile_, ofstreaapp);
         write << "END:" << ending;
         write.close();
     }
@@ -789,7 +789,7 @@ using namespace std;
     void Mare::updateLogGameType(string type)
     {
         ofstream write;
-        write.open(logFile, ofstreaapp);
+        write.open(logFile_, ofstreaapp);
         write << type << "\n";
         write.close();
     }
@@ -869,7 +869,7 @@ using namespace std;
     }
 
     int Mare::getMCondition()
-    { return condition;}
+    { return condition_;}
 
     vector<pair<int, int> > Mare::posAvailable(Corazzata shi)
     {

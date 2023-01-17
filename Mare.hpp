@@ -18,7 +18,7 @@ using namespace std;
 
     class Mare
     {
-        private:
+    private:
 
         /*matrice del mare alleato*/
         char mar_ [12][12];
@@ -27,19 +27,19 @@ using namespace std;
         /*stampa matrice del mare nemico*/
         char marES_ [12][12];
         /*matrice del mare (centri-Corazzate)*/
-        vector<Corazzata> marCor;
+        vector<Corazzata> marCor_;
         /*matrice del mare (centri-Supporto)*/
-        vector<Nds> marNds;
+        vector<Nds> marNds_;
         /*matrice del mare (centri-Esplorazione)*/
-        vector<Sde> marSde;
+        vector<Sde> marSde_;
         /*salva la condizione di giocatore attuale*/
-        int condition;
+        int condition_;
         /*nome player*/
-        string player1;
+        string player1_;
         /*nome del file su cui effettuare il log*/
-        string logFile;
+        string logFile_;
         /*numero di mosse effettuate*/
-        int drawMoves;
+        int drawMoves_;
 
     public:
 

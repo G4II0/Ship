@@ -1,8 +1,5 @@
-#include "Mare.hpp"
+#include "Ship.hpp"
 #include "Players.hpp"
-#include "Corazzata.hpp"
-#include "Nds.hpp"
-#include "Sde.hpp"
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -71,112 +68,106 @@ insertGame://-------------------------------------------------------------------
     int ind = 0;
     Mare boardP1;
     Mare boardP2;
+    players.push_back(Players(boardP1, names[0], types[0], boardP2));
+    players.push_back(Players(boardP2, names[1], types[1], boardP1));
     
 inizializeGrill:
-    if(game == "pc")
+    if(game == "pc" && ind == 0)
     {
         printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
-
         printTextEffect("Inserisci le navi nella griglia: ");
-        try
+        for(int i = 0; i<3; i++)
         {
-            for(int i = 0; i<3; i++)
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata C" + to_string((i+1)));
+            pair<int, int> p;
+            int x;
+            int y;
+            cin>>x>>y;
+            p.first = x;
+            p.second = y;
+            printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
+            int d;
+            cin>>d;
+            if(i==0)
             {
-                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della corazzata C" + to_string((i+1)));
-                pair<int, int> p;
-                int x;
-                int y;
-                cin>>x>>y;
-                p.first = x;
-                p.second = y;
-                printTextEffect("Inserisci la direzione della Corazzata" + to_string((i+1)));
-                int d;
-                cin>>d;
-                if(i==0)
-                {
-                    Corazzata c1 = Corazzata(p, d, i);
-                    boardP1.insertCor(c1, p);
-                }
-                else          
-                if(i==1)
-                {
-                    Corazzata c2 = Corazzata(p, d, i);
-                    boardP1.insertCor(c2, p);
-                }
-                else
-                if(i==2)
-                {
-                    Corazzata c3 = Corazzata(p, d, i);
-                    boardP1.insertCor(c3, p);
-                }
+                Corazzata c1 = Corazzata(p, d, i);
+                boardP1.insertCor(c1, p);
             }
-            for(int i = 0; i<3; i++)
+            else          
+            if(i==1)
             {
-                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
-                pair<int, int> p;
-                int x;
-                int y;
-                cin>>x;
-                cin>>y;
-                p.first = x;
-                p.second = y;
-                printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
-                int d;
-                cin>>d;
-                if(i==0)
-                {
-                    Nds n1 = Nds(p, d, i);
-                    boardP1.insertNds(n1, p);
-                }
-                else
-                if(i==1)
-                {
-                    Nds n2 = Nds(p, d, i);
-                    boardP1.insertNds(n2, p);
-                }
-                else
-                if(i==2)
-                {
-                    Nds n3 = Nds(p, d, i);
-                    boardP1.insertNds(n3, p);
-                }
+            Corazzata c2 = Corazzata(p, d, i);
+            boardP1.insertCor(c2, p);
             }
-            for(int i = 0; i<2; i++)
+            else
+            if(i==2)
             {
-                printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                pair<int, int> p;
-                int x;
-                int y;
-                cin>>x;
-                cin>>y;
-                p.first = x;
-                p.second = y;
-                printTextEffect("Inserisci la direzione della Sde" + to_string((i+1)));
-                int d;
-                cin>>d;
-                if(i==0)
-                {
-                    Sde n1 = Sde(p, d, i);
-                    boardP1.insertSde(n1, p);
-                }
-                else
-                if(i==1)
-                {
-                    Sde n2 = Sde(p, d, i);
-                    boardP1.insertSde(n2, p);
-                }
+                Corazzata c3 = Corazzata(p, d, i);
+                boardP1.insertCor(c3, p);
             }
         }
-        catch(const InvalidInputException &e)
+        for(int i = 0; i<3; i++)
         {
-            std::cerr << e.what() << '\n';
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
+            pair<int, int> p;
+            int x;
+            int y;
+            cin>>x;
+            cin>>y;
+            p.first = x;
+            p.second = y;
+            printTextEffect("Inserisci la direzione della Nds" + to_string((i+1)));
+            int d;
+            cin>>d;
+            if(i==0)
+            {
+                Nds n1 = Nds(p, d, i);
+                boardP1.insertNds(n1, p);
+            }
+            else
+            if(i==1)
+            {
+                Nds n2 = Nds(p, d, i);
+                boardP1.insertNds(n2, p);
+            }
+            else
+            if(i==2)
+            {
+                Nds n3 = Nds(p, d, i);
+                boardP1.insertNds(n3, p);
+            }
+        }
+        for(int i = 0; i<2; i++)
+        {
+            printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
+            pair<int, int> p;
+            int x;
+            int y;
+            cin>>x;
+            cin>>y;
+            p.first = x;
+            p.second = y;
+            printTextEffect("Inserisci la direzione della Sde" + to_string((i+1)));
+            int d;
+            cin>>d;
+            if(i==0)
+            {
+                Sde n1 = Sde(p, d, i);
+                boardP1.insertSde(n1, p);
+            }
+            else
+            if(i==1)
+            {
+                Sde n2 = Sde(p, d, i);
+                boardP1.insertSde(n2, p);
+            }
         }
         if(ind==0)
         {
             ind = 1;
             goto inizializeGrill;//-------------------------------------------------------------------------------------
         }
-        }
+    }
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
