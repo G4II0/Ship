@@ -8,25 +8,25 @@
     {
         private:
 
-        char tipo;
-        int dimensione;
-        std::vector<bool> segmenti;
-        int corazza;
-        std::pair<int, int> pMedio;
-        int numero;
-        bool state;
+        char tipo_;
+        int dimensione_;
+        std::vector<bool> segmenti_;
+        int corazza_;
+        std::pair<int, int> pMedio_;
+        int numero_;
+        bool state_;
 
         public:
 
         Sde();
-        Sde(std::pair<int, int> pM_, int direzione_, int numero_);
+        Sde(std::pair<int, int> pM, int direzione, int numero);
 
         void setTipo(char tipo);
-        void setDimensione(int dimensione_);
-        void setCorazza(int corazza_);
-        void setPMedio(std::pair<int, int> pMedio_);
-        void setNumero(int numero_);
-        void setState(int state_);
+        void setDimensione(int dimensione);
+        void setCorazza(int corazza);
+        void setPMedio(std::pair<int, int> pMedio);
+        void setNumero(int numero);
+        void setState(int state);
 
         char getTipo() const;
         int getDimensione() const;

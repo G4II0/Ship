@@ -3,43 +3,43 @@
     Sde::Sde()
     {}
 
-    Sde::Sde(std::pair<int, int> pM_, int direzione_, int numero_)
+    Sde::Sde(std::pair<int, int> pM, int direzione, int numero)
     {
-        this -> tipo = 'E';
-        this -> pMedio = pM_;
-        this -> dimensione = 3;
-        this -> corazza = 3;
-        this -> numero = numero_;
-        this -> state = true;
+        this -> tipo_ = 'E';
+        this -> pMedio_ = pM;
+        this -> dimensione_ = 3;
+        this -> corazza_ = 3;
+        this -> numero_ = numero;
+        this -> state_ = true;
     }
 
-    void Sde::setTipo(char tipo_)
-    {this -> tipo = tipo_;}
-    void Sde::setDimensione(int dimensione_)
-    {this -> dimensione = dimensione_;}
-    void Sde::setCorazza(int corazza_)
-    {this -> corazza = corazza_;}
-    void Sde::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
-    void Sde::setNumero(int numero_)
-    {this -> numero = numero_;}
-    void Sde::setState(int state_)
-    {this -> state = state_;}
+    void Sde::setTipo(char tipo)
+    {this -> tipo_ = tipo;}
+    void Sde::setDimensione(int dimensione)
+    {this -> dimensione_ = dimensione;}
+    void Sde::setCorazza(int corazza)
+    {this -> corazza_ = corazza;}
+    void Sde::setPMedio(std::pair<int, int> pMedio)
+    {this -> pMedio_ = pMedio;}
+    void Sde::setNumero(int numero)
+    {this -> numero_ = numero;}
+    void Sde::setState(int state)
+    {this -> state_ = state;}
 
     char Sde::getTipo() const
-    {return this -> tipo;}
+    {return this -> tipo_;}
     int Sde::getDimensione() const
-    {return this -> dimensione;}
+    {return this -> dimensione_;}
     int Sde::getCorazza() const
-    {return this -> corazza;}
+    {return this -> corazza_;}
     std::pair<int, int> Sde::getPMedio() const
-    {return this -> pMedio;}
+    {return this -> pMedio_;}
     int Sde::getNumero() const
-    {return this -> numero;}
+    {return this -> numero_;}
     int Sde::getState() const
-    {return this -> state;}
+    {return this -> state_;}
 
-    //possibili posizioni del pMedio della Sde
+    //possibili posizioni del pMedio_ della Sde
     std::vector<std::pair<int, int> > Sde::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
@@ -59,7 +59,7 @@
 
     void Sde::Damage()
     {
-       corazza = corazza - 1;
+       corazza_ = corazza_ - 1;
     }
 
 bool operator==(const Sde& n1, const Sde& n2)
