@@ -1,8 +1,10 @@
 #include "Sde.hpp"
 
+    //costruttore vuoto
     Sde::Sde()
     {}
 
+    //costruttore
     Sde::Sde(std::pair<int, int> pM, int numero)
     {
         this -> tipo_ = 'E';
@@ -13,6 +15,7 @@
         this -> state_ = true;
     }
 
+    //setter
     void Sde::setTipo(char tipo)
     {this -> tipo_ = tipo;}
     void Sde::setDimensione(int dimensione)
@@ -26,6 +29,7 @@
     void Sde::setState(int state)
     {this -> state_ = state;}
 
+    //getter
     char Sde::getTipo() const
     {return this -> tipo_;}
     int Sde::getDimensione() const
@@ -39,7 +43,7 @@
     int Sde::getState() const
     {return this -> state_;}
 
-    //possibili posizioni del pMedio_ della Sde
+    //possibili posizioni del del sottomarino da esplorazione
     std::vector<std::pair<int, int> > Sde::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
@@ -57,11 +61,13 @@
         return Mov;
     }
 
+    //metodo che toglie un punto vita ogni volta che il sottomatino da esplorazione viene colpito
     void Sde::Damage()
     {
        corazza_ = corazza_ - 1;
     }
 
+//overload dell'operatore ==
 bool operator==(const Sde& n1, const Sde& n2)
     {
         return n1.getTipo() == n2.getTipo() && n1.getNumero() == n2.getNumero() && n1.getPMedio() == n2.getPMedio();

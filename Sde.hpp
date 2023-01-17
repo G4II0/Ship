@@ -7,7 +7,7 @@
     class Sde : public Ship
     {
         private:
-
+        //dichiarazioni delle variabili
         char tipo_;
         int dimensione_;
         std::vector<bool> segmenti_;
@@ -18,9 +18,11 @@
 
         public:
 
+        //costruttori
         Sde();
         Sde(std::pair<int, int> pM, int numero);
 
+        //setter
         void setTipo(char tipo);
         void setDimensione(int dimensione);
         void setCorazza(int corazza);
@@ -28,6 +30,7 @@
         void setNumero(int numero);
         void setState(int state);
 
+        //getter
         char getTipo() const;
         int getDimensione() const;
         int getCorazza() const;
@@ -38,11 +41,14 @@
         //0 verticale, 1 se orizzontale
         int Direction(std::pair<std::pair<int, int>, std::pair<int, int> > pos);
 
+        //possibili posizioni del del sottomarino da esplorazione
         std::vector<std::pair<int, int> > Moves();
-
+    
+        //metodo che toglie un punto vita ogni volta che la nave da supporto viene colpita
         void Damage();
     };
 
+    //overload dell'operatore ==
     bool operator==(const Sde& c1, const Sde& c2);
 
 #endif
