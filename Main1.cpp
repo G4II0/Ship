@@ -439,15 +439,3 @@ int main()
     }
     printTextEffect("Grazie per aver giocato!");
 }
-
-/*string game;
-while (true) {
-    printTextEffect("Che partita vuoi fare? Inserire:");
-    printTextEffect("- pc: partita player vs. computer");
-    printTextEffect("- cc: partita computer vs. computer");
-    cin >> game;
-    if (game == "pc" || game == "cc") {
-        break;
-    }
-    printTextEffect("Input non valido, riprovare; si può inserire solo:");
-}*/
