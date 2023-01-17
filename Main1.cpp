@@ -38,7 +38,8 @@ int main()
     std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
     printTextEffect("Benvenuto nella nostra versione della battaglia navale");
     printTextEffect("Che partita vuoi fare? Inserire:");
-    while(true) {
+    while(true)
+    {
         printTextEffect("- pc: partita player vs. computer");
         printTextEffect("- cc: partita computer vs. computer");
         cin >> game;
@@ -410,25 +411,26 @@ int main()
             int b = 0;
             while(b < 1)
             {
-            try
-            {
-                if(index == 0)
+                try
                 {
-                    p.MovesB(boardP1, players[index].getMareN());
+                    if(index == 0)
+                    {
+                        p.MovesB(boardP1, players[index].getMareN());
+                    }
+                    else
+                    {
+                        p.MovesB(boardP2, players[index].getMareN());
+                    }
+                    b++;
                 }
-                else
+                catch (InvalidMoveException &e)
                 {
-                    p.MovesB(boardP2, players[index].getMareN());
+                    printTextEffect(e.what());
                 }
-                b++;
-            }
-            catch (InvalidMoveException &e)
-            {
-                printTextEffect(e.what());
-            }
-            catch (InvalidInputException &e)
-            {
-                printTextEffect(e.what());
+                catch (InvalidInputException &e)
+                {
+                    printTextEffect(e.what());
+                }
             }
         }
         i++;
