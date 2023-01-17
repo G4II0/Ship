@@ -148,14 +148,14 @@ int main()
                         c3.setNumero(i);
                         players[ind].getMare().insertCor(c3, p);
                     }
-                }
-                break; 
+                } 
             }
             catch(const InvalidInputException &e)
             {
                 printTextEffect(e.what());
             }
             i++;
+            break;
         }
         //Nds
         for(int i = 0; i<3; i++)
