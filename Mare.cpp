@@ -111,28 +111,32 @@ using namespace std;
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
-        vector<pair<int, int>::iterator it;
         vector<pair<int, int> > v = posAvailable(ship);
-        it = find(v.begin(), v.end(), pos);
-        if (it != v.end())
-        {return true;}
-        else
+        for(int i = 0; i<v.size(); i++)
+        {
+            if(v[i].first == pos.first && v[i].second == pos.second)
+            {return true;} 
+        }
         return false;
     }
     bool Mare::legitMoveInput(Nds ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
-        if (find(v.begin(), v.end(), pos) != v.end())
-        return true;
-        else
+        for(int i = 0; i<v.size(); i++)
+        {
+            if(v[i].first == pos.first && v[i].second == pos.second)
+            {return true;} 
+        }
         return false;
     }
         bool Mare::legitMoveInput(Sde ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
-        if (find(v.begin(), v.end(), pos) != v.end())
-        return true;
-        else
+        for(int i = 0; i<v.size(); i++)
+        {
+            if(v[i].first == pos.first && v[i].second == pos.second)
+            {return true;} 
+        }
         return false;
     }
 
