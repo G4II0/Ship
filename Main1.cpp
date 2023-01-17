@@ -90,7 +90,7 @@ int main()
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)));
+                    printTextEffect("Inserisci la direzione della Corazzata " + to_string((i+1)) + " 1 = orizzontale, 0 = verticale ");
                     cin>>d;
                     if(i==0)
                     {
@@ -157,7 +157,7 @@ int main()
                 int d;
                 if(players[ind].getType() == U)
                 {
-                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
+                    printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)) + " 1 = orizzontale, 0 = verticale ");
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
@@ -232,53 +232,51 @@ int main()
                     cin>>x>>y;
                     p.first = x;
                     p.second = y;
-                    printTextEffect("Inserisci la direzione della Sde" + to_string((i+1)));
-                    cin>>d;
+                    //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
-                        Sde e1 = Sde(p, d, i);
+                        Sde e1 = Sde(p, i);
                         e1.setNumero(i);
                         players[ind].getMare().insertSde(e1, p);
                     }
                     else          
                     if(i==1)
                     {
-                        Sde e2 = Sde(p, d, i);
+                        Sde e2 = Sde(p, i);
                         e2.setNumero(i);
                         players[ind].getMare().insertSde(e2, p);
                     }
                     else
                     if(i==2)
                     {
-                        Sde e3 = Sde(p, d, i);
+                        Sde e3 = Sde(p, i);
                         e3.setNumero(i);
                         players[ind].getMare().insertSde(e3, p);
                     }
                 }
                 else
                 {
-                    d = rand()%2;
                     x = rand()%12;
                     y = rand()%12;
                     p.first = x;
                     p.second = y;
                     if(i==0)
                     {
-                        Sde e1 = Sde(p, d, i);
+                        Sde e1 = Sde(p, i);
                         e1.setNumero(i);
                         players[ind].getMare().insertSde(e1, p);
                     }
                     else
                     if(i==1)
                     {
-                        Sde e2 = Sde(p, d, i);
+                        Sde e2 = Sde(p, i);
                         e2.setNumero(i);
                         players[ind].getMare().insertSde(e2, p);
                     }
                     else
                     if(i==2)
                     {
-                        Sde e3 = Sde(p, d, i);
+                        Sde e3 = Sde(p, i);
                         e3.setNumero(i);
                         players[ind].getMare().insertSde(e3, p);
                     }

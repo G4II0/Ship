@@ -19,7 +19,7 @@
         public:
 
         Sde();
-        Sde(std::pair<int, int> pM, int direzione, int numero);
+        Sde(std::pair<int, int> pM, int numero);
 
         void setTipo(char tipo);
         void setDimensione(int dimensione);

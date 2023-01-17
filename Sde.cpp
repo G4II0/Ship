@@ -3,7 +3,7 @@
     Sde::Sde()
     {}
 
-    Sde::Sde(std::pair<int, int> pM, int direzione, int numero)
+    Sde::Sde(std::pair<int, int> pM, int numero)
     {
         this -> tipo_ = 'E';
         this -> pMedio_ = pM;
