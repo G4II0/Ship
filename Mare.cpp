@@ -900,7 +900,6 @@ using namespace std;
         {
             for(int x = 0; x < 12; x++)
             {
-                y = 2;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < 10; y++)
                 {
