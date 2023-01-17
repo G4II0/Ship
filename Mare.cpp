@@ -889,17 +889,32 @@ using namespace std;
                 while (y < 10)
                 {
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
+                    {
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                v1.remove(i);
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                temp = 1;
+                            }
+                        }
+                        if(tmp == 0)
                         {
                             p.first = x;
                             p.second = y;
-                            vector<int>::iterator it;
-                            it = remove(v1.begin(), v1.end(), p); 
+                            v1.push_back(p);
                         }
-                    else
-                    {
-                        p.first = x;
-                        p.second = y;
-                        v1.push_back(p);
                     }
                     y++;
                 }
@@ -915,16 +930,31 @@ using namespace std;
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
-                            p.first = x;
-                            p.second = y;
-                            vector<int>::iterator it;
-                            it = remove(v1.begin(), v1.end(), p); 
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                v1.remove(i);
+                                break;
+                            }
+                        }
                     }
                     else
                     {
-                        p.first = x;
-                        p.second = y;
-                        v1.push_back(p);
+                        int temp = 0;
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                temp = 1;
+                            }
+                        }
+                        if(tmp == 0)
+                        {
+                            p.first = x;
+                            p.second = y;
+                            v1.push_back(p);
+                        }
                     }
                     y++;
                 }
@@ -948,17 +978,32 @@ using namespace std;
                 while (y < 11)
                 {
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ')
+                    {
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                v1.remove(i);
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                temp = 1;
+                            }
+                        }
+                        if(tmp == 0)
                         {
                             p.first = x;
                             p.second = y;
-                            vector<int>::iterator it;
-                            it = remove(v1.begin(), v1.end(), p); 
+                            v1.push_back(p);
                         }
-                    else
-                    {
-                        p.first = x;
-                        p.second = y;
-                        v1.push_back(p);
                     }
                     y++;
                 }
@@ -974,16 +1019,31 @@ using namespace std;
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ')
                     {
-                            p.first = x;
-                            p.second = y;
-                            vector<int>::iterator it;
-                            it = remove(v1.begin(), v1.end(), p); 
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                v1.remove(i);
+                                break;
+                            }
+                        }
                     }
                     else
                     {
-                        p.first = x;
-                        p.second = y;
-                        v1.push_back(p);
+                        int temp = 0;
+                        for(int i = 0; i<v1.size(); i++)
+                        {
+                            if(v1[i].first == x && v1[i].first == y)
+                            {
+                                temp = 1;
+                            }
+                        }
+                        if(tmp == 0)
+                        {
+                            p.first = x;
+                            p.second = y;
+                            v1.push_back(p);
+                        }
                     }
                     y++;
                 }
@@ -1005,15 +1065,32 @@ using namespace std;
             {
                 if(mar_[x][y] != ' ')
                 {
-                    p.first = x;
-                    p.second = y;
-                    vector<int>::iterator it;
-                    it = remove(v1.begin(), v1.end(), p); 
+                    for(int i = 0; i<v1.size(); i++)
+                    {
+                        if(v1[i].first == x && v1[i].first == y)
+                        {
+                            v1.remove(i);
+                            break;
+                        }
+                    }
                 }
                 else
-                p.first = x;
-                p.second = y;
-                v1.push_back(p);
+                {
+                    int temp = 0;
+                    for(int i = 0; i<v1.size(); i++)
+                    {
+                        if(v1[i].first == x && v1[i].first == y)
+                        {
+                            temp = 1;
+                        }
+                    }
+                    if(tmp == 0)
+                    {
+                        p.first = x;
+                        p.second = y;
+                        v1.push_back(p);
+                    }
+                }
                 y++;
             }
             x++;
