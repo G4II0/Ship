@@ -100,7 +100,7 @@ int main()
                         c1.setNumero(i);
                         players[ind].getMare().insertCor(c1, p);
                     }
-                    else          
+                    else
                     if(i==1)
                     {
                         Corazzata c2 = Corazzata(p, d, i);
