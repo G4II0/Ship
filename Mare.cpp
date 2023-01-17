@@ -115,7 +115,7 @@ using namespace std;
         for(int i = 0; i<v.size(); i++)
         {
             if(v[i].first == pos.first && v[i].second == pos.second)
-            {return true;} 
+            {return true;}
         }
         return false;
     }
