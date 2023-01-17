@@ -168,14 +168,14 @@ inizializeGrill:
                 if(i==0)
                 {
                     Nds s1 = Nds(p, d, i);
-                    s1..setNumero(i);
+                    s1.setNumero(i);
                     players[ind].getMare().insertNds(s1, p);
                 }
                 else          
                 if(i==1)
                 {
                     Nds s2 = Nds(p, d, i);
-                    s2..setNumero(i);
+                    s2.setNumero(i);
                     players[ind].getMare().insertNds(s2, p);
                 }
                 else
