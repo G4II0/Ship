@@ -111,9 +111,11 @@ using namespace std;
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
+        vector<pair<int, int>::iterator it;
         vector<pair<int, int> > v = posAvailable(ship);
-        if (find(v.begin(), v.end(), pos) != v.end())
-        return true;
+        it = find(v.begin(), v.end(), pos);
+        if (it != v.end())
+        {return true;}
         else
         return false;
     }
