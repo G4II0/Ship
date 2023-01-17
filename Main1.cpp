@@ -75,10 +75,10 @@ int main()
             printTextEffect("E' il momento che "+ names[0] + " posizioni le sue navi" + "\n");
             printTextEffect("Inserisci le navi nella griglia: ");
         }
-        
-            //Corazzata
+        //richiede al player o al bot di inserire la corazzata, continua finchè tutte le corazzate sono inserite
+        //Corazzata
         int i = 0;
-        while(i < 3)
+        while(i < 3) 
         {
             pair<int, int> p;
             int x;
@@ -156,8 +156,10 @@ int main()
                 printTextEffect(e.what());
             }
         }
+        //richiede al player o al bot di inserire le Nds, continua finchè tutte le Nds sono inserite
         //Nds
-        for(int i = 0; i<3; i++)
+        i = 0;
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -229,14 +231,17 @@ int main()
                         players[ind].getMare().insertNds(s3, p);
                     }
                 }
+                i++;
             }
             catch(const InvalidInputException &e)
             {
                 printTextEffect(e.what());
             }
         }
+        //richiede al player o al bot di inserire i Sde, continua finchè tutti i Sde sono inseriti
         //Sde
-        for(int i = 0; i<2; i++)
+        i = 0;
+        while(i < 3)
         {
             pair<int, int> p;
             int x;
@@ -299,6 +304,7 @@ int main()
                         players[ind].getMare().insertSde(e3, p);
                     }
                 }
+                i++;
             }
             catch(const InvalidInputException &e)
             {
