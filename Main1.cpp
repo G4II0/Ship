@@ -72,7 +72,7 @@ insertGame://-------------------------------------------------------------------
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
     
 inizializeGrill:
-    if(game == "pc" && ind == 0)
+    if(game == "pc" && ind < 2)
     {
         printTextEffect("E' il momento che "+ names[0] + "posizioni le sue navi" + "\n");
         printTextEffect("Inserisci le navi nella griglia: ");
