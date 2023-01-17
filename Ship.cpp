@@ -3,41 +3,37 @@
 
     Ship::Ship()
     {}
-    Ship::Ship(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero)
+    Ship::Ship(std::pair<int, int> pM, int direzione, int numero)
     {
-        this -> tipo = ' ';
-        this -> pos = pos_;
-        this -> dimensione = 0;
-        this -> direzione = -1;
-        this -> corazza = 0;
-        this -> numero = -1;
-        this -> state = false;
+        this -> tipo_ = ' ';
+        this -> dimensione_ = 0;
+        this -> direzione_ = -1;
+        this -> pMedio_ = pM;
+        this -> corazza_ = 0;
+        this -> numero_ = -1;
+        this -> state_ = false;
     }
 
-    void Ship::setTipo(char tipo_)
-    {this -> tipo = tipo_;}
-    void Ship::setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_)
-    {this -> pos = pos_;}
-    void Ship::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
-    void Ship::setDimensione(int dimensione_)
-    {this -> dimensione = dimensione_;}
-    void Ship::setDirezione(int direzione_)
-    {this -> direzione = direzione_;}
-    void Ship::setCorazza(int corazza_)
-    {this -> corazza = corazza_;}
-    void Ship::setNumero(int numero_)
-    {this-> numero = numero_;}
+    void Ship::setTipo(char tipo)
+    {this -> tipo_ = tipo;}
+    void Ship::setPMedio(std::pair<int, int> pMedio)
+    {this -> pMedio_ = pMedio;}
+    void Ship::setDimensione(int dimensione)
+    {this -> dimensione_ = dimensione;}
+    void Ship::setDirezione(int direzione)
+    {this -> direzione_ = direzione;}
+    void Ship::setCorazza(int corazza)
+    {this -> corazza_ = corazza;}
+    void Ship::setNumero(int numero)
+    {this-> numero_ = numero;}
 
     char Ship::getTipo() const
-    {return this -> tipo;}
-    std::pair<std::pair<int, int>, std::pair<int, int> > Ship::getPos() const
-    {return this -> pos;}
+    {return this -> tipo_;}
     std::pair<int, int> Ship::getPMedio() const
-    {return this -> pMedio;}
+    {return this -> pMedio_;}
     int Ship::getDirezione() const
-    {return this -> direzione;}
+    {return this -> direzione_;}
     int Ship::getDimensione() const
-    {return this -> dimensione;}
+    {return this -> dimensione_;}
     int Ship::getCorazza() const
-    {return this -> corazza;}
+    {return this -> corazza_;}

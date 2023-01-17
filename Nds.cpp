@@ -3,46 +3,46 @@
     Nds::Nds()
     {}
     
-    Nds::Nds(std::pair<int, int> pM_, int direzione_, int numero_)
+    Nds::Nds(std::pair<int, int> pM, int direzione, int numero)
     {
-        this -> tipo = 'S';
-        this -> pMedio = pM_;
-        this -> direzione = direzione_;
-        this -> dimensione = 3;
-        this -> corazza = 3;
-        this -> numero = numero_;
-        this -> state = true;
+        this -> tipo_ = 'S';
+        this -> pMedio_ = pM;
+        this -> direzione_ = direzione;
+        this -> dimensione_ = 3;
+        this -> corazza_ = 3;
+        this -> numero_ = numero;
+        this -> state_ = true;
     }
  
-    void Nds::setTipo(char tipo_)
-    {this -> tipo = tipo_;}
-    void Nds::setDirezione(int direzione_)
-    {this->direzione = direzione_;}
-    void Nds::setDimensione(int dimensione_)
-    {this -> dimensione = dimensione_;}
-    void Nds::setCorazza(int corazza_)
-    {this -> corazza = corazza_;}
-    void Nds::setPMedio(std::pair<int, int> pMedio_)
-    {this -> pMedio = pMedio_;}
-    void Nds::setNumero(int numero_)
-    {this -> numero = numero_;}
-    void Nds::setState(int state_)
-    {this -> state = state_;}
+    void Nds::setTipo(char tipo)
+    {this -> tipo_ = tipo;}
+    void Nds::setDirezione(int direzione)
+    {this->direzione_ = direzione;}
+    void Nds::setDimensione(int dimensione)
+    {this -> dimensione_ = dimensione;}
+    void Nds::setCorazza(int corazza)
+    {this -> corazza_ = corazza;}
+    void Nds::setPMedio(std::pair<int, int> pMedio)
+    {this -> pMedio_ = pMedio;}
+    void Nds::setNumero(int numero)
+    {this -> numero_ = numero;}
+    void Nds::setState(int state)
+    {this -> state_ = state;}
 
     char Nds::getTipo() const
-    {return this -> tipo;}
+    {return this -> tipo_;}
     int Nds::getDirezione() const
-    {return this -> direzione;}
+    {return this -> direzione_;}
     int Nds::getDimensione() const
-    {return this -> dimensione;}
+    {return this -> dimensione_;}
     int Nds::getCorazza() const
-    {return this -> corazza;}
+    {return this -> corazza_;}
     std::pair<int, int> Nds::getPMedio() const
-    {return this -> pMedio;}
+    {return this -> pMedio_;}
     int Nds::getNumero() const
-    {return this -> numero;}
+    {return this -> numero_;}
     int Nds::getState() const
-    {return this -> state;}
+    {return this -> state_;}
 
     //possibili posizioni del pMedio della Nds
     std::vector<std::pair<int, int> > Nds::Moves()
@@ -83,12 +83,12 @@
 
     void Nds::Damage()
     {
-       corazza = corazza - 1;
+       corazza_ = corazza_ - 1;
     }
 
     void Nds::Heal()
     {
-       corazza = 3;
+       corazza_ = 3;
     }
 
     bool operator==(const Nds& n1, const Nds& n2)

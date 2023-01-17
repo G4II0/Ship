@@ -8,26 +8,26 @@
     {
         private:
 
-        char tipo;
-        int direzione;
-        int dimensione;
-        int corazza;
-        std::pair<int, int> pMedio;
-        int numero;
-        bool state;
+        char tipo_;
+        int direzione_;
+        int dimensione_;
+        int corazza_;
+        std::pair<int, int> pMedio_;
+        int numero_;
+        bool state_;
 
         public:
 
         Nds();
-        Nds(std::pair<int, int> pM_, int direzione_, int numero_);
+        Nds(std::pair<int, int> pM, int direzione, int numero);
 
-        void setTipo(char tipo_);
-        void setDirezione(int direzione_);
-        void setDimensione(int dimensione_);
-        void setCorazza(int corazza_);
-        void setPMedio(std::pair<int, int> pMedio_);
-        void setNumero(int numero_);
-        void setState(int state_);
+        void setTipo(char tipo);
+        void setDirezione(int direzione);
+        void setDimensione(int dimensione);
+        void setCorazza(int corazza);
+        void setPMedio(std::pair<int, int> pMedio);
+        void setNumero(int numero);
+        void setState(int state);
 
         char getTipo() const;
         int getDirezione() const;

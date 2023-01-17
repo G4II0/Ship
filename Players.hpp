@@ -9,11 +9,11 @@
 
         protected:
 
-        std::string Name;
-        Mare mare;
-        char Type;
-        int condition;
-        Mare mareNemico;
+        std::string name_;
+        Mare mare_;
+        char type_;
+        int condition_;
+        Mare mareNemico_;
 
         public:
 

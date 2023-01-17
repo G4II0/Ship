@@ -8,34 +8,28 @@
     {
         private:
 
-        std::vector<char> structure;
-        char tipo;
-        std::pair<std::pair<int, int>, std::pair<int, int> > pos;
-        std::pair<int, int> pMedio;
-        int direzione;
-        int dimensione;
-        int corazza;
-        int numero;
-        bool state;
+        char tipo_;
+        std::pair<int, int> pMedio_;
+        int direzione_;
+        int dimensione_;
+        int corazza_;
+        int numero_;
+        bool state_;
 
         public:
 
         Ship();
-        Ship(std::pair<std::pair<int, int>, std::pair<int, int> > pos_, int direzione_, int numero_);
+        Ship(std::pair<int, int> pM, int direzione, int numero);
 
-        void setStructure(std::vector<char> structure_);
         void setTipo(char tipo);
-        void setPos(std::pair<std::pair<int, int>, std::pair<int, int> > pos_);
-        void setPMedio(std::pair<int, int> pMedio_);
-        void setDirezione(int direzione_);
-        void setDimensione(int dimensione_);
-        void setCorazza(int corazza_);
-        void setNumero(int num_);
-        void setState(bool state_);
+        void setPMedio(std::pair<int, int> pMedio);
+        void setDirezione(int direzione);
+        void setDimensione(int dimensione);
+        void setCorazza(int corazza);
+        void setNumero(int num);
+        void setState(bool state);
 
-        std::vector<char> getStructure() const;
         char getTipo() const;
-        std::pair<std::pair<int, int>, std::pair<int, int> > getPos() const;
         std::pair<int, int> getPMedio() const;
         int getDirezione() const;
         int getDimensione() const;
