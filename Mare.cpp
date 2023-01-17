@@ -109,11 +109,20 @@ using namespace std;
         return marSde[t];
     }
 
+it = std::find (vec.begin(), vec.end(), ser);
+    if (it != vec.end())
+    {
+        std::cout << "Element " << ser <<" found at position : " ;
+    }
+
+
+
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
-        if (find(v.begin(), v.end(), pos) != v.end())
-        return true;
+        it = find(v.begin(), v.end(), pos);
+        if (it != vec.end())
+        {return true;}
         else
         return false;
     }
