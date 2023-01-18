@@ -928,8 +928,7 @@ using namespace std;
             for(int x = 0; x < 12; x++)
             {
                 cout<< "Xtemp = " << x << " "; 
-                int y = 2;
-                for(int x = 2; x < 10; x++)
+                for(int y = 2; y < 10; y++)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
@@ -969,7 +968,7 @@ using namespace std;
             for(int x = 2; x < 10; x++)
             {
                 cout<< "Xtemp = " << x << " ";
-                for(int x = 0; x < 12; x++)
+                for(int y = 0; y < 12; y++)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
