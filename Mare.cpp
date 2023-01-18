@@ -23,7 +23,7 @@ using namespace std;
         int y = p.second;
         cout<<"c di cazzo"<<endl;
         mar_[x][y] = 'C';
-        printAMare(mar_);
+        printAMare();
         cout<<mar_[x][y];
     }
 
