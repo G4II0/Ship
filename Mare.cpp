@@ -13,21 +13,21 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        this -> mar_[x][y] = c;
+        mar_[x][y] = c;
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
-        this -> marE_[x][y] = c;
+        marE_[x][y] = c;
     }
 
     void Mare::setMareES(pair<int, int> p, char c)
     {
         int x = p.first;
         int y = p.second;
-        this -> marES_[x][y] = c;
+        marES_[x][y] = c;
     }
 
     vector<vector<char> > Mare::getMare()
@@ -836,11 +836,16 @@ using namespace std;
             out += " ¦ ";
             for (int j = 0; j < 12; j++)
             {
-                if (mar_[i][j] != ' ')
-                    out += mar_[i][j];
+                if (mar_[i][j] == ' ')
+                    {
+                        out += " ";
+                        //out += " │ ";
+                    }
                 else
-                    out += " ";
-                //out += " │ ";
+                {
+                    cout<<endl;
+                    out += mar_[i][j];
+                }
                 out += " ¦ ";
             }
             out += "\n";
@@ -914,7 +919,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -926,7 +931,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 temp = 1;
                             }
@@ -954,7 +959,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -966,7 +971,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 temp = 1;
                                 break;
@@ -1005,7 +1010,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -1017,7 +1022,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 temp = 1;
                                 break;
@@ -1043,7 +1048,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -1055,7 +1060,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].first == y)
+                            if(v1[i].first == x && v1[i].second == y)
                             {
                                 temp = 1;
                                 break;
@@ -1086,7 +1091,7 @@ using namespace std;
                 {
                     for(int i = 0; i<v1.size(); i++)
                     {
-                        if(v1[i].first == x && v1[i].first == y)
+                        if(v1[i].first == x && v1[i].second == y)
                         {
                             v1.erase(v1.begin() + i);
                             break;
@@ -1098,7 +1103,7 @@ using namespace std;
                     int temp = 0;
                     for(int i = 0; i<v1.size(); i++)
                     {
-                        if(v1[i].first == x && v1[i].first == y)
+                        if(v1[i].first == x && v1[i].second == y)
                         {
                             temp = 1;
                         }
