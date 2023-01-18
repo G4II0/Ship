@@ -72,6 +72,13 @@ using namespace std;
         }
         return v;
     }
+
+    char getCasella(int x, int y, vector<vector<char>> mar_)
+    {
+        char c = mar_[x][y];
+        return c;
+    }
+
     void Mare::getMareE(Mare& mN)
     {
         vector<vector<char> > v;
@@ -948,7 +955,7 @@ using namespace std;
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
-                    if (mar_[x][y] != ' ')
+                    if (getCasella(x, y, mar_) != ' ' || getCasella(x, (y + 1), mar_) != ' ' || getCasella(x, (y - 1), mar_) != ' ' || getCasella(x, (y + 2), mar_) != ' ' || getCasella(x, (y - 2), mar_) != ' ')
                     {
                         cout << "C5" << endl;
                         for(int i = 0; i<v1.size(); i++)
