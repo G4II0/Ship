@@ -68,7 +68,7 @@ using namespace std;
 
         //genera la board vuota
         void initializeMare(vector<vector<char> > mar_);
-        void initializeMareES(char (&marES_)[12][12]);
+        void initializeMareES(vector<vector<char> > mar_);
         void initializeMare(vector<Corazzata> marCor);
         void initializeMare(vector<Nds> marNds);
         void initializeMare(vector<Sde> marSde);
