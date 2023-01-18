@@ -45,10 +45,10 @@ using namespace std;
 
         Mare();
 
-        void setMareA(pair<int, int> p, char (&mar_)[12][12]);
-        void setMareAc(pair<int, int> p, char (&mar_)[12][12]);
-        void setMareAs(pair<int, int> p, char (&mar_)[12][12]);
-        void setMareAe(pair<int, int> p, char (&mar_)[12][12]);
+        void setMareA(vector<vector<char>> mar_);
+        void setMareAc(vector<vector<char>> mar_);
+        void setMareAs(vector<vector<char> > mar_);
+        void setMareAe(vector<vector<char> > mar_);
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
         vector<vector<char> > getMare();
