@@ -37,7 +37,6 @@ using namespace std;
         {
             t++;
         }
-        mar_.erase(it);
         cout << "c di cazzo" << endl;
         for (int i = 0; i < y; i++)
         {
@@ -49,6 +48,7 @@ using namespace std;
         {
             v1.push_back(v.at(i));
         }
+        mar_.erase(it);
         if (x == 0)
         {
             mar_.insert(t, v1);
