@@ -249,7 +249,7 @@ int main()
         //richiede al player o al bot di inserire i Sde, continua finchè tutti i Sde sono inseriti
         //Sde
         i = 0;
-        while(i < 3)
+        while(i < 2)
         {
             pair<int, int> p;
             int x;
@@ -277,13 +277,6 @@ int main()
                         e2.setNumero(i);
                         players[ind].getMare().insertSde(e2, p);
                     }
-                    else
-                    if(i==2)
-                    {
-                        Sde e3 = Sde(p, i);
-                        e3.setNumero(i);
-                        players[ind].getMare().insertSde(e3, p);
-                    }
                 }
                 else
                 {
@@ -303,13 +296,6 @@ int main()
                         Sde e2 = Sde(p, i);
                         e2.setNumero(i);
                         players[ind].getMare().insertSde(e2, p);
-                    }
-                    else
-                    if(i==2)
-                    {
-                        Sde e3 = Sde(p, i);
-                        e3.setNumero(i);
-                        players[ind].getMare().insertSde(e3, p);
                     }
                 }
                 i++;
