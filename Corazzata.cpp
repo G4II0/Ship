@@ -62,7 +62,9 @@
                 {
                     p.first = x;
                     p.second = y;
+                    cout << "iniziato push" << endl;
                     Mov.push_back(p);
+                    cout << "finito push" << endl;
                 }
             }
         }
