@@ -25,9 +25,10 @@ using namespace std;
         vector<char> v;
         vector<char> v1;
         cout << "c di palle" << endl;
-        copy(mar_[x].begin(), mar_[x].end(), v);
-        cout << "c di figa" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
+        vector<vector<char> >::iterator end = mar_.end();
+        copy(it, end, v);
+        cout << "c di figa" << endl;
         for (int j = 0; j < x; j++)
         {
             it++;
