@@ -21,11 +21,11 @@ using namespace std;
     private:
 
         /*matrice del mare alleato*/
-        vector<vector<char>> mar_;
+        vector<vector<char> > mar_;
         /*matrice del mare nemico*/
-        vector<vector<char>> marE_;
+        vector<vector<char> > marE_;
         /*stampa matrice del mare nemico*/
-        vector<vector<char>> marES_;
+        vector<vector<char> > marES_;
         /*matrice del mare (centri-Corazzate)*/
         vector<Corazzata> marCor_;
         /*matrice del mare (centri-Supporto)*/
