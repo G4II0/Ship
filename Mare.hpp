@@ -45,8 +45,8 @@ using namespace std;
 
         Mare();
 
-        void setMareA(vector<vector<char>> mar_);
-        void setMareAc(vector<vector<char>> mar_);
+        void setMareA(vector<vector<char> > mar_);
+        void setMareAc(vector<vector<char> > mar_);
         void setMareAs(vector<vector<char> > mar_);
         void setMareAe(vector<vector<char> > mar_);
         void setMareE(pair<int, int> p, char c);
