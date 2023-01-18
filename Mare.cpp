@@ -951,11 +951,11 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            cout << "C2" << endl;
+                            cout << "C4" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
-                            v1.erase(v1.begin() + i);
-                            break;
+                                v1.erase(v1.begin() + i);
+                                break;
                             }
                         }
                     }
