@@ -69,7 +69,7 @@ using namespace std;
         if(y != 9)
         {char jj = mar_[x][9];}
         else
-        {char ll = 'C';} 
+        {char jj = 'C';} 
 
         if(y != 10)
         {char kk = mar_[x][10];} 
