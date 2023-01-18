@@ -27,7 +27,7 @@ using namespace std;
         }
         mar_[x][y] = 'C';
         cout << "c di palle" << endl;
-        printAMare(mar_);
+        printAMare();
         cout << "c di figa" << endl;
         cout<<mar_[x][y];
         return mar_;
