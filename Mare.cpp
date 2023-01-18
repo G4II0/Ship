@@ -61,6 +61,21 @@ using namespace std;
         }
     }
 
+    void Mare::setMarCor(Corazzata c)
+    {
+        cout << "inserisco" << endl;
+        marCor_.push_back(c);
+        cout << "ho fatto collione" << endl;
+    }
+    void Mare::setMarNds(Nds n)
+    {
+        marNds_.push_back(n);
+    }
+    void Mare::setMarSde(Sde s)
+    {
+        marSde_.push_back(s);
+    }
+
     vector<Corazzata> Mare::getMarCor()
     {return this -> marCor_;}
 
@@ -109,7 +124,7 @@ using namespace std;
         return marSde[t];
     }
 
-    bool Mare::legitMoveInput(Corazzata ship, pair<int, int>& pos)
+    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {   
         cout << "legitMoveInput" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
@@ -259,7 +274,7 @@ using namespace std;
             setMareA(temp4, 'C');
             // posizionamento nel mareC
             cout << "inserisco in marCor_" << endl;
-            //marCor_[ship.getNumero()] = ship;
+            setMarCor(ship);
             cout << "ho inserito in marCor_" << endl; 
         }
         else
@@ -306,7 +321,7 @@ using namespace std;
             setMareA(temp1, 'S');
             setMareA(temp2, 'S');
             // posizionamento nel mareC
-            marNds_[ship.getNumero()] = ship;
+            setMarNds(ship);
         }
     }
 
@@ -334,7 +349,7 @@ using namespace std;
             // posizionamento nella board
             setMareA(pos, 'E');
             // posizionamento nel mareC
-            marSde_[ship.getNumero()] = ship;
+            setMarSde(ship);
         }
     }
 

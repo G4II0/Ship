@@ -51,6 +51,10 @@ using namespace std;
         vector<vector<char> > getMare();
         void getMareE(Mare& mN);
 
+        void setMarCor(Corazzata c);
+        void setMarNds(Nds n);
+        void setMarSde(Sde s);
+
         vector<Corazzata> getMarCor();
         vector<Nds> getMarNds();
         vector<Sde> getMarSde();
