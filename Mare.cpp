@@ -857,7 +857,7 @@ using namespace std;
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
         cout<<mar_.size()<<endl;
         out += "   +-----------------------------------------------+\n";
-        for (int i = mar_.size()-1; i >= 0; i--)
+        for (int i = 11; i >= 0; i--)
         {
             if ((i + 1) >= 10)
             {out += to_string(i + 1);}
@@ -865,7 +865,7 @@ using namespace std;
             {out += " ";out += to_string(i + 1);}
             //out += " │ ";
             out += " ¦ ";
-            for (int j = 0; j < mar_[i].size(); j++)
+            for (int j = 0; j < 12; j++)
             {
                 if (mar_[i][j] == ' ')
                     {
