@@ -99,7 +99,7 @@ using namespace std;
         vector<vector<char> >::iterator it = mar_.begin();
         //vector<char>::iterator gg = v.begin();
         cout << "c di figa" << endl;
-        for (int j = 0; j < x; j++)
+        for (int j = 0; j <= x; j++)
         {
             it++;
         }
