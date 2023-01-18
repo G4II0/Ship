@@ -28,7 +28,7 @@ using namespace std;
         cout << "c di figa" << endl;
         cout<<mar_[x][y];
         return mar_;
-    }
+    }//--
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
     {
