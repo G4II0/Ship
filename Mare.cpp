@@ -111,10 +111,11 @@ using namespace std;
 
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int>& pos)
     {   
-        cout << "check" << endl;
+        cout << "legitMoveInput" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
         {
+            cout << "xC = " << v[i].first << "yC = " << v[i].second << endl;
             if(v[i].first == pos.first && v[i].second == pos.second)
             {return true;}
         }
@@ -206,17 +207,19 @@ using namespace std;
     {   
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
-        cout << "qualcosa";
+        cout << "b = " << b << endl;
         if (b == true)
         {   
-            cout << " b è true!!!!";
+            cout << " b è in true!!!!" << endl;
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<int, int> temp3;
             pair<int, int> temp4;
             pair<pair<int, int>, pair<int, int> > temp5;
-            if (ship.getDirezione() == 0)
+            int d = ship.getDirezione();
+            if(d == 0)
             {
+                cout << "sono in d == 0" << endl;
                 temp1.first = pos.first;         // x prua
                 temp1.second = (pos.second) + 2; // y prua
                 temp2.first = pos.first;         // x poppa
@@ -230,6 +233,7 @@ using namespace std;
             }
             else
             {
+                cout << "sono in d == 1" << endl;
                 temp1.first = (pos.first) + 2; // x prua
                 temp1.second = pos.second;     // y prua
                 temp2.first = (pos.first) - 2; // x poppa
@@ -891,10 +895,10 @@ using namespace std;
 
     vector<pair<int, int> > Mare::posAvailable(Corazzata shi)
     {
+        cout << "sono in PosAvailableCor" << endl;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        cout << "sono in PosAvailableCor" << endl;
         if(d==0)
         {
             int x = 0;
@@ -979,7 +983,6 @@ using namespace std;
                 x++;
             }
         }
-        shi.Moves() = v1;
         return v1;
     }
 

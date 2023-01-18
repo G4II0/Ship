@@ -52,7 +52,8 @@
     std::vector<std::pair<int, int> > Corazzata::Moves()
     {
         std::vector<std::pair<int, int> > Mov;
-        if(getDirezione() == 0)
+        std::cout << "sono in Corazzata::Moves" << std::endl;
+        if(direzione_ == 0)
         {
             int y = 2;
             int x = 0;
