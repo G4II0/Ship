@@ -62,9 +62,7 @@
                 {
                     p.first = x;
                     p.second = y;
-                    std::cout << "iniziato push" << std::endl;
                     Mov.push_back(p);
-                    std::cout << "finito push" << std::endl;
                 }
             }
         }
@@ -83,6 +81,7 @@
                 }
             }
         }
+        std::cout<<"gay"<<std::endl;
         return Mov;
     }
 
