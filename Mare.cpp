@@ -1007,6 +1007,11 @@ using namespace std;
                 x++;
             }
         }
+        cout << "v1 = " << " ";
+        for (int i = 0; i < v1.size(); i++)
+        {
+            cout << v1.at(i).first << " " << v1.at(i).second << endl;;
+        }
         return v1;
     }
 
@@ -1089,13 +1094,6 @@ using namespace std;
                 }
             }
         }
-        shi.Moves() = v1;
-        cout << "v1 = " << " ";
-        for (int i = 0); i < v1.size(); i++)
-        {
-            cout << v1.at(i).first << " " << v1.at(i).second << endl;;
-        }
-        
         return v1;
     }
 
@@ -1137,6 +1135,5 @@ using namespace std;
                 }
             }
         }
-        shi.Moves() = v1;
         return v1;
     }
