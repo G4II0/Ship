@@ -1094,7 +1094,7 @@ using namespace std;
         }
         shi.Moves() = v1;
         cout << "v1 = " << " ";
-        for (int i = v1.size(); i < v1.end(); i++)
+        for (int i = 0); i < v1.size(); i++)
         {
             cout << v1.at(i).first << " " << v1.at(i).second << endl;;
         }
