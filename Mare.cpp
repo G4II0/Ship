@@ -948,11 +948,7 @@ using namespace std;
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
-                    int y1 = y+1;
-                    int y1_ = y - 1;
-                    int y2 = y + 2;
-                    int y2_ = y - 2;
-                    if (mar_[x][y] != ' ' || mar_[x][y1] != ' ' || mar_[x][y1_] != ' ' || mar_[x][y2] != ' ' || mar_[x][y2_] != ' ')
+                    if (mar_[x][y] != ' ')
                     {
                         cout << "C5" << endl;
                         for(int i = 0; i<v1.size(); i++)
