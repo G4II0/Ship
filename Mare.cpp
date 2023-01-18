@@ -188,13 +188,14 @@ using namespace std;
 
     void Mare::initializeMare(vector<vector<char> > mar_)
     {
-
+        vector<char> v;
         for(int x = 0; x < 12; x++)
         {
             for(int y = 0; y < 12; y++)
             {
-                mar_[x][y] = ' ';
+                v.push_back(' ');
             }
+            mar_.push_back(v);
         }
     }
 
