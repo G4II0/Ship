@@ -17,7 +17,7 @@ using namespace std;
         mar_[x][y] = ' ';
     }
 
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char>> &mar_)
+    void Mare::setMareAc(pair<int, int> p, vector<vector<char> > &mar_)
     {
         int x = p.first;
         int y = p.second;
@@ -27,13 +27,13 @@ using namespace std;
         cout << "c di palle" << endl;
         copy(mar_[x].begin(), mar_[x].end(), v);
         cout << "c di figa" << endl;
-        vector<vector>::iterator it = mar_.begin();
-        vector<vector>::iterator t = mar_[x].begin();
-        for (int j = 0; j <= x; j++)
+        vector<vector<char> >::iterator it = mar_.begin();
+        vector<vector<char> >::iterator t = mar_[x].begin();
+        for (int j = 0; j < x; j++)
         {
             it++;
         }
-        for (int n = 0; n <= y; n++)
+        for (int n = 0; n < y; n++)
         {
             t++;
         }
