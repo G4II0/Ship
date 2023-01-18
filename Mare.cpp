@@ -260,8 +260,10 @@ using namespace std;
                 temp3.second = pos.second;
                 temp4.first = (pos.first) - 1;
                 temp2.second = pos.second;
-                temp5.first = temp1;  // c prua
-                temp5.second = temp2; // c poppa
+                temp5.first.first = temp1.first;  // c prua
+                temp5.first.second = temp1.second;
+                temp5.second.first = temp2.first; // c poppa
+                temp5.second.second = temp2.second;
             }
             cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
@@ -923,15 +925,16 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            for(int x = 0; x<12; x++)
+            int x = 0;
+            while(x < 12)
             {
                 cout<< "Xtemp = " << x << " "; 
-                for(int y = 2; y<10; y++)
+                int y = 2;
+                while(y < 10)
                 {
-                    cout << "Ytemp = " << y << " "<<endl;
+                    cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
-                        cout <<"Xif = " << x << "Yif = " << y <<endl;
                         for(int i = 0; i<v1.size(); i++)
                         {
                             if(v1[i].first == x && v1[i].first == y)
@@ -942,15 +945,13 @@ using namespace std;
                         }
                     }
                     else
-                    {//-----
-                        cout <<"Xelse = " << x << "Yelse = " << y <<endl;
+                    {
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
-                                break;
                             }
                         }
                         if(temp == 0)
@@ -959,23 +960,27 @@ using namespace std;
                             p.second = y;
                             v1.push_back(p);
                         }
-                    }//------------
+                    }
+                    y++;
                 }
+                x++;
             }
         }
         else
         {
-            for(int x = 2; x<10; x++)
+            int x = 2;
+            while(x < 10)
             {
                 cout<< "Xtemp = " << x << " ";
-                for(int y = 0; y<12; y++)
+                int y = 0;
+                while(y < 12)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -987,7 +992,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
                                 break;
@@ -1000,7 +1005,9 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
+                    y++;
                 }
+                x++;
             }
         }
         cout << "v1 = " << " ";
@@ -1026,7 +1033,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -1038,7 +1045,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
                                 break;
@@ -1064,7 +1071,7 @@ using namespace std;
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 v1.erase(v1.begin() + i);
                                 break;
@@ -1076,7 +1083,7 @@ using namespace std;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
                                 break;
@@ -1107,7 +1114,7 @@ using namespace std;
                 {
                     for(int i = 0; i<v1.size(); i++)
                     {
-                        if(v1[i].first == x && v1[i].second == y)
+                        if(v1[i].first == x && v1[i].first == y)
                         {
                             v1.erase(v1.begin() + i);
                             break;
@@ -1119,7 +1126,7 @@ using namespace std;
                     int temp = 0;
                     for(int i = 0; i<v1.size(); i++)
                     {
-                        if(v1[i].first == x && v1[i].second == y)
+                        if(v1[i].first == x && v1[i].first == y)
                         {
                             temp = 1;
                         }
