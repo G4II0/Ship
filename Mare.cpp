@@ -949,7 +949,7 @@ using namespace std;
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
-                    char miao = mar_[x].at(y);
+                    const char miao = mar_[x].at(y);
                     cout << "C4.1" << endl;
                     if ( mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
