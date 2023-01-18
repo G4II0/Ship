@@ -51,11 +51,12 @@ using namespace std;
         }
         if (x == 0)
         {
-            mar_.insert(x, v1);
+            mar_.insert(t, v1);
         }
         else
         {
-            mar_.insert(x - 1, v1);
+            t--;
+            mar_.insert(t, v1);
         }
         cout << "c di" << endl;
     }
