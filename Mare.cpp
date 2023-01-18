@@ -953,7 +953,7 @@ using namespace std;
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
                         cout << "C5" << endl;
-                        for(int i = 0; i<v1.size(); i++)
+                        for(int i = 0; i<v1.size()-1; i++)
                         {
                             cout << "C6" << endl;
                             if (v1[i].first == x && v1[i].second == y)
