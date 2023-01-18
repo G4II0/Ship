@@ -26,7 +26,7 @@ using namespace std;
         vector<char> v1;
         cout << "c di palle" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
-        vector<vector<char> >::iterator end = mar_[x].end();
+        vector<char>::iterator end = it.end();
         vector<char>::iterator gg = v.begin();
         cout << "c di figa" << endl;
         for (int j = 0; j < x; j++)
