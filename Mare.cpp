@@ -944,7 +944,7 @@ using namespace std;
             {
                 cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
-                for(int y = 10; y > 2; y--)
+                for(int y = 9; y > 2; y--)
                 {
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
