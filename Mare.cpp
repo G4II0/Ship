@@ -21,17 +21,29 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
+        char aa = mar_[x][0];
+        char bb = mar_[x][1];
+        char cc = mar_[x][2];
+        char dd = mar_[x][3];
+        char ee = mar_[x][4];
+        char ff = mar_[x][5];
+        char gg = mar_[x][6];
+        char hh = mar_[x][7];
+        char ii = mar_[x][8];
+        char jj = mar_[x][9];
+        char kk = mar_[x][10];
+        char ll = mar_[x][11];      
 //--
-        vector<char> v;
+        vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
         vector<char> v1;
         cout << "c di palle" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
-        vector<char>::iterator gg = v.begin();
+        //vector<char>::iterator gg = v.begin();
         cout << "c di figa" << endl;
         for (int j = 0; j < x; j++)
         {
             it++;
-        }
+        }/*
         vector<vector<char> >::iterator fine = it;
         for (int a = 0; a < 12; a++)
         {
@@ -46,7 +58,7 @@ using namespace std;
         for (int n = 0; n < y; n++)
         {
             t++;
-        }
+        }*/
         cout << "c di cazzo" << endl;
         for (int i = 0; i < y; i++)
         {
@@ -61,12 +73,12 @@ using namespace std;
         mar_.erase(it);
         if (x == 0)
         {
-            mar_.insert(t, v1);
+            mar_.insert(it, v1);
         }
         else
         {
-            t--;
-            mar_.insert(t, v1);
+            it--;
+            mar_.insert(it, v1);
         }
         cout << "c di" << endl;
     }
