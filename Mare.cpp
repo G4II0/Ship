@@ -344,13 +344,6 @@ using namespace std;
         if (b == true)
         {
             cout << "b è true!!!!!!" << endl;
-            pair<int, int> temp1;//_________________________________________________________________
-            pair<int, int> temp2;
-            pair<pair<int, int>, pair<int, int> > temp3;
-            temp1.first = pos.first;         // x prua
-            temp1.second = (pos.second);     // y prua
-            temp3.first = temp1;             // c prua
-            temp3.second = temp1;            // c poppa_____________________________________________
             ship.setPMedio(pos);
             // posizionamento nella board
             setMareA(pos, 'E');
