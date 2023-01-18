@@ -9,7 +9,7 @@ using namespace std;
         initializeMare(mar_);
     }
 
-    void Mare::setMareA(pair<int, int> p, vector<vector<char>> mar_)
+    void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
@@ -17,7 +17,7 @@ using namespace std;
         mar_[x][y] = ' ';
     }
 
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char>> mar_)
+    void Mare::setMareAc(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
@@ -27,7 +27,7 @@ using namespace std;
         cout<<mar_[x][y];
     }
 
-    void Mare::setMareAs(pair<int, int> p, vector<vector<char>> mar_)
+    void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
@@ -35,7 +35,7 @@ using namespace std;
         mar_[x][y] = 'S';
     }
 
-    void Mare::setMareAe(pair<int, int> p, vector<vector<char>> mar_)
+    void Mare::setMareAe(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
@@ -186,7 +186,7 @@ using namespace std;
         return false;
     }
 
-    void Mare::initializeMare(vector<vector<char>>mar_)
+    void Mare::initializeMare(vector<vector<char> > mar_)
     {
 
         for(int x = 0; x < 12; x++)
@@ -198,7 +198,7 @@ using namespace std;
         }
     }
 
-    void Mare::initializeMareES(vector<vector<char>> marES_)
+    void Mare::initializeMareES(vector<vector<char> > marES_)
     {int x=0, y=0;
 
         while (x < 12)

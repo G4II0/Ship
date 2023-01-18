@@ -70,7 +70,7 @@ int main()
         }
     }
 
-    printTextEffect("suca2");
+    printTextEffect("suca2"); 
 
     Mare boardP1;
     Mare boardP2;
