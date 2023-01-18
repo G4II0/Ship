@@ -953,15 +953,16 @@ using namespace std;
                     char c2 = mar_[x][y - 1];
                     char c3 = mar_[x][y + 2];
                     char c4 = mar_[x][y - 2];
+                    cout << "C5" << endl;
                     if (c0 != ' ' || c1 != ' ' || c2 != ' ' || c3 != ' ' || c4 != ' ')
                     {
-                        cout << "C5" << endl;
+                        cout << "C6" << endl;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            cout << "C6" << endl;
+                            cout << "C7" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
-                                cout << "C7" << endl;
+                                cout << "C8" << endl;
                                 v1.erase(v1.begin() + i);
                                 break;
                             }
