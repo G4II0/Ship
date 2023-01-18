@@ -32,7 +32,7 @@ using namespace std;
         {
             it++;
         }
-        vector<vector<char> >::iterator t = mar_.begin().begin();
+        vector<vector<char> >::iterator t = mar_.begin()->begin();
         for (int n = 0; n < y; n++)
         {
             t++;
