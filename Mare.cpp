@@ -26,14 +26,14 @@ using namespace std;
         vector<char> v1;
         cout << "c di palle" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
-        vector<vector<char> >::iterator end = mar_.end();
+        vector<vector<char> >::iterator end = mar_[x].end();
         vector<char>::iterator gg = v.begin();
-        copy(it, end, gg);
         cout << "c di figa" << endl;
         for (int j = 0; j < x; j++)
         {
             it++;
         }
+        copy(it, end, gg);
         vector<vector<char> >::iterator t = it;
         for (int n = 0; n < y; n++)
         {
