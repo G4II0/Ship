@@ -870,17 +870,17 @@ using namespace std;
             out += " ¦ ";
             for (int j = 0; j < mar_[i].size(); j++)
             {
-                if (mar_[i][j] == ' ')
-                    {
+                //if (mar_[i][j] == ' ')
+                    //{
                         out += " ";
                         //out += " │ ";
-                    }
-                else
-                {
-                    string s = to_string(mar_[i][j]);
-                    out += s;
-                }
-                out += mar_[i][j];
+                    //}
+                //else
+                //{
+                    //string s = to_string(mar_[i][j]);
+                    //out += s;
+                //}
+                //out += mar_[i][j];
                 out += " ¦ ";
             }
             out += "\n";
