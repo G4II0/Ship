@@ -23,7 +23,9 @@ using namespace std;
         int y = p.second;
         cout<<"c di cazzo"<<endl;
         mar_[x][y].push_back('C');
+        cout << "c di palle" << endl;
         printAMare(mar_);
+        cout << "c di figa" << endl;
         cout<<mar_[x][y];
     }
 
