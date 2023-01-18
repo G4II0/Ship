@@ -27,7 +27,11 @@ using namespace std;
         cout << "c di palle" << endl;
         copy(mar_[x].begin(), mar_[x].end(), v);
         cout << "c di figa" << endl;
-        vector<vector>::iterator it = x;
+        vector<vector>::iterator it = mar_.begin();
+        for (int j=0; j <= x; j++)
+        {
+            it++;
+        }
         mar_.erase(it);
         cout << "c di cazzo" << endl;
         for (int i = 0; i < y; i++)
