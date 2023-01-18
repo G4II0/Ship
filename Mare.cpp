@@ -13,28 +13,28 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        mar_[x][y] = ' ';
+        this -> mar_[x][y] = ' ';
     }
 
     void Mare::setMareAc(pair<int, int> p)
     {
         int x = p.first;
         int y = p.second;
-        mar_[x][y] = 'C';
+        this -> mar_[x][y] = 'C';
     }
 
     void Mare::setMareAs(pair<int, int> p)
     {
         int x = p.first;
         int y = p.second;
-        mar_[x][y] = 'S';
+        this -> mar_[x][y] = 'S';
     }
 
     void Mare::setMareAe(pair<int, int> p)
     {
         int x = p.first;
         int y = p.second;
-        mar_[x][y] = 'E';
+        this -> mar_[x][y] = 'E';
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
