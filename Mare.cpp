@@ -945,12 +945,11 @@ using namespace std;
                     {//-----
                         cout <<"Xelse = " << x << "Yelse = " << y <<endl;
                         int temp = 0;
-                        for(int i = 0; i<v1.size(); i++)
+                        for(int i = 0; i<v1.size() || (for(int x = 0; x<12; i++)); i++)
                         {
                             if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
-                                break;
                             }
                         }
                         if(temp == 0)
