@@ -17,16 +17,10 @@ using namespace std;
         mar_[x][y] = ' ';
     }
 
-    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char> > mar_)
+    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char> >& mar_)
     {
         int x = p.first;
         int y = p.second;
-        mar_.reserve(12);
-        for (int i = 0; i < 12; i++)
-        {
-            mar_[i].reserve(12);
-        }
-        
         mar_[x][y] = 'C';
         cout << "c di palle" << endl;
         printAMare();
