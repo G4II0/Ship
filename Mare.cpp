@@ -948,7 +948,8 @@ using namespace std;
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
-                    if (mar_[x][y] != 32 || mar_[x][y+1] != 32 || mar_[x][y-1] != 32 || mar_[x][y+2] != 32 || mar_[x][y-2] != 32)
+                    const char c = 32;
+                    if (mar_[x][y] != c || mar_[x][y+1] != c || mar_[x][y-1] != c || mar_[x][y+2] != c || mar_[x][y-2] != c)
                     {
                         cout << "C5" << endl;
                         for(int i = 0; i<v1.size(); i++)
