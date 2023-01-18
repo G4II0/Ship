@@ -193,7 +193,8 @@ using namespace std;
         {
             for(int y = 0; y < 12; y++)
             {
-                mar_[x][y].push_back(' ');
+                char c = ' ';
+                mar_[x][y].push_back(c);
             }
         }
     }
@@ -218,7 +219,7 @@ using namespace std;
 
         while (i < 3)
         {
-                marCor[i] = Corazzata();
+            marCor[i].push_back(Corazzata());
             i++;
         }
     }
@@ -229,7 +230,7 @@ using namespace std;
 
         while (i < 3)
         {
-                marNds[i] = Nds();
+            marNds[i].push_back(Nds());
             i++;
         }
     }
@@ -239,7 +240,7 @@ using namespace std;
 
         while (i < 2)
         {
-                marSde[i] = Sde();
+            marSde[i].push_back(Sde());
             i++;
         }
     }
