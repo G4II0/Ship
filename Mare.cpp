@@ -21,7 +21,7 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-
+//--
         vector<char> v;
         vector<char> v1;
         cout << "c di palle" << endl;
