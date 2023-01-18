@@ -963,7 +963,7 @@ using namespace std;
                             }
                         //}
                     }
-                    else
+                    /*else
                     {
                         cout << "C7" << endl;
                         int temp = 0;
@@ -980,7 +980,7 @@ using namespace std;
                             p.second = y;
                             v1.push_back(p);
                         }
-                    }
+                    }*/
                 }
             }
         }
