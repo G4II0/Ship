@@ -55,32 +55,28 @@
         std::cout << "sono in Corazzata::Moves" << std::endl;
         if(direzione_ == 0)
         {
-            int y = 2;
-            int x = 0;
-
-            while (x <12)
+            std::pair<int, int> p;
+            for(int x =0; x<12; x++)
             {
-                while (y < 10)
+                for (int y = 2; y < 10; y++)
                 {
-                    Mov.push_back(std::pair<int, int>(x, y));
-                    y++;
+                    p.first = x;
+                    p.second = y;
+                    Mov.push_back(p);
                 }
-                x++;
             }
         }
         else
         {
-            int x = 2;
-            int y = 0;
-
-            while (y <12)
+            std::pair<int, int> p;
+            for (int x = 2; x < 10; x++)
             {
-                while (x < 10)
+                for (int y = 0; y < 12; y++)
                 {
-                    Mov.push_back(std::pair<int, int>(x, y));
-                    x++;
+                    p.first = x;
+                    p.second = y;
+                    Mov.push_back(p);
                 }
-                y++;
             }
         }
         return Mov;

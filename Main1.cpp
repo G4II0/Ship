@@ -51,7 +51,6 @@ int main()
             printTextEffect("Il bot si chiama " + names[1]);
             types.push_back(U);
             types.push_back(B);
-            printTextEffect("suca1");
             break;
         }
         else if (game == "cc") 
@@ -70,16 +69,10 @@ int main()
         }
     }
 
-    printTextEffect("suca2"); 
-
     Mare boardP1;
-    printTextEffect("suca3");
     Mare boardP2;
-    printTextEffect("suca4");
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
-    printTextEffect("suca5");
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
-    printTextEffect("suca6");
 
     int ind = 0;
     while (ind < 2)

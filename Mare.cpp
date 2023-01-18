@@ -200,16 +200,15 @@ using namespace std;
     }
 
     void Mare::initializeMareES(vector<vector<char> > marES_)
-    {int x=0, y=0;
-
-        while (x < 12)
+    {
+        vector<char> v;
+        for (int x = 0; x < 12; x++)
         {
-            while (y < 12)
+            for (int y = 0; y < 12; y++)
             {
-                marES_[x][y] = ' ';
-                    y++;
+                v.push_back(' ');
             }
-            x++;
+            marES_.push_back(v);
         }
     }
 
