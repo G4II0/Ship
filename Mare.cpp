@@ -17,25 +17,17 @@ using namespace std;
         mar_[x][y] = ' ';
     }
 
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char> > mar_)
+    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
         cout<<"c di cazzo"<<endl;
-        vector<char> v;
-
-        copy(mar_[x].begin(), mar_[x].end(), v);
-        cout << "c di palle" << endl;
-        mar_.erase(x);
-        mar_.insert()
-
-        v.push_back('C');
-        mar_.push_back(v);
-        mar_[x].push_back('C');
+        mar_[x][y].push_back('C');
         cout << "c di palle" << endl;
         printAMare(mar_);
         cout << "c di figa" << endl;
         cout<<mar_[x][y];
+        return mar_;
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
