@@ -25,46 +25,57 @@ using namespace std;
         {char aa = mar_[x][0];}
         else
         {char aa = 'C';}
+        
         if(y != 1)
         {char bb = mar_[x][1];}
         else
-        {char bb = 'C';}      
+        {char bb = 'C';} 
+             
         if(y != 2)
         {char cc = mar_[x][2];}
         else
         {char cc = 'C';} 
+
         if(y != 3)
         {char dd = mar_[x][3];}
         else
         {char dd = 'C';} 
+
         if(y != 4)
         {char ee = mar_[x][4];}
         else
         {char ee = 'C';} 
+
         if(y != 5)
         {char ff = mar_[x][5];}
         else
         {char ff = 'C';} 
+
         if(y != 6)
         {char gg = mar_[x][6];}
         else
         {char gg = 'C';} 
+
         if(y != 7)
         {char hh = mar_[x][7];}
         else
         {char hh = 'C';} 
+
         if(y != 8)
         {char ii = mar_[x][8];}
         else
         {char ii = 'C';} 
+
         if(y != 9)
         {char jj = mar_[x][9];}
         else
         {char ll = 'C';} 
+
         if(y != 10)
         {char kk = mar_[x][10];} 
         else
         {char kk = 'C';}
+
         if(y != 11)
         {char ll = mar_[x][11];}
         else
