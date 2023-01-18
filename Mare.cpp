@@ -9,12 +9,32 @@ using namespace std;
         initializeMare(mar_);
     }
 
-    void Mare::setMareA(pair<int, int> p, char c)
+    void Mare::setMareA(pair<int, int> p)
     {
         int x = p.first;
         int y = p.second;
-        char temp = c;
-        mar_[x][y] = temp;
+        mar_[x][y] = ' ';
+    }
+
+    void Mare::setMareAc(pair<int, int> p)
+    {
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y] = 'C';
+    }
+
+    void Mare::setMareAs(pair<int, int> p)
+    {
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y] = 'S';
+    }
+
+    void Mare::setMareAe(pair<int, int> p)
+    {
+        int x = p.first;
+        int y = p.second;
+        mar_[x][y] = 'E';
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
@@ -261,11 +281,11 @@ using namespace std;
             ship.setPMedio(pos);
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareA(pos, 'C');
-            setMareA(temp1, 'C');
-            setMareA(temp2, 'C');
-            setMareA(temp3, 'C');
-            setMareA(temp4, 'C');
+            setMareAc(pos);
+            setMareAc(temp1);
+            setMareAc(temp2);
+            setMareAc(temp3);
+            setMareAc(temp4);
             // posizionamento nel mareC
             cout << "inserisco in marCor_" << endl;
             setMarCor(ship);
@@ -306,9 +326,9 @@ using namespace std;
             }
             // posizionamento nella board
             ship.setPMedio(pos);
-            setMareA(pos, 'S');
-            setMareA(temp1, 'S');
-            setMareA(temp2, 'S');
+            setMareAs(pos);
+            setMareAs(temp1);
+            setMareAs(temp2);
             // posizionamento nel mareC
             setMarNds(ship);
         }
@@ -329,7 +349,7 @@ using namespace std;
             cout << "b è true!!!!!!" << endl;
             ship.setPMedio(pos);
             // posizionamento nella board
-            setMareA(pos, 'E');
+            setMareAe(pos);
             // posizionamento nel mareC
             setMarSde(ship);
         }
@@ -405,9 +425,9 @@ using namespace std;
                 tmp1.first = tmp.second + 1;
                 tmp2.first = tmp.second - 1;
             }
-            setMareA(tmp, ' ');
-            setMareA(tmp1, ' ');
-            setMareA(tmp2, ' ');
+            setMareA(tmp);
+            setMareA(tmp1);
+            setMareA(tmp2);
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
@@ -431,9 +451,9 @@ using namespace std;
                 temp3.second = temp2;
             }
             // posizionamento nella board
-            setMareA(dest, 'S');
-            setMareA(temp1, 'S');
-            setMareA(temp2, 'S');
+            setMareAs(dest);
+            setMareAs(temp1);
+            setMareAs(temp2);
         }
     }
 
@@ -446,7 +466,7 @@ using namespace std;
         }
         if (legitMoveInput(s, dest) == true)
         {
-            setMareA(start, ' ');
+            setMareA(start);
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
@@ -456,7 +476,7 @@ using namespace std;
             temp3.second = temp1;            // c poppa
             //s.setPos(temp3);
             // posizionamento nella board
-            setMareA(dest, 'E');
+            setMareAe(dest);
         }
     }
 
