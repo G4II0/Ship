@@ -71,13 +71,15 @@
         else
         {
             std::pair<int, int> p;
-            for (int x = 2; x < 10; x++)
+            for (int x = 0; x < 12; x++)
             {
-                for (int y = 0; y < 12; y++)
+                for (int y = 2; y < 10; y++)
                 {
                     p.first = x;
                     p.second = y;
+                    cout << "iniziato push" << endl;
                     Mov.push_back(p);
+                    cout << "finito push" << endl;
                 }
             }
         }
