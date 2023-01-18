@@ -933,6 +933,7 @@ using namespace std;
     {
         cout << "sono in PosAvailableCor" << endl;
         vector<pair<int, int> > v1 = shi.Moves();
+        cout<<"down"<<endl;
         pair<int, int> p;
         int d = shi.getDirezione();
         if(d==0)

@@ -81,7 +81,6 @@
                 }
             }
         }
-        std::cout<<"gay"<<std::endl;
         return Mov;
     }
 
