@@ -52,8 +52,7 @@ using namespace std;
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
         vector<vector<char> > getMare();
-        char getCasella(int x, int y, vector<vector<char> > mar_);
-        void getMareE(Mare &mN);
+        void getMareE(Mare& mN);
 
         void setMarCor(Corazzata c);
         void setMarNds(Nds n);
