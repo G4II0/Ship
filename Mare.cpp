@@ -37,7 +37,11 @@ using namespace std;
         {
             fine++;
         }
-        copy(it, fine, gg);
+        for (; it != fine; ++it, (void) ++gg)
+        {
+        *gg = *it;
+        }
+        //copy(it, fine, gg);
         vector<vector<char> >::iterator t = it;
         for (int n = 0; n < y; n++)
         {
