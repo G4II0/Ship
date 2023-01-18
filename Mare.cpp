@@ -947,6 +947,7 @@ using namespace std;
                 {
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
+                    cout << "C8" << endl;
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
                         cout << "C4" << endl;
