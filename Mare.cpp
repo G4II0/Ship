@@ -9,32 +9,37 @@ using namespace std;
         initializeMare(mar_);
     }
 
-    void Mare::setMareA(pair<int, int> p)
+    void Mare::setMareA(pair<int, int> p, char (&mar_)[12][12])
     {
         int x = p.first;
         int y = p.second;
-        this -> mar_[x][y] = ' ';
+        cout<<"spazio"<<endl;
+        mar_[x][y] = ' ';
     }
 
-    void Mare::setMareAc(pair<int, int> p)
+    void Mare::setMareAc(pair<int, int> p, char (&mar_)[12][12])
     {
         int x = p.first;
         int y = p.second;
-        this -> mar_[x][y] = 'C';
+        cout<<"c di cazzo"<<endl;
+        mar_[x][y] = 'C';
+        cout<<mar_[x][y]<<endl;
     }
 
-    void Mare::setMareAs(pair<int, int> p)
+    void Mare::setMareAs(pair<int, int> p, char (&mar_)[12][12])
     {
         int x = p.first;
         int y = p.second;
-        this -> mar_[x][y] = 'S';
+        cout<<"s di stronzo"<<endl;
+        mar_[x][y] = 'S';
     }
 
-    void Mare::setMareAe(pair<int, int> p)
+    void Mare::setMareAe(pair<int, int> p, char (&mar_)[12][12])
     {
         int x = p.first;
         int y = p.second;
-        this -> mar_[x][y] = 'E';
+        cout<<"e di esucchiamelo"<<endl;
+        mar_[x][y] = 'E';
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
@@ -281,11 +286,11 @@ using namespace std;
             ship.setPMedio(pos);
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(pos);
-            setMareAc(temp1);
-            setMareAc(temp2);
-            setMareAc(temp3);
-            setMareAc(temp4);
+            setMareAc(pos, mar_);
+            setMareAc(temp1, mar_);
+            setMareAc(temp2, mar_);
+            setMareAc(temp3, mar_);
+            setMareAc(temp4, mar_);
             // posizionamento nel mareC
             cout << "inserisco in marCor_" << endl;
             setMarCor(ship);
@@ -326,9 +331,9 @@ using namespace std;
             }
             // posizionamento nella board
             ship.setPMedio(pos);
-            setMareAs(pos);
-            setMareAs(temp1);
-            setMareAs(temp2);
+            setMareAs(pos, mar_);
+            setMareAs(temp1, mar_);
+            setMareAs(temp2, mar_);
             // posizionamento nel mareC
             setMarNds(ship);
         }
@@ -349,7 +354,7 @@ using namespace std;
             cout << "b è true!!!!!!" << endl;
             ship.setPMedio(pos);
             // posizionamento nella board
-            setMareAe(pos);
+            setMareAe(pos, mar_);
             // posizionamento nel mareC
             setMarSde(ship);
         }
@@ -425,9 +430,9 @@ using namespace std;
                 tmp1.first = tmp.second + 1;
                 tmp2.first = tmp.second - 1;
             }
-            setMareA(tmp);
-            setMareA(tmp1);
-            setMareA(tmp2);
+            setMareA(tmp, mar_);
+            setMareA(tmp1, mar_);
+            setMareA(tmp2, mar_);
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
@@ -451,9 +456,9 @@ using namespace std;
                 temp3.second = temp2;
             }
             // posizionamento nella board
-            setMareAs(dest);
-            setMareAs(temp1);
-            setMareAs(temp2);
+            setMareAs(dest, mar_);
+            setMareAs(temp1, mar_);
+            setMareAs(temp2, mar_);
         }
     }
 
@@ -466,7 +471,7 @@ using namespace std;
         }
         if (legitMoveInput(s, dest) == true)
         {
-            setMareA(start);
+            setMareA(start, mar_);
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
@@ -476,7 +481,7 @@ using namespace std;
             temp3.second = temp1;            // c poppa
             //s.setPos(temp3);
             // posizionamento nella board
-            setMareAe(dest);
+            setMareAe(dest, mar_);
         }
     }
 
@@ -842,7 +847,7 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
-    string Mare::printAMare()
+    string Mare::printAMare(char (&mar_)[12][12])
     {
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
