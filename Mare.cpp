@@ -73,7 +73,7 @@ using namespace std;
         return v;
     }
 
-    char getCasella(int x, int y, vector<vector<char>> mar_)
+    char Mare::getCasella(int x, int y, vector<vector<char> > mar_)
     {
         char c = mar_[x][y];
         return c;
