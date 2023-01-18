@@ -28,11 +28,11 @@ using namespace std;
         copy(mar_[x].begin(), mar_[x].end(), v);
         cout << "c di figa" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
-        vector<vector<char> >::iterator t = mar_[x].begin();
         for (int j = 0; j < x; j++)
         {
             it++;
         }
+        vector<vector<char> >::iterator t = mar_.begin().begin();
         for (int n = 0; n < y; n++)
         {
             t++;
