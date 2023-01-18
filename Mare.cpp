@@ -993,6 +993,7 @@ using namespace std;
                             if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
+                                break;
                             }
                         }
                         if(temp == 0)
@@ -1040,6 +1041,7 @@ using namespace std;
                             if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
+                                break;
                             }
                         }
                         if(temp == 0)
@@ -1077,6 +1079,7 @@ using namespace std;
                             if(v1[i].first == x && v1[i].first == y)
                             {
                                 temp = 1;
+                                break;
                             }
                         }
                         if(temp == 0)
