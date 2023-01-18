@@ -950,7 +950,7 @@ using namespace std;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
                     cout << x << y << " " << x << (y+1) << " " << x << (y-1) << " " << x << (y+2) << " " << x << (y-2) << endl;
-                    if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
+                    if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
                         cout << "C5" << endl;
                         for(int i = 0; i<v1.size(); i++)
