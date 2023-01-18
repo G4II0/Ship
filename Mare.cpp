@@ -23,7 +23,8 @@ using namespace std;
         int y = p.second;
         cout<<"c di cazzo"<<endl;
         mar_[x][y] = 'C';
-        cout<<mar_[x][y]<<endl;
+        printAMare(mar_);
+        cout<<mar_[x][y];
     }
 
     void Mare::setMareAs(pair<int, int> p, char (&mar_)[12][12])
@@ -284,6 +285,9 @@ using namespace std;
             }
             cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
+            cout << "inserisco in marCor_" << endl;
+            setMarCor(ship);
+            cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
             setMareAc(pos, mar_);
@@ -292,9 +296,6 @@ using namespace std;
             setMareAc(temp3, mar_);
             setMareAc(temp4, mar_);
             // posizionamento nel mareC
-            cout << "inserisco in marCor_" << endl;
-            setMarCor(ship);
-            cout << "ho inserito in marCor_" << endl; 
         }
         else
         {

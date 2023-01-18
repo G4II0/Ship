@@ -106,7 +106,7 @@ int main()
                         c1.setNumero(i);
                         cout << "inserisco la prima corazzata" << endl;
                         players[ind].getMare().insertCor(c1, p);
-                        printTextEffect(players[ind].getMare().printAMare(players[ind].getMare()));
+                        printTextEffect(players[ind].getMare().printAMare());
                         cout << "inserita la prima corazzata" << endl;
                     }
                     else
@@ -350,11 +350,11 @@ int main()
             printTextEffect("Se vuoi stampare le griglie, inserire 'XX XX': ");
             string code;
             cin >> code;
-            if (code == "XX XX")
-            {
-                cout << boardP1.printAMare();
-                cout << boardP2.printEMare();
-            }//__________________________________________________________________________________________________________
+            //if (code == "XX XX")
+            //{
+                //cout << boardP1.printAMare(mar_);
+                //cout << boardP2.printEMare(mar_);
+            //}//__________________________________________________________________________________________________________
             pair<int, int> start;
             pair<int, int> end;
             int xs;

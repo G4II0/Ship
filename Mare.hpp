@@ -119,7 +119,7 @@ using namespace std;
         int getMCondition();
 
         // stampa la griglia alleata
-        string printAMare();
+        string printAMare(char (&mar_)[12][12]);
         // stampa la griglia nemica
         string printEMare();
 
