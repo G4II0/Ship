@@ -856,7 +856,7 @@ using namespace std;
 
     string Mare::printAMare()
     {
-        cout<<"suca stea no so una funxion de merda"<<emdl;
+        cout<<"suca stea no so una funxion de merda"<<endl;
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
         out += "   +-----------------------------------------------+\n";
