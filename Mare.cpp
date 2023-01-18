@@ -33,9 +33,11 @@ using namespace std;
         char jj;
         char kk;
         char ll;
-        int asd = 0;
+        vector<vector<char> >::iterator q1 = mar_.begin();
+        vector<char>::iterator q2 = mar_.begin();
+
         cout << "Controllo 1" << endl;
-        cout << "mar = " << mar_[x][asd];
+        cout << "mar = " << q1.at(x);
         if(y != 0)
         {
             cout << "Controllo 1.1" << endl;
