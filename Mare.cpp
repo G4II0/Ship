@@ -929,12 +929,10 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            int x = 0;
-            while(x < 12)
+            for(int x = 0; x < 12; x++)
             {
                 cout<< "Xtemp = " << x << " "; 
-                int y = 2;
-                while(y < 10)
+                for(int y = 2; y < 10; y++)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
@@ -965,19 +963,16 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         else
         {
             int x = 2;
-            while(x < 10)
+            for(int x = 2; x < 10; x++)
             {
                 cout<< "Xtemp = " << x << " ";
-                int y = 0;
-                while(y < 12)
+                for(int y = 0; y < 12; y++)
                 {
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
@@ -1009,9 +1004,7 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         cout << "v1 = " << " ";
