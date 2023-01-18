@@ -243,10 +243,10 @@ using namespace std;
                 temp3.second = (pos.second) + 1;
                 temp4.first = pos.first;
                 temp4.second = (pos.second) - 1;
-                temp5.first.first = temp1.first;  // c prua
+                temp5.first.first = temp1.first;  // c prua_____________________________________________________
                 temp5.first.second = temp1.second;
                 temp5.second.first = temp2.first; // c poppa
-                temp5.second.second = temp2.second;
+                temp5.second.second = temp2.second;//___________________________________________________________
                 cout << "ho finito il d == 0" << endl; 
             }
             else
@@ -259,11 +259,11 @@ using namespace std;
                 temp3.first = (pos.first) + 1;
                 temp3.second = pos.second;
                 temp4.first = (pos.first) - 1;
-                temp2.second = pos.second;
-                temp5.first.first = temp1.first;  // c prua
+                temp4.second = pos.second;
+                temp5.first.first = temp1.first;  // c prua_______________________________________________________
                 temp5.first.second = temp1.second;
                 temp5.second.first = temp2.first; // c poppa
-                temp5.second.second = temp2.second;
+                temp5.second.second = temp2.second;//_____________________________________________________________
             }
             cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
@@ -305,8 +305,10 @@ using namespace std;
                 temp1.second = (pos.second) + 1; // y prua
                 temp2.first = pos.first;         // x poppa
                 temp2.second = (pos.second) - 1; // y poppa
-                temp3.first = temp1;             // c prua
-                temp3.second = temp2;            // c poppa
+                temp3.first.first = temp1.first; // c prua__________________________________________________
+                temp3.first.second = temp1.second;
+                temp3.second.fisrt = temp2.first;// c poppa
+                temp3.second.second = temp2.second;//________________________________________________________
             }
             else
             {
@@ -314,8 +316,10 @@ using namespace std;
                 temp1.second = pos.second;
                 temp2.first = (pos.first) - 1;
                 temp2.second = pos.second;
-                temp3.first = temp1;
-                temp3.second = temp2;
+                temp3.first.first = temp1.first; // c prua__________________________________________________
+                temp3.first.second = temp1.second;
+                temp3.second.fisrt = temp2.first;// c poppa
+                temp3.second.second = temp2.second;//_______________________________________________________
             }
             // posizionamento nella board
             ship.setPMedio(pos);
@@ -340,13 +344,13 @@ using namespace std;
         if (b == true)
         {
             cout << "b è true!!!!!!" << endl;
-            pair<int, int> temp1;
+            pair<int, int> temp1;//_________________________________________________________________
             pair<int, int> temp2;
             pair<pair<int, int>, pair<int, int> > temp3;
             temp1.first = pos.first;         // x prua
             temp1.second = (pos.second);     // y prua
             temp3.first = temp1;             // c prua
-            temp3.second = temp1;            // c poppa
+            temp3.second = temp1;            // c poppa_____________________________________________
             ship.setPMedio(pos);
             // posizionamento nella board
             setMareA(pos, 'E');
