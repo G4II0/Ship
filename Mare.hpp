@@ -8,6 +8,7 @@
 #include <vector>
 #include <map>
 #include <random>
+#include <iterator>
 #include "Ship.hpp"
 #include "Corazzata.hpp"
 #include "Nds.hpp"

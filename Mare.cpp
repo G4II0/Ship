@@ -46,7 +46,7 @@ using namespace std;
         }
         else
         {
-            mar_.insert(x - 1, v)1;
+            mar_.insert(x - 1, v1);
         }
         cout << "c di" << endl;
     }
