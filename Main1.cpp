@@ -104,7 +104,9 @@ int main()
                     {
                         Corazzata c1 = Corazzata(p, d, i);
                         c1.setNumero(i);
+                        cout << "inserisco la prima corazzata" << endl;
                         players[ind].getMare().insertCor(c1, p);
+                        cout << "inserita la prima corazzata" << endl;
                     }
                     else
                     if(i==1)

@@ -203,7 +203,7 @@ using namespace std;
     }
 
 //inserimento corazzata
-    void Mare::insertCor(Corazzata& ship, pair<int, int>& pos)
+    void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {   
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
@@ -227,9 +227,12 @@ using namespace std;
                 temp3.first = pos.first;
                 temp3.second = (pos.second) + 1;
                 temp4.first = pos.first;
-                temp2.second = (pos.second) - 1;
-                temp5.first = temp1;  // c prua
-                temp5.second = temp2; // c poppa
+                temp4.second = (pos.second) - 1;
+                temp5.first.first = temp1.first;  // c prua
+                temp5.first.second = temp1.second;
+                temp5.second.first = temp2.first; // c poppa
+                temp5.second.second = temp2.second;
+                cout << "ho finito il d == 0" << endl; 
             }
             else
             {
@@ -245,15 +248,19 @@ using namespace std;
                 temp5.first = temp1;  // c prua
                 temp5.second = temp2; // c poppa
             }
+            cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
             // posizionamento nel mare
+            cout << "setto il mare" << endl;
             setMareA(pos, 'C');
             setMareA(temp1, 'C');
             setMareA(temp2, 'C');
             setMareA(temp3, 'C');
             setMareA(temp4, 'C');
             // posizionamento nel mareC
-            marCor_[ship.getNumero()] = ship;
+            cout << "inserisco in marCor_" << endl;
+            //marCor_[ship.getNumero()] = ship;
+            cout << "ho inserito in marCor_" << endl; 
         }
         else
         {
