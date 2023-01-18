@@ -95,7 +95,6 @@ using namespace std;
               
 //--
         vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
-        vector<char> v1;
         cout << "c di palle" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
         //vector<char>::iterator gg = v.begin();
@@ -103,42 +102,16 @@ using namespace std;
         for (int j = 0; j < x; j++)
         {
             it++;
-        }/*
-        vector<vector<char> >::iterator fine = it;
-        for (int a = 0; a < 12; a++)
-        {
-            fine++;
         }
-        for (; it != fine; ++it, (void) ++gg)
-        {
-        *gg = *it;
-        }
-        //copy(it, fine, gg);
-        vector<vector<char> >::iterator t = it;
-        for (int n = 0; n < y; n++)
-        {
-            t++;
-        }
-        cout << "c di cazzo" << endl;
-        for (int i = 0; i < y; i++)
-        {
-            v1.push_back(v.at(i));
-        }
-        v1.push_back('C');
-        v.pop_back();
-        for (int i = y+1; i < v.size(); i++)
-        {
-            v1.push_back(v.at(i));
-        }*/
         mar_.erase(it);
         if (x == 0)
         {
-            mar_.insert(it, v1);
+            mar_.insert(it, v);
         }
         else
         {
             it--;
-            mar_.insert(it, v1);
+            mar_.insert(it, v);
         }
         cout << "c di" << endl;
     }
