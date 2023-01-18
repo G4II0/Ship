@@ -945,15 +945,17 @@ using namespace std;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < 10; y++)
                 {
+                    cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            if(v1[i].first == x && v1[i].second == y)
+                            cout << "C2" << endl;
+                            if (v1[i].first == x && v1[i].second == y)
                             {
-                                v1.erase(v1.begin() + i);
-                                break;
+                            v1.erase(v1.begin() + i);
+                            break;
                             }
                         }
                     }
