@@ -949,11 +949,13 @@ using namespace std;
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y+2] != ' ' || mar_[x][y-2] != ' ')
                     {
+                        cout << "C4" << endl;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            cout << "C4" << endl;
+                            cout << "C5" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
+                                cout << "C6" << endl;
                                 v1.erase(v1.begin() + i);
                                 break;
                             }
@@ -961,6 +963,7 @@ using namespace std;
                     }
                     else
                     {
+                        cout << "C7" << endl;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
