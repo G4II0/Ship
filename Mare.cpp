@@ -949,11 +949,15 @@ using namespace std;
                     cout << "Ytemp = " << y << " ";
                     cout << "C4" << endl;
                     char c0 = mar_[x][y];
+                    cout << "C5.0" << endl;
                     char c1 = mar_[x][y + 1];
+                    cout << "C5.1" << endl;
                     char c2 = mar_[x][y - 1];
+                    cout << "C5.2" << endl;
                     char c3 = mar_[x][y + 2];
+                    cout << "C5.3" << endl;
                     char c4 = mar_[x][y - 2];
-                    cout << "C5" << endl;
+                    cout << "C5.4" << endl;
                     if (c0 != ' ' || c1 != ' ' || c2 != ' ' || c3 != ' ' || c4 != ' ')
                     {
                         cout << "C6" << endl;
