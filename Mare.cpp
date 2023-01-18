@@ -34,8 +34,12 @@ using namespace std;
         char kk;
         char ll;
         cout << "Controllo 1" << endl;
+        cout << "mar = " << mar_[x][0];
         if(y != 0)
-        {aa = mar_[x][0];}
+        {
+            cout << "Controllo 1.1" << endl;
+            aa = mar_[x][0];
+        }
         else
         {aa = 'C';}
         cout << "Controllo 2" << endl;
