@@ -109,7 +109,7 @@ using namespace std;
         return marSde[t];
     }
 
-    bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
+    bool Mare::legitMoveInput(Corazzata ship, pair<int, int>& pos)
     {   
         cout << "check" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
@@ -202,7 +202,7 @@ using namespace std;
     }
 
 //inserimento corazzata
-    void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
+    void Mare::insertCor(Corazzata& ship, pair<int, int>& pos)
     {   
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
