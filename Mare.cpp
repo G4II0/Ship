@@ -859,6 +859,7 @@ using namespace std;
         cout<<"suca stea no so una funxion de merda"<<endl;
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
+        cout<<mar_.size()<<endl;
         out += "   +-----------------------------------------------+\n";
         for (int i = mar_.size()-1; i >= 0; i--)
         {
