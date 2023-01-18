@@ -21,18 +21,55 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        char aa = mar_[x][0];
-        char bb = mar_[x][1];
-        char cc = mar_[x][2];
-        char dd = mar_[x][3];
-        char ee = mar_[x][4];
-        char ff = mar_[x][5];
-        char gg = mar_[x][6];
-        char hh = mar_[x][7];
-        char ii = mar_[x][8];
-        char jj = mar_[x][9];
-        char kk = mar_[x][10];
-        char ll = mar_[x][11];      
+        if(y != 0)
+        {char aa = mar_[x][0];}
+        else
+        {char aa = 'C';}
+        if(y != 1)
+        {char bb = mar_[x][1];}
+        else
+        {char bb = 'C';}      
+        if(y != 2)
+        {char cc = mar_[x][2];}
+        else
+        {char cc = 'C';} 
+        if(y != 3)
+        {char dd = mar_[x][3];}
+        else
+        {char dd = 'C';} 
+        if(y != 4)
+        {char ee = mar_[x][4];}
+        else
+        {char ee = 'C';} 
+        if(y != 5)
+        {char ff = mar_[x][5];}
+        else
+        {char ff = 'C';} 
+        if(y != 6)
+        {char gg = mar_[x][6];}
+        else
+        {char gg = 'C';} 
+        if(y != 7)
+        {char hh = mar_[x][7];}
+        else
+        {char hh = 'C';} 
+        if(y != 8)
+        {char ii = mar_[x][8];}
+        else
+        {char ii = 'C';} 
+        if(y != 9)
+        {char jj = mar_[x][9];}
+        else
+        {char ll = 'C';} 
+        if(y != 10)
+        {char kk = mar_[x][10];} 
+        else
+        {char kk = 'C';}
+        if(y != 11)
+        {char ll = mar_[x][11];}
+        else
+        {char ll = 'C';}
+              
 //--
         vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
         vector<char> v1;
@@ -58,7 +95,7 @@ using namespace std;
         for (int n = 0; n < y; n++)
         {
             t++;
-        }*/
+        }
         cout << "c di cazzo" << endl;
         for (int i = 0; i < y; i++)
         {
@@ -69,7 +106,7 @@ using namespace std;
         for (int i = y+1; i < v.size(); i++)
         {
             v1.push_back(v.at(i));
-        }
+        }*/
         mar_.erase(it);
         if (x == 0)
         {
