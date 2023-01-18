@@ -941,6 +941,7 @@ using namespace std;
             cout<<"C1"<<endl;
             for(int x = 0; x < 12; x++)
             {
+                cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < 10; y++)
                 {
