@@ -21,65 +21,77 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
+        char aa;
+        char bb;
+        char cc;
+        char dd;
+        char ee;
+        char ff;
+        char gg;
+        char hh;
+        char ii;
+        char jj;
+        char kk;
+        char ll;
         if(y != 0)
-        {char aa = mar_[x][0];}
+        {aa = mar_[x][0];}
         else
-        {char aa = 'C';}
+        {aa = 'C';}
         
         if(y != 1)
-        {char bb = mar_[x][1];}
+        {bb = mar_[x][1];}
         else
-        {char bb = 'C';} 
+        {bb = 'C';} 
              
         if(y != 2)
-        {char cc = mar_[x][2];}
+        {cc = mar_[x][2];}
         else
-        {char cc = 'C';} 
+        {cc = 'C';} 
 
         if(y != 3)
-        {char dd = mar_[x][3];}
+        {dd = mar_[x][3];}
         else
-        {char dd = 'C';} 
+        {dd = 'C';} 
 
         if(y != 4)
-        {char ee = mar_[x][4];}
+        {ee = mar_[x][4];}
         else
-        {char ee = 'C';} 
+        {ee = 'C';} 
 
         if(y != 5)
-        {char ff = mar_[x][5];}
+        {ff = mar_[x][5];}
         else
-        {char ff = 'C';} 
+        {ff = 'C';} 
 
         if(y != 6)
-        {char gg = mar_[x][6];}
+        {gg = mar_[x][6];}
         else
-        {char gg = 'C';} 
+        {gg = 'C';} 
 
         if(y != 7)
-        {char hh = mar_[x][7];}
+        {hh = mar_[x][7];}
         else
-        {char hh = 'C';} 
+        {hh = 'C';} 
 
         if(y != 8)
-        {char ii = mar_[x][8];}
+        {ii = mar_[x][8];}
         else
-        {char ii = 'C';} 
+        {ii = 'C';} 
 
         if(y != 9)
-        {char jj = mar_[x][9];}
+        {jj = mar_[x][9];}
         else
-        {char jj = 'C';} 
+        {jj = 'C';} 
 
         if(y != 10)
-        {char kk = mar_[x][10];} 
+        {kk = mar_[x][10];} 
         else
-        {char kk = 'C';}
+        {kk = 'C';}
 
         if(y != 11)
-        {char ll = mar_[x][11];}
+        {ll = mar_[x][11];}
         else
-        {char ll = 'C';}
+        {ll = 'C';}
               
 //--
         vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
