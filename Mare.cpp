@@ -13,7 +13,8 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        mar_[x][y] = c;
+        char temp = c;
+        mar_[x][y] = temp;
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
@@ -836,16 +837,17 @@ using namespace std;
             out += " ¦ ";
             for (int j = 0; j < 12; j++)
             {
-                if (mar_[i][j] == ' ')
+                /*if (mar_[i][j] == ' ')
                     {
                         out += " ";
                         //out += " │ ";
                     }
                 else
                 {
-                    cout<<endl;
-                    out += mar_[i][j];
-                }
+                    string s = to_string(mar_[i][j]);
+                    out += s;
+                }*/
+                out += mar_[i][j];
                 out += " ¦ ";
             }
             out += "\n";
