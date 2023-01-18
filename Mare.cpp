@@ -186,7 +186,7 @@ using namespace std;
         return false;
     }
 
-    void Mare::initializeMare(char (&mar_)[12][12])
+    void Mare::initializeMare(vector<vector<char>>mar_)
     {
 
         for(int x = 0; x < 12; x++)
@@ -198,7 +198,7 @@ using namespace std;
         }
     }
 
-    void Mare::initializeMareES(char (&marES_) [12][12])
+    void Mare::initializeMareES(vector<vector<char>> marES_)
     {int x=0, y=0;
 
         while (x < 12)
