@@ -51,6 +51,7 @@ int main()
             printTextEffect("Il bot si chiama " + names[1]);
             types.push_back(U);
             types.push_back(B);
+            printTextEffect("suca");
             break;
         }
         else if (game == "cc") 
