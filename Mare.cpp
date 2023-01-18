@@ -960,9 +960,7 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         else
@@ -1003,9 +1001,7 @@ using namespace std;
                             v1.push_back(p);
                         }
                     }
-                    y++;
                 }
-                x++;
             }
         }
         cout << "v1 = " << " ";
