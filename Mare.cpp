@@ -32,7 +32,7 @@ using namespace std;
         {
             it++;
         }
-        vector<char>::iterator fine = it;
+        vector<vector<char> >::iterator fine = it;
         for (int a = 0; a < 12; a++)
         {
             fine++;
