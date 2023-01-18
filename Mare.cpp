@@ -33,8 +33,9 @@ using namespace std;
         char jj;
         char kk;
         char ll;
+        int asd = 0;
         cout << "Controllo 1" << endl;
-        cout << "mar = " << mar_[x][0];
+        cout << "mar = " << mar_[x][asd];
         if(y != 0)
         {
             cout << "Controllo 1.1" << endl;
