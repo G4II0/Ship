@@ -23,7 +23,7 @@ using namespace std;
         int y = p.second;
         cout<<"c di cazzo"<<endl;
         mar_[x][y] = 'C';
-        printAMare();
+        printAMare(mar_);
         cout<<mar_[x][y];
     }
 
@@ -848,7 +848,7 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
-    string Mare::printAMare(vector<vector<char>> mar_)
+    string Mare::printAMare(vector<vector<char> > mar_)
     {
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
