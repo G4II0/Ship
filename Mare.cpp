@@ -933,13 +933,12 @@ using namespace std;
     {
         cout << "sono in PosAvailableCor" << endl;
         vector<pair<int, int> > v1 = shi.Moves();
-        //---------------------------------------------------
         pair<int, int> p;
-        cout << "C1" << endl;
         int d = shi.getDirezione();
-        cout<<"C2"<<endl;
+        //---------------------------------------------------
         if(d==0)
         {
+            cout<<"C1"<<endl;
             for(int x = 0; x < 12; x++)
             {
                 cout<< "Xtemp = " << x << " "; 
