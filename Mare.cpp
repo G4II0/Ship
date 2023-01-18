@@ -947,7 +947,7 @@ using namespace std;
                 {
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
-                    cout << "C8" << endl;
+                    cout << "C4" << endl;
                     char c0 = mar_[x][y];
                     char c1 = mar_[x][y + 1];
                     char c2 = mar_[x][y - 1];
@@ -955,13 +955,13 @@ using namespace std;
                     char c4 = mar_[x][y - 2];
                     if (c0 != ' ' || c1 != ' ' || c2 != ' ' || c3 != ' ' || c4 != ' ')
                     {
-                        cout << "C4" << endl;
+                        cout << "C5" << endl;
                         for(int i = 0; i<v1.size(); i++)
                         {
-                            cout << "C5" << endl;
+                            cout << "C6" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
-                                cout << "C6" << endl;
+                                cout << "C7" << endl;
                                 v1.erase(v1.begin() + i);
                                 break;
                             }
@@ -969,7 +969,7 @@ using namespace std;
                     }
                     else
                     {
-                        cout << "C7" << endl;
+                        cout << "C8" << endl;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
