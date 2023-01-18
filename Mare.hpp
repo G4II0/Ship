@@ -67,7 +67,7 @@ using namespace std;
         Sde whichSde(vector<Sde> marSde, pair<int, int> pos);
 
         //genera la board vuota
-        void initializeMare(char (&mar_)[12][12]);
+        void initializeMare(vector<vector<char> > mar_);
         void initializeMareES(char (&marES_)[12][12]);
         void initializeMare(vector<Corazzata> marCor);
         void initializeMare(vector<Nds> marNds);
@@ -119,7 +119,7 @@ using namespace std;
         int getMCondition();
 
         // stampa la griglia alleata
-        string printAMare(char (&mar_)[12][12]);
+        string printAMare(vector<vector<char> > mar_);
         // stampa la griglia nemica
         string printEMare();
 
