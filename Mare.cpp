@@ -28,9 +28,14 @@ using namespace std;
         copy(mar_[x].begin(), mar_[x].end(), v);
         cout << "c di figa" << endl;
         vector<vector>::iterator it = mar_.begin();
-        for (int j=0; j <= x; j++)
+        vector<vector>::iterator t = mar_[x].begin();
+        for (int j = 0; j <= x; j++)
         {
             it++;
+        }
+        for (int n = 0; n <= y; n++)
+        {
+            t++;
         }
         mar_.erase(it);
         cout << "c di cazzo" << endl;
