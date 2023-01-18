@@ -940,11 +940,11 @@ using namespace std;
         if(d==0)
         {
             cout<<"C1"<<endl;
-            for(int x = 0; x < 12; x++)
+            for(int x = 0; x < mar_.size(); x++)
             {
                 cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
-                for(int y = 9; y > 2; y--)
+                for(int y = 2; y < mar_[x].size()-2; y++)
                 {
                     cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
