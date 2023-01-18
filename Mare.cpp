@@ -969,9 +969,11 @@ using namespace std;
             int x = 2;
             while(x < 10)
             {
+                cout<< "Xtemp = " << x << " ";
                 int y = 0;
                 while(y < 12)
                 {
+                    cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
@@ -1088,6 +1090,12 @@ using namespace std;
             }
         }
         shi.Moves() = v1;
+        cout << "v1 = " << " ";
+        for (int i = v1.size(); i < v1.end(); i++)
+        {
+            cout << v1.at(i).first << " " << v1.at(i).second << endl;;
+        }
+        
         return v1;
     }
 
