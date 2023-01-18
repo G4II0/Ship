@@ -6,7 +6,7 @@ using namespace std;
     {
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
-        //initializeMare(mar_);
+        initializeMare(mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
@@ -193,7 +193,7 @@ using namespace std;
         {
             for(int y = 0; y < 12; y++)
             {
-                mar_[x][y] = ' ';
+                mar_[x][y].push_back(' ');
             }
         }
     }
@@ -205,8 +205,8 @@ using namespace std;
         {
             while (y < 12)
             {
-                marES_[x][y] = ' ';
-                    y++;
+                marES_[x][y].push_back(' ');
+                y++;
             }
             x++;
         }
