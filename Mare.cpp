@@ -33,11 +33,12 @@ using namespace std;
         char jj;
         char kk;
         char ll;
+        cout << "Controllo 1" << endl;
         if(y != 0)
         {aa = mar_[x][0];}
         else
         {aa = 'C';}
-        
+        cout << "Controllo 2" << endl;
         if(y != 1)
         {bb = mar_[x][1];}
         else
@@ -52,7 +53,7 @@ using namespace std;
         {dd = mar_[x][3];}
         else
         {dd = 'C';} 
-
+        cout << "Controllo 3" << endl;
         if(y != 4)
         {ee = mar_[x][4];}
         else
@@ -94,6 +95,7 @@ using namespace std;
         {ll = 'C';}
               
 //--
+        cout << "Controllo 4" << endl;
         vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
         cout << "c di palle" << endl;
         vector<vector<char> >::iterator it = mar_.begin();
