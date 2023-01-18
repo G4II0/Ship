@@ -29,7 +29,6 @@ using namespace std;
         cout << "c di palle" << endl;
         printAMare();
         cout << "c di figa" << endl;
-        cout<<mar_[x][y];
         return mar_;
     }
 
