@@ -32,25 +32,21 @@ using namespace std;
         cout << "c di cazzo" << endl;
         for (int i = 0; i < y; i++)
         {
-            v1.push_back(v.pop_back());
+            v1.push_back(v.at(i));
         }
         v1.push_back('C');
         v.pop_back();
-        for (int i = 0; i < v.size(); i++)
+        for (int i = y+1; i < v.size(); i++)
         {
-            v1.push_back(v.pop_back());
-        }
-        for (int i = 0; i < v1.size(); i++)
-        {
-            v.push_back(v1.pop_back());
+            v1.push_back(v.at(i));
         }
         if (x == 0)
         {
-            mar_.insert(x, v);
+            mar_.insert(x, v1);
         }
         else
         {
-            mar_.insert(x - 1, v);
+            mar_.insert(x - 1, v)1;
         }
         cout << "c di" << endl;
     }
