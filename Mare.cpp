@@ -977,7 +977,6 @@ using namespace std;
             cout<<"C1"<<endl;
             for(int x = 0; x < mar_.size(); x++)
             {
-                int temp = 0;
                 cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < mar_[x].size()-2; y++)
@@ -1000,7 +999,7 @@ using namespace std;
                     else
                     {
                         cout << "C6" << endl;
-                        
+                        int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
                             if(v1[i].first == x && v1[i].second == y)
@@ -1008,21 +1007,14 @@ using namespace std;
                                 temp = 1;
                             }
                         }
-                        
-                    }
-                    if(temp == 0)
+                        if(temp == 0)
                         {
                             p.first = x;
                             p.second = y;
                             v1.push_back(p);
                             cout << "C7" << endl;
-                            break;
+                        }
                     }
-                }
-                if (temp == 0)
-                {
-                    cout << "C8" << endl;
-                    break;
                 }
             }
         }
