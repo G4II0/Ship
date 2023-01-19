@@ -107,7 +107,7 @@ int main()
                         c1.setNumero(i);
                         cout << "inserisco la prima corazzata" << endl;
                         players[ind].getMare().insertCor(c1, p);
-                        printTextEffect(players[ind].getMare().printAMare());
+                        //printTextEffect(players[ind].getMare().printAMare());
                         cout << "inserita la prima corazzata" << endl;
                     }
                     else
