@@ -27,23 +27,24 @@ using namespace std;
         }
     }
 
-    void Mare::setMareAc(pair<int, int> &p)
+    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char>> mar_)
     {
         int x = p.first;
         int y = p.second;
         
-        for (int i = 0; i < mar_.size(); i++) 
+        for (int i = 0; i < mar_.size(); i++)
         {
-            for (int j = 0; j < mar_[i].size(); j++)
+            for (int j = 0; j < mar_mar_[i].size(); j++)
             {
                 if (i == x && j == y) 
                 {
-                    mar_[i].erase(mar_[i].begin() + j);
-                    mar_[i].insert(mar_[i].begin() + j, 'C');
+                    mar_[i].erase(mar_mar_mar_mar_[i].begin() + j);
+                    mar_[i].insert(mar_mar_mar_[i].begin() + j, 'C');
                 }
             }
         }
         printAMare();
+        return mar_;
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
@@ -220,9 +221,13 @@ using namespace std;
         for (int x = 0; x < 12; x++) 
         {
             std::vector<char> innerVec;
-            for (int y = 0; y < 12; y++) 
+            for (int y = 0; y < 6; y++) 
             {
                 mar_[x].insert(mar_[x].begin() + y, ' ');
+            }
+            for (int y = 0; y < 6; y++)
+            {
+                mar_[x].insert(mar_[x].begin() + y, 'M');
             }
             mar_.push_back(innerVec);
         }
@@ -323,15 +328,18 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(temp0);
-            setMareAc(temp1);
-            setMareAc(temp2);
-            setMareAc(temp3);
-            setMareAc(temp4);
+            vector<vector<char> > vT;
+            vT = setMareAc(temp0, mar_);
+
+            vT = setMareAc(temp1, vT);
+            vT = setMareAc(temp2, vT);
+            vT = setMareAc(temp3, vT);
+            vT = setMareAc(temp4, vT);
             // posizionamento nel mareC
-        }//-
+            mar_ = vT;
+        }
         else
-        {
+        {//-
             cout << "errore" << endl;
             throw InvalidInputException("Inserimento non valido");
         }
