@@ -14,7 +14,16 @@ using namespace std;
         int x = p.first;
         int y = p.second;
         cout<<"spazio"<<endl;
-        mar_[x][y] = ' ';
+        for (int i = 0; i < mar_.size(); i++) 
+        {
+            for (int j = 0; j < mar_[i].size(); j++)
+             {
+                if (i == x && j == y) 
+                {
+                    mar_[i].insert(mar_[i].begin() + j, ' ');
+                }
+            }
+        }
     }
 
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> > &mar_)
