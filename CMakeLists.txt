@@ -7,7 +7,7 @@ project(ship)
 
 add_executable(
     ship
-    Main1.cpp
+    Battaglia_Navale.cpp
     Mare.cpp
     Ship.cpp
     Nds.cpp
