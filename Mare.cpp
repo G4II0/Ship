@@ -261,8 +261,8 @@ using namespace std;
             pair<int, int> temp2;
             pair<int, int> temp3;
             pair<int, int> temp4;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = (pos.first);
+            temp0.second = (pos.second);
             int d = ship.getDirezione();
             if(d == 1)
             {
@@ -315,8 +315,8 @@ using namespace std;
             pair<int, int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = (pos.first);
+            temp0.second = (pos.second);
             int d = ship.getDirezione();
             if (d == 1)
             {
@@ -357,8 +357,8 @@ using namespace std;
         if (b == true)
         {
             pair<int, int> temp0;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = (pos.first);
+            temp0.second = (pos.second);
             if (b == false)
             {
                 cout << "torno in b == false" << endl;
