@@ -28,7 +28,7 @@ using namespace std;
 
     void Mare::saveMare(vector<vector<char>> &temp)
     {
-        smar_ = temp;
+        mar_ = temp;
     }
 
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
@@ -287,35 +287,38 @@ using namespace std;
         if (b == true)
         {   
             cout << " b è in true!!!!" << endl;
+            pair<int,int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;
             pair<int, int> temp3;
             pair<int, int> temp4;
+            temp0.first = (pos.first) - 1;
+            temp0.second = (pos.second) - 1;
             int d = ship.getDirezione();
-            if(d == 0)
+            if(d == 1)
             {
                 cout << "sono in d == 0" << endl;
-                temp1.first = pos.first;         // x prua
-                temp1.second = (pos.second) + 2; // y prua
-                temp2.first = pos.first;         // x poppa
-                temp2.second = (pos.second) - 2; // y poppa
-                temp3.first = pos.first;
-                temp3.second = (pos.second) + 1;
-                temp4.first = pos.first;
-                temp4.second = (pos.second) - 1;
+                temp1.first = (temp0.first);         // x prua
+                temp1.second = (temp0.second) - 2; // y prua
+                temp2.first = (temp0.first);         // x poppa
+                temp2.second = (temp0.second) + 2; // y poppa
+                temp3.first = (temp0.first);
+                temp3.second = (temp0.second) - 1;
+                temp4.first = (temp0.first);
+                temp4.second = (temp0.second) + 1;
                 cout << "ho finito il d == 0" << endl; 
             }
             else
             {
                 cout << "sono in d == 1" << endl;
-                temp1.first = (pos.first) + 2; // x prua
-                temp1.second = pos.second;     // y prua
-                temp2.first = (pos.first) - 2; // x poppa
-                temp2.second = pos.second;     // y poppa
-                temp3.first = (pos.first) + 1;
-                temp3.second = pos.second;
-                temp4.first = (pos.first) - 1;
-                temp4.second = pos.second;
+                temp1.first = (temp0.first) + 2; // x prua
+                temp1.second = (temp0.second);     // y prua
+                temp2.first = (temp0.first) - 2; // x poppa
+                temp2.second = (temp0.second);     // y poppa
+                temp3.first = (temp0.first) + 1;
+                temp3.second = (temp0.second);
+                temp4.first = (temp0.first) - 1;
+                temp4.second = (temp0.second);
             }
             cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
@@ -324,7 +327,7 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(pos, mar_);
+            setMareAc(temp0, mar_);
             setMareAc(temp1, mar_);
             setMareAc(temp2, mar_);
             setMareAc(temp3, mar_);
