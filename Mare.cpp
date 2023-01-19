@@ -255,7 +255,6 @@ using namespace std;
         bool b = legitMoveInput(ship, pos);
         if (b == true)
         {
-            cout << " b è in true!!!!" << endl;
             pair<int,int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;

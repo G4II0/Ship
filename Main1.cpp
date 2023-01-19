@@ -74,6 +74,12 @@ int main()
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
+    pair<int, int> p;
+    char x;
+    int x1;
+    int y;
+    int d;
+
     int ind = 0;
     while (ind < 2)
     {
@@ -87,20 +93,17 @@ int main()
         int i = 0;
         while(i < 3) 
         {
-            pair<int, int> p;
-            int x;
-            int y;
-            int d;
             try
-            {                           
+            {
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    cin>>x>>y;
-                    p.first = x;
-                    p.second = y;
+                    cin >> x >> y;
+                    x1 = convertI(char x);
+                    p.first = x1 - 1;
+                    p.second = y - 1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -211,10 +214,6 @@ int main()
         i = 0;
         while(i < 3)
         {
-            pair<int, int> p;
-            int x;
-            int y;
-            int d;
             try
             {
                 if(players[ind].getType() == U)
@@ -222,10 +221,11 @@ int main()
                     printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
-                    cin>>x>>y;
-                    p.first = x;
-                    p.second = y;
-                    
+                    cin >> x >> y;
+                    x1 = convertI(char x);
+                    p.first = x1 - 1;
+                    p.second = y - 1;
+
                     if(i==0)
                     {
                         Nds s1 = Nds(p, d, i);
@@ -326,18 +326,15 @@ int main()
         i = 0;
         while(i < 2)
         {
-            pair<int, int> p;
-            int x;
-            int y;
-            int d;
             try
             {
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                    cin>>x>>y;
-                    p.first = x;
-                    p.second = y;
+                    cin >> x >> y;
+                    x1 = convertI(char x);
+                    p.first = x1 - 1;
+                    p.second = y - 1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
@@ -523,4 +520,32 @@ int main()
         printTextEffect("La partita termina in patta! È stata effettuata la 50esima mossa totale!");
     }
     printTextEffect("Grazie per aver giocato!");
+}
+
+int convertI(char l)
+{
+    if(l == 'A' || 'a')
+    {return 0;}
+    if (l == 'B' || 'b')
+    {return 1;}
+    if (l == 'C' || 'c')
+    {return 2;}
+    if (l == 'D' || 'd')
+    {return 3;}
+    if (l == 'E' || 'e')
+    {return 4;}
+    if (l == 'F' || 'f')
+    {return 5;}
+    if (l == 'G' || 'g')
+    {return 6;}
+    if (l == 'H' || 'h')
+    {return 7;}
+    if (l == 'I' || 'i')
+    {return 8;}
+    if (l == 'L' || 'l')
+    {return 9;}
+    if (l == 'M' || 'n')
+    {return 10;}
+    if (l == 'N' || 'n')
+    {return 11;}
 }
