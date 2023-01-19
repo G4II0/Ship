@@ -41,7 +41,7 @@ using namespace std;
                 }
             }
         }
-        printAMare(mar_);
+        //printAMare(mar_);
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
@@ -234,7 +234,7 @@ using namespace std;
             }
             mar_.push_back(innerVec);
         }
-        printAMare(mar_);
+        //printAMare(mar_);
     }
 
     void Mare::initializeMareES(vector<vector<char> > marES_)
