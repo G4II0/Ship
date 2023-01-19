@@ -231,7 +231,7 @@ using namespace std;
             std::vector<char> innerVec;
             for (int j = 0; j < 12; j++) 
             {
-                innerVec.push_back(' ');
+                mar_[x].insert(mar_[x].begin() + y, ' ');
             }
             mar_.push_back(innerVec);
         }
