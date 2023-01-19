@@ -37,23 +37,32 @@ int convertI(char l)
     else
     if (l == 'C' || 'c')
     {return 2;}
-    else if (l == 'D' || 'd')
+    else
+    if (l == 'D' || 'd')
     {return 3;}
-    else if (l == 'E' || 'e')
+    else
+    if (l == 'E' || 'e')
     {return 4;}
-    else if (l == 'F' || 'f')
+    else
+    if (l == 'F' || 'f')
     {return 5;}
-    else if (l == 'G' || 'g')
+    else
+    if (l == 'G' || 'g')
     {return 6;}
-    else if (l == 'H' || 'h')
+    else
+    if (l == 'H' || 'h')
     {return 7;}
-    else if (l == 'I' || 'i')
+    else
+    if (l == 'I' || 'i')
     {return 8;}
-    else if (l == 'L' || 'l')
+    else
+    if (l == 'L' || 'l')
     {return 9;}
-    else if (l == 'M' || 'n')
+    else
+    if (l == 'M' || 'n')
     {return 10;}
-    else if (l == 'N' || 'm')
+    else
+    if (l == 'N' || 'm')
     {return 11;}
 }
 int main()
