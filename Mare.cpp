@@ -293,7 +293,6 @@ using namespace std;
         }
         else
         {
-            cout << "errore" << endl;
             throw InvalidInputException("Inserimento non valido");
         }
     }
@@ -302,10 +301,8 @@ using namespace std;
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
         bool b = legitMoveInput(ship, pos);
-        cout << "b = " << b << endl;
         if (b == true)
         {
-            cout << " b è in true!!!!" << endl;
             pair<int, int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;
@@ -338,7 +335,6 @@ using namespace std;
         }
         else
         {
-            cout << "errore" << endl;
             throw InvalidInputException("Inserimento non valido");
         }
     }
@@ -347,7 +343,6 @@ using namespace std;
     void Mare::insertSde(Sde& ship, pair<int, int> pos)
     {
         bool b = legitMoveInput(ship, pos);
-        cout << "b = " << b << endl;
         if (b == true)
         {
             pair<int, int> temp0;
@@ -355,18 +350,16 @@ using namespace std;
             temp0.second = pos.second;
             if (b == false)
             {
-                cout << "torno in b == false" << endl;
                 throw InvalidInputException("Inserimento non valido");
             }
             if (b == true)
             {
-                cout << "b è true!!!!!!" << endl;
                 ship.setPMedio(temp0);
                 // posizionamento nel mareC
                 setMarSde(ship);
                 // posizionamento nella board
                 setMareAe(temp0);
-                }
+            }
         }
     }
 

@@ -129,6 +129,30 @@ ship/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/build
 .PHONY : ship/fast
 
+Battaglia_Navale.o: Battaglia_Navale.cpp.o
+.PHONY : Battaglia_Navale.o
+
+# target to build an object file
+Battaglia_Navale.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Battaglia_Navale.cpp.o
+.PHONY : Battaglia_Navale.cpp.o
+
+Battaglia_Navale.i: Battaglia_Navale.cpp.i
+.PHONY : Battaglia_Navale.i
+
+# target to preprocess a source file
+Battaglia_Navale.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Battaglia_Navale.cpp.i
+.PHONY : Battaglia_Navale.cpp.i
+
+Battaglia_Navale.s: Battaglia_Navale.cpp.s
+.PHONY : Battaglia_Navale.s
+
+# target to generate assembly for a file
+Battaglia_Navale.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Battaglia_Navale.cpp.s
+.PHONY : Battaglia_Navale.cpp.s
+
 Corazzata.o: Corazzata.cpp.o
 .PHONY : Corazzata.o
 
@@ -152,30 +176,6 @@ Corazzata.s: Corazzata.cpp.s
 Corazzata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Corazzata.cpp.s
 .PHONY : Corazzata.cpp.s
-
-Main1.o: Main1.cpp.o
-.PHONY : Main1.o
-
-# target to build an object file
-Main1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.o
-.PHONY : Main1.cpp.o
-
-Main1.i: Main1.cpp.i
-.PHONY : Main1.i
-
-# target to preprocess a source file
-Main1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.i
-.PHONY : Main1.cpp.i
-
-Main1.s: Main1.cpp.s
-.PHONY : Main1.s
-
-# target to generate assembly for a file
-Main1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ship.dir/build.make CMakeFiles/ship.dir/Main1.cpp.s
-.PHONY : Main1.cpp.s
 
 Mare.o: Mare.cpp.o
 .PHONY : Mare.o
@@ -306,12 +306,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ship"
+	@echo "... Battaglia_Navale.o"
+	@echo "... Battaglia_Navale.i"
+	@echo "... Battaglia_Navale.s"
 	@echo "... Corazzata.o"
 	@echo "... Corazzata.i"
 	@echo "... Corazzata.s"
-	@echo "... Main1.o"
-	@echo "... Main1.i"
-	@echo "... Main1.s"
 	@echo "... Mare.o"
 	@echo "... Mare.i"
 	@echo "... Mare.s"

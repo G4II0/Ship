@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ship.dir/Battaglia_Navale.cpp.o"
+  "CMakeFiles/ship.dir/Battaglia_Navale.cpp.o.d"
   "CMakeFiles/ship.dir/Corazzata.cpp.o"
   "CMakeFiles/ship.dir/Corazzata.cpp.o.d"
-  "CMakeFiles/ship.dir/Main1.cpp.o"
-  "CMakeFiles/ship.dir/Main1.cpp.o.d"
   "CMakeFiles/ship.dir/Mare.cpp.o"
   "CMakeFiles/ship.dir/Mare.cpp.o.d"
   "CMakeFiles/ship.dir/Nds.cpp.o"

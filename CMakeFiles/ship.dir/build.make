@@ -69,19 +69,19 @@ include CMakeFiles/ship.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ship.dir/flags.make
 
-CMakeFiles/ship.dir/Main1.cpp.o: CMakeFiles/ship.dir/flags.make
-CMakeFiles/ship.dir/Main1.cpp.o: Main1.cpp
-CMakeFiles/ship.dir/Main1.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ship.dir/Main1.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Main1.cpp.o -MF CMakeFiles/ship.dir/Main1.cpp.o.d -o CMakeFiles/ship.dir/Main1.cpp.o -c /Users/alvisestella/Desktop/Ship/Main1.cpp
+CMakeFiles/ship.dir/Battaglia_Navale.cpp.o: CMakeFiles/ship.dir/flags.make
+CMakeFiles/ship.dir/Battaglia_Navale.cpp.o: Battaglia_Navale.cpp
+CMakeFiles/ship.dir/Battaglia_Navale.cpp.o: CMakeFiles/ship.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alvisestella/Desktop/Ship/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ship.dir/Battaglia_Navale.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ship.dir/Battaglia_Navale.cpp.o -MF CMakeFiles/ship.dir/Battaglia_Navale.cpp.o.d -o CMakeFiles/ship.dir/Battaglia_Navale.cpp.o -c /Users/alvisestella/Desktop/Ship/Battaglia_Navale.cpp
 
-CMakeFiles/ship.dir/Main1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Main1.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Main1.cpp > CMakeFiles/ship.dir/Main1.cpp.i
+CMakeFiles/ship.dir/Battaglia_Navale.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ship.dir/Battaglia_Navale.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alvisestella/Desktop/Ship/Battaglia_Navale.cpp > CMakeFiles/ship.dir/Battaglia_Navale.cpp.i
 
-CMakeFiles/ship.dir/Main1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Main1.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Main1.cpp -o CMakeFiles/ship.dir/Main1.cpp.s
+CMakeFiles/ship.dir/Battaglia_Navale.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ship.dir/Battaglia_Navale.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alvisestella/Desktop/Ship/Battaglia_Navale.cpp -o CMakeFiles/ship.dir/Battaglia_Navale.cpp.s
 
 CMakeFiles/ship.dir/Mare.cpp.o: CMakeFiles/ship.dir/flags.make
 CMakeFiles/ship.dir/Mare.cpp.o: Mare.cpp
@@ -169,7 +169,7 @@ CMakeFiles/ship.dir/Players.cpp.s: cmake_force
 
 # Object files for target ship
 ship_OBJECTS = \
-"CMakeFiles/ship.dir/Main1.cpp.o" \
+"CMakeFiles/ship.dir/Battaglia_Navale.cpp.o" \
 "CMakeFiles/ship.dir/Mare.cpp.o" \
 "CMakeFiles/ship.dir/Ship.cpp.o" \
 "CMakeFiles/ship.dir/Nds.cpp.o" \
@@ -180,7 +180,7 @@ ship_OBJECTS = \
 # External object files for target ship
 ship_EXTERNAL_OBJECTS =
 
-ship: CMakeFiles/ship.dir/Main1.cpp.o
+ship: CMakeFiles/ship.dir/Battaglia_Navale.cpp.o
 ship: CMakeFiles/ship.dir/Mare.cpp.o
 ship: CMakeFiles/ship.dir/Ship.cpp.o
 ship: CMakeFiles/ship.dir/Nds.cpp.o
