@@ -133,6 +133,7 @@ using namespace std;
                 }
             }
         }
+        printAMare();
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
@@ -959,7 +960,6 @@ using namespace std;
 
     string Mare::printAMare()
     {
-        cout<<"suca stea no so una funxion de merda"<<endl;
         string out = "";
         //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
         cout<<mar_.size()<<endl;
