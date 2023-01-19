@@ -24,7 +24,7 @@ using namespace std;
                 }
             }
         }
-    }
+    }//-
 
     void Mare::saveMare(vector<vector<char>> &temp)
     {
