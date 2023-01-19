@@ -17,6 +17,8 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
+// restituisce erroneamente sempre 0
+/*
 int convertI(char l)
 {
     if(l == 'A' || 'a')
@@ -55,6 +57,7 @@ int convertI(char l)
     if (l == 'N' || 'm')
     {return 11;}
 }
+*/
 int main()
 {
     const char B = 66;
@@ -103,7 +106,9 @@ int main()
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
     pair<int, int> p;
-    char x;
+    //rimosso in quanto la conversione non funzionava prima della consegna
+    //char x;
+    int x2;
     int x1;
     int y;
     int d;
@@ -128,10 +133,13 @@ int main()
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    cin >> x >> y;
-                    x1 = convertI(x);
+                    //cin >> x >> y;
+                    cin >> x2 >> y;
+                    //x1 = convertI(x);
                     p.first = y -1;
-                    p.second = x1;
+                    //p.second = x1;
+                    p.second = x2 -1;
+
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -245,10 +253,12 @@ int main()
                     printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
-                    cin >> x >> y;
-                    x1 = convertI(x);
+                    // cin >> x >> y;
+                    cin >> x2 >> y;
+                    // x1 = convertI(x);
                     p.first = y - 1;
-                    p.second = x1;
+                    // p.second = x1;
+                    p.second = x2 - 1;
 
                     if(i==0)
                     {
@@ -355,10 +365,13 @@ int main()
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                    cin >> x >> y;
-                    x1 = convertI(x);
+                    // cin >> x >> y;
+                    cin >> x2 >> y;
+                    // x1 = convertI(x);
                     p.first = y - 1;
-                    p.second = x1;
+                    // p.second = x1;
+                    p.second = x2 -1;
+
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
