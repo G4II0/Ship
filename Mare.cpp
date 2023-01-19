@@ -868,7 +868,7 @@ using namespace std;
         vector<string> vec;
         for (char c = 'A'; c <= 'L'; c++) 
         {
-            vec.push_back(string(1, c) + " o");
+            vec.push_back(string(1, c));
         }
         string out = "";
         out += "   +-----------------------------------------------+\n";
@@ -923,7 +923,7 @@ using namespace std;
         vector<string> vec;
         for (char c = 'A'; c <= 'L'; c++) 
         {
-            vec.push_back(string(1, c) + " o");
+            vec.push_back(string(1, c));
         }
         string out = "";
         // out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
