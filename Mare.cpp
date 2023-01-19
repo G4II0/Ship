@@ -26,7 +26,7 @@ using namespace std;
         }
     }
 
-    void saveMare(vector<vector<char>> &temp)
+    void Mare::saveMare(vector<vector<char>> &temp)
     {
         mar_ = temp;
     }
