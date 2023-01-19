@@ -910,7 +910,8 @@ using namespace std;
             {out += "   +---+---+---+---+---+---+---+---+---+---+---+---¦\n";}
             else
             {out += "   +-----------------------------------------------+\n";
-            out += "     A   B   C   D   E   F   G   H   I   J   K   L\n";}
+            out += "     A   B   C   D   E   F   G   H   I   J   K   L\n";
+            break;}
 
             if (i == 11)
             {i = 0;}
