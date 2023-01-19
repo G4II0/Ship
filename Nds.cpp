@@ -1,3 +1,4 @@
+//Alvise Stella
 #include "Nds.hpp"
     //costruttore vuoto
     Nds::Nds()
