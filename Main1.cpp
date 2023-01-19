@@ -75,7 +75,7 @@ int main()
     Mare boardP2;
     cout << "board2 vuota" << endl;
     //boardP2.printAMare(); 
-    players.push_back(Players(boardP1, names[0], types[0], boardP2));
+    players.push_back(Player s(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
     int ind = 0;
