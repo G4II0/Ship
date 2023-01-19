@@ -909,14 +909,14 @@ using namespace std;
             if (i >= 0 && i < 11)
             {out += "   +---+---+---+---+---+---+---+---+---+---+---+---¦\n";}
             else
-            {out += "   +-----------------------------------------------+\n";}
+            {out += "   +-----------------------------------------------+\n";
+            out += "     A   B   C   D   E   F   G   H   I   J   K   L";}
 
             if (i == 11)
             {i = 0;}
             else
             {i++;}
         }
-        out += "     A   B   C   D   E   F   G   H   I   J   K   L";
         cout << out << endl;
         cout << "scemo" << endl;
         return out;
