@@ -31,7 +31,7 @@
     //getter
     std::string Players::getName() const
     {return this -> name_;}
-    Mare Players::getMare() const
+    Mare &Players::getMare() const
     {return this -> mare_;}
     Mare Players::getMareN() const
     {return this -> mareNemico_;}
