@@ -222,7 +222,7 @@ using namespace std;
         return false;
     }
 
-    void Mare::initializeMare(vector<vector<char> > mar_)
+    void Mare::initializeMare(vector<vector<char> >& mar_)
     {
         mar_.resize(12);
         for (int x = 0; x < 12; x++) 
