@@ -211,10 +211,11 @@ using namespace std;
         for (int x = 0; x < 12; x++) 
         {
             std::vector<char> innerVec;
-            for (int y = 0; y < 12; y++) 
+            for (int y = 0; y < 11; y++) 
             {
                 mar_[x].insert(mar_[x].begin() + y, ' ');
             }
+            mar_[x].insert(mar_[x].begin() + 11, 'X');
             mar_.push_back(innerVec);
         }
     }
