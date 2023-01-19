@@ -21,7 +21,7 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        char aa;
+        /*char aa;
         char bb;
         char cc;
         char dd;
@@ -101,7 +101,7 @@ using namespace std;
         else
         {ll = 'C';}
               
-//--
+
         cout << "Controllo 4" << endl;
         vector<char> v =  {aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll};
         cout << "c di palle" << endl;
@@ -122,7 +122,13 @@ using namespace std;
             it--;
             mar_.insert(it, v);
         }
-        cout << "c di" << endl;
+        cout << "c di" << endl;*/
+        for (int i = 0; i < mar_.size(); i++) {
+            for (int j = 0; j < mar_[i].size(); j++) {
+                if (i == x && j == y) {
+                    mar_[i].insert(mar_[i].begin() + j, 'C');
+            }
+        }
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
