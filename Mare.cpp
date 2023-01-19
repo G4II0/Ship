@@ -866,7 +866,11 @@ using namespace std;
     string Mare::printAMare()
     {
         vector<string> vec;
-        for (char c = 'A'; c <= 'L'; c++) 
+        for (char c = 'A'; c <= 'I'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
+        for (char c = 'L'; c <= 'N'; c++) 
         {
             vec.push_back(string(1, c));
         }
@@ -922,7 +926,11 @@ using namespace std;
     string Mare::printEMare()
     {
         vector<string> vec;
-        for (char c = 'A'; c <= 'L'; c++) 
+        for (char c = 'A'; c <= 'I'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
+        for (char c = 'L'; c <= 'N'; c++) 
         {
             vec.push_back(string(1, c));
         }
