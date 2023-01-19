@@ -94,18 +94,7 @@ using namespace std;
 
     vector<vector<char> > Mare::getMare()
     {
-        vector<vector<char> > v;
-        vector<char> v1;
-
-        for(int y=0; y<12; y++)
-        {
-            for(int x=0; x<12; x++)
-            {
-                v1.push_back(this -> mar_[x][y]);
-            }
-            v.push_back(v1);
-        }
-        return v;
+        return this -> mar_;
     }
 
     void Mare::getMareE(Mare& mN)
