@@ -877,12 +877,12 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += vec[i+1];
+                out += vec[i];
             }
             else
             {
                 out += " ";
-                out += vec[i+1];
+                out += vec[i];
             }
             out += " ¦ ";
             for (const auto &element : row)
@@ -932,12 +932,12 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += vec[i+1];
+                out += vec[i];
             }
             else
             {
                 out += " ";
-                out += vec[i+1];
+                out += vec[i];
             }
             // out += " │ ";
             out += " ¦ ";
