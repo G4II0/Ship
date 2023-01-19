@@ -226,10 +226,10 @@ using namespace std;
     void Mare::initializeMare(vector<vector<char> > mar_)
     {
         mar_.resize(12);
-        for (int i = 0; i < 12; i++) 
+        for (int x = 0; x < 12; x++) 
         {
             std::vector<char> innerVec;
-            for (int j = 0; j < 12; j++) 
+            for (int y = 0; y < 12; y++) 
             {
                 mar_[x].insert(mar_[x].begin() + y, ' ');
             }
