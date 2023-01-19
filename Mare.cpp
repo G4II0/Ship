@@ -93,7 +93,7 @@ using namespace std;
         marES_[x][y] = c;
     }
 
-    vector<vector<char> > Mare::getMare()
+    vector<vector<char> >* Mare::getMare()
     {
         return this-> mar_;
     }
