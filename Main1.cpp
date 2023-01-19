@@ -71,10 +71,10 @@ int main()
 
     Mare boardP1;
     cout<<"board1 vuota"<<endl;
-    boardP1.printAMare(boardP1.getMare());
+    boardP1.printAMare();
     Mare boardP2;
     cout << "board2 vuota" << endl;
-    boardP2.printAMare(boardP2.getMare());
+    boardP2.printAMare();
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
