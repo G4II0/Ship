@@ -292,7 +292,7 @@ using namespace std;
             pair<int, int> temp3;
             pair<int, int> temp4;
             int d = ship.getDirezione();
-            if(d == 0)
+            if(d == 1)
             {
                 cout << "sono in d == 0" << endl;
                 temp1.first = pos.first;         // x prua
