@@ -1015,10 +1015,8 @@ using namespace std;
         {
             for(int x = 2; x < 10; x++)
             {
-                cout<< "Xtemp = " << x << " ";
                 for(int y = 0; y < 12; y++)
                 {
-                    cout << "Ytemp = " << y << " ";
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
@@ -1050,11 +1048,6 @@ using namespace std;
                     }
                 }
             }
-        }
-        cout << "v1 = " << " ";
-        for (int i = 0; i < v1.size(); i++)
-        {
-            cout << v1.at(i).first << " " << v1.at(i).second << endl;;
         }
         return v1;
     }
