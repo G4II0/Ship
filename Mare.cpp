@@ -877,6 +877,7 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
+                out += " ";
                 out += vec[i];
             }
             else
@@ -932,6 +933,7 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
+                out += " ";
                 out += vec[i];
             }
             else
