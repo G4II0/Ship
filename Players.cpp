@@ -31,8 +31,8 @@
     //getter
     std::string Players::getName() const
     {return this -> name_;}
-    Mare &Players::getMare() 
-    {return &mare_;}
+    Mare& Players::getMare() 
+    {return this -> mare_;}
     Mare Players::getMareN() const
     {return this -> mareNemico_;}
     char Players::getType() const

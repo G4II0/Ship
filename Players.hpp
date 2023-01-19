@@ -33,7 +33,7 @@
         
         //getter
         std::string getName() const;
-        Mare &getMare();
+        Mare& getMare();
         Mare getMareN() const;
         char getType() const;
         int getCondition() const;
