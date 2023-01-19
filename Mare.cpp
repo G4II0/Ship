@@ -502,7 +502,7 @@ using namespace std;
             temp3.second = temp1;            // c poppa
             //s.setPos(temp3);
             // posizionamento nella board
-            setMareAe(dest, mar_);
+            setMareAe(dest);
         }
     }
 
