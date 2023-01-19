@@ -379,6 +379,7 @@ using namespace std;
                 setMareAe(temp0);
                 }
         }
+    }
 
     //move generico
     void Mare::MoveG(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN)
