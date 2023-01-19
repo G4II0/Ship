@@ -1,4 +1,3 @@
-//Samuele Gallo
 #include "Ship.hpp"
 #include "Players.hpp"
 #include <iostream>
