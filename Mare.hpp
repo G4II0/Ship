@@ -52,7 +52,7 @@ using namespace std;
         void setMareAe(pair<int, int> p, vector<vector<char> > mar_);
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
-        vector<vector<char> > getMare();
+        vector<vector<char> >* getMare();
         void getMareE(Mare& mN);
 
         void setMarCor(Corazzata c);
