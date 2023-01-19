@@ -318,11 +318,11 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(pos, mar_);
-            setMareAc(temp1, mar_);
-            setMareAc(temp2, mar_);
-            setMareAc(temp3, mar_);
-            setMareAc(temp4, mar_);
+            setMareAc(pos, getMare());
+            setMareAc(temp1, getMare());
+            setMareAc(temp2, getMare());
+            setMareAc(temp3, getMare());
+            setMareAc(temp4, getMare());
             // posizionamento nel mareC
         }
         else
