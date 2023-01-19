@@ -1,3 +1,4 @@
+//Alvise Stella
 #ifndef PLAYERS_HPP
 #define PLAYERS_HPP
 

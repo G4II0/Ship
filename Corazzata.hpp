@@ -1,3 +1,4 @@
+//Samuele Gallo
 #ifndef CORAZZATA_HPP
 #define CORAZZATA_HPP
 

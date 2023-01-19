@@ -1,3 +1,4 @@
+//Samuele Gallo
 #include "Corazzata.hpp"
 
     //costruttore vuoto

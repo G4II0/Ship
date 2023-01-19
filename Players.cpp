@@ -1,4 +1,4 @@
-//Alvise Stella (players include bot.cpp che poi è stato inserito)
+//Alvise Stella
 #include "Players.hpp"
 
     //costruttore vuoto
