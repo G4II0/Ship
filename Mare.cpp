@@ -336,6 +336,7 @@ using namespace std;
             vT = setMareAc(temp3, vT);
             vT = setMareAc(temp4, vT);
             // posizionamento nel mareC
+            mar_ = vT;
         }
         else
         {
