@@ -261,8 +261,8 @@ using namespace std;
             pair<int, int> temp2;
             pair<int, int> temp3;
             pair<int, int> temp4;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = pos.first;
+            temp0.second = pos.second;
             int d = ship.getDirezione();
             if(d == 1)
             {
@@ -315,8 +315,8 @@ using namespace std;
             pair<int, int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = pos.first;
+            temp0.second = pos.second;
             int d = ship.getDirezione();
             if (d == 1)
             {
@@ -357,8 +357,8 @@ using namespace std;
         if (b == true)
         {
             pair<int, int> temp0;
-            temp0.first = (pos.first) - 1;
-            temp0.second = (pos.second) - 1;
+            temp0.first = pos.first;
+            temp0.second = pos.second;
             if (b == false)
             {
                 cout << "torno in b == false" << endl;
@@ -865,6 +865,15 @@ using namespace std;
 
     string Mare::printAMare()
     {
+        vector<string> vec;
+        for (char c = 'A'; c <= 'I'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
+        for (char c = 'L'; c <= 'N'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
         string out = "";
         out += "   +-----------------------------------------------+\n";
         int i = 0;
@@ -872,12 +881,13 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += to_string(i + 1);
+                out += " ";
+                out += vec[i];
             }
             else
             {
                 out += " ";
-                out += to_string(i + 1);
+                out += vec[i];
             }
             out += " ¦ ";
             for (const auto &element : row)
@@ -915,6 +925,15 @@ using namespace std;
 
     string Mare::printEMare()
     {
+        vector<string> vec;
+        for (char c = 'A'; c <= 'I'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
+        for (char c = 'L'; c <= 'N'; c++) 
+        {
+            vec.push_back(string(1, c));
+        }
         string out = "";
         // out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
         out += "   +-----------------------------------------------+\n";
@@ -922,12 +941,13 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += to_string(i + 1);
+                out += " ";
+                out += vec[i];
             }
             else
             {
                 out += " ";
-                out += to_string(i + 1);
+                out += vec[i];
             }
             // out += " │ ";
             out += " ¦ ";
