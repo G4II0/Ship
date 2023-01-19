@@ -1,3 +1,4 @@
+//Samuele Gallo
 #ifndef MARE_HPP
 #define MARE_HPP
 
