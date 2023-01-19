@@ -972,7 +972,6 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        //---------------------------------------------------
         if(d==0)
         {
             cout<<"C1"<<endl;
@@ -982,18 +981,16 @@ using namespace std;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < mar_[x].size()-2; y++)
                 {
-                    cout << "C3" << endl;
                     cout << "Ytemp = " << y << " ";
-                    cout << "C4" << endl;
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
-                        cout << "C5" << endl;
+                        cout << "C53" << endl;
                         for(int i = 0; i<v1.size()-1; i++)
                         {
-                            cout << "C6" << endl;
+                            cout << "C4" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
-                                cout << "C7" << endl;
+                                cout << "C5" << endl;
                                 v1.erase(v1.begin() + i);
                                 break;
                             }
@@ -1001,7 +998,7 @@ using namespace std;
                     }
                     else
                     {
-                        cout << "C7" << endl;
+                        cout << "C6" << endl;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
@@ -1015,6 +1012,8 @@ using namespace std;
                             p.first = x;
                             p.second = y;
                             v1.push_back(p);
+                            cout << "C7" << endl;
+                            break;
                         }
                     }
                 }
