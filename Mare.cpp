@@ -959,30 +959,21 @@ using namespace std;
 
     vector<pair<int, int> > Mare::posAvailable(Corazzata shi)
     {
-        cout << "sono in PosAvailableCor" << endl;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
         if(d==0)
         {
-            cout<<"C1"<<endl;
-            for(int x = 0; x < 12; x++)
+            for(int x = -1; x < 11; x++)
             {
-                cout<<"C2"<<endl;
-                cout<< "Xtemp = " << x << " "; 
-                for(int y = 2; y < 10; y++)
+                for(int y = 1; y < 9; y++)
                 {
-                    cout << "Ytemp = " << y << " ";
-
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
-                        cout << "C3" << endl;
                         for(int i = 0; i<v1.size()-1; i++)
                         {
-                            cout << "C4" << endl;
                             if (v1[i].first == x && v1[i].second == y)
                             {
-                                cout << "C5" << endl;
                                 v1.erase(v1.begin() + i);
                                 break;
                             }
@@ -990,7 +981,6 @@ using namespace std;
                     }
                     else
                     {
-                        cout << "C6" << endl;
                         int temp = 0;
                         for(int i = 0; i<v1.size(); i++)
                         {
@@ -1004,25 +994,17 @@ using namespace std;
                             p.first = x;
                             p.second = y;
                             v1.push_back(p);
-                            cout << "C7" << endl;
                         }
                     }
                 }
-                wasd++;
             }
         }
         else
         {
-            for(int x = 2; x < 10; x++)
+            for(int x = 1; x < 9; x++)
             {
-                for(int y = 0; y < 12; y++)
+                for(int y = -1; y < 11; y++)
                 {
-
-                    if (wasd == 0 || wasd == 11)
-                    {
-                        printAMare();
-                    }
-
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
                     {
                         for(int i = 0; i<v1.size(); i++)
@@ -1053,7 +1035,6 @@ using namespace std;
                         }
                     }
                 }
-                wasd++;
             }
         }
         return v1;
