@@ -130,8 +130,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin >> x >> y;
                     convertI(x, x1);
-                    p.first = y - 1;
-                    p.second = x1 - 1;
+                    p.first = y -1;
+                    p.second = x1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -252,7 +252,7 @@ int main()
                     cin >> x >> y;
                     convertI(x, x1);
                     p.first = y - 1;
-                    p.second = x1 - 1;
+                    p.second = x1;
 
                     if(i==0)
                     {
@@ -362,7 +362,7 @@ int main()
                     cin >> x >> y;
                     convertI(x, x1);
                     p.first = y - 1;
-                    p.second = x1 - 1;
+                    p.second = x1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
