@@ -978,6 +978,10 @@ using namespace std;
             cout<<"C1"<<endl;
             for(int x = 0; x < mar_.size()-1; x++)
             {
+                if(x==mar_.size()-1)
+                {
+                    break;
+                }
                 cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
                 for(int y = 2; y < mar_[x].size()-2; y++)
