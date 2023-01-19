@@ -26,7 +26,7 @@ using namespace std;
         }
     }
 
-    void Mare::setMareAc(pair<int, int> p)
+    vector<vector<char> > Mare::setMareAc(pair<int, int> p)
     {
         int x = p.first;
         int y = p.second;
@@ -43,6 +43,7 @@ using namespace std;
             }
         }
         printAMare();
+        return mare_;
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
