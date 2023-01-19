@@ -38,7 +38,7 @@ using namespace std;
         printAMare();
     }
 
-    void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
+    void Mare::setMareAs(pair<int, int> &p)
     {
         int x = p.first;
         int y = p.second;
@@ -49,7 +49,7 @@ using namespace std;
         printAMare();
     }
 
-    void Mare::setMareAe(pair<int, int> p, vector<vector<char> > mar_)
+    void Mare::setMareAe(pair<int, int> &p)
     {
         int x = p.first;
         int y = p.second;
@@ -254,12 +254,12 @@ using namespace std;
 
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
-    {   
+    {
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
         cout << "b = " << b << endl;
         if (b == true)
-        {   
+        {
             cout << " b è in true!!!!" << endl;
             pair<int,int> temp0;
             pair<int, int> temp1;
@@ -271,7 +271,6 @@ using namespace std;
             int d = ship.getDirezione();
             if(d == 1)
             {
-                cout << "sono in d == 0" << endl;
                 temp1.first = (temp0.first);         // x prua
                 temp1.second = (temp0.second) - 2; // y prua
                 temp2.first = (temp0.first);         // x poppa
@@ -280,12 +279,10 @@ using namespace std;
                 temp3.second = (temp0.second) - 1;
                 temp4.first = (temp0.first);
                 temp4.second = (temp0.second) + 1;
-                cout << "ho finito il d == 0" << endl; 
             }
 
             else
             {
-                cout << "sono in d == 1" << endl;
                 temp1.first = (temp0.first) + 2; // x prua
                 temp1.second = (temp0.second);     // y prua
                 temp2.first = (temp0.first) - 2; // x poppa
@@ -295,20 +292,16 @@ using namespace std;
                 temp4.first = (temp0.first) - 1;
                 temp4.second = (temp0.second);
             }
-            cout << "setto pmedio" << endl;
             ship.setPMedio(pos);
-            cout << "inserisco in marCor_" << endl;
             setMarCor(ship);
-            cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
-            cout << "setto il mare" << endl;
             setMareAc(temp0);
             setMareAc(temp1);
             setMareAc(temp2);
             setMareAc(temp3);
             setMareAc(temp4);
             // posizionamento nel mareC
-        }//-
+        }
         else
         {
             cout << "errore" << endl;
@@ -319,59 +312,73 @@ using namespace std;
 //inserimento Nds
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        bool b =legitMoveInput(ship, pos);
-        if(b == false)
-        {
-            throw InvalidInputException("Inserimento non valido");
-        }
+        bool b = legitMoveInput(ship, pos);
+        cout << "b = " << b << endl;
         if (b == true)
         {
+            cout << " b è in true!!!!" << endl;
+            pair<int, int> temp0;
             pair<int, int> temp1;
             pair<int, int> temp2;
-            if (ship.getDirezione() == 0)
+            temp0.first = (pos.first) - 1;
+            temp0.second = (pos.second) - 1;
+            int d = ship.getDirezione();
+            if (d == 1)
             {
-                temp1.first = pos.first;         // x prua
-                temp1.second = (pos.second) + 1; // y prua
-                temp2.first = pos.first;         // x poppa
-                temp2.second = (pos.second) - 1; // y poppa
+                temp1.first = (temp0.first);       // x prua
+                temp1.second = (temp0.second) - 1; // y prua
+                temp2.first = (temp0.first);       // x poppa
+                temp2.second = (temp0.second) + 1; // y poppa
             }
+
             else
             {
-                temp1.first = (pos.first) + 1;
-                temp1.second = pos.second;
-                temp2.first = (pos.first) - 1;
-                temp2.second = pos.second;
+                temp1.first = (temp0.first) + 1; // x prua
+                temp1.second = (temp0.second);   // y prua
+                temp2.first = (temp0.first) - 1; // x poppa
+                temp2.second = (temp0.second);   // y poppa
             }
-            // posizionamento nella board
             ship.setPMedio(pos);
-            setMareAs(pos, mar_);
-            setMareAs(temp1, mar_);
-            setMareAs(temp2, mar_);
             // posizionamento nel mareC
             setMarNds(ship);
+            // posizionamento nel mare
+            setMareAs(temp0);
+            setMareAs(temp1);
+            setMareAs(temp2);
+
+        }
+        else
+        {
+            cout << "errore" << endl;
+            throw InvalidInputException("Inserimento non valido");
         }
     }
 
     // inserimento Sde
     void Mare::insertSde(Sde& ship, pair<int, int> pos)
-    {   
+    {
         bool b = legitMoveInput(ship, pos);
-        cout << "torno in insertSde" << endl;
-        if(b == false)
-        {
-            cout << "torno in b == false" << endl;
-            //throw InvalidInputException("Inserimento non valido");
-        }
+        cout << "b = " << b << endl;
         if (b == true)
         {
-            cout << "b è true!!!!!!" << endl;
-            ship.setPMedio(pos);
-            // posizionamento nella board
-            setMareAe(pos, mar_);
-            // posizionamento nel mareC
-            setMarSde(ship);
+            pair<int, int> temp0;
+            temp0.first = (pos.first) - 1;
+            temp0.second = (pos.second) - 1;
+            if (b == false)
+            {
+                cout << "torno in b == false" << endl;
+                throw InvalidInputException("Inserimento non valido");
+            }
+            if (b == true)
+            {
+                cout << "b è true!!!!!!" << endl;
+                ship.setPMedio(temp0);
+                // posizionamento nel mareC
+                setMarSde(ship);
+                // posizionamento nella board
+                setMareAe(temp0);
+                }
         }
-    }
 
     //move generico
     void Mare::MoveG(pair<int, int> start, pair<int, int> dest, Mare m, Mare mN)
