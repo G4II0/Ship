@@ -68,6 +68,7 @@ int main()
     char testare = 'a';
     int xtest;
     xtest = convertI(testare);
+    cout<< xtest <<endl;
         printTextEffect("Che partita vuoi fare? Inserire:");
     while(true)
     {
