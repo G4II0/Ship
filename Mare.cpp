@@ -27,14 +27,12 @@ using namespace std;
         }
     }
 
-    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char>> mar_)
+    void Mare::setMareAc(pair<int, int> &p)
     {
         int x = p.first;
         int y = p.second;
-
-        mar_[x].erase()
         
-        for (int i = 0; i < mar_.size(); i++)
+        for (int i = 0; i < mar_.size(); i++) 
         {
             for (int j = 0; j < mar_[i].size(); j++)
             {
@@ -46,7 +44,6 @@ using namespace std;
             }
         }
         printAMare();
-        return mar_;
     }
 
     void Mare::setMareAs(pair<int, int> p, vector<vector<char> > mar_)
@@ -223,13 +220,9 @@ using namespace std;
         for (int x = 0; x < 12; x++) 
         {
             std::vector<char> innerVec;
-            for (int y = 0; y < 6; y++) 
+            for (int y = 0; y < 12; y++) 
             {
                 mar_[x].insert(mar_[x].begin() + y, ' ');
-            }
-            for (int y = 0; y < 6; y++)
-            {
-                mar_[x].insert(mar_[x].begin() + y, 'M');
             }
             mar_.push_back(innerVec);
         }
@@ -330,18 +323,15 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            vector<vector<char> > vT;
-            vT = setMareAc(temp0, mar_);
-
-            vT = setMareAc(temp1, vT);
-            vT = setMareAc(temp2, vT);
-            vT = setMareAc(temp3, vT);
-            vT = setMareAc(temp4, vT);
+            setMareAc(temp0);
+            setMareAc(temp1);
+            setMareAc(temp2);
+            setMareAc(temp3);
+            setMareAc(temp4);
             // posizionamento nel mareC
-            mar_ = vT;
-        }
+        }//-
         else
-        {//-
+        {
             cout << "errore" << endl;
             throw InvalidInputException("Inserimento non valido");
         }
@@ -927,7 +917,7 @@ using namespace std;
             else
             {
             out += "   +-----------------------------------------------+\n";
-            out += "     A   B   C   D   E   F   G   H   I   J   K   L\n";
+            out += "     1   2   3   4   5   6   7   8   9   10   11   12\n";
             break;
             }
 
