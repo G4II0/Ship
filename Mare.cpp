@@ -277,8 +277,8 @@ using namespace std;
     {
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
-        pos.first=(pos.first)-1;
-        pos.second = (pos.second)-1;
+        //pos.first=(pos.first)-1;
+        //pos.second = (pos.second)-1;
         cout << "b = " << b << endl;
         if (b == true)
         {   
@@ -337,7 +337,7 @@ using namespace std;
 //inserimento Nds
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        pos.first = (pos.first) - 1;
+        pos.first = (pos.first) -1 ;
         pos.second = (pos.second) - 1;
         bool b =legitMoveInput(ship, pos);
         if(b == false)
