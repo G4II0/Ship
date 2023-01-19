@@ -111,7 +111,7 @@ int main()
                         c1.setNumero(i);
                         cout << "inserisco la prima corazzata" << endl;
                         players[ind].getMare().insertCor(c1, p);
-                        //printTextEffect(players[ind].getMare().printAMare());
+                        printTextEffect(players[ind].getMare().printAMare());
                         cout << "inserita la prima corazzata" << endl;
                     }
                     else
@@ -120,6 +120,7 @@ int main()
                         Corazzata c2 = Corazzata(p, d, i);
                         c2.setNumero(i);
                         players[ind].getMare().insertCor(c2, p);
+                        printTextEffect(players[ind].getMare().printAMare());
                     }
                     else
                     if(i==2)
@@ -127,6 +128,7 @@ int main()
                         Corazzata c3 = Corazzata(p, d, i);
                         c3.setNumero(i);
                         players[ind].getMare().insertCor(c3, p);
+                        printTextEffect(players[ind].getMare().printAMare());
                     }
                 }
                 else
