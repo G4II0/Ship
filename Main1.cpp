@@ -17,43 +17,43 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
-void convertI(char l, int x1)
+int convertI(char l)
 {
     if(l == 'A' || 'a')
-    {x1 = 0;}
+    {return 0;}
     else
     if (l == 'B' || 'b')
-    {x1 =  1;}
+    {return 1;}
     else
     if (l == 'C' || 'c')
-    {x1 =  2;}
+    {return 2;}
     else
     if (l == 'D' || 'd')
-    {x1 =  3;}
+    {return 3;}
     else
     if (l == 'E' || 'e')
-    {x1 =  4;}
+    {return 4;}
     else
     if (l == 'F' || 'f')
-    {x1 =  5;}
+    {return 5;}
     else
     if (l == 'G' || 'g')
-    {x1 =  6;}
+    {return 6;}
     else
     if (l == 'H' || 'h')
-    {x1 =  7;}
+    {return 7;}
     else
     if (l == 'I' || 'i')
-    {x1 =  8;}
+    {return 8;}
     else
     if (l == 'L' || 'l')
-    {x1 =  9;}
+    {return 9;}
     else
     if (l == 'M' || 'n')
-    {x1 =  10;}
+    {return 10;}
     else
     if (l == 'N' || 'm')
-    {x1 =  11;}
+    {return 11;}
 }
 int main()
 {
@@ -119,7 +119,6 @@ int main()
         //richiede al player o al bot di inserire la corazzata, continua finchè tutte le corazzate sono inserite
         //Corazzata
         int i = 0;
-        int sper;
         while(i < 3) 
         {
             try
@@ -130,9 +129,9 @@ int main()
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin >> sper >> y;
-                    //convertI(x, x1);
+                    x1 = convertI(x);
                     p.first = y -1;
-                    p.second = sper - 1;
+                    p.second = x1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -247,7 +246,7 @@ int main()
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin >> x >> y;
-                    convertI(x, x1);
+                    x1 = convertI(x);
                     p.first = y - 1;
                     p.second = x1;
 
@@ -357,7 +356,7 @@ int main()
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
                     cin >> x >> y;
-                    convertI(x, x1);
+                    x1 = convertI(x);
                     p.first = y - 1;
                     p.second = x1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
@@ -433,8 +432,7 @@ int main()
     else
         movesLimit = -1;
     bool endgame = false;
-    //____________________________________________________________________________________________________________
-    //inizio del gioco_________________
+    //inizio del gioco
     while (i != movesLimit && !endgame)
     {
         if(index == 0)
@@ -466,11 +464,11 @@ int main()
             printTextEffect("Se vuoi stampare le griglie, inserire 'XX XX': ");
             string code;
             cin >> code;
-            //if (code == "XX XX")
-            //{
-                //cout << boardP1.printAMare(mar_);
-                //cout << boardP2.printEMare(mar_);
-            //}//__________________________________________________________________________________________________________
+            if (code == "XX XX")
+            {
+                cout << boardP1.printAMare();
+                cout << boardP2.printEMare();
+            }
             pair<int, int> start;
             pair<int, int> end;
             int xs;
