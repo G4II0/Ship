@@ -95,7 +95,7 @@ using namespace std;
 
     vector<vector<char> > Mare::getMare()
     {
-        return mar_;
+        return this-> mar_;
     }
 
     void Mare::getMareE(Mare& mN)
