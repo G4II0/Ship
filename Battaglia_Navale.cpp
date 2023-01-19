@@ -5,6 +5,7 @@
 #include <thread>
 #include <string>
 
+//produce un ritardo nella stampa per creare un effetto grafico
 using namespace std;
 void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
 {
@@ -17,7 +18,7 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
-// restituisce erroneamente sempre 0
+// restituisce erroneamente sempre 0 (per cui rimosso prima della sua sistemazione)
 /*
 int convertI(char l)
 {
@@ -60,12 +61,18 @@ int convertI(char l)
 */
 int main()
 {
+    //char equivalente al player umano
     const char B = 66;
+    // char equivalente al player umano
     const char U = 85;
+
     string game;
     vector<string> names(2);
+    // vettore di tipi d players ( bot o umano)
     vector<char> types;
+    // vettore di players
     vector<Players> players;
+    // vettore nomi possibili del bot
     std::vector<std::string> botNames = {"Giorgio", "Michele", "Claudio", "Piripillo", "Roberto", "Assenzio", "Barabba", "Adolfo", "Rolando", "Maurizio"};
     printTextEffect("Benvenuto nella nostra versione della battaglia navale");
     printTextEffect("Che partita vuoi fare? Inserire:");
@@ -107,7 +114,8 @@ int main()
 
     pair<int, int> p;
     //rimosso in quanto la conversione non funzionava prima della consegna
-    //char x;
+    //char x0;
+    int x;
     int x2;
     int x1;
     int y;
@@ -133,9 +141,9 @@ int main()
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    //cin >> x >> y;
+                    //cin >> x0 >> y;
                     cin >> x2 >> y;
-                    //x1 = convertI(x);
+                    //x1 = convertI(x0);
                     p.first = y -1;
                     //p.second = x1;
                     p.second = x2 -1;
@@ -159,7 +167,6 @@ int main()
                         Corazzata c3 = Corazzata(p, d, i);
                         c3.setNumero(i);
                         players[ind].getMare().insertCor(c3, p);
-                        //printTextEffect(players[ind].getMare().printAMare());
                     }
                 }
                 else
@@ -181,21 +188,18 @@ int main()
                         Corazzata c1 = Corazzata(p, d, i);
                         c1.setNumero(i);
                         players[ind].getMare().insertCor(c1, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 1)
                     {
                         Corazzata c2 = Corazzata(p, d, i);
                         c2.setNumero(i);
                         players[ind].getMare().insertCor(c2, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 2)
                     {
                         Corazzata c3 = Corazzata(p, d, i);
                         c3.setNumero(i);
                         players[ind].getMare().insertCor(c3, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                 }
                 if (players[ind].getType() != U && ind == 1)
@@ -216,21 +220,18 @@ int main()
                         Corazzata c4 = Corazzata(p, d, i);
                         c4.setNumero(i);
                         players[ind].getMare().insertCor(c4, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 1)
                     {
                         Corazzata c5 = Corazzata(p, d, i);
                         c5.setNumero(i);
                         players[ind].getMare().insertCor(c5, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 2)
                     {
                         Corazzata c6 = Corazzata(p, d, i);
                         c6.setNumero(i);
                         players[ind].getMare().insertCor(c6, p);
-                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                 }
                 i++;
@@ -253,9 +254,9 @@ int main()
                     printTextEffect("Inserisci la direzione della Nds: " + to_string((i+1)) + " 0 = verticale, 1 = orizzontale");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
-                    // cin >> x >> y;
+                    // cin >> x0 >> y;
                     cin >> x2 >> y;
-                    // x1 = convertI(x);
+                    // x1 = convertI(x0);
                     p.first = y - 1;
                     // p.second = x1;
                     p.second = x2 - 1;
@@ -365,9 +366,9 @@ int main()
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                    // cin >> x >> y;
+                    // cin >> x0 >> y;
                     cin >> x2 >> y;
-                    // x1 = convertI(x);
+                    // x1 = convertI(x0);
                     p.first = y - 1;
                     // p.second = x1;
                     p.second = x2 -1;
