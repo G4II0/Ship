@@ -6,7 +6,8 @@ using namespace std;
     {
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
-        initializeMar(mar_);
+        cout << "costruttore Mare";
+        initializeMare(mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
@@ -219,15 +220,19 @@ using namespace std;
         return false;
     }
 
-    void Mare::initializeMar(vector<vector<char> >& mar_)
+    void Mare::initializeMare(vector<vector<char> >& mar_)
     {
         mar_.resize(12);
         for (int x = 0; x < 12; x++) 
         {
             std::vector<char> innerVec;
-            for (int y = 0; y < 12; y++) 
+            for (int y = 0; y < 6; y++) 
             {
                 mar_[x].insert(mar_[x].begin() + y, ' ');
+            }
+            for (int y = 0; y < 6; y++)
+            {
+                mar_[x].insert(mar_[x].begin() + y, 'M');
             }
             mar_.push_back(innerVec);
         }
@@ -308,6 +313,7 @@ using namespace std;
                 temp4.second = (temp0.second) + 1;
                 cout << "ho finito il d == 0" << endl; 
             }
+
             else
             {
                 cout << "sono in d == 1" << endl;
