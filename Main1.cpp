@@ -27,6 +27,33 @@ pair<int,int> stringToPair(string input)
     return output;
 }
 
+int convertI(char l)
+{
+    if(l == 'A' || 'a')
+    {return 0;}
+    if (l == 'B' || 'b')
+    {return 1;}
+    if (l == 'C' || 'c')
+    {return 2;}
+    if (l == 'D' || 'd')
+    {return 3;}
+    if (l == 'E' || 'e')
+    {return 4;}
+    if (l == 'F' || 'f')
+    {return 5;}
+    if (l == 'G' || 'g')
+    {return 6;}
+    if (l == 'H' || 'h')
+    {return 7;}
+    if (l == 'I' || 'i')
+    {return 8;}
+    if (l == 'L' || 'l')
+    {return 9;}
+    if (l == 'M' || 'n')
+    {return 10;}
+    if (l == 'N' || 'n')
+    {return 11;}
+}
 int main()
 {
     const char B = 66;
@@ -520,32 +547,4 @@ int main()
         printTextEffect("La partita termina in patta! È stata effettuata la 50esima mossa totale!");
     }
     printTextEffect("Grazie per aver giocato!");
-}
-
-int convertI(char l)
-{
-    if(l == 'A' || 'a')
-    {return 0;}
-    if (l == 'B' || 'b')
-    {return 1;}
-    if (l == 'C' || 'c')
-    {return 2;}
-    if (l == 'D' || 'd')
-    {return 3;}
-    if (l == 'E' || 'e')
-    {return 4;}
-    if (l == 'F' || 'f')
-    {return 5;}
-    if (l == 'G' || 'g')
-    {return 6;}
-    if (l == 'H' || 'h')
-    {return 7;}
-    if (l == 'I' || 'i')
-    {return 8;}
-    if (l == 'L' || 'l')
-    {return 9;}
-    if (l == 'M' || 'n')
-    {return 10;}
-    if (l == 'N' || 'n')
-    {return 11;}
 }
