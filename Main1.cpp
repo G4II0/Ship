@@ -144,25 +144,26 @@ int main()
                         x = rand()%8+2;
                         y = rand()%12;
                     }
-                    if(i==0)
+                    if (i == 0)
                     {
-                        Corazzata c1 = Corazzata(p, d, i);
+                        Corazzata c4 = Corazzata(p, d, i);
                         c1.setNumero(i);
-                        players[ind].getMare().insertCor(c1, p);
+                        players[ind].getMare().insertCor(c4, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
                     }
-                    else          
-                    if(i==1)
+                    else if (i == 1)
                     {
-                        Corazzata c2 = Corazzata(p, d, i);
+                        Corazzata c5 = Corazzata(p, d, i);
                         c2.setNumero(i);
-                        players[ind].getMare().insertCor(c2, p);
+                        players[ind].getMare().insertCor(c5, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
                     }
-                    else
-                    if(i==2)
+                    else if (i == 2)
                     {
-                        Corazzata c3 = Corazzata(p, d, i);
+                        Corazzata c6 = Corazzata(p, d, i);
                         c3.setNumero(i);
-                        players[ind].getMare().insertCor(c3, p);
+                        players[ind].getMare().insertCor(c6, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
                     }
                 } 
                 i++;
