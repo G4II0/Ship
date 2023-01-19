@@ -180,6 +180,7 @@ using namespace std;
     {   
         cout << "legitMoveInput" << endl;
         vector<pair<int, int> > v = posAvailable(ship);
+        cout<<"dio cane"<<endl;
         for(int i = 0; i<v.size(); i++)
         {
             cout << "xC = " << v[i].first << "yC = " << v[i].second << endl;
