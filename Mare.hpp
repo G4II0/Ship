@@ -120,7 +120,7 @@ using namespace std;
         int getMCondition();
 
         // stampa la griglia alleata
-        string printAMare(vector<vector<char> > mar_);
+        string printAMare(vector<vector<char> >& mar_);
         // stampa la griglia nemica
         string printEMare();
 
