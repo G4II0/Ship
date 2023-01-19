@@ -1074,9 +1074,9 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            for (int x = 0; x < mar_.size(); x++)
+            for (int x = 0; x < 12; x++)
             {
-                for(int y = 1; y < mar_[x].size() - 1; y++)
+                for(int y = 1; y < 11; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y-1] != ' ')
                     {
@@ -1112,9 +1112,9 @@ using namespace std;
         }
         else
         {
-            for(int x = 1; x < mar_.size() - 1; x++)
+            for(int x = 1; x < 11; x++)
             {
-                for(int y = 0; y < mar_[x].size(); y++)
+                for(int y = 0; y < 12; y++)
                 {
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ')
                     {
@@ -1155,9 +1155,9 @@ using namespace std;
     {
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
-        for(int x = 0; x < mar_.size(); x++)
+        for(int x = 0; x < 12; x++)
         {
-            for(int y = 0; y < mar_[x].size(); y++)
+            for(int y = 0; y < 12; y++)
             {
                 if(mar_[x][y] != ' ')
                 {
