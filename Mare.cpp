@@ -27,7 +27,7 @@ using namespace std;
         }
     }
 
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char> >& mar_)
+    void Mare::setMareAc(pair<int, int> &p)
     {
         int x = p.first;
         int y = p.second;
@@ -323,11 +323,11 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(temp0, mar_);
-            setMareAc(temp1, mar_);
-            setMareAc(temp2, mar_);
-            setMareAc(temp3, mar_);
-            setMareAc(temp4, mar_);
+            setMareAc(temp0);
+            setMareAc(temp1);
+            setMareAc(temp2);
+            setMareAc(temp3);
+            setMareAc(temp4);
             // posizionamento nel mareC
         }
         else
