@@ -34,6 +34,7 @@ using namespace std;
 
         mar_[x].erase(mar_[x].begin() + y);
         mar_[x].insert(mar_[x].begin() + y, 'C');
+
         printAMare();
     }
 
@@ -41,34 +42,22 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        cout<<"s di stronzo"<<endl;
-        for (int i = 0; i < mar_.size(); i++) 
-        {
-            for (int j = 0; j < mar_[i].size(); j++)
-            {
-                if (i == x && j == y) 
-                {
-                    mar_[i].insert(mar_[i].begin() + j, 'S');
-                }
-            }
-        }
+
+        mar_[x].erase(mar_[x].begin() + y);
+        mar_[x].insert(mar_[x].begin() + y, 'S');
+
+        printAMare();
     }
 
     void Mare::setMareAe(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
-        cout<<"e di esucchiamelo"<<endl;
-        for (int i = 0; i < mar_.size(); i++) 
-        {
-            for (int j = 0; j < mar_[i].size(); j++)
-            {
-                if (i == x && j == y) 
-                {
-                    mar_[i].insert(mar_[i].begin() + j, 'E');
-                }
-            }
-        }
+
+        mar_[x].erase(mar_[x].begin() + y);
+        mar_[x].insert(mar_[x].begin() + y, 'E');
+
+        printAMare();
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
