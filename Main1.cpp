@@ -71,11 +71,11 @@ int main()
 
     Mare boardP1;
     cout<<"board1 vuota"<<endl;
-    Mare *point1 = boardP1.getMare();
+    vector<vector<char> > *point1 = boardP1.getMare();
     boardP1.printAMare(point1);
     Mare boardP2;
     cout << "board2 vuota" << endl;
-    Mare *point2 = boardP2.getMare();
+    vector<vector<char> > *point2 = boardP2.getMare();
     boardP2.printAMare(point2);
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
