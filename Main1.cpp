@@ -17,41 +17,42 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
-pair<int,int> stringToPair(string input)
-{
-    pair<int,int> output;
-    int X = std::stoi(input.substr(0, 2));
-    int Y = std::stoi(input.substr(3, 2));
-    output.first = X;
-    output.second = Y;
-    return output;
-}
-
 int convertI(char l)
 {
     if(l == 'A' || 'a')
     {return 0;}
+    else
     if (l == 'B' || 'b')
     {return 1;}
+    else
     if (l == 'C' || 'c')
     {return 2;}
+    else
     if (l == 'D' || 'd')
     {return 3;}
+    else
     if (l == 'E' || 'e')
     {return 4;}
+    else
     if (l == 'F' || 'f')
     {return 5;}
+    else
     if (l == 'G' || 'g')
     {return 6;}
+    else
     if (l == 'H' || 'h')
     {return 7;}
+    else
     if (l == 'I' || 'i')
     {return 8;}
+    else
     if (l == 'L' || 'l')
     {return 9;}
+    else
     if (l == 'M' || 'n')
     {return 10;}
-    if (l == 'N' || 'n')
+    else
+    if (l == 'N' || 'm')
     {return 11;}
 }
 int main()
@@ -127,10 +128,10 @@ int main()
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    cin >> x >> y;
+                    cin >> sper >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y -1;
+                    p.second = x1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -160,16 +161,12 @@ int main()
                     if(d==0)
                     {
                         x = rand()%12;
-                        cout<<" x bot = "<<x<<endl;
                         y = rand()%8+2;
-                        cout <<" y bot = "<<y<<endl;
                     }
                     else
                     {
                         x = rand()%8+2;
-                        cout << " x bot = " << x << endl;
                         y = rand()%12;
-                        cout << " y bot = " << y << endl;
                     }
                     if (i == 0)
                     {
@@ -250,8 +247,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin >> x >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y - 1;
+                    p.second = x1;
 
                     if(i==0)
                     {
@@ -360,8 +357,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
                     cin >> x >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y - 1;
+                    p.second = x1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
@@ -435,8 +432,7 @@ int main()
     else
         movesLimit = -1;
     bool endgame = false;
-    //____________________________________________________________________________________________________________
-    //inizio del gioco_________________
+    //inizio del gioco
     while (i != movesLimit && !endgame)
     {
         if(index == 0)
@@ -468,11 +464,11 @@ int main()
             printTextEffect("Se vuoi stampare le griglie, inserire 'XX XX': ");
             string code;
             cin >> code;
-            //if (code == "XX XX")
-            //{
-                //cout << boardP1.printAMare(mar_);
-                //cout << boardP2.printEMare(mar_);
-            //}//__________________________________________________________________________________________________________
+            if (code == "XX XX")
+            {
+                cout << boardP1.printAMare();
+                cout << boardP2.printEMare();
+            }
             pair<int, int> start;
             pair<int, int> end;
             int xs;

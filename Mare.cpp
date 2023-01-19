@@ -6,7 +6,6 @@ using namespace std;
     {
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
-        cout << "costruttore Mare" << endl;
         initializeMare(mar_);
     }
 
@@ -15,7 +14,6 @@ using namespace std;
     {
         int x = p.first;
         int y = p.second;
-        cout<<"spazio"<<endl;
         for (int i = 0; i < mar_.size(); i++) 
         {
             for (int j = 0; j < mar_[i].size(); j++)
@@ -100,9 +98,7 @@ using namespace std;
     //altri setter
     void Mare::setMarCor(Corazzata c)
     {
-        cout << "inserisco" << endl;
         marCor_.push_back(c);
-        cout << "ho fatto collione" << endl;
     }
     void Mare::setMarNds(Nds n)
     {
@@ -167,8 +163,7 @@ using namespace std;
 
     //metodo che controlla se l'input inserito è disponibile
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
-    {   
-        cout << "legitMoveInput" << endl;
+    {
         vector<pair<int, int> > v = posAvailable(ship);
         for(int i = 0; i<v.size(); i++)
         {
@@ -902,7 +897,6 @@ using namespace std;
             {i++;}
         }
         cout << out << endl;
-        cout << "scemo" << endl;
         return out;
     }
 
