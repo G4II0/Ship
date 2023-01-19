@@ -51,7 +51,7 @@
     { 
         count_=3;
         count2_=3;
-        count3_=3
+        count3_=3;
         int r0 = 0;
         bool esistonoNavi = true;
         srand(time(NULL));
