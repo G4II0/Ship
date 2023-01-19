@@ -120,7 +120,7 @@ int main()
                         Corazzata c2 = Corazzata(p, d, i);
                         c2.setNumero(i);
                         players[ind].getMare().insertCor(c2, p);
-                        printTextEffect(players[ind].getMare().printAMare());
+                        //printTextEffect(players[ind].getMare().printAMare());
                     }
                     else
                     if(i==2)
