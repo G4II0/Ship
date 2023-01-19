@@ -1,3 +1,4 @@
+//Alvise Molino
 #include "Sde.hpp"
 
     //costruttore vuoto
