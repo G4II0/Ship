@@ -123,10 +123,14 @@ using namespace std;
             mar_.insert(it, v);
         }
         cout << "c di" << endl;*/
-        for (int i = 0; i < mar_.size(); i++) {
-            for (int j = 0; j < mar_[i].size(); j++) {
-                if (i == x && j == y) {
+        for (int i = 0; i < mar_.size(); i++) 
+        {
+            for (int j = 0; j < mar_[i].size(); j++)
+             {
+                if (i == x && j == y) 
+                {
                     mar_[i].insert(mar_[i].begin() + j, 'C');
+                }
             }
         }
     }
