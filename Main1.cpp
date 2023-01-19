@@ -352,6 +352,7 @@ int main()
         //richiede al player o al bot di inserire i Sde, continua finchè tutti i Sde sono inseriti
         //Sde
         i = 0;
+        int sperm;
         while(i < 2)
         {
             try
@@ -359,10 +360,10 @@ int main()
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                    cin >> x >> y;
-                    convertI(x, x1);
+                    cin >> sperm >> y;
+                    //convertI(x, x1);
                     p.first = y - 1;
-                    p.second = x1;
+                    p.second = sperm - 1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
