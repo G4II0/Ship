@@ -119,6 +119,7 @@ int main()
         //richiede al player o al bot di inserire la corazzata, continua finchè tutte le corazzate sono inserite
         //Corazzata
         int i = 0;
+        int sper;
         while(i < 3) 
         {
             try
@@ -128,10 +129,10 @@ int main()
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    cin >> x >> y;
-                    convertI(x, x1);
+                    cin >> sper >> y;
+                    //convertI(x, x1);
                     p.first = y -1;
-                    p.second = x1;
+                    p.second = sper - 1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -161,16 +162,12 @@ int main()
                     if(d==0)
                     {
                         x = rand()%12;
-                        cout<<" x bot = "<<x<<endl;
                         y = rand()%8+2;
-                        cout <<" y bot = "<<y<<endl;
                     }
                     else
                     {
                         x = rand()%8+2;
-                        cout << " x bot = " << x << endl;
                         y = rand()%12;
-                        cout << " y bot = " << y << endl;
                     }
                     if (i == 0)
                     {
@@ -352,7 +349,6 @@ int main()
         //richiede al player o al bot di inserire i Sde, continua finchè tutti i Sde sono inseriti
         //Sde
         i = 0;
-        int sperm;
         while(i < 2)
         {
             try
@@ -360,10 +356,10 @@ int main()
                 if(players[ind].getType() == U)
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
-                    cin >> sperm >> y;
-                    //convertI(x, x1);
+                    cin >> x >> y;
+                    convertI(x, x1);
                     p.first = y - 1;
-                    p.second = sperm - 1;
+                    p.second = x1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
