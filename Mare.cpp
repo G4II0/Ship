@@ -967,7 +967,6 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            int wasd = 0;
             cout<<"C1"<<endl;
             for(int x = 0; x < 12; x++)
             {
@@ -976,11 +975,6 @@ using namespace std;
                 for(int y = 2; y < 10; y++)
                 {
                     cout << "Ytemp = " << y << " ";
-
-                    if(wasd == 0 || wasd == 11)
-                    {
-                        printAMare();
-                    }
 
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
