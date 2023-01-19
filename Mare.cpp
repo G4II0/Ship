@@ -930,8 +930,8 @@ using namespace std;
         }
         out += "   +-----------------------------------------------+\n";
         out += "     A   B   C   D   E   F   G   H   I   J   K   L";
-        cout << "scemo" << endl;
         cout << out << endl;
+        cout << "scemo" << endl;
         return out;
     }
 
