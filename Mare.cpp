@@ -32,9 +32,9 @@ using namespace std;
         int x = p.first;
         int y = p.second;
 
-        mar_[x].erase()
-        
-        for (int i = 0; i < mar_.size(); i++)
+        mar_[x].erase(mar_[x].begin() + y)
+
+            for (int i = 0; i < mar_.size(); i++)
         {
             for (int j = 0; j < mar_[i].size(); j++)
             {
