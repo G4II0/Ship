@@ -975,7 +975,7 @@ using namespace std;
         if(d==0)
         {
             cout<<"C1"<<endl;
-            for(int x = 0; x < mar_.size(); x++)
+            for(int x = 0; x < mar_.size()-1; x++)
             {
                 cout<<"C2"<<endl;
                 cout<< "Xtemp = " << x << " "; 
@@ -984,7 +984,7 @@ using namespace std;
                     cout << "Ytemp = " << y << " ";
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
                     {
-                        cout << "C53" << endl;
+                        cout << "C3" << endl;
                         for(int i = 0; i<v1.size()-1; i++)
                         {
                             cout << "C4" << endl;
