@@ -6,7 +6,7 @@ using namespace std;
     {
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
-        initializeMare(mar_);
+        initializeMar(mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
@@ -219,7 +219,7 @@ using namespace std;
         return false;
     }
 
-    void Mare::initializeMare(vector<vector<char> >& mar_)
+    void Mare::initializeMar(vector<vector<char> >& mar_)
     {
         mar_.resize(12);
         for (int x = 0; x < 12; x++) 
