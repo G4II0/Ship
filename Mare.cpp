@@ -27,28 +27,21 @@ using namespace std;
         }
     }
 
-    void Mare::saveMare(vector<vector<char>> &temp)
-    {
-        mar_ = temp;
-    }
-
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
+    void Mare::setMareAc(pair<int, int> p, vector<vector<char> >& mar_)
     {
         int x = p.first;
         int y = p.second;
-        
-        for (int i = 0; i < mare.size(); i++) 
+        for (int i = 0; i < mar_.size(); i++) 
         {
-            for (int j = 0; j < mare[i].size(); j++)
+            for (int j = 0; j < mar_[i].size(); j++)
             {
                 if (i == x && j == y) 
                 {
-                    mare[i].erase(mare[i].begin() + j);
-                    mare[i].insert(mare[i].begin() + j, 'C');
+                    mar_[i].erase(mar_[i].begin() + j);
+                    mar_[i].insert(mar_[i].begin() + j, 'C');
                 }
             }
         }
-        saveMare(mare);
         printAMare();
     }
 

@@ -47,12 +47,11 @@ using namespace std;
         Mare();
 
         void setMareA(pair<int, int> p, vector<vector<char> > mar_);
-        void setMareAc(pair<int, int> p, vector<vector<char> > mar_);
+        void setMareAc(pair<int, int> p, vector<vector<char> >& mar_);
         void setMareAs(pair<int, int> p, vector<vector<char> > mar_);
         void setMareAe(pair<int, int> p, vector<vector<char> > mar_);
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
-        void saveMare(vector<vector<char> > &temp);
         vector<vector<char> > getMare();
         void getMareE(Mare& mN);
 
