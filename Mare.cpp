@@ -868,6 +868,11 @@ using namespace std;
 
     string Mare::printAMare()
     {
+        vector<string> vec;
+        for (char c = 'A'; c <= 'L'; c++) 
+        {
+            vec.push_back(string(1, c) + " o");
+        }
         string out = "";
         out += "   +-----------------------------------------------+\n";
         int i = 0;
@@ -875,12 +880,12 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += to_string(i + 1);
+                out += vec[i+1];
             }
             else
             {
                 out += " ";
-                out += to_string(i + 1);
+                out += vec[i+1];
             }
             out += " ¦ ";
             for (const auto &element : row)
@@ -918,6 +923,11 @@ using namespace std;
 
     string Mare::printEMare()
     {
+        vector<string> vec;
+        for (char c = 'A'; c <= 'L'; c++) 
+        {
+            vec.push_back(string(1, c) + " o");
+        }
         string out = "";
         // out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
         out += "   +-----------------------------------------------+\n";
@@ -925,12 +935,12 @@ using namespace std;
         {
             if ((i + 1) >= 10)
             {
-                out += to_string(i + 1);
+                out += vec[i+1];
             }
             else
             {
                 out += " ";
-                out += to_string(i + 1);
+                out += vec[i+1];
             }
             // out += " │ ";
             out += " ¦ ";
