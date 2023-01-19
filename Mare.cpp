@@ -888,7 +888,6 @@ using namespace std;
     string printAMare()
     {
         string out = "";
-        cout << mare.size() << endl;
         out += "   +-----------------------------------------------+\n";
         int i = 0;
         for (const auto &row : mare)
