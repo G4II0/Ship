@@ -986,45 +986,52 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
-    string Mare::printAMare()
+    string printAMare(vector<vector<char>> mare)
     {
         string out = "";
-        //out += "   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐\n";
-        cout<<mar_.size()<<endl;
+        cout << mare.size() << endl;
         out += "   +-----------------------------------------------+\n";
-        for (int i = mar_.size()-1; i >= 0; i--)
+        int i = 0;
+        for (const auto &row : mare)
         {
             if ((i + 1) >= 10)
-            {out += to_string(i + 1);}
-            else
-            {out += " ";out += to_string(i + 1);}
-            //out += " │ ";
-            out += " ¦ ";
-            for (int j = 0; j < mar_[i].size(); j++)
             {
-                if (mar_[i][j] == ' ')
-                    {
-                        out += " ";
-                        //out += " │ ";
-                    }
+                out += to_string(i + 1);
+            }
+            else
+            {
+                out += " ";
+                out += to_string(i + 1);
+            }
+            out += " ¦ ";
+            for (const auto &element : row)
+            {
+                if (element == ' ')
+                {
+                    out += " ";
+                }
                 else
                 {
-                    //string s = to_string(mar_[i][j]);
-                    //out += s;
+                    char s = element;
+                    out += s;
                 }
-                out += mar_[i][j];
                 out += " ¦ ";
             }
             out += "\n";
-            if (i >= 1)
+            if (i >= 0 && i < 11)
                 out += "   +---+---+---+---+---+---+---+---+---+---+---+---¦\n";
-                //out += "   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤\n";
-                
+            if (i == 12)
+            {
+                i = 0;
+            }
+            else
+            {
+                i++;
+            }
         }
-        //out += "   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘\n";
         out += "   +-----------------------------------------------+\n";
         out += "     A   B   C   D   E   F   G   H   I   J   K   L";
-        cout<<out<<endl;
+        cout << out << endl;
         return out;
     }
 
