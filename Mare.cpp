@@ -16,7 +16,7 @@ using namespace std;
         cout<<"spazio"<<endl;
         mar_[x][y] = ' ';
     }
-//-
+//--
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> > &mar_)
     {
         int x = p.first;
