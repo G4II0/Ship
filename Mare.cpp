@@ -26,11 +26,6 @@ using namespace std;
         }
     }
 
-    void Mare::saveMare(vector<vector<char>> &temp)
-    {
-        mar_ = temp;
-    }
-
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
     {
         int x = p.first;
@@ -292,7 +287,7 @@ using namespace std;
             pair<int, int> temp3;
             pair<int, int> temp4;
             int d = ship.getDirezione();
-            if(d == 1)
+            if(d == 0)
             {
                 cout << "sono in d == 0" << endl;
                 temp1.first = pos.first;         // x prua
@@ -455,7 +450,7 @@ using namespace std;
             pair<int, int> tmp = s.getPMedio();
             pair<int, int> tmp1;
             pair<int, int> tmp2;
-            if(d==1)
+            if(d==0)
             {
                 tmp1.second = tmp.second + 1;
                 tmp2.second = tmp.second - 1;
@@ -797,7 +792,7 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        if(d==1)
+        if(d==0)
         {
             mar_[x][y+1] = ' ';
             mar_[x][y+2] = ' ';
@@ -821,7 +816,7 @@ using namespace std;
         pair<int, int> p = s.getPMedio();
         int x = p.first;
         int y = p.second;
-        if(d==1)
+        if(d==0)
         {
             mar_[x][y+1] = ' ';
             mar_[x][y-1] = ' ';
@@ -979,7 +974,7 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        if(d==1)
+        if(d==0)
         {
             cout<<"C1"<<endl;
             for(int x = 0; x < 12; x++)
@@ -1078,7 +1073,7 @@ using namespace std;
         vector<pair<int, int> > v1 = shi.Moves();
         pair<int, int> p;
         int d = shi.getDirezione();
-        if(d==1)
+        if(d==0)
         {
             for (int x = 0; x < 12; x++)
             {
