@@ -7,6 +7,7 @@ using namespace std;
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
         initializeMare(mar_);
+        printAMare(mar_);
     }
 
     void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
