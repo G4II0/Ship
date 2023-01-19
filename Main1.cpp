@@ -132,6 +132,7 @@ int main()
                     }
                 }
                 else
+                if (players[ind].getType() != U && ind == 0)
                 {
                     d = rand()%2;
                     if(d==0)
@@ -146,26 +147,61 @@ int main()
                     }
                     if (i == 0)
                     {
-                        Corazzata c4 = Corazzata(p, d, i);
+                        Corazzata c1 = Corazzata(p, d, i);
                         c1.setNumero(i);
+                        players[ind].getMare().insertCor(c1, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
+                    }
+                    else if (i == 1)
+                    {
+                        Corazzata c2 = Corazzata(p, d, i);
+                        c2.setNumero(i);
+                        players[ind].getMare().insertCor(c2, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
+                    }
+                    else if (i == 2)
+                    {
+                        Corazzata c3 = Corazzata(p, d, i);
+                        c3.setNumero(i);
+                        players[ind].getMare().insertCor(c3, p);
+                        // printTextEffect(players[ind].getMare().printAMare());
+                    }
+                }
+                if (players[ind].getType() != U && ind == 1)
+                {
+                    d = rand() % 2;
+                    if (d == 0)
+                    {
+                        x = rand() % 12;
+                        y = rand() % 8 + 2;
+                    }
+                    else
+                    {
+                        x = rand() % 8 + 2;
+                        y = rand() % 12;
+                    }
+                    if (i == 0)
+                    {
+                        Corazzata c4 = Corazzata(p, d, i);
+                        c4.setNumero(i);
                         players[ind].getMare().insertCor(c4, p);
                         // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 1)
                     {
                         Corazzata c5 = Corazzata(p, d, i);
-                        c2.setNumero(i);
+                        c5.setNumero(i);
                         players[ind].getMare().insertCor(c5, p);
                         // printTextEffect(players[ind].getMare().printAMare());
                     }
                     else if (i == 2)
                     {
                         Corazzata c6 = Corazzata(p, d, i);
-                        c3.setNumero(i);
+                        c6.setNumero(i);
                         players[ind].getMare().insertCor(c6, p);
                         // printTextEffect(players[ind].getMare().printAMare());
                     }
-                } 
+                }
                 i++;
             }
             catch(const InvalidInputException &e)
@@ -173,6 +209,7 @@ int main()
                 printTextEffect(e.what());
             }
         }
+        
         //richiede al player o al bot di inserire le Nds, continua finchè tutte le Nds sono inserite
         //Nds
         i = 0;
@@ -215,6 +252,7 @@ int main()
                     }
                 }
                 else
+                if (players[ind].getType() != U && ind == 0)
                 {
                     d = rand()%2;
                     if(d==0)
@@ -246,6 +284,38 @@ int main()
                         Nds s3 = Nds(p, d, i);
                         s3.setNumero(i);
                         players[ind].getMare().insertNds(s3, p);
+                    }
+                }
+                else if (players[ind].getType() != U && ind == 1)
+                {
+                    d = rand() % 2;
+                    if (d == 0)
+                    {
+                        x = rand() % 12;
+                        y = rand() % 10 + 1;
+                    }
+                    else
+                    {
+                        x = rand() % 10 + 1;
+                        y = rand() % 12;
+                    }
+                    if (i == 0)
+                    {
+                        Nds s4 = Nds(p, d, i);
+                        s4.setNumero(i);
+                        players[ind].getMare().insertNds(s4, p);
+                    }
+                    else if (i == 1)
+                    {
+                        Nds s5 = Nds(p, d, i);
+                        s5.setNumero(i);
+                        players[ind].getMare().insertNds(s5, p);
+                    }
+                    else if (i == 2)
+                    {
+                        Nds s6 = Nds(p, d, i);
+                        s6.setNumero(i);
+                        players[ind].getMare().insertNds(s6, p);
                     }
                 }
                 i++;
@@ -288,6 +358,7 @@ int main()
                     }
                 }
                 else
+                if (players[ind].getType() == U && ind == 0)
                 {
                     x = rand()%12;
                     y = rand()%12;
@@ -305,6 +376,25 @@ int main()
                         Sde e2 = Sde(p, i);
                         e2.setNumero(i);
                         players[ind].getMare().insertSde(e2, p);
+                    }
+                }
+                else if (players[ind].getType() == U && ind == 1)
+                {
+                    x = rand() % 12;
+                    y = rand() % 12;
+                    p.first = x;
+                    p.second = y;
+                    if (i == 0)
+                    {
+                        Sde e3 = Sde(p, i);
+                        e3.setNumero(i);
+                        players[ind].getMare().insertSde(e3, p);
+                    }
+                    else if (i == 1)
+                    {
+                        Sde e4 = Sde(p, i);
+                        e4.setNumero(i);
+                        players[ind].getMare().insertSde(e4, p);
                     }
                 }
                 i++;
