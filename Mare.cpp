@@ -36,7 +36,7 @@ using namespace std;
         
         for (int i = 0; i < mar_.size(); i++)
         {
-            for (int j = 0; j < mar_mar_[i].size(); j++)
+            for (int j = 0; j < mar_[i].size(); j++)
             {
                 if (i == x && j == y) 
                 {
