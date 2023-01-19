@@ -26,9 +26,9 @@ using namespace std;
         }
     }
 
-    void saveMare(vector<vector<char>> &temp)
+    void Mare::saveMare(vector<vector<char>> &temp)
     {
-        this -> mar_ = temp;
+        smar_ = temp;
     }
 
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
