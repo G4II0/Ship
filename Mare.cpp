@@ -477,9 +477,9 @@ using namespace std;
                 temp3.second = temp2;
             }
             // posizionamento nella board
-            setMareAs(dest, mar_);
-            setMareAs(temp1, mar_);
-            setMareAs(temp2, mar_);
+            setMareAs(dest);
+            setMareAs(temp1);
+            setMareAs(temp2);
         }
     }
 
