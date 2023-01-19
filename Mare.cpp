@@ -27,19 +27,19 @@ using namespace std;
         }
     }
 
-    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char>> mar_)
+    vector<vector<char>> Mare::setMareAc(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
         int y = p.second;
         
         for (int i = 0; i < mar_.size(); i++) 
         {
-            for (int j = 0; j < mar_mar_[i].size(); j++)
+            for (int j = 0; j < mar_[i].size(); j++)
             {
                 if (i == x && j == y) 
                 {
-                    mar_[i].erase(mar_mar_mar_mar_[i].begin() + j);
-                    mar_[i].insert(mar_mar_mar_[i].begin() + j, 'C');
+                    mar_[i].erase(mar_[i].begin() + j);
+                    mar_[i].insert(mar_[i].begin() + j, 'C');
                 }
             }
         }
