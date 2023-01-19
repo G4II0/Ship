@@ -128,7 +128,7 @@ int main()
                     printTextEffect("Inserisci la direzione della Corazzata C" + to_string((i+1)) + ": 0 = verticale, 1 = orizzontale ");
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
-                    cin >> sper >> y;
+                    cin >> x1 >> y;
                     x1 = convertI(x);
                     p.first = y -1;
                     p.second = x1;
