@@ -49,6 +49,9 @@
     //mosse randomiche del bot
     void Players::MovesB(Mare m, Mare mN)
     { 
+        count_=3;
+        count2_=3;
+        count3_=3;
         int r0 = 0;
         bool esistonoNavi = true;
         srand(time(NULL));
@@ -115,8 +118,8 @@
             }
             else
             {
-                esistonoNavi = false;
                 count_ = 0;
+                esistonoNavi = false;
             }
         }
         else
@@ -135,8 +138,8 @@
             }
             else
             {
-                esistonoNavi = false;
                 count2_ = 1;
+                esistonoNavi = false;
             }
         }
         else
@@ -155,8 +158,8 @@
             }
             else
             {
-                esistonoNavi = false;
                 count3_ = 2;
+                esistonoNavi = false;
             }
         }
     }while (esistonoNavi == false);
