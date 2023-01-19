@@ -1,3 +1,4 @@
+//Alvise Molino
 #ifndef SHIP_HPP
 #define SHIP_HPP
 
