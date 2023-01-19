@@ -17,53 +17,43 @@ void printTextEffect(string s, int delayShort = 1, int delayLong = 250)
     cout << endl;
 }
 
-pair<int,int> stringToPair(string input)
-{
-    pair<int,int> output;
-    int X = std::stoi(input.substr(0, 2));
-    int Y = std::stoi(input.substr(3, 2));
-    output.first = X;
-    output.second = Y;
-    return output;
-}
-
-int convertI(char l)
+void convertI(char l, int x1)
 {
     if(l == 'A' || 'a')
-    {return 0;}
+    {x1 = 0;}
     else
     if (l == 'B' || 'b')
-    {return 1;}
+    {x1 =  1;}
     else
     if (l == 'C' || 'c')
-    {return 2;}
+    {x1 =  2;}
     else
     if (l == 'D' || 'd')
-    {return 3;}
+    {x1 =  3;}
     else
     if (l == 'E' || 'e')
-    {return 4;}
+    {x1 =  4;}
     else
     if (l == 'F' || 'f')
-    {return 5;}
+    {x1 =  5;}
     else
     if (l == 'G' || 'g')
-    {return 6;}
+    {x1 =  6;}
     else
     if (l == 'H' || 'h')
-    {return 7;}
+    {x1 =  7;}
     else
     if (l == 'I' || 'i')
-    {return 8;}
+    {x1 =  8;}
     else
     if (l == 'L' || 'l')
-    {return 9;}
+    {x1 =  9;}
     else
     if (l == 'M' || 'n')
-    {return 10;}
+    {x1 =  10;}
     else
     if (l == 'N' || 'm')
-    {return 11;}
+    {x1 =  11;}
 }
 int main()
 {
@@ -139,7 +129,7 @@ int main()
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin >> x >> y;
-                    x1 = convertI(x);
+                    convertI(x, x1);
                     p.first = y - 1;
                     p.second = x1 - 1;
                     if(i==0)
@@ -260,7 +250,7 @@ int main()
                     cin>>d;
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin >> x >> y;
-                    x1 = convertI(x);
+                    convertI(x, x1);
                     p.first = y - 1;
                     p.second = x1 - 1;
 
@@ -370,7 +360,7 @@ int main()
                 {
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
                     cin >> x >> y;
-                    x1 = convertI(x);
+                    convertI(x, x1);
                     p.first = y - 1;
                     p.second = x1 - 1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
