@@ -43,9 +43,10 @@ using namespace std;
         int drawMoves_;
 
     public:
-
+        //costruttore
         Mare();
-
+    
+        //setter
         void setMareA(pair<int, int> p, vector<vector<char> > mar_);
         void setMareAc(pair<int, int> &p);
         void setMareAs(pair<int, int> &p);
@@ -53,18 +54,24 @@ using namespace std;
         void setMareE(pair<int, int> p, char c);
         void setMareES(pair<int, int> p, char c);
 
+        //getter
         vector<vector<char> > getMare();
         void getMareE(Mare& mN);
+        //setter
         void setMarCor(Corazzata c);
         void setMarNds(Nds n);
         void setMarSde(Sde s);
-
+        //getter
         vector<Corazzata> getMarCor();
         vector<Nds> getMarNds();
         vector<Sde> getMarSde();
 
+        //ripristina la corazza della corazzata
         Corazzata whichCor(vector<Corazzata> marCor, pair<int, int> pos);
+        //ripristina la corazza della nave da supporto
         Nds whichNds(vector<Nds> marNds, pair<int, int> pos);
+
+        //potere del sottomarino
         Sde whichSde(vector<Sde> marSde, pair<int, int> pos);
 
         //genera la board vuota

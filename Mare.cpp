@@ -703,7 +703,7 @@ using namespace std;
     {int c = 3; s.setCorazza(c);}
 
 
-    //ripristina la corazza del sottomarino
+    //potere del sottomarino
     void Mare::SdeScan(Sde s)
     {
         pair <int, int> c = s.getPMedio();
