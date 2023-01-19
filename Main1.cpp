@@ -31,27 +31,29 @@ int convertI(char l)
 {
     if(l == 'A' || 'a')
     {return 0;}
+    else
     if (l == 'B' || 'b')
     {return 1;}
+    else
     if (l == 'C' || 'c')
     {return 2;}
-    if (l == 'D' || 'd')
+    else if (l == 'D' || 'd')
     {return 3;}
-    if (l == 'E' || 'e')
+    else if (l == 'E' || 'e')
     {return 4;}
-    if (l == 'F' || 'f')
+    else if (l == 'F' || 'f')
     {return 5;}
-    if (l == 'G' || 'g')
+    else if (l == 'G' || 'g')
     {return 6;}
-    if (l == 'H' || 'h')
+    else if (l == 'H' || 'h')
     {return 7;}
-    if (l == 'I' || 'i')
+    else if (l == 'I' || 'i')
     {return 8;}
-    if (l == 'L' || 'l')
+    else if (l == 'L' || 'l')
     {return 9;}
-    if (l == 'M' || 'n')
+    else if (l == 'M' || 'n')
     {return 10;}
-    if (l == 'N' || 'm')
+    else if (l == 'N' || 'm')
     {return 11;}
 }
 int main()
