@@ -69,7 +69,7 @@ using namespace std;
         Sde whichSde(vector<Sde> marSde, pair<int, int> pos);
 
         //genera la board vuota
-        void initializeMar(vector<vector<char> >& mar_);
+        void initializeMare(vector<vector<char> >& mar_);
         void initializeMareES(vector<vector<char> > mar_);
         void initializeMare(vector<Corazzata> marCor);
         void initializeMare(vector<Nds> marNds);

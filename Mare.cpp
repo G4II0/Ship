@@ -6,7 +6,7 @@ using namespace std;
     {
         this -> condition_ = -1;
         this -> drawMoves_ = 0;
-        cout << "costruttore Mare";
+        cout << "costruttore Mare" << endl;
         initializeMare(mar_);
     }
 
