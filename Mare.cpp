@@ -890,7 +890,7 @@ using namespace std;
         string out = "";
         out += "   +-----------------------------------------------+\n";
         int i = 0;
-        for (const auto &row : mare)
+        for (const auto &row : mar_)
         {
             if ((i + 1) >= 10)
             {
