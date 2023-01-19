@@ -319,10 +319,9 @@ using namespace std;
             setMareAc(temp3);
             setMareAc(temp4);
             // posizionamento nel mareC
-        }//-
+        }
         else
         {
-            cout << "errore" << endl;
             throw InvalidInputException("Inserimento non valido");
         }
     }
