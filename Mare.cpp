@@ -26,22 +26,28 @@ using namespace std;
         }
     }
 
-    void Mare::setMareAc(pair<int, int> p, vector<vector<char> > *mar_)
+    void saveMare(vector<vector<char>> &temp)
+    {
+        mar_ = temp;
+    }
+
+    void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
     {
         int x = p.first;
         int y = p.second;
         
-        for (int i = 0; i < mar_.size(); i++) 
+        for (int i = 0; i < mare.size(); i++) 
         {
-            for (int j = 0; j < mar_[i].size(); j++)
+            for (int j = 0; j < mare[i].size(); j++)
             {
                 if (i == x && j == y) 
                 {
-                    mar_[i].erase(mar_[i].begin() + j);
-                    mar_[i].insert(mar_[i].begin() + j, 'C');
+                    mare[i].erase(mare[i].begin() + j);
+                    mare[i].insert(mare[i].begin() + j, 'C');
                 }
             }
         }
+        saveMare(mare);
         printAMare();
     }
 
@@ -93,7 +99,7 @@ using namespace std;
         marES_[x][y] = c;
     }
 
-    vector<vector<char> >* Mare::getMare()
+    vector<vector<char> > Mare::getMare()
     {
         return this-> mar_;
     }
@@ -318,11 +324,11 @@ using namespace std;
             cout << "ho inserito in marCor_" << endl; 
             // posizionamento nel mare
             cout << "setto il mare" << endl;
-            setMareAc(pos, getMare());
-            setMareAc(temp1, getMare());
-            setMareAc(temp2, getMare());
-            setMareAc(temp3, getMare());
-            setMareAc(temp4, getMare());
+            setMareAc(pos, mar_);
+            setMareAc(temp1, mar_);
+            setMareAc(temp2, mar_);
+            setMareAc(temp3, mar_);
+            setMareAc(temp4, mar_);
             // posizionamento nel mareC
         }
         else
