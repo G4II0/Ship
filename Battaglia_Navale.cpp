@@ -69,7 +69,37 @@ int main()
     int xtest;
     xtest = convertI(testare);
     cout<< xtest <<endl;
-        printTextEffect("Che partita vuoi fare? Inserire:");
+    testare = 'b';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'C';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'd';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'E';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'f';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'G';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'h';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'I';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'l';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    testare = 'M';
+    xtest = convertI(testare);
+    cout << xtest << endl;
+    printTextEffect("Che partita vuoi fare? Inserire:");
     while(true)
     {
         printTextEffect("- pc: partita player vs. computer");
