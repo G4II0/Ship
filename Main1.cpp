@@ -129,8 +129,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Corazzata C" + to_string((i+1)));
                     cin >> x >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y - 1;
+                    p.second = x1 - 1;
                     if(i==0)
                     {
                         Corazzata c1 = Corazzata(p, d, i);
@@ -250,8 +250,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio della Nave da Supporto Nds" + to_string((i+1)));
                     cin >> x >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y - 1;
+                    p.second = x1 - 1;
 
                     if(i==0)
                     {
@@ -360,8 +360,8 @@ int main()
                     printTextEffect("Inserisci le coordinate in cui vuoi mettere il punto medio del Sottomarino da Esplorazione Sde" + to_string((i+1)));
                     cin >> x >> y;
                     x1 = convertI(x);
-                    p.first = x1 - 1;
-                    p.second = y - 1;
+                    p.first = y - 1;
+                    p.second = x1 - 1;
                     //non è necessario richiedere la direzione dell'sde poichè la sua dimensione è = 1
                     if(i==0)
                     {
