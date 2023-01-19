@@ -126,7 +126,7 @@ using namespace std;
         for (int i = 0; i < mar_.size(); i++) 
         {
             for (int j = 0; j < mar_[i].size(); j++)
-             {
+            {
                 if (i == x && j == y) 
                 {
                     mar_[i].insert(mar_[i].begin() + j, 'C');
@@ -141,7 +141,16 @@ using namespace std;
         int x = p.first;
         int y = p.second;
         cout<<"s di stronzo"<<endl;
-        mar_[x][y] = 'S';
+        for (int i = 0; i < mar_.size(); i++) 
+        {
+            for (int j = 0; j < mar_[i].size(); j++)
+            {
+                if (i == x && j == y) 
+                {
+                    mar_[i].insert(mar_[i].begin() + j, 'S');
+                }
+            }
+        }
     }
 
     void Mare::setMareAe(pair<int, int> p, vector<vector<char> > mar_)
@@ -149,7 +158,16 @@ using namespace std;
         int x = p.first;
         int y = p.second;
         cout<<"e di esucchiamelo"<<endl;
-        mar_[x][y] = 'E';
+        for (int i = 0; i < mar_.size(); i++) 
+        {
+            for (int j = 0; j < mar_[i].size(); j++)
+            {
+                if (i == x && j == y) 
+                {
+                    mar_[i].insert(mar_[i].begin() + j, 'E');
+                }
+            }
+        }
     }
 
     void Mare::setMareE(pair<int, int> p, char c)
@@ -298,14 +316,15 @@ using namespace std;
 
     void Mare::initializeMare(vector<vector<char> > mar_)
     {
-        vector<char> v;
-        for(int x = 0; x < 12; x++)
+        mar_.resize(12);
+        for (int i = 0; i < 12; i++) 
         {
-            for(int y = 0; y < 12; y++)
+            std::vector<char> innerVec;
+            for (int j = 0; j < 12; j++) 
             {
-                v.push_back(' ');
+                innerVec.push_back(' ');
             }
-            mar_.push_back(v);
+            mar_.push_back(innerVec);
         }
     }
 
