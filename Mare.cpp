@@ -1,7 +1,7 @@
 #include "Mare.hpp"
 
 using namespace std;
-  
+    //costruttore
     Mare::Mare()
     {
         this -> condition_ = -1;
@@ -9,6 +9,7 @@ using namespace std;
         initializeMare(mar_);
     }
 
+    //setter
     void Mare::setMareA(pair<int, int> p, vector<vector<char> > mar_)
     {
         int x = p.first;
@@ -72,6 +73,7 @@ using namespace std;
         marES_[x][y] = c;
     }
 
+    //getter
     vector<vector<char> > Mare::getMare()
     {
         return this-> mar_;
@@ -93,6 +95,7 @@ using namespace std;
         }
     }
 
+    //setter
     void Mare::setMarCor(Corazzata c)
     {
         marCor_.push_back(c);
@@ -106,6 +109,7 @@ using namespace std;
         marSde_.push_back(s);
     }
 
+    //getter
     vector<Corazzata> Mare::getMarCor()
     {return this -> marCor_;}
 
@@ -115,6 +119,7 @@ using namespace std;
     vector<Sde> Mare::getMarSde()
     {return this -> marSde_;}
 
+    //metodo che restituisce la corazzata situata alla posizione passata per valore
     Corazzata Mare::whichCor(vector<Corazzata> marCor, pair<int, int> pos)
     {
         int t;
@@ -128,6 +133,7 @@ using namespace std;
         return marCor[t];
     }
 
+    //metodo che restituisce la nave da supporto situata alla posizione passata per valore
     Nds Mare::whichNds(vector<Nds> marNds, pair<int, int> pos)
     {
         int t;
@@ -141,6 +147,7 @@ using namespace std;
         return marNds[t];
     }
 
+    //metodo che restituisce il sottomarino situata alla posizione passata per valore
     Sde Mare::whichSde(vector<Sde> marSde, pair<int, int> pos)
     {
         int t;
@@ -154,6 +161,7 @@ using namespace std;
         return marSde[t];
     }
 
+    //metodo che controlla se la posizione inserita è disponibile
     bool Mare::legitMoveInput(Corazzata ship, pair<int, int> pos)
     {
         vector<pair<int, int> > v = posAvailable(ship);
@@ -185,6 +193,7 @@ using namespace std;
         return false;
     }
 
+    //inizializza il mare
     void Mare::initializeMare(vector<vector<char> >& mar_)
     {
         mar_.resize(12);
@@ -684,12 +693,17 @@ using namespace std;
         return false;
     }
 
+    //ripristina la corazza della corazzata
     void Mare::CorHeal(Corazzata& s)
     {int c = 5; s.setCorazza(c);}
 
+
+    //ripristina la corazza della nave da supporto
     void Mare::NdsHeal(Nds& s)
     {int c = 3; s.setCorazza(c);}
 
+
+    //potere del sottomarino
     void Mare::SdeScan(Sde s)
     {
         pair <int, int> c = s.getPMedio();
@@ -724,6 +738,7 @@ using namespace std;
         }
     }
 
+    //corazzata viene colpita
     void Mare::CorHit(Corazzata s, Mare mN)
     {
         int c = s.getCorazza() - 1;
@@ -735,6 +750,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
+    //nave da supporto viene colpita
     void Mare::NdsHit(Nds s, Mare mN)
     {
         int c = s.getCorazza() - 1;
@@ -746,6 +762,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
+    //sottomarino viene colpita
     void Mare::SdeHit(Sde s, Mare mN)
     {
         int c = s.getCorazza() - 1;
@@ -757,6 +774,7 @@ using namespace std;
         HitSet(s.getPMedio(), mN);
     }
 
+    //corazzata viene affondata
     void Mare::CorAff(Corazzata s)
     {//-
         s.setState((-1));
@@ -781,6 +799,7 @@ using namespace std;
         }
     }
 
+    //nave da supporto viene affondata
     void Mare::NdsAff(Nds s)
     {
         s.setState((-1));
@@ -801,6 +820,7 @@ using namespace std;
         }
     }
 
+    //sottomarino viene affondato
     void Mare::SdeAff(Sde s)
     {
         s.setState((-1));
@@ -850,6 +870,7 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
+    //stampa mare
     string Mare::printAMare()
     {
         vector<string> vec;
@@ -968,9 +989,11 @@ using namespace std;
         return out;
     }
 
+    //getter
     int Mare::getMCondition()
     { return condition_;}
 
+    //metodo ceh restituisce un vettore contenente le posiz disponibili dove inserire la corazzata
     vector<pair<int, int> > Mare::posAvailable(Corazzata shi)
     {
         vector<pair<int, int> > v1 = shi.Moves();
@@ -1054,6 +1077,7 @@ using namespace std;
         return v1;
     }
 
+    //metodo ceh restituisce un vettore contenente le posiz disponibili dove inserire la nave da supporto
     vector<pair<int, int> > Mare::posAvailable(Nds shi)
     {
         vector<pair<int, int> > v1 = shi.Moves();
@@ -1138,6 +1162,7 @@ using namespace std;
         return v1;
     }
 
+    //metodo ceh restituisce un vettore contenente le posiz disponibili dove inserire il sottomarino
     vector<pair<int, int> > Mare::posAvailable(Sde shi)
     {
         vector<pair<int, int> > v1 = shi.Moves();
