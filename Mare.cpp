@@ -33,7 +33,7 @@ using namespace std;
         int y = p.second;
 
         mar_[x].erase(mar_[x].begin() + y);
-        mar_[i].insert(mar_[x].begin() + y, 'C');
+        mar_[x].insert(mar_[x].begin() + y, 'C');
         printAMare();
     }
 
