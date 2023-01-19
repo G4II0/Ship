@@ -26,6 +26,11 @@ using namespace std;
         }
     }
 
+    void saveMare(vector<vector<char>> &temp)
+    {
+        mar_ = temp;
+    }
+
     void Mare::setMareAc(pair<int, int> p, vector<vector<char> >mare)
     {
         int x = p.first;
@@ -42,6 +47,7 @@ using namespace std;
                 }
             }
         }
+        saveMare(mare);
         printAMare();
     }
 
@@ -274,11 +280,9 @@ using namespace std;
 
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
-    {
+    {   
         cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
-        //pos.first=(pos.first)-1;
-        //pos.second = (pos.second)-1;
         cout << "b = " << b << endl;
         if (b == true)
         {   
@@ -337,8 +341,6 @@ using namespace std;
 //inserimento Nds
     void Mare::insertNds(Nds& ship, pair<int, int> pos)
     {
-        pos.first = (pos.first) -1 ;
-        pos.second = (pos.second) - 1;
         bool b =legitMoveInput(ship, pos);
         if(b == false)
         {
@@ -374,9 +376,7 @@ using namespace std;
 
     // inserimento Sde
     void Mare::insertSde(Sde& ship, pair<int, int> pos)
-    {
-        pos.first = (pos.first) - 1;
-        pos.second = (pos.second) - 1;
+    {   
         bool b = legitMoveInput(ship, pos);
         cout << "torno in insertSde" << endl;
         if(b == false)
