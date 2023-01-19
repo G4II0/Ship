@@ -138,12 +138,16 @@ int main()
                     if(d==0)
                     {
                         x = rand()%12;
+                        cout<<" x bot = "<<x<<endl;
                         y = rand()%8+2;
+                        cout <<" y bot = "<<y<<endl;
                     }
                     else
                     {
                         x = rand()%8+2;
+                        cout << " x bot = " << x << endl;
                         y = rand()%12;
+                        cout << " y bot = " << y << endl;
                     }
                     if (i == 0)
                     {
