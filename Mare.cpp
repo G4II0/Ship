@@ -255,9 +255,7 @@ using namespace std;
 //inserimento corazzata
     void Mare::insertCor(Corazzata& ship, pair<int, int> pos)
     {
-        cout << "chiamata prima di legit" << endl;
         bool b = legitMoveInput(ship, pos);
-        cout << "b = " << b << endl;
         if (b == true)
         {
             cout << " b è in true!!!!" << endl;
