@@ -967,7 +967,7 @@ using namespace std;
         int d = shi.getDirezione();
         if(d==0)
         {
-            int wasd;
+            int wasd = 0;
             cout<<"C1"<<endl;
             for(int x = 0; x < 12; x++)
             {
@@ -979,7 +979,7 @@ using namespace std;
 
                     if(wasd == 0 || wasd == 11)
                     {
-                        printAMare(mar_);
+                        printAMare();
                     }
 
                     if (mar_[x][y+2] != ' ' || mar_[x][y+1] != ' ' || mar_[x][y] != ' ' || mar_[x][y-1] != ' ' || mar_[x][y-2] != ' ')
@@ -1028,7 +1028,7 @@ using namespace std;
 
                     if (wasd == 0 || wasd == 11)
                     {
-                        printAMare(mar_);
+                        printAMare();
                     }
 
                     if (mar_[x][y] != ' ' || mar_[x+1][y] != ' ' || mar_[x-1][y] != ' ' || mar_[x+2][y] != ' ' || mar_[x-2][y] != ' ')
