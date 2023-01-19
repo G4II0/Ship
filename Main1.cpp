@@ -51,7 +51,7 @@ int convertI(char l)
     {return 9;}
     if (l == 'M' || 'n')
     {return 10;}
-    if (l == 'N' || 'n')
+    if (l == 'N' || 'm')
     {return 11;}
 }
 int main()
