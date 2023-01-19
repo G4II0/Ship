@@ -986,7 +986,7 @@ using namespace std;
 */
 /*____________________________________________________________________________________________________________________________________________________________*/
 
-    string printAMare(vector<vector<char>> mare)
+    string printAMare()
     {
         string out = "";
         cout << mare.size() << endl;
