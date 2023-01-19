@@ -37,7 +37,7 @@ using namespace std;
             {
                 if (i == x && j == y) 
                 {
-                    mar_[i].erase(mar_[i].begin() + j);
+                    //mar_[i].erase(mar_[i].begin() + j);
                     mar_[i].insert(mar_[i].begin() + j, 'C');
                 }
             }
