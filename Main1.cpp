@@ -70,11 +70,7 @@ int main()
     }
 
     Mare boardP1;
-    cout<<"board1 vuota"<<endl;
-    //boardP1.printAMare();
     Mare boardP2;
-    cout << "board2 vuota" << endl;
-    //boardP2.printAMare(); 
     players.push_back(Players(boardP1, names[0], types[0], boardP2));
     players.push_back(Players(boardP2, names[1], types[1], boardP1));
 
@@ -109,10 +105,7 @@ int main()
                     {
                         Corazzata c1 = Corazzata(p, d, i);
                         c1.setNumero(i);
-                        cout << "inserisco la prima corazzata" << endl;
                         players[ind].getMare().insertCor(c1, p);
-                        //printTextEffect(players[ind].getMare().printAMare());
-                        cout << "inserita la prima corazzata" << endl;
                     }
                     else
                     if(i==1)
@@ -120,7 +113,6 @@ int main()
                         Corazzata c2 = Corazzata(p, d, i);
                         c2.setNumero(i);
                         players[ind].getMare().insertCor(c2, p);
-                        //printTextEffect(players[ind].getMare().printAMare());
                     }
                     else
                     if(i==2)
